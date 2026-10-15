@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Download the available YouTube thumbnail files from one or more video links, then preview them locally." />
+    <title>YouTube Thumbnail Downloader — Thumbnail Tester</title>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="48x48" href="/icon.png">
+    <link rel="stylesheet" href="styles.css?v=20260930-nav-wrap" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Thumbnail Tester home">
+          <span class="brand-mark" aria-hidden="true"><span></span></span>
+          <span>THUMBNAIL TESTER</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a>
+          <a href="/youtube-thumbnail-size">Thumbnail size</a>
+          <a href="/youtube-banner-size">Banner size</a>
+          <a class="is-current" aria-current="page" href="/youtube-thumbnail-downloader">Downloader</a>
+          <a href="/youtube-thumbnail-maker">Thumbnail maker</a>
+          <a href="/youtube-banner-maker">Banner maker</a>
+          <a href="/youtube-profile-picture-size">Profile picture size</a>
+          <a href="/youtube-profile-picture-maker">Profile picture maker</a>
+          <a href="/youtube-thumbnail-resizer">Thumbnail resizer</a>
+          <a href="/youtube-end-screen-template">End screen template</a>
+          <a href="/about">About</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/contact">Contact</a>
+        </nav>
+        <div class="privacy-note"><span class="status-dot"></span>Browser only · no upload</div>
+      </header>
+
+      <main class="downloader-page page-content">
+        <section class="downloader-tool-card" aria-labelledby="downloader-title">
+          <div class="downloader-tool-heading">
+            <div>
+              <div class="eyebrow">YOUTUBE THUMBNAIL DOWNLOADER <span>06</span></div>
+              <h1 id="downloader-title">Get every thumbnail file that YouTube exposes.</h1>
+              <p class="downloader-subtitle">Paste one video link per line. The browser checks the direct YouTube image files, shows their actual pixel dimensions, and keeps each result ready to save or preview.</p>
+            </div>
+            <div class="local-pill"><span class="status-dot"></span>Local browser flow</div>
+          </div>
+
+          <form class="downloader-form" id="downloaderForm">
+            <div class="field-label-row">
+              <label for="videoLinks">YouTube video links</label>
+              <span class="field-hint">One per line</span>
+            </div>
+            <textarea id="videoLinks" class="downloader-textarea" rows="4" placeholder="https://www.youtube.com/watch?v=...&#10;https://youtu.be/..." spellcheck="false"></textarea>
+            <div class="downloader-form-actions">
+              <button class="downloader-primary" type="submit"><span>Get thumbnails</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+              <button class="downloader-secondary" id="clearLinks" type="button">Clear</button>
+            </div>
+            <p class="downloader-status" id="downloaderStatus" role="status">No links checked yet.</p>
+          </form>
+
+          <section class="downloader-results" id="downloaderResults" aria-live="polite" aria-label="Thumbnail results">
+            <div class="results-empty" id="resultsEmpty">
+              <span class="results-empty-mark" aria-hidden="true">↓</span>
+              <strong>Your available files will appear here.</strong>
+              <span>Nothing is uploaded. Image bytes come directly from YouTube's image host to this browser.</span>
+            </div>
+          </section>
+        </section>
+
+        <section class="downloader-copy" aria-labelledby="downloader-guide-title">
+          <div class="downloader-copy-grid">
+            <div>
+              <div class="section-kicker">HOW IT WORKS</div>
+              <h2 id="downloader-guide-title">A batch-friendly way to collect thumbnails.</h2>
+              <p>Paste multiple YouTube links, one per line, then save the files that load. Each card reports the dimensions read from the image itself rather than assuming a label. Use Preview in tool to pass one image into the local feed mockup on the homepage, or open the thumbnail maker to turn a downloaded frame into a new composition.</p>
+              <div class="maker-link-row"><a href="/youtube-thumbnail-maker">Open thumbnail maker</a></div>
+            </div>
+            <div class="downloader-steps">
+              <div><span>01</span><p><strong>Paste links.</strong> Standard watch, short, Shorts, live, embed, and a bare video ID are accepted.</p></div>
+              <div><span>02</span><p><strong>Check the cards.</strong> Only image files that load are kept in the result, with their natural dimensions shown.</p></div>
+              <div><span>03</span><p><strong>Save or preview.</strong> Save one file, trigger the available set, or send one image to the homepage tool.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="shorts-note" aria-labelledby="shorts-title">
+          <div>
+            <div class="section-kicker">SHORTS THUMBNAILS</div>
+            <h2 id="shorts-title">A Shorts link works here too.</h2>
+            <p>For a vertical Shorts video, paste its Shorts URL just like a watch link. The browser extracts the video ID, requests the direct YouTube image files for that ID, and shows the files that actually load. The result is the thumbnail YouTube exposes; this page does not invent a portrait crop or rename a missing file.</p>
+          </div>
+          <div class="shorts-note-card">
+            <span>YOUTUBE SHORTS THUMBNAIL DOWNLOADER</span>
+            <strong>Paste the Shorts URL. Check the returned dimensions. Save the available file.</strong>
+            <small>Shorts links are handled in the browser and stay out of a site-side upload.</small>
+          </div>
+        </section>
+
+        <section class="downloader-faq" aria-labelledby="faq-title">
+          <div class="section-kicker">QUESTIONS</div>
+          <h2 id="faq-title">Thumbnail downloader FAQ</h2>
+          <div class="faq-grid">
+            <details open><summary>Can I submit several links?</summary><p>Yes. Put one YouTube link or video ID on each line. Each valid line gets its own result group.</p></details>
+            <details><summary>Why is a larger file missing?</summary><p>YouTube does not expose every filename for every video. The page removes a card when its image does not load, so it does not present a broken size as available.</p></details>
+            <details><summary>How does a Shorts thumbnail work?</summary><p>Paste the Shorts URL on its own line. The browser uses that video's ID with the direct YouTube image host and reports the dimensions of each file that loads. It does not create a separate portrait crop.</p></details>
+            <details><summary>Does this page upload my links or images?</summary><p>No. The page parses links in this browser and requests the direct image URL from YouTube's image host. It has no account, server-side form, or daily limit.</p></details>
+            <details><summary>How do I preview a downloaded image?</summary><p>Choose Preview in tool on a result card. The image is converted inside this browser and handed to the homepage preview without uploading it to this site.</p></details>
+            <details><summary>Are the size names invented?</summary><p>No. The cards use the exact YouTube CDN filenames tested for this tool, and the pixel dimensions are read from each image after it loads.</p></details>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer-note">
+        <span>Thumbnail Tester</span>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="/">Tool</a>
+          <a href="/youtube-thumbnail-size">Thumbnail size</a>
+          <a href="/youtube-banner-size">Banner size</a>
+          <a href="/youtube-thumbnail-downloader">Downloader</a>
+          <a href="/youtube-thumbnail-maker">Thumbnail maker</a>
+          <a href="/youtube-banner-maker">Banner maker</a>
+          <a href="/youtube-profile-picture-size">Profile picture size</a>
+          <a href="/youtube-profile-picture-maker">Profile picture maker</a>
+          <a href="/about">About</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/contact">Contact</a>
+        </nav>
+        <span>Built for fast, local decisions.</span>
+        <span class="footer-disclosure">Affiliate links may earn us a commission at no extra cost to you.</span>
+      </footer>
+    </div>
+    <script src="downloader.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://feedthumbnail.com/api/site-lookup",
+      "service-desc": [
+        { "href": "https://feedthumbnail.com/openapi.json", "type": "application/vnd.oai.openapi+json" }
+      ],
+      "service-doc": [
+        { "href": "https://feedthumbnail.com/ai/", "type": "text/markdown" }
+      ],
+      "status": [
+        { "href": "https://feedthumbnail.com/api/site-lookup?topic=youtube-thumbnail-size", "type": "application/json" }
+      ]
+    }
+  ]
+}

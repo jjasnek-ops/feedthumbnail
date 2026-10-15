@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Why can't you A/B test a YouTube thumbnail? Check the current official eligibility requirements, then separate channel access from a local YouTube thumbnail size check." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-ab-test-eligibility/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>Why Can't I A/B Test a YouTube Thumbnail? Eligibility Checks | Feed Thumbnail</title>
+    <style>
+      .eligibility-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .eligibility-figure img { display: block; width: 100%; height: auto; }
+      .eligibility-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .eligibility-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .eligibility-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .eligibility-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .eligibility-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .eligibility-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: eligibility-step; }
+      .eligibility-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: eligibility-step; }
+      .eligibility-steps li::before { content: counter(eligibility-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      .eligibility-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #ffe5dd; color: #9d4938; font-size: 12px; font-weight: 800; }
+      .source-quote { margin: 18px 0; }
+      @media (max-width: 700px) { .eligibility-figure { padding: 9px; } .eligibility-grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL SIZE · A/B TEST CHECK</div>
+            <h1 id="article-title">Why can’t I A/B test a YouTube thumbnail?</h1>
+            <p class="answer-lede"><strong>A correct YouTube thumbnail size is not enough to make an A/B test available.</strong> The current YouTube Help page lists separate eligibility requirements: the feature is available through YouTube Studio on a computer, advanced features must be enabled, and some video types and content settings are excluded. Prepare the image locally, but diagnose access at the channel and video level.</p>
+            <p class="source-line">Official source: <a href="https://support.google.com/youtube/answer/16391400?hl=en" rel="noopener">Test &amp; compare thumbnails &amp; titles - YouTube Help</a>, reviewed 2026-10-15.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="official-title" id="official-rule">
+            <div class="section-kicker">THE CURRENT ELIGIBILITY LIST</div>
+            <h2 id="official-title">What does YouTube require before an A/B test can run?</h2>
+            <p>The current official A/B-testing page does not reduce eligibility to an image dimension. It says the feature is currently available on computers through YouTube Studio, requires advanced features to be enabled, and excludes Shorts, Scheduled Lives, and Premiere videos at this time. It separately says that Live Archives can be tested and that a Premiere becomes eligible only after it ends and converts to a long-form video.</p>
+            <blockquote class="source-quote"><p>“This feature is currently only available on computers through YouTube Studio.”</p><cite>— <a href="https://support.google.com/youtube/answer/16391400?hl=en" rel="noopener">YouTube Help, Test &amp; compare thumbnails &amp; titles</a></cite></blockquote>
+            <p>The page also lists content restrictions. Videos made for kids, mature audiences, or private videos cannot use the feature. Its age-restriction note adds a specific warning about losing feature access when age-restricted content is uploaded without the corresponding setting. These are account and video-state checks, not thumbnail-canvas checks.</p>
+            <span class="eligibility-badge">Thumbnail file ready ≠ A/B-test access</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="levels-title" id="eligibility-levels">
+            <div class="section-kicker">THREE DIFFERENT CHECKS</div>
+            <h2 id="levels-title">Which eligibility check is failing?</h2>
+            <p>When the testing control is missing, the fastest useful diagnosis is to separate the levels. A local tool can show what happened to an image. YouTube Studio decides whether the channel and video can use the feature. The official Help page is the source for that product-level decision.</p>
+            <div class="eligibility-grid">
+              <div><strong>Channel access</strong><span>Advanced features must be enabled before the feature is eligible.</span></div>
+              <div><strong>Video type</strong><span>Shorts, Scheduled Lives, and Premiere videos are excluded under the checked rule.</span></div>
+              <div><strong>Video settings</strong><span>Made-for-kids, mature-audience, and private videos are excluded.</span></div>
+            </div>
+            <p>A missing control therefore does not prove that the image is too small. Conversely, a clean local export does not prove that the control should appear. Use the product’s eligibility list first, then investigate the image-specific requirements separately.</p>
+            <figure class="eligibility-figure">
+              <img src="/assets/youtube-thumbnail-ab-test-eligibility.svg" alt="A three-step diagram separating local thumbnail preparation, channel and video eligibility, and YouTube Studio test access." width="1200" height="560" />
+              <figcaption>Original local diagram. It separates the file check from the channel and video conditions in the current official A/B-testing page.</figcaption>
+            </figure>
+          </section>
+
+          <section class="guide-section" aria-labelledby="local-title" id="local-check">
+            <div class="section-kicker">WHAT FEED THUMBNAIL CAN VERIFY LOCALLY</div>
+            <h2 id="local-title">What can a thumbnail-size tool actually rule out?</h2>
+            <p>Feed Thumbnail handles the preparation side of the workflow: a local image can be placed into a YouTube-style feed preview, checked in the available views, and exported from the browser. Its homepage source accepts local PNG, JPEG, and WEBP input. That makes it useful for image handoff, but it cannot enable advanced features or read a video’s YouTube Studio eligibility state.</p>
+            <p>The <a href="/app.js">homepage script</a> creates a PNG download from the browser canvas. The <a href="/resizer.js">thumbnail resizer script</a> creates a local JPEG output. These are first-party implementation facts. They do not connect to YouTube Studio, inspect channel settings, or return a native A/B-test control.</p>
+            <p>That boundary makes the workflow easier to explain. A creator can use the <a href="/youtube-thumbnail-size">YouTube thumbnail size notes</a> and the <a href="/youtube-thumbnail-resizer">thumbnail resizer</a> to prepare a file, then use the official A/B-testing eligibility list to diagnose access. The tool should not imply that a size result is an account feature check.</p>
+            <div class="eligibility-grid">
+              <div><strong>Local input</strong><span>PNG, JPEG, and WEBP appear in the homepage file-control accept list.</span></div>
+              <div><strong>Local preview</strong><span>The browser preview shows the selected image and title without sending the image to a server.</span></div>
+              <div><strong>Local export</strong><span>The public paths create static PNG or JPEG downloads; no Studio permission is changed.</span></div>
+            </div>
+          </section>
+
+          <section class="guide-section" aria-labelledby="workflow-title" id="workflow">
+            <div class="section-kicker">A PRACTICAL ACCESS CHECK</div>
+            <h2 id="workflow-title">How should you troubleshoot a missing A/B-test control?</h2>
+            <ol class="eligibility-steps">
+              <li><span><strong>Prepare the image separately.</strong> Open the <a href="/youtube-thumbnail-resizer">thumbnail resizer</a> or the <a href="/">local feed preview</a>, choose the image, and inspect the crop and title placement.</span></li>
+              <li><span><strong>Use a computer for the product check.</strong> The official page says the feature is currently available through YouTube Studio on a computer. Do not treat a mobile-only view as proof that the feature is unavailable everywhere.</span></li>
+              <li><span><strong>Check advanced features.</strong> The official eligibility list says advanced features must be enabled. Follow YouTube’s own access instructions rather than guessing from the thumbnail file.</span></li>
+              <li><span><strong>Check the video type.</strong> Exclude Shorts, Scheduled Lives, and active Premiere videos under the current rule. A Live Archive is treated differently on the official page.</span></li>
+              <li><span><strong>Check the video settings.</strong> Made-for-kids, mature-audience, and private videos are listed as ineligible. Resolve the actual setting shown in YouTube Studio before changing the image.</span></li>
+            </ol>
+            <p class="source-line">This workflow combines the current official eligibility list with reproducible first-party local behavior. It does not access YouTube Studio, change settings, or promise that a creator will receive the feature.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="gap-title" id="comparison-gap">
+            <div class="section-kicker">WHAT THE CHECKED PAGES LEAVE OUT</div>
+            <h2 id="gap-title">Why do thumbnail tools make eligibility look simpler?</h2>
+            <p>The specific LightX YouTube thumbnail resizer page we opened focuses on upload, a 1280 × 720 preset, editing, and JPG or PNG download. The specific Snappa YouTube thumbnail page focuses on templates, editable graphics, dimensions, and download options. Those pages explain asset creation, but neither page establishes whether a creator’s YouTube channel or video can access native A/B testing.</p>
+            <p>The opened Reddit discussion focuses on Test &amp; Compare, timing, CTR, average view duration, and creator experience. It is useful context for the question, but it does not replace the current official eligibility list. The official page is the source that distinguishes desktop access, advanced features, video types, and content settings.</p>
+            <p>The useful gap is the handoff between image readiness and product access. A size guide can show what its local canvas and exporter did. It cannot enable a channel feature, convert a video format, or inspect a privacy setting. Keeping those claims separate gives the creator a shorter path to the real blocker.</p>
+            <p>This comparison is limited to the three pages actually opened for this article. It is not a site-wide claim about every page on those domains, and it is not a ranking claim.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title">
+            <div class="section-kicker">QUESTIONS</div>
+            <h2 id="faq-title">YouTube thumbnail size and A/B-test eligibility questions</h2>
+            <div class="faq-grid">
+              <details open><summary>Does YouTube thumbnail size make an A/B test available?</summary><p>No. Thumbnail preparation and A/B-test eligibility are separate checks. The current official page lists channel, device, video-type, and content-setting requirements.</p></details>
+              <details><summary>Can I run the A/B test from a phone?</summary><p>The checked official page says the feature is currently available on computers through YouTube Studio.</p></details>
+              <details><summary>Do I need advanced features enabled?</summary><p>Yes. The current eligibility list says advanced features must be enabled to be eligible.</p></details>
+              <details><summary>Which video types are excluded?</summary><p>The checked page says Shorts, Scheduled Lives, and Premiere videos cannot be A/B tested at this time. It treats Live Archives separately.</p></details>
+              <details><summary>Can Feed Thumbnail check my A/B-test access?</summary><p>No. It handles local image preview and export. It does not read channel settings, privacy, audience labels, or YouTube Studio eligibility.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Keep file preparation and feature eligibility separate</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/16391400?hl=en" rel="noopener">YouTube Help: Test &amp; compare thumbnails &amp; titles</a> is the source for the current desktop, advanced-feature, video-format, and content-setting eligibility requirements. Reviewed 2026-10-15.</p>
+              <p><a href="https://support.google.com/youtube/answer/9890437?hl=en" rel="noopener">YouTube Help: different YouTube Tools and features</a> and <a href="https://support.google.com/youtube/answer/9891124?hl=en" rel="noopener">how to unlock access to advanced features</a> are linked from the official eligibility list; this guide does not infer a creator’s account state.</p>
+              <p><a href="https://www.lightxeditor.com/photo-editing/youtube-thumbnail-resizer/" rel="noopener">LightX’s YouTube thumbnail resizer page</a> and <a href="https://snappa.com/create/youtube-thumbnails" rel="noopener">Snappa’s YouTube thumbnail page</a> were opened for page-specific comparison of image-preparation coverage.</p>
+              <p><a href="https://www.reddit.com/r/PartneredYoutube/comments/1ddwppc/is_youtubes_new_test_compare_thumbnails_useful/" rel="noopener">The opened Reddit Test &amp; Compare discussion</a> was treated as community context, not as the official eligibility source.</p>
+              <p><a href="/index.html">Feed Thumbnail’s homepage markup</a>, <a href="/app.js">homepage script</a>, and <a href="/resizer.js">thumbnail resizer script</a> are the first-party sources for the local input and export boundary.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Feed Thumbnail",
+    "identifier": "did:web:feedthumbnail.com"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:feedthumbnail.com:api:site-lookup",
+      "displayName": "Feed Thumbnail reference lookup",
+      "type": "application/vnd.oai.openapi+json",
+      "url": "https://feedthumbnail.com/openapi.json",
+      "representativeQueries": [
+        "What is the YouTube thumbnail size?",
+        "What is the YouTube channel banner safe area?"
+      ]
+    },
+    {
+      "identifier": "urn:air:feedthumbnail.com:skill:site-lookup",
+      "displayName": "Feed Thumbnail site lookup skill",
+      "type": "text/markdown",
+      "url": "https://feedthumbnail.com/ai/skills/site-lookup/SKILL.md",
+      "representativeQueries": [
+        "Look up the official thumbnail dimensions",
+        "Find the official channel banner dimensions"
+      ]
+    },
+    {
+      "identifier": "urn:air:feedthumbnail.com:mcp:site-lookup",
+      "displayName": "Feed Thumbnail MCP server",
+      "type": "application/mcp-server-card+json",
+      "url": "https://feedthumbnail.com/.well-known/mcp/server-card.json",
+      "representativeQueries": [
+        "Retrieve a known YouTube thumbnail specification",
+        "Retrieve a known YouTube banner specification"
+      ]
+    }
+  ]
+}

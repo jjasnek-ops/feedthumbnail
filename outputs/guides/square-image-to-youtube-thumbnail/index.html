@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A reproducible example shows how crop, fit, and stretch change a square image inside YouTube's recommended 16:9 video thumbnail frame." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/square-image-to-youtube-thumbnail/" />
+    <title>Fit a Square Image to YouTube Thumbnail Size | Feed Thumbnail</title>
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <style>
+      .worked-table-wrap { overflow-x: auto; margin-top: 18px; }
+      .worked-table { width: 100%; border-collapse: collapse; min-width: 590px; background: rgba(255,255,255,.7); }
+      .worked-table th, .worked-table td { padding: 13px 14px; border-bottom: 1px solid #dce2eb; text-align: left; vertical-align: top; line-height: 1.55; }
+      .worked-table th { color: #141b2d; font-size: 12px; }
+      .worked-table td { color: #56647a; font-size: 13px; }
+      .worked-figure { margin: 22px 0 0; }
+      .worked-figure img { display: block; width: 100%; height: auto; border-radius: 18px; }
+      .worked-figure figcaption { margin-top: 9px; color: #68758a; font-size: 12px; line-height: 1.55; }
+      .worked-callout { padding: 17px 19px; border-left: 4px solid #ff795f; border-radius: 0 14px 14px 0; background: rgba(255,255,255,.72); color: #56647a; line-height: 1.65; }
+      @media (max-width: 500px) { .worked-table th, .worked-table td { padding: 11px 10px; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">IMAGE FRAMING · FIELD NOTE</div>
+            <h1 id="article-title">Fit a square image to YouTube thumbnail size</h1>
+            <p class="answer-lede"><strong>A square image cannot fill a 16:9 video thumbnail frame without either cropping its edges, adding side padding, or distorting its shape.</strong> Choose the trade-off before export: crop to fill, fit to preserve every edge, or stretch only when shape distortion is acceptable.</p>
+            <p class="source-line">YouTube recommends a 16:9 aspect ratio for video thumbnails. Source: <a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">Add custom thumbnails on YouTube - Computer - YouTube Help</a>, “Image size &amp; resolution”; reviewed 2026-09-29.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="math-title" id="first-party-math">
+            <div class="section-kicker">REPRODUCIBLE GEOMETRY</div>
+            <h2 id="math-title">What changes in one square-to-wide example?</h2>
+            <p>Let S be the width and height of a square source, then compare it with YouTube Help’s recommended video canvas of 3840 × 2160 pixels. S is a variable, not a recommended upload size; the equations use the official canvas and apply to any square source. They describe framing geometry, not how another app will display an uploaded image.</p>
+            <figure class="worked-figure">
+              <img src="/assets/square-to-16x9-framing.svg" alt="Three framing choices: crop removes top and bottom, fit keeps the square with side padding, and stretch distorts its shape." width="1200" height="444" />
+              <figcaption>Original diagram created for this guide. The three wide frames use the same 16:9 canvas.</figcaption>
+            </figure>
+            <div class="worked-table-wrap">
+              <table class="worked-table">
+                <thead><tr><th scope="col">Choice</th><th scope="col">Calculation for square side S</th><th scope="col">Trade-off</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Fill / crop</th><td>Retained source height = S × (9 ÷ 16). A centered crop removes (S − 9S ÷ 16) ÷ 2 = 7S ÷ 32 from each vertical edge.</td><td>Fills the frame without bars, but loses the top and bottom of the square.</td></tr>
+                  <tr><th scope="row">Fit / padding</th><td>Scale = min(3840 ÷ S, 2160 ÷ S) = 2160 ÷ S. The square draws at 2160 × 2160 px, leaving (3840 − 2160) ÷ 2 = 840 px of side padding.</td><td>Keeps every source edge; the side areas become part of the exported image.</td></tr>
+                  <tr><th scope="row">Stretch</th><td>Horizontal scale = 3840 ÷ S; vertical scale = 2160 ÷ S. The horizontal scale is 16 ÷ 9 times the vertical scale.</td><td>Keeps all pixels and fills the frame, but circles and faces change shape.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="worked-callout"><strong>How to read the result:</strong> use Fill when the subject can survive a centered top-and-bottom crop; use Fit when the whole square must remain visible and side padding is acceptable. Stretch is the only option here with no crop and no padding, and it changes the source proportions.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="questions-title">
+            <div class="section-kicker">CREATOR QUESTIONS</div>
+            <h2 id="questions-title">Which framing choice should you check?</h2>
+            <div class="faq-grid">
+              <details open><summary>Why do black bars appear beside a square image?</summary><p>In a fit operation, a square is narrower than a 16:9 canvas after it is scaled to the canvas height. The unused side regions are padding. In our resizer, that padding is painted into the local JPG; this does not diagnose framing added by an unrelated embed or platform.</p></details>
+              <details><summary>Does cropping keep the whole square visible?</summary><p>No. A center crop trims the top and bottom in this square-to-16:9 case. Check that captions, logos, and the subject remain inside the retained region before saving.</p></details>
+              <details><summary>Can stretching avoid both padding and cropping?</summary><p>It avoids both, but the horizontal scale is 16/9 times the vertical scale for a square source and a 16:9 canvas. Use a stretch only if that visible shape change is acceptable for the artwork.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; LIMITS</div>
+            <h2 id="sources-title">What this example can and cannot establish</h2>
+            <div class="source-notes">
+              <p>The 16:9 video ratio and 3840 × 2160 recommendation come from <a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">YouTube Help</a>. The crop, fit, and scale values are algebra derived from that official canvas; S remains a variable rather than an assumed source size.</p>
+              <p>A Reddit post asks about black bars in off-platform video embeds. That report is a real user question, not proof that every bar has the same cause: <a href="https://www.reddit.com/r/youtube/comments/tgymiw/can_i_get_rid_of_black_bars_in_my_thumbnails/" rel="noopener">“Can I get rid of black bars in my thumbnails?”</a></p>
+              <p>The existing <a href="/youtube-thumbnail-resizer">browser-based thumbnail resizer</a> demonstrates crop, fit, and stretch locally, but its current export preset is 1280 × 720. It is not an export at YouTube’s current 3840 × 2160 recommendation. See the <a href="/youtube-thumbnail-size">thumbnail size source notes</a> for the official figures.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>

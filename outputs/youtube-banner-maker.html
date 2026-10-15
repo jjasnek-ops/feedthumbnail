@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Make a YouTube channel banner locally, download an editable YouTube banner template, keep text inside the safe area, and export a clean PNG." />
+    <link rel="canonical" href="https://feedthumbnail.com/youtube-banner-maker" />
+    <title>YouTube Banner Maker — Feed Thumbnail</title>
+    <link rel="stylesheet" href="styles.css?v=20260930-nav-wrap" />
+  </head>
+  <body data-maker="banner">
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Thumbnail Tester home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>THUMBNAIL TESTER</span></a>
+        <nav class="site-nav" aria-label="Primary navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a class="is-current" aria-current="page" href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav>
+        <div class="privacy-note"><span class="status-dot"></span>Local only · no upload</div>
+      </header>
+
+      <main class="maker-page">
+        <section class="maker-tool-card" aria-labelledby="maker-title">
+          <div class="maker-heading">
+            <div><div class="eyebrow">YOUTUBE BANNER MAKER <span>09</span></div><h1 id="maker-title">YouTube Banner Maker</h1><p class="maker-subtitle">Build channel art on a local canvas, start from an editable YouTube banner template, keep the important headline inside the published safe area, and export a clean PNG without an account or upload.</p></div>
+            <div class="maker-local-pill"><span class="status-dot"></span>Browser canvas</div>
+          </div>
+          <div class="maker-grid">
+            <section class="maker-controls" aria-label="Banner maker controls">
+              <div class="maker-control-group"><div class="maker-control-label"><label for="makerImage">Background image</label><span id="makerImageStatus">Optional</span></div><label class="maker-file"><input id="makerImage" type="file" accept="image/png,image/jpeg,image/webp" />Choose a PNG, JPG, or WEBP image<br /><span>It stays in this browser.</span></label></div>
+              <div class="maker-control-group"><div class="maker-control-label"><label for="makerHeadline">Channel headline</label><span>Drag it on the canvas</span></div><input id="makerHeadline" class="maker-input" type="text" value="YOUR CHANNEL NAME" autocomplete="off" /></div>
+              <div class="maker-control-group"><div class="maker-control-label"><label for="makerFontSize">Font size</label><span id="makerFontSizeValue"></span></div><input id="makerFontSize" class="maker-range" type="range" min="70" max="360" value="190" /></div>
+              <div class="maker-control-group"><div class="maker-control-label"><span>Text color</span><span>Local setting</span></div><input id="makerTextColor" class="maker-color" type="color" value="#ffffff" /></div>
+              <div class="maker-control-group"><div class="maker-control-label"><label for="makerPositionX">Headline position</label><span><b id="makerPositionXValue">10%</b> / <b id="makerPositionYValue">50%</b></span></div><input id="makerPositionX" class="maker-range" type="range" min="4" max="78" value="10" /><input id="makerPositionY" class="maker-range" type="range" min="8" max="92" value="50" /></div>
+              <div class="maker-control-group"><div class="maker-control-label"><span>Style presets</span><span>Choose a starting look</span></div><div class="maker-preset-list"><button class="maker-preset is-active" type="button" data-maker-preset="midnight">Midnight</button><button class="maker-preset" type="button" data-maker-preset="sunset">Sunset</button><button class="maker-preset" type="button" data-maker-preset="paper">Paper</button></div></div>
+              <button class="maker-export" id="makerExport" type="button"><span>Export PNG</span><span class="maker-export-arrow" aria-hidden="true">↗</span></button>
+              <p class="maker-local-note">The safe-area guide is a preview aid only. It is excluded from the exported PNG.</p>
+            </section>
+            <section class="maker-preview" aria-labelledby="maker-preview-title"><div class="maker-preview-head"><h2 id="maker-preview-title">Safe-area canvas</h2><span>2048 × 1152 · 16:9 <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">YouTube Help · reviewed 2026-09-15</a></span></div><div class="maker-canvas-wrap"><canvas id="makerCanvas" class="maker-canvas" aria-label="Editable channel banner canvas"></canvas><div id="makerSafeArea" class="maker-safe-area" aria-hidden="true"><span class="maker-safe-area-label">1235 × 338 safe area <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">YouTube Help · reviewed 2026-09-15</a></span></div></div><div class="maker-preview-foot"><span>TV recommendation: 2560 × 1440 <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">Manage your channel branding · reviewed 2026-09-15</a> <a class="metric-cite" href="https://support.google.com/youtube/answer/12950272?hl=en" rel="noopener">Channel banner &amp; profile picture tips · reviewed 2026-09-15</a></span><a class="text-link" href="/youtube-banner-size">See the source notes</a></div></section>
+          </div>
+        </section>
+        <section class="template-downloads" aria-labelledby="template-title">
+          <div class="template-download-copy">
+            <div class="section-kicker">EDITABLE TEMPLATE</div>
+            <h2 id="template-title">Download a YouTube banner template.</h2>
+            <p>Use the editable SVG starter to plan channel art on a 2560 × 1440 canvas <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">Manage your channel branding · reviewed 2026-09-15</a> <a class="metric-cite" href="https://support.google.com/youtube/answer/12950272?hl=en" rel="noopener">Channel banner &amp; profile picture tips · reviewed 2026-09-15</a>. The centered 1235 × 338 guide <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">YouTube Help · reviewed 2026-09-15</a> shows where important text and logos can stay visible.</p>
+            <a class="template-download" href="/assets/youtube-banner-template-2560x1440.svg" download="youtube-banner-template-2560x1440.svg">Download editable SVG <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="template-specs" aria-label="Template specifications">
+            <div><span>Canvas</span><strong>2560 × 1440 <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">Manage your channel branding · reviewed 2026-09-15</a> <a class="metric-cite" href="https://support.google.com/youtube/answer/12950272?hl=en" rel="noopener">Channel banner &amp; profile picture tips · reviewed 2026-09-15</a></strong></div>
+            <div><span>Safe area</span><strong>1235 × 338 <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">YouTube Help · reviewed 2026-09-15</a></strong></div>
+            <div><span>Format</span><strong>SVG</strong></div>
+            <div><span>File limit</span><strong>File size: 6 MB or smaller. <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">YouTube Help — Manage your channel branding · reviewed 2026-09-15</a></strong></div>
+            <div><span>Decoration</span><strong>Do not include any additional file embellishments (e.g. shadows, borders, and frames). <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">YouTube Help — Manage your channel branding · reviewed 2026-09-15</a></strong></div>
+          </div>
+        </section>
+        <section class="maker-copy"><div class="maker-copy-grid"><div><div class="section-kicker">HOW TO USE IT</div><h2>Give the center the message.</h2><p>Load a local image, type the channel promise, and keep the text inside the dashed 1235 × 338 guide <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">YouTube Help · reviewed 2026-09-15</a>. The canvas starts at the official 2048 × 1152 minimum <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">YouTube Help · reviewed 2026-09-15</a>, while the site’s source note also records the 2560 × 1440 TV recommendation <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">Manage your channel branding · reviewed 2026-09-15</a> <a class="metric-cite" href="https://support.google.com/youtube/answer/12950272?hl=en" rel="noopener">Channel banner &amp; profile picture tips · reviewed 2026-09-15</a>.</p><div class="maker-link-row"><a href="/youtube-banner-size">Read banner dimensions</a><a href="/youtube-thumbnail-maker">Make a thumbnail</a></div></div><div class="maker-steps"><div><span>01</span><p><strong>Choose a background.</strong> Your image is read locally and placed on the browser canvas.</p></div><div><span>02</span><p><strong>Use the safe area.</strong> The dashed center box marks the published 1235 × 338 safe area <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">YouTube Help · reviewed 2026-09-15</a> at the minimum canvas.</p></div><div><span>03</span><p><strong>Export the artwork.</strong> The guide stays out of the PNG, so the downloaded image is ready to take away.</p></div></div></div></section>
+        <section class="maker-faq"><div class="section-kicker">QUESTIONS</div><h2>YouTube banner maker FAQ</h2><div class="maker-faq-grid"><details open><summary>What is the dashed box?</summary><p>It marks the official 1235 × 338 safe area <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">YouTube Help · reviewed 2026-09-15</a> at the 2048 × 1152 minimum canvas <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">YouTube Help · reviewed 2026-09-15</a>. Keep the words and logos that must survive cropping inside it.</p></details><details><summary>Does this page include a YouTube banner template?</summary><p>Yes. Download the editable SVG template above, open it in a design editor, and replace the starter text and visual layers.</p></details><details><summary>Which canvas does export use?</summary><p>This maker exports the visible canvas at 2048 × 1152 <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">YouTube Help · reviewed 2026-09-15</a>. The source page separately lists 2560 × 1440 as the TV recommendation <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">Manage your channel branding · reviewed 2026-09-15</a> <a class="metric-cite" href="https://support.google.com/youtube/answer/12950272?hl=en" rel="noopener">Channel banner &amp; profile picture tips · reviewed 2026-09-15</a>.</p></details><details><summary>Does the guide appear in the PNG?</summary><p>No. The dashed safe-area guide is a visual aid in the editor and is intentionally excluded from export.</p></details><details><summary>Does this page upload my image?</summary><p>No. The image and text are drawn in the browser. There is no account, server-side upload, third-party API, or watermark.</p></details></div></section>
+      </main>
+      <footer class="footer-note"><span>Thumbnail Tester</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><span>Built for fast, local decisions.</span><span class="footer-disclosure">Affiliate links may earn us a commission at no extra cost to you.</span></footer>
+    </div>
+    <script src="maker.js"></script>
+  </body>
+</html>

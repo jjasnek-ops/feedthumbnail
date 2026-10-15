@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="What YouTube thumbnail size means for an A/B test: the official 720p threshold, the 480p downscale rule, and a local pre-test check." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-ab-test-resolution/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>YouTube Thumbnail Size for A/B Tests: What Happens Below 720p? | Feed Thumbnail</title>
+    <style>
+      .resolution-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .resolution-figure img { display: block; width: 100%; height: auto; }
+      .resolution-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .resolution-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .resolution-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .resolution-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .resolution-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .resolution-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: resolution-step; }
+      .resolution-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: resolution-step; }
+      .resolution-steps li::before { content: counter(resolution-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      .source-quote { margin: 18px 0; }
+      @media (max-width: 700px) { .resolution-figure { padding: 9px; } .resolution-grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL SIZE · FIELD NOTE</div>
+            <h1 id="article-title">What happens if a YouTube A/B test thumbnail is below 720p?</h1>
+            <p class="answer-lede"><strong>If any thumbnail in a YouTube A/B test is below 720p (1280 × 720), YouTube says all experiment thumbnails are downscaled to 480p (854 × 480).</strong> That is a test-specific rule, not the same answer as YouTube’s general video-thumbnail recommendation. Check the source files before you start the experiment.</p>
+            <p class="source-line">Official sources: <a href="https://support.google.com/youtube/answer/16391400?hl=en" rel="noopener">A/B test titles &amp; thumbnails - YouTube Help</a> and <a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">Add custom thumbnails on YouTube - YouTube Help</a>, reviewed 2026-10-09.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="threshold-title" id="threshold">
+            <div class="section-kicker">THE TEST-SPECIFIC RULE</div>
+            <h2 id="threshold-title">The YouTube thumbnail size answer changes inside an A/B test</h2>
+            <p>YouTube’s general custom-thumbnail guidance says video thumbnails should be as large as possible, recommends 3840 × 2160 pixels, and names a minimum width of 640 pixels. The separate A/B testing page adds a stricter condition for experiments: if one test thumbnail is lower than 720p, every thumbnail in that experiment is downscaled to 480p.</p>
+            <blockquote class="source-quote"><p>“If the resolution of any thumbnail is lower than 720p (1280 x 720), all experiment thumbnails will be downscaled to 480p (854 x 480).”</p><cite>— <a href="https://support.google.com/youtube/answer/16391400?hl=en" rel="noopener">YouTube Help, A/B test titles &amp; thumbnails</a></cite></blockquote>
+            <p>The practical reading is narrow: the rule tells you what YouTube does to the experiment thumbnails when the threshold is missed. It does not say that 480p is the recommended design canvas, and it does not predict a winner, watch time, click-through rate, or reach. Treat 1280 × 720 as the pre-test threshold named by this source, then keep the general YouTube thumbnail-size recommendation in view for the file you actually want to upload.</p>
+            <figure class="resolution-figure">
+              <img src="/assets/youtube-thumbnail-ab-test-resolution.svg" alt="Comparison of YouTube's general recommended video thumbnail canvas, the 1280 by 720 A/B test threshold, and the 854 by 480 downscaled experiment result." width="1200" height="520" />
+              <figcaption>Original comparison diagram based on the two official YouTube Help pages. It is not a YouTube Studio screenshot and does not measure an experiment.</figcaption>
+            </figure>
+          </section>
+
+          <section class="guide-section" aria-labelledby="local-title" id="local-check">
+            <div class="section-kicker">A LOCAL PRE-TEST CHECK</div>
+            <h2 id="local-title">What Feed Thumbnail can check before you upload?</h2>
+            <p>Feed Thumbnail’s resizer is a local file check, not a YouTube experiment controller. Its public script defines a 1280 × 720 target canvas, reads the selected image’s natural width, natural height, and file size, then draws the image with crop, fit, or stretch behavior. The input file is handled through a browser object URL; no account or site-side upload is part of that code path.</p>
+            <p>When you export, the script encodes a local JPEG and checks the selected blob against the mobile upload limit used by the tool. The output filename carries the local target dimensions, but that filename is not a new YouTube recommendation. It is a trace of what this browser tool rendered. The useful question is therefore: “Did my local source and export reach the A/B threshold?” not “Did Feed Thumbnail run my test?”</p>
+            <p>Those facts are reproducible in <a href="/resizer.js">the public resizer script</a>. They also define the tool’s boundary: the script does not sign in to YouTube Studio, start an experiment, inspect the test result, or know whether a channel’s upload was accepted. Use the official Studio page for the experiment and the local tool for the file preparation step.</p>
+            <div class="resolution-grid">
+              <div><strong>Official test threshold</strong><span>1280 × 720 is the 720p condition named in the A/B test guidance.</span></div>
+              <div><strong>Local canvas</strong><span>The public resizer code draws to a 1280 × 720 browser canvas before export.</span></div>
+              <div><strong>Experiment result</strong><span>Only YouTube Studio can show the test state and the result; the local tool does not.</span></div>
+            </div>
+          </section>
+
+          <section class="guide-section" aria-labelledby="workflow-title" id="workflow">
+            <div class="section-kicker">A CLEANER WORKFLOW</div>
+            <h2 id="workflow-title">How to check thumbnail size before an A/B test</h2>
+            <ol class="resolution-steps">
+              <li><span><strong>Keep the candidate files separate.</strong> Name the images by their experiment role so you can tell which source file passed the local check.</span></li>
+              <li><span><strong>Read the source dimensions first.</strong> Load each image in the <a href="/youtube-thumbnail-resizer">thumbnail resizer</a> and read the dimensions shown by the browser. This is a file observation, not a Studio result.</span></li>
+              <li><span><strong>Reach the named threshold.</strong> If a test candidate is below 1280 × 720, the official A/B page says all experiment thumbnails will be downscaled to 854 × 480.</span></li>
+              <li><span><strong>Keep the general guidance separate.</strong> The official thumbnail-size page recommends a larger 3840 × 2160 video canvas and a 16:9 ratio. Do not replace that general guidance with the downscaled 480p outcome.</span></li>
+              <li><span><strong>Upload and manage the experiment in Studio.</strong> The local page can prepare a file, but it cannot start the test or report the winner. Keep the source URL and the official rule beside your own file notes.</span></li>
+            </ol>
+            <p class="source-line">This sequence is a practical interpretation of the two official Help pages plus the public first-party resizer code. It is not a promise about a particular channel’s experiment outcome.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="gap-title" id="comparison-gap">
+            <div class="section-kicker">WHY A GENERIC RESIZER ANSWER IS NOT ENOUGH</div>
+            <h2 id="gap-title">The missing detail is the experiment consequence</h2>
+            <p>The specific LightX page we read focuses on upload, a 1280 × 720 preset, custom units, editing, and JPG/PNG download. The specific Snappa page focuses on templates, editable graphics, dimensions, and download. The Reddit discussion we read focuses on whether a new thumbnail test is useful early in a video’s life and on community test-timing notes. None of those page texts states the exact official rule that one below-720p test thumbnail causes all experiment thumbnails to be downscaled.</p>
+            <p>That is the useful gap for a size guide: a canvas preset tells you what to make, while the A/B rule tells you what the experiment will do when one candidate misses the threshold. The difference matters because a file can look ready in a generic editor and still enter the experiment under a different resolution condition than you intended.</p>
+            <p>This comparison is limited to the three pages actually opened for this article. It is not a site-wide claim about every page on those domains, and it is not a ranking claim.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title">
+            <div class="section-kicker">QUESTIONS</div>
+            <h2 id="faq-title">YouTube thumbnail size and A/B test questions</h2>
+            <div class="faq-grid">
+              <details open><summary>What size should an A/B test thumbnail reach?</summary><p>The cited A/B testing page names 720p, written as 1280 × 720, as the threshold. It says that if any test thumbnail is lower than that, all experiment thumbnails are downscaled to 854 × 480.</p></details>
+              <details><summary>Is 854 × 480 the recommended YouTube thumbnail size?</summary><p>No. It is the downscaled experiment result described by the A/B test page, not the general video-thumbnail recommendation.</p></details>
+              <details><summary>Does the local resizer run an A/B test?</summary><p>No. It reads a local image, draws a 1280 × 720 canvas, exports a local JPEG, and reports file information. YouTube Studio manages the experiment.</p></details>
+              <details><summary>What does the general YouTube thumbnail page recommend?</summary><p>The checked official page recommends 3840 × 2160 for video thumbnails, a minimum width of 640 pixels, and a 16:9 aspect ratio for videos.</p></details>
+              <details><summary>Does passing the size check guarantee a winning thumbnail?</summary><p>No. The size rule describes resolution handling. It does not predict watch time, click-through rate, or which option will win.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Separate size facts from experiment results</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/16391400?hl=en" rel="noopener">YouTube Help: A/B test titles &amp; thumbnails</a> is the source for the 720p threshold and 480p downscale rule. The “Tips for A/B testing” section was reviewed 2026-10-09.</p>
+              <p><a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">YouTube Help: Add custom thumbnails on YouTube</a> is the source for the general 3840 × 2160 recommendation, minimum width, listed formats, and 16:9 video ratio. The page was reviewed 2026-10-09.</p>
+              <p><a href="/resizer.js">Feed Thumbnail’s public resizer script</a> is the source for the local 1280 × 720 canvas, local image metadata read, and local JPEG export. It is implementation evidence, not a YouTube Studio test.</p>
+              <p>For the direct tool, open the <a href="/youtube-thumbnail-downloader">YouTube thumbnail downloader</a>. For the broader official size table, read <a href="/youtube-thumbnail-size">YouTube thumbnail size</a>.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>

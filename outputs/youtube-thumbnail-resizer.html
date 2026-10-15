@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      gtag('js', new Date());
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Resize one local image to 1280 × 720 in your browser, choose crop or padding, preview the result, and export an upload-ready JPG." />
+    <link rel="canonical" href="https://feedthumbnail.com/youtube-thumbnail-resizer" />
+    <title>YouTube Thumbnail Resizer — Local 1280 × 720 Export</title>
+    <link rel="stylesheet" href="styles.css?v=20260930-nav-wrap" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Thumbnail Tester home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>THUMBNAIL TESTER</span></a>
+        <nav class="site-nav" aria-label="Primary navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a class="is-current" aria-current="page" href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav>
+        <div class="privacy-note"><span class="status-dot"></span>Local only · no upload</div>
+      </header>
+
+      <main class="resizer-page">
+        <section class="resizer-tool-card" aria-labelledby="resizer-title">
+          <div class="resizer-heading">
+            <div>
+              <div class="eyebrow">YOUTUBE THUMBNAIL RESIZER <span>09</span></div>
+              <h1 id="resizer-title">Resize a thumbnail in your browser.</h1>
+              <p class="resizer-subtitle">Choose one local image, make a 1280 × 720 thumbnail, pick how the frame is filled, and export an upload-ready JPG. The image stays on this device.</p>
+            </div>
+            <div class="maker-local-pill"><span class="status-dot"></span>Browser canvas</div>
+          </div>
+
+          <div class="resizer-grid">
+            <section class="resizer-controls" aria-label="YouTube thumbnail resizer controls">
+              <div class="resizer-control-group">
+                <div class="maker-control-label"><label for="resizerImage">Source image</label><span id="resizerFileStatus">Choose one</span></div>
+                <label class="resizer-dropzone" id="resizerDropzone" for="resizerImage">
+                  <input id="resizerImage" type="file" accept="image/png,image/jpeg,image/webp" />
+                  <strong>Choose a local image</strong>
+                  <span>PNG, JPG, or WEBP · drag and drop works</span>
+                  <small>The file is read by this browser and is not uploaded.</small>
+                </label>
+                <p class="resizer-file-meta" id="resizerFileMeta">No image selected.</p>
+              </div>
+
+              <div class="resizer-control-group">
+                <div class="maker-control-label"><label for="resizerPreset">Output preset</label><span>Fixed target</span></div>
+                <select id="resizerPreset" class="maker-select" aria-label="Output preset">
+                  <option value="youtube">YouTube thumbnail · 1280 × 720 · 16:9</option>
+                </select>
+              </div>
+
+              <div class="resizer-control-group">
+                <div class="maker-control-label"><span>Frame treatment</span><span id="resizerModeHint">Crop the edges</span></div>
+                <div class="resizer-mode-list" role="radiogroup" aria-label="Frame treatment">
+                  <button class="resizer-mode is-active" type="button" role="radio" aria-checked="true" data-resizer-mode="fill">Fill frame <small>Crop</small></button>
+                  <button class="resizer-mode" type="button" role="radio" aria-checked="false" data-resizer-mode="fit">Fit image <small>Padding</small></button>
+                  <button class="resizer-mode" type="button" role="radio" aria-checked="false" data-resizer-mode="stretch">Stretch <small>Exact frame</small></button>
+                </div>
+              </div>
+
+              <div class="resizer-control-group resizer-padding-control" id="resizerPaddingControl">
+                <div class="maker-control-label"><label for="resizerBackground">Padding color</label><span>Used by Fit image</span></div>
+                <div class="resizer-color-row"><input id="resizerBackground" class="maker-color" type="color" value="#111827" /><output id="resizerBackgroundValue">#111827</output></div>
+              </div>
+
+              <div class="resizer-output-card" aria-live="polite">
+                <div><span>Target</span><strong>1280 × 720</strong></div>
+                <div><span>Export</span><strong>Upload-ready JPG</strong></div>
+                <div><span>File size</span><strong id="resizerOutputSize">—</strong></div>
+                <div><span>Mobile check</span><strong id="resizerOutputCheck">Choose an image</strong></div>
+              </div>
+
+              <button class="maker-export" id="resizerExport" type="button" disabled><span>Export upload-ready JPG</span><span class="maker-export-arrow" aria-hidden="true">↗</span></button>
+              <p class="resizer-status" id="resizerStatus" role="status">Choose a local image to start.</p>
+              <p class="maker-local-note">No account, server upload, batch queue, or image API is used. All processing happens in this browser.</p>
+            </section>
+
+            <section class="resizer-preview" aria-labelledby="resizer-preview-title">
+              <div class="maker-preview-head"><h2 id="resizer-preview-title">Live preview</h2><span>1280 × 720 · 16:9</span></div>
+              <div class="resizer-canvas-wrap"><canvas id="resizerCanvas" class="resizer-canvas" width="1280" height="720" aria-label="Resized YouTube thumbnail preview"></canvas><div class="resizer-empty" id="resizerEmpty">Your resized image will appear here.</div></div>
+              <div class="maker-preview-foot"><span id="resizerPreviewNote">Fill frame crops to the exact target.</span><a class="text-link" href="/youtube-thumbnail-size">See thumbnail size source notes</a></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="resizer-source-section" aria-labelledby="resizer-source-title">
+          <div class="resizer-source-copy">
+            <div class="section-kicker">THE SIZE CHECK</div>
+            <h2 id="resizer-source-title">The export checks the file before you leave.</h2>
+            <p>This resize YouTube thumbnail tool does the size check in the same browser step. When the first JPG is over the mobile video-thumbnail limit, it lowers the local JPEG quality and tries again until the exported file is under the gate or the browser reports that it could not get there. The official page lists a separate desktop limit, so both contexts are shown below.</p>
+            <p class="resizer-citation">Official source excerpt: “Remain under MB limits. Limits depend on the device you’re using to upload your thumbnail:”<br />“Mobile: 2 MB for video thumbnails or 10 MB for podcasts.”<br />“Desktop: 50MB for video, Shorts, and podcast thumbnails.” — <a href="https://support.google.com/youtube/answer/72431?co=GENIE.Platform%3DDesktop&amp;hl=en" target="_blank" rel="noopener">Add custom thumbnails on YouTube - Computer - YouTube Help</a>. Reviewed 2026-09-17.</p>
+            <div class="resizer-link-row"><a href="/youtube-thumbnail-size">Read the full thumbnail size notes</a><a href="/youtube-thumbnail-maker">Open the thumbnail maker</a></div>
+          </div>
+          <div class="resizer-source-card">
+            <div><span>Input</span><strong>One local image</strong><small>PNG · JPG · WEBP</small></div>
+            <div><span>Canvas</span><strong>1280 × 720</strong><small>16:9 YouTube thumbnail preset</small></div>
+            <div><span>Output</span><strong>JPG with a size check</strong><small>Saved directly from the browser</small></div>
+          </div>
+        </section>
+
+        <section class="resizer-how" aria-labelledby="resizer-how-title">
+          <div class="section-kicker">HOW IT WORKS</div>
+          <h2 id="resizer-how-title">A resize YouTube thumbnail workflow with no detour.</h2>
+          <div class="resizer-how-grid">
+            <div><span>01</span><p><strong>Load locally.</strong> Select one image or drop it on the tool. The file never leaves this browser tab.</p></div>
+            <div><span>02</span><p><strong>Choose the frame.</strong> Fill crops the edges, Fit keeps the whole image with padding, and Stretch maps the source to the exact frame.</p></div>
+            <div><span>03</span><p><strong>Export once.</strong> The thumbnail resizer produces a JPG, shows its file size, and reports the mobile upload check.</p></div>
+          </div>
+        </section>
+
+        <section class="resizer-faq" aria-labelledby="resizer-faq-title">
+          <div class="section-kicker">QUESTIONS</div>
+          <h2 id="resizer-faq-title">YouTube thumbnail compressor and resizer FAQ</h2>
+          <div class="resizer-faq-grid">
+            <details open><summary>What does this YouTube thumbnail size converter export?</summary><p>It exports one 1280 × 720 JPG from the local canvas. The selected crop, padding, or stretch treatment is included in the saved file.</p></details>
+            <details><summary>What happens when the JPG is too large?</summary><p>The browser tries lower JPEG quality settings locally and updates the file-size readout. It does not send the image to a server.</p></details>
+            <details><summary>Which option keeps the whole image?</summary><p>Choose Fit image. It adds padding where the source aspect ratio does not fill the 16:9 frame.</p></details>
+            <details><summary>Can I use this thumbnail resizer without an account?</summary><p>Yes. There is no login and no daily usage counter. The tool handles one local image at a time.</p></details>
+            <details><summary>Is this a resize image for YouTube thumbnail service?</summary><p>Yes, but the work stays in your browser: select a local file, preview the 1280 × 720 result, then save the checked JPG.</p></details>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer-note"><span>Thumbnail Tester</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><span>Built for fast, local decisions.</span><span class="footer-disclosure">Affiliate links may earn us a commission at no extra cost to you.</span></footer>
+    </div>
+    <script src="resizer.js"></script>
+  </body>
+</html>

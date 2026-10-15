@@ -1,0 +1,16 @@
+{
+  "serverInfo": {
+    "name": "feedthumbnail-site-lookup",
+    "version": "1.0.0"
+  },
+  "endpoint": "https://feedthumbnail.com/mcp",
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "https://feedthumbnail.com/mcp"
+  },
+  "capabilities": {
+    "tools": {},
+    "resources": {},
+    "prompts": {}
+  }
+}

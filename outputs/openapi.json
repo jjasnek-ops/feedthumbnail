@@ -1,0 +1,70 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Feed Thumbnail public reference API",
+    "version": "1.0.0",
+    "description": "Bounded, read-only lookup for the two public YouTube size references on Feed Thumbnail."
+  },
+  "servers": [
+    { "url": "https://feedthumbnail.com" }
+  ],
+  "paths": {
+    "/api/site-lookup": {
+      "get": {
+        "operationId": "siteLookup",
+        "summary": "Look up a known public reference",
+        "parameters": [
+          {
+            "name": "topic",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": ["youtube-thumbnail-size", "youtube-banner-size"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A known reference record",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ReferenceRecord" }
+              }
+            }
+          },
+          "404": {
+            "description": "The topic is not in the bounded public set",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/NotFound" } } }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ReferenceRecord": {
+        "type": "object",
+        "required": ["identifier", "page_url", "source_url", "reviewed_on", "values"],
+        "properties": {
+          "identifier": { "type": "string" },
+          "title": { "type": "string" },
+          "summary": { "type": "string" },
+          "page_url": { "type": "string", "format": "uri" },
+          "source_url": { "type": "string", "format": "uri" },
+          "reviewed_on": { "type": "string", "format": "date" },
+          "values": { "type": "object", "additionalProperties": true }
+        },
+        "additionalProperties": false
+      },
+      "NotFound": {
+        "type": "object",
+        "required": ["error", "available_topics"],
+        "properties": {
+          "error": { "const": "not_found" },
+          "available_topics": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

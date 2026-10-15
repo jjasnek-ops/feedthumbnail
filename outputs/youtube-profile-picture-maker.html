@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Make a YouTube profile picture locally: crop one image into a circle, preview the official rendered size, and export a square PNG without an account or upload." />
+    <link rel="canonical" href="https://feedthumbnail.com/youtube-profile-picture-maker" />
+    <title>YouTube Profile Picture Maker — Feed Thumbnail</title>
+    <link rel="stylesheet" href="styles.css?v=20260930-nav-wrap" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Thumbnail Tester home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>THUMBNAIL TESTER</span></a>
+        <nav class="site-nav" aria-label="Primary navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a class="is-current" aria-current="page" href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav>
+        <div class="privacy-note"><span class="status-dot"></span>Local only · no upload</div>
+      </header>
+
+      <main class="maker-page profile-maker-page">
+        <section class="maker-tool-card" aria-labelledby="profile-maker-title">
+          <div class="maker-heading">
+            <div><div class="eyebrow">YOUTUBE PROFILE PICTURE MAKER <span>LOCAL</span></div><h1 id="profile-maker-title">YouTube profile picture maker</h1><p class="maker-subtitle">Crop one local image into a circle, preview the official rendered size, and export a square PNG. No account, upload, batch processing, or watermark.</p></div>
+            <div class="maker-local-pill"><span class="status-dot"></span>Browser canvas</div>
+          </div>
+          <div class="maker-grid profile-maker-grid">
+            <section class="maker-controls profile-maker-controls" aria-label="Profile picture maker controls">
+              <div class="maker-control-group"><div class="maker-control-label"><label for="profileImage">Profile image</label><span id="profileImageStatus">Choose one image</span></div><label class="maker-file profile-dropzone" id="profileDropzone"><input id="profileImage" type="file" accept="image/*" />Choose a local image<br /><span>Drop or browse · stays in this browser</span></label></div>
+              <div class="maker-control-group"><div class="maker-control-label"><label for="profileZoom">Zoom</label><span>Drag the image</span></div><input id="profileZoom" class="maker-range" type="range" min="1" max="3" step="0.01" value="1" /></div>
+              <div class="profile-action-row"><button class="profile-secondary-button" id="profileReset" type="button">Reset crop</button><span id="profileCropStatus">Upload an image to start.</span></div>
+              <button class="maker-export" id="profileExport" type="button"><span>Export square PNG</span><span class="maker-export-arrow" aria-hidden="true">↗</span></button>
+              <p class="maker-local-note">The image is read by this browser only. It is not sent to Feed Thumbnail, a server, or a third-party API.</p>
+            </section>
+            <section class="maker-preview profile-maker-preview" aria-labelledby="profile-preview-title">
+              <div class="maker-preview-head"><h2 id="profile-preview-title">Circle crop</h2><span>Square PNG</span></div>
+              <div class="maker-canvas-wrap profile-canvas-wrap"><canvas id="profileCanvas" class="maker-canvas profile-canvas" aria-label="Circular profile picture crop"></canvas></div>
+              <div class="profile-output-row">
+                <div class="profile-render-card"><span class="section-kicker">RENDERED PREVIEW</span><canvas id="profileRenderPreview" class="profile-render-preview" width="98" height="98" aria-label="Profile picture rendered at 98 by 98 pixels"></canvas><strong>98 × 98 px</strong></div>
+                <div class="profile-output-note"><span class="section-kicker">OUTPUT</span><p>Transparent corners stay outside the circular crop. The downloaded PNG has no site mark.</p></div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="profile-facts-section" aria-labelledby="profile-facts-title">
+          <div class="section-kicker">OFFICIAL PROFILE FACTS</div>
+          <h2 id="profile-facts-title">Use the rules without inventing an upload size.</h2>
+          <p class="profile-facts-lede">The official help page gives the rendered size, accepted file rules, and file limit. It does not state a recommended upload pixel size.</p>
+          <div class="profile-fact-grid">
+            <div class="profile-fact-card"><span>Rendered size</span><strong>98 × 98 px <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">YouTube Help — Manage your channel branding · reviewed 2026-09-15</a></strong><small>Official wording: image that renders at this size</small></div>
+            <div class="profile-fact-card"><span>Accepted formats</span><strong>JPG · GIF · BMP · PNG <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">YouTube Help — Manage your channel branding · reviewed 2026-09-15</a></strong><small>No animated GIFs</small></div>
+            <div class="profile-fact-card"><span>File limit</span><strong>15 MB max <a class="metric-cite" href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">YouTube Help — Manage your channel branding · reviewed 2026-09-15</a></strong><small>Official maximum file size</small></div>
+            <div class="profile-fact-card"><span>Upload pixel recommendation</span><strong>Not stated</strong><small>Not published on that official page</small></div>
+          </div>
+          <div class="maker-link-row"><a href="/youtube-profile-picture-size">Read profile picture size rules</a><a href="/">Open thumbnail preview</a></div>
+        </section>
+
+        <section class="maker-copy profile-maker-copy"><div class="maker-copy-grid"><div><div class="section-kicker">ONE LOCAL CROP</div><h2>Make a clean channel identity image.</h2><p>Whether you search for youtube profile picture creator, youtube profile pic maker, youtube channel picture maker, youtube profile picture generator, or youtube pfp maker, this page keeps the job simple: choose one local image, align the circle, and take the PNG.</p></div><div class="maker-steps"><div><span>01</span><p><strong>Choose one image.</strong> The browser reads the local file and keeps it on this device.</p></div><div><span>02</span><p><strong>Align the circle.</strong> Drag the image and use Zoom until the face, logo, or mark sits cleanly inside the crop.</p></div><div><span>03</span><p><strong>Export the PNG.</strong> The output is square, has transparent corners outside the crop, and carries no watermark.</p></div></div></div></section>
+
+        <section class="maker-faq profile-maker-faq"><div class="section-kicker">QUESTIONS</div><h2>YouTube profile picture maker FAQ</h2><div class="maker-faq-grid"><details open><summary>Does the image leave my device?</summary><p>No. The crop runs on a local browser canvas. This page does not upload the image or send it to an image API.</p></details><details><summary>What does the 98 × 98 preview show?</summary><p>It shows the official rendered size stated by YouTube Help. The official page does not state a recommended upload pixel canvas.</p></details><details><summary>Can I make a youtube pfp maker result here?</summary><p>Yes. A profile picture, profile pic, channel picture, PFP, and channel avatar are the same local crop job on this page.</p></details><details><summary>Can I process a batch?</summary><p>No. This page is intentionally for one local image at a time, so the crop stays easy to inspect on a phone.</p></details><details><summary>Does export add a watermark?</summary><p>No. Export creates a PNG from the browser canvas and does not add a Feed Thumbnail mark.</p></details></div></section>
+      </main>
+
+      <footer class="footer-note"><span>Thumbnail Tester</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a class="is-current" aria-current="page" href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><span>Built for fast, local decisions.</span><span class="footer-disclosure">Affiliate links may earn us a commission at no extra cost to you.</span></footer>
+    </div>
+    <script src="profile-maker.js"></script>
+  </body>
+</html>

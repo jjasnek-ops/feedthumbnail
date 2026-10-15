@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 444" role="img" aria-labelledby="title desc">
+  <title id="title">Three ways to frame a square image in a 16:9 thumbnail canvas</title>
+  <desc id="desc">Crop trims the top and bottom, fit keeps the square with side padding, and stretch distorts the square horizontally and vertically.</desc>
+  <rect width="1200" height="444" rx="26" fill="#f4f6fa"/>
+  <g font-family="Arial, sans-serif" fill="#141b2d">
+    <g transform="translate(28 24)">
+      <text x="170" y="28" text-anchor="middle" font-size="18" font-weight="700" letter-spacing="2">FILL / CROP</text>
+      <rect x="12" y="48" width="316" height="178" rx="14" fill="#dce6f1" stroke="#141b2d" stroke-width="3"/>
+      <rect x="88" y="48" width="164" height="178" fill="#ff795f" opacity=".22"/>
+      <rect x="88" y="48" width="164" height="24" fill="#ff795f" opacity=".7"/>
+      <rect x="88" y="202" width="164" height="24" fill="#ff795f" opacity=".7"/>
+      <circle cx="170" cy="137" r="47" fill="#6b8cff"/>
+      <circle cx="170" cy="137" r="13" fill="#fff"/>
+      <text x="170" y="258" text-anchor="middle" font-size="16" font-weight="700">Top and bottom are trimmed</text>
+      <text x="170" y="282" text-anchor="middle" font-size="14" fill="#647087">The frame is filled; edges are lost.</text>
+    </g>
+    <g transform="translate(428 24)">
+      <text x="170" y="28" text-anchor="middle" font-size="18" font-weight="700" letter-spacing="2">FIT / PADDING</text>
+      <rect x="12" y="48" width="316" height="178" rx="14" fill="#dce6f1" stroke="#141b2d" stroke-width="3"/>
+      <rect x="91" y="48" width="158" height="178" fill="#fff" stroke="#6b8cff" stroke-width="3"/>
+      <circle cx="170" cy="137" r="47" fill="#6b8cff"/>
+      <circle cx="170" cy="137" r="13" fill="#fff"/>
+      <path d="M52 137h28M260 137h28" stroke="#ff795f" stroke-width="4" stroke-linecap="round"/>
+      <text x="170" y="258" text-anchor="middle" font-size="16" font-weight="700">The whole square stays visible</text>
+      <text x="170" y="282" text-anchor="middle" font-size="14" fill="#647087">Side padding fills the wider canvas.</text>
+    </g>
+    <g transform="translate(828 24)">
+      <text x="170" y="28" text-anchor="middle" font-size="18" font-weight="700" letter-spacing="2">STRETCH</text>
+      <rect x="12" y="48" width="316" height="178" rx="14" fill="#dce6f1" stroke="#141b2d" stroke-width="3"/>
+      <ellipse cx="170" cy="137" rx="112" ry="63" fill="#6b8cff"/>
+      <ellipse cx="170" cy="137" rx="30" ry="17" fill="#fff"/>
+      <path d="M75 87l-13-12M265 87l13-12M75 187l-13 12M265 187l13 12" stroke="#ff795f" stroke-width="4" stroke-linecap="round"/>
+      <text x="170" y="258" text-anchor="middle" font-size="16" font-weight="700">Nothing is cropped or padded</text>
+      <text x="170" y="282" text-anchor="middle" font-size="14" fill="#647087">Unequal scaling changes the image shape.</text>
+    </g>
+    <text x="600" y="384" text-anchor="middle" font-size="14" fill="#647087">Concept diagram · all three canvases use the same 16:9 frame</text>
+  </g>
+</svg>

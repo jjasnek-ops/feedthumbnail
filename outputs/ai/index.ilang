@@ -1,0 +1,13 @@
+::ILANG::v1
+[TYPE:service_index][SITE:feedthumbnail.com][STATUS:public_read_only]
+[PURPOSE] Feed Thumbnail provides browser tools and concise, source-linked references for YouTube thumbnail and channel banner preparation.
+[PUBLIC_TASK] Look up the known thumbnail-size or banner-size reference, then cite its source_url and page_url.
+[LOOKUP] GET https://feedthumbnail.com/api/site-lookup?topic=youtube-thumbnail-size
+[LOOKUP] GET https://feedthumbnail.com/api/site-lookup?topic=youtube-banner-size
+[MCP] POST https://feedthumbnail.com/mcp with JSON-RPC methods initialize, tools/list, and tools/call.
+[SKILL] https://feedthumbnail.com/ai/skills/site-lookup/SKILL.md
+[OPENAPI] https://feedthumbnail.com/openapi.json
+[LIMITS] Only the two listed topics are supported. Unknown topics return not_found. No arbitrary URL fetch, account, private data, write action, or payment flow is available.
+[COMPOSITION] Preserve identifiers, qualifiers, dates, and source links. Answer in the visitor's language. If a fact is absent, say it is unknown instead of filling the gap.
+[PROVENANCE] Values are transcribed from the corresponding public Feed Thumbnail reference page, which links to the cited YouTube Help source. Review date: 2026-09-13.
+::ILANG::COMPLETE::

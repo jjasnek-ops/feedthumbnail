@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Make a YouTube thumbnail locally with a canvas, image background, headline controls, and PNG export." />
+    <link rel="canonical" href="https://feedthumbnail.com/youtube-thumbnail-maker" />
+    <title>YouTube Thumbnail Maker — Thumbnail Tester</title>
+    <link rel="stylesheet" href="styles.css?v=20260930-nav-wrap" />
+  </head>
+  <body data-maker="thumbnail">
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Thumbnail Tester home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>THUMBNAIL TESTER</span></a>
+        <nav class="site-nav" aria-label="Primary navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a class="is-current" aria-current="page" href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav>
+        <div class="privacy-note"><span class="status-dot"></span>Local only · no upload</div>
+      </header>
+
+      <main class="maker-page">
+        <section class="maker-tool-card" aria-labelledby="maker-title">
+          <div class="maker-heading">
+            <div><div class="eyebrow">YOUTUBE THUMBNAIL MAKER <span>08</span></div><h1 id="maker-title">Build a thumbnail in your browser.</h1><p class="maker-subtitle">Choose a local image, add a headline, move it into place, and export a clean PNG with this browser-based YouTube thumbnail generator. The editor works on this device without an account, upload, or watermark.</p></div>
+            <div class="maker-local-pill"><span class="status-dot"></span>Browser canvas</div>
+          </div>
+          <div class="maker-grid">
+            <section class="maker-controls" aria-label="Thumbnail maker controls">
+              <div class="maker-control-group"><div class="maker-control-label"><label for="makerImage">Background image</label><span id="makerImageStatus">Optional</span></div><label class="maker-file"><input id="makerImage" type="file" accept="image/png,image/jpeg,image/webp" />Choose a PNG, JPG, or WEBP image<br /><span>It stays in this browser.</span></label></div>
+              <div class="maker-control-group"><div class="maker-control-label"><label for="makerHeadline">Headline</label><span>Drag it on the canvas</span></div><input id="makerHeadline" class="maker-input" type="text" value="MAKE YOUR NEXT VIDEO CLEAR" autocomplete="off" /></div>
+              <div class="maker-control-group"><div class="maker-control-label"><label for="makerFontSize">Font size</label><span id="makerFontSizeValue"></span></div><input id="makerFontSize" class="maker-range" type="range" min="120" max="600" value="360" /></div>
+              <div class="maker-control-group"><div class="maker-control-label"><span>Text color</span><span>Local setting</span></div><input id="makerTextColor" class="maker-color" type="color" value="#ffffff" /></div>
+              <div class="maker-control-group"><div class="maker-control-label"><label for="makerPositionX">Position</label><span><b id="makerPositionXValue">10%</b> / <b id="makerPositionYValue">50%</b></span></div><input id="makerPositionX" class="maker-range" type="range" min="4" max="78" value="10" /><input id="makerPositionY" class="maker-range" type="range" min="8" max="92" value="50" /></div>
+              <div class="maker-control-group"><div class="maker-control-label"><span>Style presets</span><span>Choose a starting look</span></div><div class="maker-preset-list"><button class="maker-preset is-active" type="button" data-maker-preset="midnight">Midnight</button><button class="maker-preset" type="button" data-maker-preset="sunset">Sunset</button><button class="maker-preset" type="button" data-maker-preset="paper">Paper</button></div></div>
+              <button class="maker-export" id="makerExport" type="button"><span>Export PNG</span><span class="maker-export-arrow" aria-hidden="true">↗</span></button>
+              <p class="maker-local-note">This tool uses the browser canvas. Your image is not sent to this site or a third-party API.</p>
+            </section>
+            <section class="maker-preview" aria-labelledby="maker-preview-title"><div class="maker-preview-head"><h2 id="maker-preview-title">Live canvas</h2><span>3840 × 2160 · 16:9</span></div><div class="maker-canvas-wrap"><canvas id="makerCanvas" class="maker-canvas" aria-label="Editable thumbnail canvas"></canvas></div><div class="maker-preview-foot"><span>Official thumbnail guidance: 3840 × 2160, 16:9, minimum width 640.</span><a class="text-link" href="/youtube-thumbnail-size">See the source notes</a></div></section>
+          </div>
+        </section>
+        <section class="template-downloads" aria-labelledby="thumbnail-template-title">
+          <div class="template-download-copy">
+            <div class="section-kicker">EDITABLE TEMPLATE</div>
+            <h2 id="thumbnail-template-title">Start from an editable YouTube thumbnail template.</h2>
+            <p>Download a clean SVG starter at 1280 × 720, replace the sample text and visual layers, then bring the idea back into this browser editor for a final PNG export. This is a practical YouTube thumbnail template, not a locked image.</p>
+            <a class="template-download" href="/assets/youtube-thumbnail-template-1280x720.svg" download="youtube-thumbnail-template-1280x720.svg">Download editable SVG <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="template-specs" aria-label="Thumbnail template specifications">
+            <div><span>Starter canvas</span><strong>1280 × 720</strong></div>
+            <div><span>Shape</span><strong>16:9</strong></div>
+            <div><span>Editable layers</span><strong>Text · guides · accents</strong></div>
+            <div><span>Format</span><strong>SVG</strong></div>
+          </div>
+        </section>
+        <section class="maker-copy"><div class="maker-copy-grid"><div><div class="section-kicker">HOW TO USE IT</div><h2>Start with the image you already have.</h2><p>Choose a local background, write the promise of the video, then drag the headline until the composition reads at a glance. Export PNG when the canvas feels ready. Already have an image to resize first? Use the <a href="/youtube-thumbnail-resizer">YouTube thumbnail resizer</a> before adding a headline. The official dimensions shown here come from the site’s YouTube Help source note.</p><div class="maker-link-row"><a href="/">Open thumbnail preview</a><a href="/youtube-thumbnail-downloader">Download a source thumbnail</a><a href="/youtube-banner-maker">Make a channel banner</a><a href="/youtube-end-screen-template">Build an end screen template</a></div><div class="affiliate-placement" aria-label="Affiliate disclosure"><div class="section-kicker">PARTNER RESOURCE</div><p><a class="affiliate-link" href="https://www.tkqlhce.com/click-101884897-10504045" rel="sponsored noopener">Explore Corel creative software</a> <span class="affiliate-disclosure">Affiliate link: if you buy through this link, we may earn a commission at no extra cost to you.</span></p></div></div><div class="maker-steps"><div><span>01</span><p><strong>Choose an image.</strong> The file is read by this browser and used as the local canvas background.</p></div><div><span>02</span><p><strong>Shape the message.</strong> Edit the headline, change its size and color, and drag it on the canvas.</p></div><div><span>03</span><p><strong>Take the PNG.</strong> Export draws the final canvas without the guide or any site watermark.</p></div></div></div></section>
+        <section class="maker-faq"><div class="section-kicker">QUESTIONS</div><h2>Thumbnail maker FAQ</h2><div class="maker-faq-grid"><details open><summary>Does the image leave my device?</summary><p>No. The image is read into a local browser canvas. This page does not upload it or send it to an image API.</p></details><details><summary>What does the canvas target?</summary><p>The canvas uses the official site guidance shown above: 3840 × 2160 pixels, a 16:9 shape, and a minimum width of 640 pixels.</p></details><details><summary>How does this YouTube thumbnail generator use the editable template?</summary><p>It is the SVG starter above: a 1280 × 720 canvas with replaceable text, guides, and accent layers. Open it in a design editor, or use it as a visual starting point before rebuilding the idea in this local maker.</p></details><details><summary>Can I move the headline precisely?</summary><p>Yes. Drag directly on the canvas or use the two position sliders. The current headline, color, and size are redrawn locally.</p></details><details><summary>Does export add a watermark?</summary><p>No. The PNG is drawn from the canvas and does not add a Thumbnail Tester mark.</p></details></div></section>
+      </main>
+      <footer class="footer-note"><span>Thumbnail Tester</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><span>Built for fast, local decisions.</span><span class="footer-disclosure">Affiliate links may earn us a commission at no extra cost to you.</span></footer>
+    </div>
+    <script src="maker.js"></script>
+  </body>
+</html>

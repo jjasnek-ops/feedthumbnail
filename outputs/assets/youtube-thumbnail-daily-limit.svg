@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+  <title id="title">Separate a daily channel limit from an image-file issue</title>
+  <desc id="desc">A decision diagram. A daily custom thumbnail limit message leads to YouTube's retry guidance and channel context. A separate image-file issue leads to image requirement checks.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f8"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#7584a2"/></marker>
+  </defs>
+  <rect width="1200" height="500" rx="28" fill="url(#bg)"/>
+  <rect x="36" y="36" width="1128" height="428" rx="22" fill="#fff" stroke="#dce2eb"/>
+  <text x="76" y="91" fill="#7a879a" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">START WITH THE MESSAGE</text>
+  <rect x="76" y="125" width="1048" height="86" rx="15" fill="#17213d"/>
+  <text x="108" y="160" fill="#b8c3d9" font-family="Arial,sans-serif" font-size="16" font-weight="700">UPLOAD BLOCKED</text>
+  <text x="108" y="190" fill="#fff" font-family="Arial,sans-serif" font-size="22" font-weight="700">What exact message does Studio show?</text>
+  <path d="M600 211v36M600 247H330v27M600 247h270v27" fill="none" stroke="#7584a2" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="76" y="286" width="492" height="140" rx="16" fill="#fff4ee" stroke="#ffd2c3" stroke-width="2"/>
+  <text x="104" y="322" fill="#a3463c" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1">DAILY CHANNEL LIMIT</text>
+  <text x="104" y="354" fill="#17213d" font-family="Arial,sans-serif" font-size="17" font-weight="700">“Daily custom thumbnail limit reached”</text>
+  <text x="104" y="384" fill="#5d6b80" font-family="Arial,sans-serif" font-size="15">Use YouTube Help’s retry guidance;</text>
+  <text x="104" y="408" fill="#5d6b80" font-family="Arial,sans-serif" font-size="15">check channel context, not pixel count.</text>
+  <rect x="632" y="286" width="492" height="140" rx="16" fill="#eef1ff" stroke="#cbd4f4" stroke-width="2"/>
+  <text x="660" y="322" fill="#4358a8" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1">SEPARATE FILE CHECK</text>
+  <text x="660" y="354" fill="#17213d" font-family="Arial,sans-serif" font-size="17" font-weight="700">Dimensions, format, or file size?</text>
+  <text x="660" y="384" fill="#5d6b80" font-family="Arial,sans-serif" font-size="15">Review the relevant image requirement;</text>
+  <text x="660" y="408" fill="#5d6b80" font-family="Arial,sans-serif" font-size="15">a local edit cannot change channel limits.</text>
+  <text x="76" y="450" fill="#8894a5" font-family="Arial,sans-serif" font-size="12">Original diagram · not a YouTube Studio interface or account diagnosis</text>
+</svg>

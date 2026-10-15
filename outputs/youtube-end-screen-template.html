@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Edit a YouTube end screen template locally in your browser, move end-screen elements, check official placement limits, and export a PNG." />
+    <link rel="canonical" href="https://feedthumbnail.com/youtube-end-screen-template" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/icon.png" />
+    <title>YouTube End Screen Template — Feed Thumbnail</title>
+    <link rel="stylesheet" href="styles.css?v=20260930-nav-wrap" />
+  </head>
+  <body data-end-screen="true">
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Thumbnail Tester home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>THUMBNAIL TESTER</span></a>
+        <nav class="site-nav" aria-label="Primary navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a class="is-current" aria-current="page" href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav>
+        <div class="privacy-note"><span class="status-dot"></span>Local only · no upload</div>
+      </header>
+
+      <main class="end-screen-page">
+        <section class="end-screen-tool-card" aria-labelledby="end-screen-title">
+          <div class="end-screen-heading">
+            <div><div class="eyebrow">YOUTUBE END SCREEN TEMPLATE <span>10</span></div><h1 id="end-screen-title">Build an end screen that points somewhere.</h1><p class="end-screen-subtitle">Edit the words, colors, and element positions on a local 16:9 canvas. Export a clean PNG from this browser without an account, upload, or watermark.</p></div>
+            <div class="maker-local-pill"><span class="status-dot"></span>Browser canvas</div>
+          </div>
+          <div class="end-screen-grid">
+            <section class="end-screen-controls" aria-label="End screen template controls">
+              <div class="end-screen-control-group"><div class="end-screen-control-label"><label for="endHeadline">Headline</label><span>Edit the main message</span></div><input id="endHeadline" class="maker-input" type="text" value="WATCH WHAT COMES NEXT" autocomplete="off" /></div>
+              <div class="end-screen-control-group"><div class="end-screen-control-label"><label for="endSubtitle">Supporting line</label><span>Keep it short</span></div><input id="endSubtitle" class="maker-input" type="text" value="NEW VIDEOS EVERY WEEK" autocomplete="off" /></div>
+              <div class="end-screen-color-grid"><div class="end-screen-control-group"><div class="end-screen-control-label"><label for="endBackground">Background</label><span>Local color</span></div><input id="endBackground" class="maker-color" type="color" value="#182443" /></div><div class="end-screen-control-group"><div class="end-screen-control-label"><label for="endAccent">Accent</label><span>Local color</span></div><input id="endAccent" class="maker-color" type="color" value="#d8ff5a" /></div><div class="end-screen-control-group"><div class="end-screen-control-label"><label for="endTextColor">Text</label><span>Local color</span></div><input id="endTextColor" class="maker-color" type="color" value="#ffffff" /></div></div>
+              <div class="end-screen-elements-head"><div><div class="end-screen-control-label"><span>Element labels</span><span id="endElementCount">3 of 4</span></div><p>Drag each card on the canvas to change its position.</p></div><button id="addEndElement" class="end-screen-small-button" type="button">+ Add element</button></div>
+              <div id="endElementList" class="end-screen-element-list"></div>
+              <div id="endValidation" class="end-screen-validation is-ok" role="status" aria-live="polite"><span class="end-screen-validation-dot"></span><span id="endValidationText">Ready for a four-element standard 16:9 layout.</span></div>
+              <button class="maker-export" id="endExport" type="button"><span>Export PNG</span><span class="maker-export-arrow" aria-hidden="true">↗</span></button>
+              <p id="endExportStatus" class="end-screen-export-status" aria-live="polite">The guide is excluded from the exported image.</p>
+              <p class="maker-local-note">Everything is drawn in this browser. The template and your edits are not sent to this site or a third-party API.</p>
+            </section>
+            <section class="end-screen-preview maker-preview" aria-labelledby="end-preview-title"><div class="maker-preview-head"><h2 id="end-preview-title">Editable canvas</h2><span>1920 × 1080 · 16:9 · Page template canvas</span></div><div class="end-screen-canvas-wrap maker-canvas-wrap"><canvas id="endCanvas" class="maker-canvas end-screen-canvas" width="1920" height="1080" aria-label="Editable YouTube end screen template canvas"></canvas><div class="end-screen-canvas-note">Drag the cards to place them</div></div><div class="maker-preview-foot"><span>Official checks: last 5–20 seconds · up to 4 elements · video at least 25 seconds.</span><a class="text-link" href="https://support.google.com/youtube/answer/6388789?hl=en" rel="noopener">YouTube Help</a></div></section>
+          </div>
+        </section>
+
+        <section class="end-screen-rules" aria-labelledby="end-rules-title">
+          <div class="end-screen-rules-copy"><div class="section-kicker">OFFICIAL CHECKS</div><h2 id="end-rules-title">What the YouTube Help page actually says.</h2><p>These are the published rules this editor can keep visible while you work. The source page describes timing, element count, and video eligibility; it does not publish a pixel dimension for an end-screen artwork file.</p><a class="end-screen-source-link" href="https://support.google.com/youtube/answer/6388789?hl=en" rel="noopener">Read “Add end screens to videos” · reviewed September 17, 2026</a></div>
+          <div class="end-screen-rule-list">
+            <div><span>Timing</span><strong>Last 5–20 seconds</strong><small>Official YouTube Help · reviewed September 17, 2026</small></div>
+            <div><span>Element count</span><strong>Up to 4 elements for standard 16:9</strong><small>Official YouTube Help · reviewed September 17, 2026</small></div>
+            <div><span>Video length</span><strong>At least 25 seconds</strong><small>Official YouTube Help · reviewed September 17, 2026</small></div>
+            <div><span>Template canvas</span><strong>1920 × 1080 · page specification</strong><small>Not a pixel dimension published on the official end-screen Help page.</small></div>
+          </div>
+        </section>
+
+        <section class="end-screen-copy">
+          <div class="end-screen-copy-grid">
+            <div><div class="section-kicker">HOW TO USE IT</div><h2>Leave the viewer with a clear next move.</h2><p>Edit the headline and supporting line, choose a color treatment, then drag the editable cards to the positions you want. The guide shows the working canvas only; export removes the guide and saves the artwork as a PNG. The element limit check is an editor aid based on the official standard 16:9 rule, not a promise that every viewer will see an end screen.</p><div class="end-screen-link-row"><a href="/youtube-thumbnail-maker">Make a thumbnail</a><a href="/youtube-thumbnail-size">Read thumbnail size guidance</a></div></div>
+            <div class="end-screen-steps"><div><span>01</span><p><strong>Write the next step.</strong> Use one clear headline and a supporting line that tells viewers what to do.</p></div><div><span>02</span><p><strong>Place the cards.</strong> Drag each element on the canvas. The editor keeps the layout inside the artwork bounds.</p></div><div><span>03</span><p><strong>Export the still.</strong> Save a PNG of the editable composition. This page does not export a video file.</p></div></div>
+          </div>
+        </section>
+
+        <section class="end-screen-faq" aria-labelledby="end-faq-title"><div class="section-kicker">QUESTIONS</div><h2 id="end-faq-title">YouTube outro template FAQ</h2><div class="end-screen-faq-grid"><details open><summary>What can I edit in this YouTube end screen template?</summary><p>You can edit the headline, supporting line, colors, card labels, and card positions. Drag cards directly on the canvas to place them.</p></details><details><summary>Does this YouTube outro template export a video?</summary><p>No. It exports one PNG still of the template canvas. The YouTube video and end-screen timing are handled in YouTube Studio.</p></details><details><summary>How many elements can a standard 16:9 end screen use?</summary><p>YouTube Help says you can add up to four elements to an end screen for videos with a standard 16:9 aspect ratio. The editor keeps its element slots within that published limit.</p></details><details><summary>What is the YouTube end screen size?</summary><p>The official Help page used here explains timing and element rules but does not publish a pixel dimension for an end-screen artwork file. This page uses a 1920 × 1080 page template canvas, labeled as a page specification.</p></details><details><summary>Does my artwork leave the browser?</summary><p>No. This page uses a local canvas. It does not upload your edits, ask for an account, call a third-party API, or add a site watermark.</p></details></div></section>
+      </main>
+      <footer class="footer-note"><span>Thumbnail Tester</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><span>Built for fast, local decisions.</span><span class="footer-disclosure">Affiliate links may earn us a commission at no extra cost to you.</span></footer>
+    </div>
+    <script src="end-screen.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "site-lookup",
+      "type": "skill-md",
+      "description": "Retrieve the two known public YouTube thumbnail and channel banner specifications from Feed Thumbnail with source links and qualifiers preserved.",
+      "url": "https://feedthumbnail.com/ai/skills/site-lookup/SKILL.md",
+      "digest": "sha256:b3fa774ebad54ee4279849f2a61ddb8e77a1b2e18dc54473724b78ce9ee209f2"
+    }
+  ]
+}

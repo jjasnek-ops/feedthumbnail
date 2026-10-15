@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Does YouTube use CTR to choose an A/B thumbnail winner? Separate YouTube thumbnail size checks from the native watch-time result." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-ab-test-watch-time/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>Does YouTube Thumbnail Size Decide an A/B Test Winner? | Feed Thumbnail</title>
+    <style>
+      .metric-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .metric-figure img { display: block; width: 100%; height: auto; }
+      .metric-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .metric-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .metric-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .metric-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .metric-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .metric-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: metric-step; }
+      .metric-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: metric-step; }
+      .metric-steps li::before { content: counter(metric-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      .source-quote { margin: 18px 0; }
+      @media (max-width: 700px) { .metric-figure { padding: 9px; } .metric-grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL SIZE · FIELD NOTE</div>
+            <h1 id="article-title">Does YouTube thumbnail size decide an A/B test winner?</h1>
+            <p class="answer-lede"><strong>No. YouTube says its native A/B tests are optimized for overall watch time rather than click-through rate.</strong> YouTube thumbnail size still matters before the test because the A/B guidance names a resolution threshold. Keep the file check and the winner metric as two separate decisions.</p>
+            <p class="source-line">Official source: <a href="https://support.google.com/youtube/answer/16391400?hl=en" rel="noopener">A/B test titles &amp; thumbnails - YouTube Help</a>, reviewed 2026-10-10.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="metric-title" id="metric">
+            <div class="section-kicker">THE WINNER METRIC</div>
+            <h2 id="metric-title">What metric does YouTube use for the A/B test winner?</h2>
+            <p>The native YouTube test is not described as a simple click-through-rate contest. The official A/B testing help page says YouTube optimizes tests for overall watch time over other metrics, including click-through rate. That means a thumbnail that earns a click is not automatically the experiment winner if the resulting viewing behavior produces less watch time.</p>
+            <blockquote class="source-quote"><p>“We optimize tests for overall watch time over other metrics, like click-through-rate.”</p><cite>— <a href="https://support.google.com/youtube/answer/16391400?hl=en" rel="noopener">YouTube Help, A/B test titles &amp; thumbnails</a></cite></blockquote>
+            <p>This is a measurement rule, not a promise about a particular video. The same page explains that some tests can return “Performed Same” or “Inconclusive,” and that a clear winner may not appear when the alternatives are minimally different or the video has insufficient impressions. The source does not give a shortcut for predicting a result from the thumbnail canvas alone.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="size-title" id="size">
+            <div class="section-kicker">WHERE SIZE STILL MATTERS</div>
+            <h2 id="size-title">What does YouTube thumbnail size control before the test?</h2>
+            <p>Size is still a file-preparation question. YouTube’s A/B testing guidance says that if any experiment thumbnail is below 720p, written there as 1280 × 720, all experiment thumbnails are downscaled to 480p, written as 854 × 480. That rule describes how the experiment handles a low-resolution candidate; it does not choose the winner.</p>
+            <p>The general custom-thumbnail guidance is a separate source with a separate scope. For the broader recommendation, see the <a href="/youtube-thumbnail-size">YouTube thumbnail size notes</a>. For the experiment-specific consequence, see the earlier <a href="/guides/youtube-thumbnail-ab-test-resolution/">A/B resolution guide</a>. Keeping those pages separate prevents the downscaled outcome from being mistaken for a design target.</p>
+            <figure class="metric-figure">
+              <img src="/assets/youtube-thumbnail-ab-test-watch-time.svg" alt="A three-step diagram showing a local file check, a YouTube Studio A/B test, and a result based on overall watch time." width="1200" height="560" />
+              <figcaption>Original diagram. It separates local file evidence from the native experiment and its metric; it is not a YouTube Studio screenshot.</figcaption>
+            </figure>
+          </section>
+
+          <section class="guide-section" aria-labelledby="local-title" id="local-check">
+            <div class="section-kicker">A LOCAL PRE-TEST CHECK</div>
+            <h2 id="local-title">What can Feed Thumbnail check, and what can it not measure?</h2>
+            <p>Feed Thumbnail’s homepage is a local preview, not an analytics panel. Its public page accepts one thumbnail and one video title, switches between simulated desktop and phone feed layouts, changes the light or dark surface, and saves the current view as a PNG. The page explicitly says that the selected image stays in the browser.</p>
+            <p>The public <a href="/app.js">homepage script</a> updates the preview title and view labels in the document and keeps the selected image in browser state. It does not read YouTube Analytics, collect watch-time share, calculate click-through rate, or start a Studio experiment. That boundary is useful: the tool can help you inspect composition before publishing, but it cannot tell you which candidate will win.</p>
+            <div class="metric-grid">
+              <div><strong>File preparation</strong><span>Check the image and preview the title/layout locally before upload.</span></div>
+              <div><strong>Experiment control</strong><span>YouTube Studio runs the native A/B test and exposes its report.</span></div>
+              <div><strong>Winner signal</strong><span>The official page identifies overall watch time as the optimization focus.</span></div>
+            </div>
+          </section>
+
+          <section class="guide-section" aria-labelledby="workflow-title" id="workflow">
+            <div class="section-kicker">A CLEANER WORKFLOW</div>
+            <h2 id="workflow-title">How should you prepare a thumbnail A/B test?</h2>
+            <ol class="metric-steps">
+              <li><span><strong>Check the candidate files.</strong> Use a local tool to inspect the source image and preview its title and composition. This step produces file evidence, not a prediction.</span></li>
+              <li><span><strong>Keep the resolution rule in scope.</strong> If an experiment thumbnail is below the 720p threshold named by YouTube, the official page says all experiment thumbnails are downscaled to 480p.</span></li>
+              <li><span><strong>Run the native test in Studio.</strong> Upload the candidates and read the A/B report in the YouTube product that owns the experiment. A local preview cannot replace this step.</span></li>
+              <li><span><strong>Interpret the winner metric correctly.</strong> Read the result as an overall-watch-time optimization, not as a promise that the highest click-through rate will be selected.</span></li>
+            </ol>
+            <p class="source-line">This workflow is a practical separation of the official A/B-test guidance and the public first-party Feed Thumbnail implementation. It is not a prediction of any channel’s result.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="gap-title" id="comparison-gap">
+            <div class="section-kicker">WHY THIS DETAIL IS EASY TO MISS</div>
+            <h2 id="gap-title">What do the checked pages leave out?</h2>
+            <p>The specific LightX resizer page we read covers upload, a 1280 × 720 preset, custom units, editing, and JPG or PNG download. The specific Snappa page covers templates, editable graphics, dimensions, and download. The Reddit discussion we read is a creator conversation about Test &amp; Compare, timing, and community opinions about CTR, average view duration, and other signals. Those page texts do not state the official rule that YouTube optimizes its native test for overall watch time over click-through rate.</p>
+            <p>That is the useful gap for a YouTube thumbnail size guide: a size tool answers whether a file is prepared for upload, while the official A/B page answers how the native test is optimized. A local canvas check can be precise about the file without pretending to be an experiment report.</p>
+            <p>This comparison is limited to the three pages actually opened for this article. It is not a site-wide claim about every page on those domains, and it is not a ranking claim.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title">
+            <div class="section-kicker">QUESTIONS</div>
+            <h2 id="faq-title">YouTube thumbnail size and A/B test questions</h2>
+            <div class="faq-grid">
+              <details open><summary>Does the highest CTR automatically win?</summary><p>No. The official A/B testing page says the native test is optimized for overall watch time over other metrics such as click-through rate.</p></details>
+              <details><summary>Does reaching 1280 × 720 guarantee a winner?</summary><p>No. The 720p rule describes resolution handling. It does not guarantee a winner or predict the watch-time result.</p></details>
+              <details><summary>Can Feed Thumbnail run the YouTube experiment?</summary><p>No. Feed Thumbnail previews a local image and title and saves the current view as a PNG. It does not access YouTube Analytics or start a Studio test.</p></details>
+              <details><summary>Why might a test return no clear winner?</summary><p>YouTube says a minimal difference between candidates or insufficient impressions can make a clear winner less likely. The page also lists “Performed Same” and “Inconclusive” outcomes.</p></details>
+              <details><summary>Can third-party test results match YouTube’s result?</summary><p>Not necessarily. YouTube says its native tests show variations concurrently, while many third-party tests run sequentially and may optimize for click-through rate instead.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Keep the file check separate from the metric</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/16391400?hl=en" rel="noopener">YouTube Help: A/B test titles &amp; thumbnails</a> is the source for the overall-watch-time wording, the click-through-rate comparison, the 720p experiment rule, and the notes about concurrent tests and inconclusive outcomes. Reviewed 2026-10-10.</p>
+              <p><a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">YouTube Help: Add custom thumbnails on YouTube</a> is the separate source for general thumbnail-size guidance. It is not used here as evidence for the A/B winner metric. Reviewed 2026-10-10.</p>
+              <p><a href="/app.js">Feed Thumbnail’s public homepage script</a> is the first-party implementation source for local title binding, view/theme state, and browser-side preview behavior. It is not a YouTube Analytics source.</p>
+              <p>For the direct tool, open the <a href="/">local YouTube feed preview</a>. For the broader size table, read <a href="/youtube-thumbnail-size">YouTube thumbnail size</a>.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>

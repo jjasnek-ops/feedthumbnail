@@ -1,0 +1,10 @@
+.wrangler/
+work/
+public-repo/
+.codex/
+node_modules/
+.env
+.env.*
+*.pem
+*.key
+```

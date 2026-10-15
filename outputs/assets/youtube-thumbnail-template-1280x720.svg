@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Editable YouTube thumbnail starter template</title>
+  <desc id="desc">A 1280 by 720 editable thumbnail starter with replaceable headline text, a safe composition guide, and accent layers.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10182c"/>
+      <stop offset="0.58" stop-color="#304c8d"/>
+      <stop offset="1" stop-color="#ff775f"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0.15" cy="0.1" r="0.8">
+      <stop offset="0" stop-color="#d8ff5a" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#d8ff5a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1.5"/>
+    </pattern>
+  </defs>
+  <rect id="background-layer" width="1280" height="720" fill="url(#background)"/>
+  <rect id="light-layer" width="1280" height="720" fill="url(#light)"/>
+  <rect id="grid-layer" width="1280" height="720" fill="url(#grid)"/>
+  <circle id="accent-circle" cx="1100" cy="145" r="132" fill="#d8ff5a" fill-opacity="0.13"/>
+  <circle cx="1100" cy="145" r="88" fill="none" stroke="#d8ff5a" stroke-opacity="0.35" stroke-width="3"/>
+  <rect id="headline-panel" x="70" y="190" width="790" height="315" rx="22" fill="#0b1020" fill-opacity="0.34"/>
+  <rect id="composition-guide" x="52" y="52" width="1176" height="616" rx="18" fill="none" stroke="#d8ff5a" stroke-opacity="0.55" stroke-width="3" stroke-dasharray="14 12"/>
+  <text id="eyebrow" x="110" y="260" fill="#d8ff5a" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" letter-spacing="5">YOUR TOPIC</text>
+  <text id="headline-line-one" x="110" y="350" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="900" letter-spacing="-2">REPLACE THIS</text>
+  <text id="headline-line-two" x="110" y="435" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="900" letter-spacing="-2">HEADLINE</text>
+  <text id="accent-label" x="110" y="480" fill="#d8ff5a" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="4">MAKE THE PROMISE CLEAR</text>
+  <text id="guide-label" x="640" y="635" text-anchor="middle" fill="#ffffff" fill-opacity="0.68" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" letter-spacing="4">EDITABLE 1280 × 720 STARTER TEMPLATE</text>
+</svg>

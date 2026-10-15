@@ -1,0 +1,12 @@
+{
+  "status": "under_construction",
+  "available": false,
+  "capabilities_status": "planned_contract_only",
+  "message": "Coming soon. Existing public lookup remains available without authentication.",
+  "launch_date": null,
+  "resource": "https://feedthumbnail.com",
+  "planned_resource_endpoint": "https://feedthumbnail.com/agent-auth/resource",
+  "authorization_servers": ["https://feedthumbnail.com"],
+  "scopes_supported": ["site:read"],
+  "bearer_methods_supported": ["header"]
+}

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">YouTube thumbnail size rules for an A/B test</title>
+  <desc id="desc">A comparison diagram showing the general recommended video thumbnail canvas, the A/B test threshold, and the downscaled experiment canvas when a test thumbnail is below the threshold.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#eef2f6"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#141b2d" flood-opacity=".14"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#ff795f"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="520" rx="28" fill="url(#bg)"/>
+  <text x="48" y="58" fill="#78849a" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">THUMBNAIL SIZE · A/B TEST</text>
+  <path d="M48 84 H1152" stroke="#dce2ea" stroke-width="2"/>
+  <g filter="url(#shadow)">
+    <rect x="52" y="132" width="326" height="286" rx="22" fill="#fff" stroke="#dce2ea"/>
+    <rect x="437" y="132" width="326" height="286" rx="22" fill="#fff" stroke="#dce2ea"/>
+    <rect x="822" y="132" width="326" height="286" rx="22" fill="#fff" stroke="#dce2ea"/>
+  </g>
+  <g font-family="Arial, sans-serif">
+    <rect x="80" y="168" width="270" height="128" rx="12" fill="#6b8cff" opacity=".18" stroke="#6b8cff" stroke-width="3"/>
+    <text x="215" y="216" text-anchor="middle" fill="#141b2d" font-size="20" font-weight="800">General video guide</text>
+    <text x="215" y="250" text-anchor="middle" fill="#40579b" font-size="22" font-weight="800">3840 × 2160</text>
+    <text x="215" y="278" text-anchor="middle" fill="#647087" font-size="14">YouTube recommendation</text>
+    <text x="80" y="344" fill="#647087" font-size="16">Use for the general upload check.</text>
+    <text x="80" y="370" fill="#647087" font-size="16">It is not the A/B threshold.</text>
+
+    <rect x="465" y="168" width="270" height="128" rx="12" fill="#d8ff5a" opacity=".54" stroke="#a9c93c" stroke-width="3"/>
+    <text x="600" y="216" text-anchor="middle" fill="#141b2d" font-size="20" font-weight="800">A/B test threshold</text>
+    <text x="600" y="250" text-anchor="middle" fill="#50641b" font-size="22" font-weight="800">1280 × 720</text>
+    <text x="600" y="278" text-anchor="middle" fill="#647087" font-size="14">720p · official test rule</text>
+    <text x="465" y="344" fill="#647087" font-size="16">Check every test candidate here.</text>
+    <text x="465" y="370" fill="#647087" font-size="16">One lower file affects the test.</text>
+
+    <rect x="850" y="168" width="270" height="128" rx="12" fill="#ff795f" opacity=".18" stroke="#ff795f" stroke-width="3"/>
+    <text x="985" y="216" text-anchor="middle" fill="#141b2d" font-size="20" font-weight="800">Downscaled result</text>
+    <text x="985" y="250" text-anchor="middle" fill="#a94736" font-size="22" font-weight="800">854 × 480</text>
+    <text x="985" y="278" text-anchor="middle" fill="#647087" font-size="14">480p · all test thumbnails</text>
+    <text x="850" y="344" fill="#647087" font-size="16">This is the official consequence,</text>
+    <text x="850" y="370" fill="#647087" font-size="16">not a performance prediction.</text>
+  </g>
+  <path d="M390 232 H425" stroke="#ff795f" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M775 232 H810" stroke="#ff795f" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <text x="600" y="476" text-anchor="middle" fill="#647087" font-family="Arial, sans-serif" font-size="15">Original diagram based on the two official YouTube Help pages; it is not a Studio screenshot.</text>
+</svg>

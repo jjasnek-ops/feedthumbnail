@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="0 0 2560 1440" role="img" aria-labelledby="title desc">
+  <title id="title">YouTube banner template with safe area</title>
+  <desc id="desc">An editable 2560 by 1440 YouTube banner template with a centered 1235 by 338 safe-area guide.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#11182b"/>
+      <stop offset="0.55" stop-color="#263f78"/>
+      <stop offset="1" stop-color="#ff795f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.2" cy="0.15" r="0.8">
+      <stop offset="0" stop-color="#cfff4a" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#cfff4a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#fff" stroke-opacity="0.09" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="2560" height="1440" fill="url(#bg)"/>
+  <rect width="2560" height="1440" fill="url(#glow)"/>
+  <rect width="2560" height="1440" fill="url(#grid)"/>
+  <circle cx="2240" cy="250" r="330" fill="#cfff4a" fill-opacity="0.12"/>
+  <circle cx="2240" cy="250" r="220" fill="none" stroke="#cfff4a" stroke-opacity="0.28" stroke-width="4"/>
+  <rect x="662.5" y="551" width="1235" height="338" rx="18" fill="#0b1020" fill-opacity="0.12" stroke="#cfff4a" stroke-width="6" stroke-dasharray="24 18"/>
+  <text x="1280" y="690" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="700" letter-spacing="4">YOUR CHANNEL NAME</text>
+  <text x="1280" y="790" text-anchor="middle" fill="#cfff4a" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" letter-spacing="8">REPLACE THIS TEXT</text>
+  <text x="1280" y="520" text-anchor="middle" fill="#fff" fill-opacity="0.86" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="5">SAFE AREA · 1235 × 338</text>
+  <text x="1280" y="1360" text-anchor="middle" fill="#fff" fill-opacity="0.7" font-family="Arial, Helvetica, sans-serif" font-size="28" letter-spacing="4">EDITABLE 2560 × 1440 STARTER TEMPLATE</text>
+</svg>

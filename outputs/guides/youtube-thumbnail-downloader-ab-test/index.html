@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Save a YouTube thumbnail file before changing an active A/B test, with a clear boundary between local download and YouTube Studio experiment state." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-downloader-ab-test/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>YouTube Thumbnail Downloader Before an A/B Test Change | Feed Thumbnail</title>
+    <style>
+      .handoff-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .handoff-figure img { display: block; width: 100%; height: auto; }
+      .handoff-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .boundary-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .boundary-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .boundary-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .boundary-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .handoff-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: handoff-step; }
+      .handoff-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: handoff-step; }
+      .handoff-steps li::before { content: counter(handoff-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      .source-quote { margin: 18px 0; }
+      @media (max-width: 500px) { .handoff-figure { padding: 9px; } .boundary-grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL DOWNLOADER · FIELD NOTE</div>
+            <h1 id="article-title">Can you download a YouTube thumbnail before changing an A/B test?</h1>
+            <p class="answer-lede"><strong>Yes: save the available thumbnail file before changing the video's title or thumbnail in YouTube Studio.</strong> YouTube says a title or thumbnail change during an active A/B test stops the test and requires a restart. Feed Thumbnail can save image files that load for a video link, but it does not read the experiment state or report a winning variation.</p>
+            <p class="source-line">Official source: <a href="https://support.google.com/youtube/answer/16391400?hl=en" rel="noopener">A/B test titles &amp; thumbnails - YouTube Help</a>, “Run an A/B test,” reviewed 2026-10-08.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="rule-title" id="official-rule">
+            <div class="section-kicker">THE ORDER MATTERS</div>
+            <h2 id="rule-title">Why save the thumbnail before editing the test?</h2>
+            <p>The official rule is about what happens inside YouTube Studio, not about downloading a file. YouTube’s step five says:</p>
+            <blockquote class="source-quote"><p>“If a video’s title or thumbnail is changed during the test, the test will automatically stop. Then, you will need to restart the A/B test.”</p><cite>— <a href="https://support.google.com/youtube/answer/16391400?hl=en" rel="noopener">YouTube Help, A/B test titles &amp; thumbnails</a></cite></blockquote>
+            <p>That makes the file handoff a sensible first step: keep the current Studio test unchanged, save the image you need, and only then decide whether the video needs a new title or thumbnail. The save itself is not an experiment action. It is a local copy of an image file that the downloader can reach.</p>
+            <figure class="handoff-figure">
+              <img src="/assets/youtube-thumbnail-ab-test-handoff.svg" alt="Three steps: keep the YouTube Studio test unchanged, save the available thumbnail file in the browser, then restart the test if the title or thumbnail changes." width="1200" height="480" />
+              <figcaption>Original workflow diagram. It separates a local file handoff from the YouTube Studio rule; it is not a Studio screen or an experiment result.</figcaption>
+            </figure>
+          </section>
+
+          <section class="guide-section" aria-labelledby="downloader-title" id="downloader-boundary">
+            <div class="section-kicker">WHAT THIS DOWNLOADER ACTUALLY DOES</div>
+            <h2 id="downloader-title">A YouTube thumbnail downloader is a file check, not a test reader</h2>
+            <p>Feed Thumbnail’s public downloader script parses a YouTube watch link, short link, Shorts link, live link, embed link, or an 11-character video ID in the browser. It then builds direct image URLs from that ID and checks the image files that load. The page does not send the link to a site-side form.</p>
+            <p>The script declares five candidate filenames: <code>maxresdefault.jpg</code>, <code>sddefault.jpg</code>, <code>hqdefault.jpg</code>, <code>mqdefault.jpg</code>, and <code>default.jpg</code>. A result card remains only when its image fires a successful load event. Each surviving card reports the image’s natural width and height, and gives you a Save image action. That is why the result is best read as “available file checked in this browser,” not as a promise that every possible thumbnail version exists.</p>
+            <p>Preview in tool is a separate local handoff. The browser fetches the selected direct image, places the resulting data in session storage, and opens the local preview page. The public script does not sign in to YouTube Studio, read an A/B test, inspect watch-time share, or decide which variation won. Those boundaries are observable in <a href="/downloader.js">the public downloader script</a>, not inferred from a marketing label.</p>
+            <div class="boundary-grid">
+              <div><strong>It can do</strong><span>Check which direct image files load for a supplied video ID, show their natural dimensions, save a file, or hand one image to the local preview.</span></div>
+              <div><strong>It cannot do</strong><span>Read the Studio experiment state, preserve a private test record, compare watch-time results, or tell you which A/B variation won.</span></div>
+            </div>
+          </section>
+
+          <section class="guide-section" aria-labelledby="workflow-title" id="workflow">
+            <div class="section-kicker">A LOW-RISK HANDOFF</div>
+            <h2 id="workflow-title">How to use the downloader around a live test</h2>
+            <ol class="handoff-steps">
+              <li><span><strong>Leave the test alone first.</strong> Do not edit the title or thumbnail in Studio while the A/B test is running if you intend to keep that test active.</span></li>
+              <li><span><strong>Paste the video link.</strong> Open the <a href="/youtube-thumbnail-downloader">YouTube thumbnail downloader</a> and paste one video URL or ID. The page checks the input in your browser.</span></li>
+              <li><span><strong>Read the cards, not the labels alone.</strong> The tool removes image cards that fail to load and prints the dimensions read from the loaded image. Save the file you actually need.</span></li>
+              <li><span><strong>Make any Studio change only after the handoff.</strong> If you change the title or thumbnail during the active test, use YouTube’s documented restart path; the page says the test stops automatically.</span></li>
+              <li><span><strong>Use local preview for composition.</strong> If you want to inspect the saved file before a new upload, send it to the <a href="/">local feed preview</a> or the <a href="/youtube-thumbnail-resizer">thumbnail resizer</a>. That checks the file and layout; it does not replace YouTube’s experiment report.</span></li>
+            </ol>
+            <p class="source-line">The workflow above combines the official Studio rule with the observed behavior of Feed Thumbnail’s browser-only downloader and local preview code. It is a practical separation of responsibilities, not a claim that downloading affects test performance.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="limits-title" id="limits">
+            <div class="section-kicker">BOUNDARIES THAT MATTER</div>
+            <h2 id="limits-title">What a saved thumbnail does not prove</h2>
+            <p>A saved file does not prove that it was the first A/B variation, the winning variation, or the version currently shown to every viewer. It also does not prove that a missing filename was ever available. In this tool, a missing card means that the direct image request did not produce a loaded image in this run.</p>
+            <p>Likewise, a local preview is not a YouTube Studio test. Feed Thumbnail can show the image in a simulated feed and export a local PNG, while YouTube’s own A/B test compares concurrent title or thumbnail options and reports results in Studio. Keep those outputs named differently in your workflow: “downloaded file,” “local preview,” and “Studio test result” are not interchangeable.</p>
+            <p>If the goal is to keep an experiment intact, the official source remains the authority for the experiment state. If the goal is to keep a copy of a public thumbnail before making a change, the downloader is the narrow tool for that file step.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title">
+            <div class="section-kicker">QUESTIONS</div>
+            <h2 id="faq-title">YouTube thumbnail downloader and A/B test questions</h2>
+            <div class="faq-grid">
+              <details open><summary>Does downloading a thumbnail stop an A/B test?</summary><p>The cited YouTube Help rule says changing a video’s title or thumbnail during the test stops it. Feed Thumbnail’s downloader only checks image URLs in the browser; it does not edit the Studio video or test.</p></details>
+              <details><summary>Can the downloader show the A/B test winner?</summary><p>No. The tool reports files that load and their natural dimensions. YouTube Studio is the place to review the experiment state and result.</p></details>
+              <details><summary>Can a missing file be treated as proof that the variation never existed?</summary><p>No. The downloader removes a result card when the direct image does not load in that run. That is a file-availability observation, not a historical archive.</p></details>
+              <details><summary>Can I preview the saved file before uploading again?</summary><p>Yes. Use Preview in tool on a result card or open the local feed preview. The preview is for layout checking and does not report YouTube experiment performance.</p></details>
+              <details><summary>Where is the A/B rule documented?</summary><p>Read YouTube Help’s “A/B test titles &amp; thumbnails,” under “Run an A/B test,” step five. The page says a title or thumbnail change during the test stops the test and requires a restart.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Keep the official rule and local tool boundary separate</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/16391400?hl=en" rel="noopener">YouTube Help: A/B test titles &amp; thumbnails</a> is the source for the stop-and-restart rule. The “Run an A/B test” section was reviewed 2026-10-08.</p>
+              <p><a href="/youtube-thumbnail-downloader">Feed Thumbnail’s downloader page</a> and its <a href="/downloader.js">public script</a> are the sources for the browser-side URL parsing, loaded-file filtering, natural-dimension display, save action, and local preview handoff.</p>
+              <p><a href="/youtube-thumbnail-resizer">Feed Thumbnail’s thumbnail resizer</a> is linked as a separate local file check. None of these local tools is a YouTube Studio A/B-test report.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>

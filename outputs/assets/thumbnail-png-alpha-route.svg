@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Transparent PNG to opaque JPG in the local resizer</title>
+  <desc id="desc">A checkerboard transparent source is drawn over a selected background color, then saved as an opaque JPG. The diagram describes Feed Thumbnail's local code only.</desc>
+  <defs>
+    <pattern id="checks" width="28" height="28" patternUnits="userSpaceOnUse">
+      <rect width="28" height="28" fill="#fff"/>
+      <rect width="14" height="14" fill="#d9e0ea"/>
+      <rect x="14" y="14" width="14" height="14" fill="#d9e0ea"/>
+    </pattern>
+    <marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto">
+      <path d="M0 0 11 5.5 0 11z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="430" rx="24" fill="#f4f7fb"/>
+  <text x="55" y="58" fill="#667085" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="3">LOCAL RESIZER EXPORT PATH</text>
+  <g transform="translate(60 105)">
+    <rect width="300" height="240" rx="20" fill="#fff" stroke="#d5dde8" stroke-width="2"/>
+    <rect x="25" y="25" width="250" height="150" rx="12" fill="url(#checks)"/>
+    <circle cx="150" cy="100" r="47" fill="#ff795f"/>
+    <text x="150" y="205" text-anchor="middle" fill="#182033" font-family="Arial, sans-serif" font-size="20" font-weight="700">PNG source with alpha</text>
+  </g>
+  <path d="M400 225h140" fill="none" stroke="#64748b" stroke-width="5" marker-end="url(#arrow)"/>
+  <g transform="translate(580 105)">
+    <rect width="300" height="240" rx="20" fill="#fff" stroke="#d5dde8" stroke-width="2"/>
+    <rect x="25" y="25" width="250" height="150" rx="12" fill="#263449"/>
+    <circle cx="150" cy="100" r="47" fill="#ff795f"/>
+    <text x="150" y="205" text-anchor="middle" fill="#182033" font-family="Arial, sans-serif" font-size="20" font-weight="700">Draw over chosen color</text>
+  </g>
+  <path d="M920 225h105" fill="none" stroke="#64748b" stroke-width="5" marker-end="url(#arrow)"/>
+  <g transform="translate(1040 142)">
+    <rect width="118" height="166" rx="17" fill="#fff" stroke="#d5dde8" stroke-width="2"/>
+    <path d="M28 38h62M28 58h62M28 78h45" stroke="#96a1b2" stroke-width="6" stroke-linecap="round"/>
+    <rect x="19" y="101" width="80" height="42" rx="12" fill="#172033"/>
+    <text x="59" y="128" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="18" font-weight="700">JPG</text>
+  </g>
+  <text x="600" y="393" text-anchor="middle" fill="#526176" font-family="Arial, sans-serif" font-size="16">This is the site's canvas export behavior — not a claim about YouTube's post-upload rendering.</text>
+</svg>

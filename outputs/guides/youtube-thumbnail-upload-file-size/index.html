@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Check the YouTube thumbnail file-size limit for the upload device and content type, with the official guidance and a local export check." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-upload-file-size/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>Which YouTube Thumbnail File Size Limit Applies? | Feed Thumbnail</title>
+    <style>
+      .limit-table-wrap { overflow-x: auto; margin-top: 18px; }
+      .limit-table { width: 100%; min-width: 590px; border-collapse: collapse; background: rgba(255,255,255,.72); }
+      .limit-table th, .limit-table td { padding: 13px 14px; border-bottom: 1px solid #dce2eb; text-align: left; vertical-align: top; line-height: 1.55; }
+      .limit-table th { color: #141b2d; font-size: 12px; }
+      .limit-table td { color: #56647a; font-size: 13px; }
+      .limit-table td strong { color: #141b2d; }
+      .limit-callout { margin-top: 19px; padding: 17px 19px; border-left: 4px solid #ff795f; border-radius: 0 14px 14px 0; background: rgba(255,255,255,.72); color: #56647a; line-height: 1.65; }
+      .upload-route-figure { margin: 23px 0 0; padding: 15px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .upload-route-figure img { display: block; width: 100%; height: auto; }
+      .upload-route-figure figcaption { margin: 8px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .route-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: route-step; }
+      .route-steps li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; }
+      .route-steps li { counter-increment: route-step; }
+      .route-steps li::before { content: counter(route-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      @media (max-width: 500px) { .limit-table th, .limit-table td { padding: 11px 10px; } .upload-route-figure { padding: 10px; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">UPLOAD LIMITS · FIELD NOTE</div>
+            <h1 id="article-title">Which YouTube thumbnail file size limit applies to your upload?</h1>
+            <p class="answer-lede"><strong>Use the upload device and content type together.</strong> YouTube Help lists a 2 MB limit for video thumbnails uploaded on mobile, 10 MB for podcast thumbnails uploaded on mobile, and 50 MB for video, Shorts, and podcast thumbnails uploaded on desktop. Its current help page says custom Shorts thumbnails can only be added in YouTube Studio on a computer.</p>
+            <p class="source-line">Official source: <a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">Add custom thumbnails on YouTube - Computer - YouTube Help</a>, “Image size &amp; resolution”; reviewed 2026-09-30.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="limits-title" id="official-upload-limits">
+            <div class="section-kicker">THE OFFICIAL LIMITS</div>
+            <h2 id="limits-title">Match the limit to the upload route</h2>
+            <p>The official guidance says file-size limits depend on the device used for upload. Read each row as one combination of upload device and thumbnail type; do not treat the mobile video value as a universal cap for every YouTube thumbnail.</p>
+            <div class="limit-table-wrap">
+              <table class="limit-table">
+                <thead><tr><th scope="col">Upload context</th><th scope="col">YouTube Help file-size guidance</th><th scope="col">What the page specifies</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Mobile · video thumbnail</th><td><strong>Under 2 MB</strong></td><td>Mobile video-thumbnail upload.</td></tr>
+                  <tr><th scope="row">Mobile · podcast thumbnail</th><td><strong>Under 10 MB</strong></td><td>Mobile podcast-thumbnail upload.</td></tr>
+                  <tr><th scope="row">Desktop · video, Shorts, or podcast thumbnail</th><td><strong>Under 50 MB</strong></td><td>The desktop row names all three thumbnail types.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="source-line">Source for every row: <a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">YouTube Help</a>, “Image size &amp; resolution”; reviewed 2026-09-30. The help page also recommends square artwork for podcast playlists and a 9:16 ratio for Shorts.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="route-title" id="source-backed-route">
+            <div class="section-kicker">A PRACTICAL ROUTE CHECK</div>
+            <h2 id="route-title">Choose the upload path before exporting</h2>
+            <p>Start with where the file will be uploaded, not just with the file you already have. A file below one listed limit is not automatically suitable for every thumbnail type: YouTube Help separately describes image dimensions, formats, aspect ratios, and device-specific size limits.</p>
+            <figure class="upload-route-figure">
+              <img src="/assets/thumbnail-upload-route.svg" alt="A decision diagram maps video, podcast, and Shorts thumbnails to the upload device and the matching YouTube Help size limit." width="1200" height="510" />
+              <figcaption>Original route diagram based on the device-and-thumbnail-type rows in YouTube Help.</figcaption>
+            </figure>
+            <ol class="route-steps">
+              <li><span><strong>For a regular video thumbnail uploaded from a phone,</strong> check the mobile video row. Our local resizer is designed around that under-2-MB check and exports a JPG from its 16:9 canvas.</span></li>
+              <li><span><strong>For a regular video thumbnail uploaded from a computer,</strong> use the desktop row. The official file-size ceiling is different from the mobile video value; a small file is allowed by that size rule, but the ceiling itself is not a quality target.</span></li>
+              <li><span><strong>For podcast artwork,</strong> use the podcast row for the device you will upload from. YouTube Help recommends a 1:1 image for podcast playlists; the Feed Thumbnail resizer is a 16:9 video-thumbnail tool, so it is not a podcast-artwork preset.</span></li>
+              <li><span><strong>For a Shorts thumbnail,</strong> the current YouTube Help page says adding a custom one is available in YouTube Studio on a computer, and its desktop size row includes Shorts. The same page separately recommends a 9:16 ratio.</span></li>
+              <li><span><strong>Read the local check narrowly:</strong> the <a href="/youtube-thumbnail-resizer">Feed Thumbnail resizer</a> retries its browser-generated JPG at lower quality settings when the first result is above its mobile-video target, then reports whether its final attempt remains above that target. It does not upload the image or test YouTube’s uploader.</span></li>
+            </ol>
+            <p class="limit-callout"><strong>What a green size check means:</strong> the exported file passed this tool’s local size check. It is not a YouTube upload receipt and does not confirm the file’s eligibility, framing, account status, or any other requirement.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="questions-title">
+            <div class="section-kicker">CREATOR QUESTIONS</div>
+            <h2 id="questions-title">Which file-size question should you ask?</h2>
+            <div class="faq-grid">
+              <details open><summary>Is 2 MB the limit for every YouTube thumbnail?</summary><p>No. YouTube Help separates mobile from desktop uploads and also lists a different mobile limit for podcast thumbnails. Pick the row that matches both the upload device and the content type.</p></details>
+              <details><summary>Can I add a custom Shorts thumbnail from my phone?</summary><p>The current YouTube Help page says custom Shorts thumbnails are currently only available to add in YouTube Studio on a computer. Its desktop file-size row includes Shorts.</p></details>
+              <details><summary>Does “under the limit” guarantee that YouTube will accept my image?</summary><p>No. A local file-size check only checks file size. Review YouTube Help’s separate image-size, format, aspect-ratio, account, and upload instructions for your situation.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">What is official, and what is this site checking?</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">YouTube Help: Add custom thumbnails on YouTube</a> is the source for the upload-size, Shorts workflow, image-format, and aspect-ratio statements on this page. The cited “Image size &amp; resolution” section was reviewed 2026-09-30.</p>
+              <p>The local behavior described here was checked against <a href="/youtube-thumbnail-resizer">the resizer page</a> and its current browser-side export logic. Images are handled in the browser; the page does not call YouTube’s upload endpoint.</p>
+              <p>For the canvas recommendation and other thumbnail facts, see the <a href="/youtube-thumbnail-size">YouTube thumbnail size notes</a>. This guide does not estimate a file’s final quality or claim that one upload route improves image quality.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>

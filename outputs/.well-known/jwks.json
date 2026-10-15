@@ -1,0 +1,7 @@
+{
+  "status": "under_construction",
+  "available": false,
+  "capabilities_status": "planned_contract_only",
+  "message": "No token validation is available; this disabled key set is not a working authentication configuration.",
+  "keys": []
+}

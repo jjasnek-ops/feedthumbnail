@@ -1,0 +1,23 @@
+# Feed Thumbnail full machine-readable overview
+
+## Purpose
+
+Feed Thumbnail helps creators preview local thumbnails, retrieve YouTube thumbnail images, build thumbnails and channel banners in the browser, and consult source-linked size references.
+
+## Public lookup task
+
+Use `GET https://feedthumbnail.com/api/site-lookup?topic=youtube-thumbnail-size` for the video-thumbnail reference or `GET https://feedthumbnail.com/api/site-lookup?topic=youtube-banner-size` for the channel-banner reference. The response contains a stable identifier, page_url, source_url, reviewed_on date, and a values object. Preserve all qualifiers and links when composing an answer.
+
+The same task is available through the MCP endpoint `https://feedthumbnail.com/mcp` using `initialize`, `tools/list`, and `tools/call` with tool name `site_lookup`.
+
+## Error behavior
+
+Unsupported topics return HTTP 404 with `error: not_found` and an `available_topics` array. Do not infer missing facts.
+
+## Source provenance
+
+The records are transcribed from the public `/youtube-thumbnail-size` and `/youtube-banner-size` pages. Each page links to its YouTube Help source. Review date: 2026-09-13.
+
+## Human tools
+
+The homepage, maker pages, and downloader operate in the browser. User images stay in the browser for those tools; the public lookup service accepts only the bounded topic value and does not accept image uploads.

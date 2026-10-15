@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="See what YouTube Help says about PNG thumbnails, what it does not say about transparency, and what Feed Thumbnail’s local JPG export does to transparent pixels." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-png-transparency/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>Does a PNG Stay Transparent at YouTube Thumbnail Size? | Feed Thumbnail</title>
+    <style>
+      .alpha-figure { margin: 22px 0 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .alpha-figure img { display: block; width: 100%; height: auto; }
+      .alpha-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .evidence-steps { display: grid; gap: 9px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: alpha-step; }
+      .evidence-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 12px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: alpha-step; }
+      .evidence-steps li::before { content: counter(alpha-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      .fact-table-wrap { overflow-x: auto; margin-top: 17px; }
+      .fact-table { width: 100%; min-width: 530px; border-collapse: collapse; background: rgba(255,255,255,.72); }
+      .fact-table th, .fact-table td { padding: 12px 14px; border-bottom: 1px solid #dce2eb; text-align: left; vertical-align: top; line-height: 1.55; }
+      .fact-table th { color: #141b2d; font-size: 12px; }
+      .fact-table td { color: #56647a; font-size: 13px; }
+      @media (max-width: 500px) { .alpha-figure { padding: 9px; } .fact-table th, .fact-table td { padding: 10px; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">FILE FORMAT · FIELD NOTE</div>
+            <h1 id="article-title">Does a transparent PNG stay transparent at YouTube thumbnail size?</h1>
+            <p class="answer-lede"><strong>YouTube Help’s “Image size &amp; resolution” section lists JPG or PNG as image formats, but does not explain how transparent pixels are displayed after upload.</strong> Feed Thumbnail’s thumbnail resizer has a narrower, verifiable behavior: it paints the canvas background first and exports a JPG, so that tool’s output does not retain transparent pixels.</p>
+            <p class="source-line">Official wording: “Be uploaded in image formats such as JPG or PNG.” <a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">Add custom thumbnails on YouTube - Computer - YouTube Help</a>, “Image size &amp; resolution”; reviewed 2026-10-01.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="official-title" id="official-format-note">
+            <div class="section-kicker">WHAT YOUTUBE HELP SAYS</div>
+            <h2 id="official-title">PNG is named; transparency is not</h2>
+            <p>The current YouTube Help page names JPG and PNG as image formats for custom thumbnails. In that same “Image size &amp; resolution” section, it gives separate image-size, aspect-ratio, and upload-size guidance. The section does not describe alpha-channel preservation, a transparency preview, or a background color used by YouTube after upload. That behavior is not specified there, so this guide does not promise that a transparent PNG will look transparent in YouTube’s surfaces.</p>
+            <div class="fact-table-wrap">
+              <table class="fact-table">
+                <thead><tr><th scope="col">Question</th><th scope="col">What the cited page establishes</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Is PNG named as a supported image format?</th><td>Yes. YouTube Help says image formats such as JPG or PNG.</td></tr>
+                  <tr><th scope="row">Does that page say how transparent pixels appear after upload?</th><td>No transparency-rendering behavior is stated there.</td></tr>
+                  <tr><th scope="row">Does Feed Thumbnail’s resizer export an alpha-preserving PNG?</th><td>No. Its current export path creates a JPG.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="source-line">Source for the YouTube statement: <a href="https://support.google.com/youtube/answer/72431?hl=en#zippy=%2Cimage-size-resolution" rel="noopener">YouTube Help, Image size &amp; resolution</a>; reviewed 2026-10-01.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="local-title" id="local-export-alpha">
+            <div class="section-kicker">FIRST-PARTY EXPORT CHECK</div>
+            <h2 id="local-title">What happens to transparency in this site’s resizer?</h2>
+            <p>When you use the Feed Thumbnail resizer, transparent parts of the source are composited over its canvas background before the file is saved. The exported file is a JPG, not a transparent PNG. This statement describes Feed Thumbnail’s own browser-side code; it is not a claim about how YouTube processes a PNG upload.</p>
+            <figure class="alpha-figure">
+              <img src="/assets/thumbnail-png-alpha-route.svg" alt="A transparent PNG is drawn over the selected canvas color, then Feed Thumbnail’s resizer saves an opaque JPG." width="1200" height="430" />
+              <figcaption>Original diagram of the local resizer’s current code path; it does not depict YouTube’s post-upload rendering.</figcaption>
+            </figure>
+            <ol class="evidence-steps">
+              <li><span><strong>The canvas is made opaque.</strong> The resizer creates its canvas context with <code>alpha: false</code>, then fills the whole canvas with the selected background color before drawing the source.</span></li>
+              <li><span><strong>The source is drawn over that fill.</strong> Any transparent pixels reveal the already-painted canvas color in the local preview. The background control is visible beside the frame options.</span></li>
+              <li><span><strong>The export encoding is JPG.</strong> The public <a href="/resizer.js">resizer script</a> calls the canvas export with the <code>image/jpeg</code> type. The input being PNG does not change that output path.</span></li>
+              <li><span><strong>The boundary is important.</strong> This is a source-code check of Feed Thumbnail’s resizer, not a test upload to YouTube. YouTube Help does not state whether its player preserves, composites, or otherwise renders PNG transparency.</span></li>
+            </ol>
+            <p class="limit-callout"><strong>Practical takeaway:</strong> if you need the saved file itself to keep transparency, this resizer’s JPG export is not the right export path. If you use it, choose the background color you want behind transparent areas and inspect the preview before saving.</p>
+            <p class="source-line">First-party source: <a href="/resizer.js">Feed Thumbnail resizer.js</a>, the public <a href="/youtube-thumbnail-resizer">thumbnail resizer</a>, and its visible background-color control; inspected 2026-10-01.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title">
+            <div class="section-kicker">QUESTIONS</div>
+            <h2 id="faq-title">PNG and thumbnail transparency questions</h2>
+            <div class="faq-grid">
+              <details open><summary>Can I upload a PNG as a YouTube thumbnail?</summary><p>YouTube Help lists image formats such as JPG or PNG. Check that same official page for the current image and upload requirements.</p></details>
+              <details><summary>Will YouTube keep a PNG’s transparent background?</summary><p>The cited “Image size &amp; resolution” section does not specify how transparent pixels are rendered after upload. This guide cannot confirm that behavior.</p></details>
+              <details><summary>Why does this thumbnail resizer save JPG when I choose PNG?</summary><p>PNG is an accepted source-image type in the tool, but its current export code writes JPG. The output format is set by the resizer, not inherited from the selected source file.</p></details>
+              <details><summary>Can I use this resizer when I need alpha in the saved file?</summary><p>No. Its current canvas export produces JPG and does not preserve an alpha channel. Use an export workflow that can save PNG if keeping transparency in the file is required.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="scope-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="scope-title">Separate format guidance from tool behavior</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">YouTube Help: Add custom thumbnails on YouTube</a> is the source for the JPG/PNG wording and the separate image and upload guidance cited here. The “Image size &amp; resolution” section was reviewed 2026-10-01.</p>
+              <p><a href="/resizer.js">The Feed Thumbnail resizer source</a> is the source for this site’s opaque canvas, background fill, and JPG export description. It is browser-side behavior and does not send an image to YouTube.</p>
+              <p>For official thumbnail canvas and upload-size notes, see <a href="/youtube-thumbnail-size">YouTube thumbnail size</a> and <a href="/guides/youtube-thumbnail-upload-file-size/">the upload-device file-size guide</a>. For the local tool, open the <a href="/youtube-thumbnail-resizer">YouTube thumbnail resizer</a>.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>

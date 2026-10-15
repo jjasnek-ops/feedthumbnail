@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Can you A/B test a YouTube Shorts thumbnail? Read the current official rule, separate video classification from thumbnail size, and check the local Feed Thumbnail workflow." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-shorts-ab-test/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>Can You A/B Test a YouTube Shorts Thumbnail? | Feed Thumbnail</title>
+    <style>
+      .shorts-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .shorts-figure img { display: block; width: 100%; height: auto; }
+      .shorts-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .shorts-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .shorts-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .shorts-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .shorts-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .shorts-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: shorts-step; }
+      .shorts-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: shorts-step; }
+      .shorts-steps li::before { content: counter(shorts-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      .availability-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #ffe5dd; color: #9d4938; font-size: 12px; font-weight: 800; }
+      .source-quote { margin: 18px 0; }
+      @media (max-width: 700px) { .shorts-figure { padding: 9px; } .shorts-grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL SIZE · SHORTS CHECK</div>
+            <h1 id="article-title">Can you A/B test a YouTube Shorts thumbnail?</h1>
+            <p class="answer-lede"><strong>No, not under the current official rule.</strong> The current YouTube Help page says A/B testing is not available for Shorts. That is a rule about the video being treated as a Short, not a claim that a thumbnail-size checker can predict a test result. Prepare the image locally, but check the video classification before planning a native YouTube experiment.</p>
+            <p class="source-line">Official source: <a href="https://support.google.com/youtube/answer/16391400?hl=en" rel="noopener">Test &amp; compare thumbnails &amp; titles - YouTube Help</a>, reviewed 2026-10-13.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="official-title" id="official-rule">
+            <div class="section-kicker">THE CURRENT OFFICIAL RULE</div>
+            <h2 id="official-title">Does YouTube allow A/B testing for Shorts?</h2>
+            <p>The current YouTube Help article has a question specifically about videos that transition into Shorts. Its answer is direct: native A/B testing is not available for Shorts, and a video that becomes a Short cannot use a previously created test or start a new one for that video.</p>
+            <blockquote class="source-quote"><p>“A/B testing is not available for Shorts.”</p><cite>— <a href="https://support.google.com/youtube/answer/16391400?hl=en" rel="noopener">YouTube Help, Test &amp; compare thumbnails &amp; titles</a></cite></blockquote>
+            <p>This gives a useful boundary for a YouTube thumbnail size workflow. A correctly prepared image can still be useful for a Short, but the file itself does not unlock the native experiment. The first question is whether the video is in the product path where YouTube makes A/B testing available.</p>
+            <span class="availability-badge">Shorts: native A/B testing unavailable</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="classification-title" id="size-classification">
+            <div class="section-kicker">CLASSIFICATION IS NOT A THUMBNAIL PIXEL CHECK</div>
+            <h2 id="classification-title">What does the official page use to describe a Short?</h2>
+            <p>The same official answer includes a note about video uploads: uploads up to three minutes long that are square or taller are considered Shorts. Those are properties of the video upload and its aspect ratio. They are not a new recommended thumbnail canvas, and they do not turn the usual thumbnail-size preparation step into a Shorts A/B-test control.</p>
+            <p>That distinction prevents a common workflow error. Someone can resize a cover image, see a clean export, and still be unable to run the native test because the uploaded video is classified as a Short. The image check answers “is this local asset ready to hand off?” The official product rule answers “can this video use the experiment?”</p>
+            <div class="shorts-grid">
+              <div><strong>Image preparation</strong><span>Check the local file, crop, visible title, and export before upload.</span></div>
+              <div><strong>Video classification</strong><span>Review the official Short conditions for the uploaded video.</span></div>
+              <div><strong>Experiment access</strong><span>Do not plan a native A/B test for a video treated as a Short.</span></div>
+            </div>
+            <figure class="shorts-figure">
+              <img src="/assets/youtube-thumbnail-shorts-ab-test.svg" alt="A diagram separating local thumbnail preparation, video classification, and native A/B test availability for Shorts." width="1200" height="560" />
+              <figcaption>Original local diagram. It separates an image-preparation check from the video classification rule in the current official Help page.</figcaption>
+            </figure>
+          </section>
+
+          <section class="guide-section" aria-labelledby="local-title" id="local-check">
+            <div class="section-kicker">WHAT FEED THUMBNAIL CAN VERIFY LOCALLY</div>
+            <h2 id="local-title">What can a local thumbnail check tell you?</h2>
+            <p>Feed Thumbnail can help with the part that happens before YouTube Studio: choosing a local image, placing a title into a feed-style preview, and checking the result at the tool’s available views. Its homepage source accepts local PNG, JPEG, and WEBP input. The public scripts do not call a YouTube experiment endpoint or report a Shorts classification.</p>
+            <p>The <a href="/app.js">homepage script</a> creates a PNG download from the browser canvas. The <a href="/resizer.js">thumbnail resizer script</a> creates a local JPEG output. These are first-party, browser-side observations. They support a file handoff, not a promise that YouTube will expose A/B testing for the uploaded video.</p>
+            <p>For a creator, the practical value is separation. You can catch a crop or title-placement problem while the asset is still local, then make the product-level decision in YouTube Studio. A clean thumbnail export should not be described as a test result, an eligibility result, or an analytics result.</p>
+            <div class="shorts-grid">
+              <div><strong>Local input</strong><span>PNG, JPEG, and WEBP appear in the homepage file-control accept list.</span></div>
+              <div><strong>Local preview</strong><span>The browser preview shows the selected image and title without sending the image to a server.</span></div>
+              <div><strong>Local export</strong><span>The public paths create static PNG or JPEG downloads; no Studio experiment is run.</span></div>
+            </div>
+          </section>
+
+          <section class="guide-section" aria-labelledby="workflow-title" id="workflow">
+            <div class="section-kicker">A SHORTS-SAFE PRE-FLIGHT</div>
+            <h2 id="workflow-title">How should you prepare a thumbnail before checking experiment access?</h2>
+            <ol class="shorts-steps">
+              <li><span><strong>Prepare the image locally.</strong> Open the <a href="/youtube-thumbnail-resizer">thumbnail resizer</a> or the <a href="/">local feed preview</a>, choose the image, and check the crop and readable title placement.</span></li>
+              <li><span><strong>Keep the asset and video questions separate.</strong> The local export tells you what file you made. It does not tell you whether the video is a Short or whether YouTube will offer an experiment.</span></li>
+              <li><span><strong>Read the current official rule.</strong> Use the official A/B-testing Help article, not an old creator comment, to check whether Shorts are eligible for the native feature.</span></li>
+              <li><span><strong>Check the video conditions.</strong> The official note describes up-to-three-minute square-or-taller uploads as Shorts. Treat that as a video-classification clue, not as a thumbnail dimension.</span></li>
+              <li><span><strong>Plan the next step honestly.</strong> If the video is a Short, keep the prepared image for its normal upload workflow and do not promise a native YouTube A/B test for it.</span></li>
+            </ol>
+            <p class="source-line">This workflow combines the current official classification wording with reproducible first-party local behavior. It does not simulate YouTube Studio or measure watch time, impressions, or click-through rate.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="gap-title" id="comparison-gap">
+            <div class="section-kicker">WHAT THE CHECKED PAGES LEAVE OUT</div>
+            <h2 id="gap-title">Why can a Shorts A/B-testing answer look contradictory?</h2>
+            <p>The specific LightX YouTube thumbnail resizer page we opened focuses on image work: upload or drag and drop, a 1280 × 720 preset, editing controls, and JPG or PNG download. The specific Snappa YouTube thumbnail page focuses on templates, editable graphics, dimensions, and download options. Those pages help with asset creation, but neither page establishes current YouTube Shorts experiment eligibility.</p>
+            <p>The opened Reddit discussion is different: it is a community conversation about YouTube’s Test &amp; Compare feature, timing, CTR, average view duration, and whether Shorts can be tested. It includes a community answer that says Shorts testing works. Because that is an older discussion rather than a current YouTube Help rule, it is useful as a question signal but not as the controlling answer for this guide.</p>
+            <p>The gap is not another thumbnail maker. It is the handoff between an image tool and a product rule. The official page supplies the current restriction; the local tool supplies a reproducible preparation boundary; the community thread shows why the question keeps coming up. Reading those roles separately is safer than choosing the most confident sentence from a mixed list.</p>
+            <p>This comparison is limited to the three pages actually opened for this article. It is not a site-wide claim about every page on those domains, and it is not a ranking claim.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title">
+            <div class="section-kicker">QUESTIONS</div>
+            <h2 id="faq-title">YouTube thumbnail size and Shorts A/B-test questions</h2>
+            <div class="faq-grid">
+              <details open><summary>Can you A/B test a YouTube Shorts thumbnail?</summary><p>Not with YouTube’s native A/B-testing feature under the current Help-page rule. The page says A/B testing is not available for Shorts.</p></details>
+              <details><summary>Does thumbnail size decide whether a video is a Short?</summary><p>No. The checked official note describes the video upload’s duration and aspect ratio. That is different from preparing a thumbnail image.</p></details>
+              <details><summary>Can Feed Thumbnail run a YouTube experiment?</summary><p>No. It provides local image and feed-preview work. It does not connect to YouTube Studio or report experiment outcomes.</p></details>
+              <details><summary>Can I still prepare a Shorts cover image?</summary><p>Yes. You can prepare and export a local image, but treat that as an asset workflow rather than proof of native A/B-test access.</p></details>
+              <details><summary>Why does an older post say Shorts testing works?</summary><p>Community discussions can describe an earlier product state, a different testing method, or an individual workflow. Use the current official Help page for the present native-feature rule.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Keep the image check and product rule separate</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/16391400?hl=en" rel="noopener">YouTube Help: Test &amp; compare thumbnails &amp; titles</a> is the source for the current Shorts A/B-testing rule and the note about up-to-three-minute square-or-taller video uploads. Reviewed 2026-10-13.</p>
+              <p><a href="https://www.lightxeditor.com/photo-editing/youtube-thumbnail-resizer/" rel="noopener">LightX’s YouTube thumbnail resizer page</a> and <a href="https://snappa.com/create/youtube-thumbnails" rel="noopener">Snappa’s YouTube thumbnail page</a> were opened for page-specific comparison of image-preparation coverage.</p>
+              <p><a href="https://www.reddit.com/r/PartneredYoutube/comments/1ddwppc/is_youtubes_new_test_compare_thumbnails_useful/" rel="noopener">The opened Reddit Test &amp; Compare discussion</a> was treated as an older community question signal, not as an official eligibility source.</p>
+              <p><a href="/index.html">Feed Thumbnail’s homepage markup</a>, <a href="/app.js">homepage script</a>, and <a href="/resizer.js">thumbnail resizer script</a> are the first-party sources for the local input and export boundary. For the broader table, read <a href="/youtube-thumbnail-size">YouTube thumbnail size</a>.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>

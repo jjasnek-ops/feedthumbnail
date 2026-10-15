@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
+  <title id="title">Save a thumbnail before changing an A/B test</title>
+  <desc id="desc">A three-part diagram: keep the YouTube Studio test unchanged, save the available thumbnail file in the browser, then restart the test if the title or thumbnail is changed.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#eef2f6"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#141b2d" flood-opacity=".14"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#ff795f"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="480" rx="28" fill="url(#paper)"/>
+  <path d="M48 92 H1152" stroke="#dce2ea" stroke-width="2"/>
+  <text x="48" y="62" fill="#78849a" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">A/B TEST FILE HANDOFF</text>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="140" width="300" height="232" rx="22" fill="#fff" stroke="#dce2ea"/>
+    <rect x="450" y="140" width="300" height="232" rx="22" fill="#fff" stroke="#dce2ea"/>
+    <rect x="846" y="140" width="300" height="232" rx="22" fill="#fff" stroke="#dce2ea"/>
+  </g>
+
+  <g font-family="Arial, sans-serif">
+    <circle cx="94" cy="180" r="20" fill="#d8ff5a"/>
+    <text x="94" y="187" text-anchor="middle" fill="#141b2d" font-size="18" font-weight="700">01</text>
+    <text x="82" y="236" fill="#141b2d" font-size="23" font-weight="700">Keep the test still</text>
+    <text x="82" y="270" fill="#647087" font-size="17">Do not change the title</text>
+    <text x="82" y="296" fill="#647087" font-size="17">or thumbnail in Studio.</text>
+    <rect x="82" y="326" width="164" height="12" rx="6" fill="#6b8cff" opacity=".28"/>
+    <rect x="82" y="346" width="114" height="12" rx="6" fill="#ff795f" opacity=".3"/>
+
+    <circle cx="490" cy="180" r="20" fill="#ff795f"/>
+    <text x="490" y="187" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">02</text>
+    <text x="478" y="236" fill="#141b2d" font-size="23" font-weight="700">Save the file</text>
+    <text x="478" y="270" fill="#647087" font-size="17">Use the browser downloader</text>
+    <text x="478" y="296" fill="#647087" font-size="17">for image files that load.</text>
+    <path d="M478 338 H660" stroke="#ff795f" stroke-width="5" stroke-linecap="round"/>
+    <path d="M660 320 L688 338 L660 356" fill="none" stroke="#ff795f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <circle cx="886" cy="180" r="20" fill="#6b8cff"/>
+    <text x="886" y="187" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">03</text>
+    <text x="874" y="236" fill="#141b2d" font-size="23" font-weight="700">Restart if changed</text>
+    <text x="874" y="270" fill="#647087" font-size="17">YouTube says a changed</text>
+    <text x="874" y="296" fill="#647087" font-size="17">title or thumbnail stops it.</text>
+    <rect x="874" y="326" width="174" height="32" rx="16" fill="#6b8cff" opacity=".14"/>
+    <text x="961" y="348" text-anchor="middle" fill="#40579b" font-size="14" font-weight="700">RESTART IN STUDIO</text>
+  </g>
+
+  <path d="M366 256 H430" stroke="#ff795f" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M762 256 H826" stroke="#ff795f" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+</svg>

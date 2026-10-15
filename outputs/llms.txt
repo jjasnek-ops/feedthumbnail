@@ -1,0 +1,22 @@
+# Feed Thumbnail
+
+Feed Thumbnail is a public browser toolkit for checking, downloading, making, and reading YouTube thumbnail and channel-banner references.
+
+## Useful pages
+
+- [Thumbnail Tester](https://feedthumbnail.com/): preview a local thumbnail in simulated YouTube layouts.
+- [YouTube thumbnail size](https://feedthumbnail.com/youtube-thumbnail-size): source-linked thumbnail dimensions and format notes.
+- [YouTube banner size](https://feedthumbnail.com/youtube-banner-size): source-linked banner canvas and safe-area notes.
+- [Public lookup API](https://feedthumbnail.com/ai/): bounded machine-readable reference lookup.
+
+## Agent discovery
+
+- [Service index](https://feedthumbnail.com/ai/index.ilang)
+- [Site lookup skill](https://feedthumbnail.com/ai/skills/site-lookup/SKILL.md)
+- [API catalog](https://feedthumbnail.com/.well-known/api-catalog)
+- [MCP server card](https://feedthumbnail.com/.well-known/mcp/server-card.json)
+- [ARD manifest](https://feedthumbnail.com/.well-known/ai-catalog.json)
+
+## Limits
+
+The public lookup is read-only and supports only the two named topics. It does not fetch arbitrary URLs, access private data, create accounts, or perform writes.

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 510" role="img" aria-labelledby="title desc">
+  <title id="title">Choose the thumbnail upload route</title>
+  <desc id="desc">First choose video, podcast, or Shorts. Then match the upload device to the official YouTube Help file-size guidance.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7f9fc}.card{fill:#fff;stroke:#d7deea;stroke-width:2}.accent{fill:#d8ff5a;stroke:#141b2d;stroke-width:2}.dark{fill:#141b2d}.muted{fill:#56647a}.coral{fill:#ff795f}.line{fill:none;stroke:#8290a5;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      text{font-family:Inter,Arial,sans-serif}.label{font-size:14px;font-weight:800;letter-spacing:1.3px}.head{font-size:24px;font-weight:900}.body{font-size:16px;font-weight:650}.small{font-size:13px;font-weight:650}
+    </style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1200" height="510" rx="28"/>
+  <text class="label muted" x="38" y="48">START HERE</text>
+  <rect class="accent" x="38" y="73" width="295" height="118" rx="20"/>
+  <text class="head dark" x="62" y="119">What are you</text><text class="head dark" x="62" y="149">uploading?</text>
+  <path class="line" d="M333 132h38m0 0v-63h29m-29 63v0h29m-29 0v63h29"/>
+  <rect class="card" x="400" y="37" width="248" height="88" rx="16"/><text class="body dark" x="424" y="73">Video thumbnail</text><text class="small muted" x="424" y="99">Choose upload device next</text>
+  <rect class="card" x="400" y="151" width="248" height="88" rx="16"/><text class="body dark" x="424" y="187">Podcast artwork</text><text class="small muted" x="424" y="213">Help recommends square art</text>
+  <rect class="card" x="400" y="265" width="248" height="88" rx="16"/><text class="body dark" x="424" y="301">Shorts thumbnail</text><text class="small muted" x="424" y="327">Add it in Studio on a computer</text>
+  <path class="line" d="M648 81h38m0 0v-27h33m-33 27v28h33M648 195h38m0 0v-27h33m-33 27v28h33M648 309h71"/>
+  <rect class="card" x="719" y="20" width="443" height="104" rx="16"/><text class="label coral" x="743" y="49">MOBILE · VIDEO</text><text class="head dark" x="743" y="84">Under 2 MB</text><text class="small muted" x="930" y="83">YouTube Help</text>
+  <rect class="card" x="719" y="134" width="443" height="104" rx="16"/><text class="label coral" x="743" y="163">MOBILE · PODCAST</text><text class="head dark" x="743" y="198">Under 10 MB</text><text class="small muted" x="930" y="197">YouTube Help</text>
+  <rect class="card" x="719" y="248" width="443" height="104" rx="16"/><text class="label coral" x="743" y="277">DESKTOP · VIDEO, SHORTS, PODCAST</text><text class="head dark" x="743" y="312">Under 50 MB</text><text class="small muted" x="930" y="311">YouTube Help</text>
+  <rect x="38" y="404" width="1124" height="70" rx="15" fill="#fff3ee" stroke="#ffd4c9" stroke-width="2"/>
+  <text class="body dark" x="61" y="434">A local size check is only one check.</text><text class="small muted" x="61" y="457">Confirm image type, aspect ratio, dimensions, and the upload route in the official Help page.</text>
+</svg>
