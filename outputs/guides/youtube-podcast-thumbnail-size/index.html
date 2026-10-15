@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="YouTube's current Help page says podcast playlists use a 1:1 thumbnail instead of 16:9. This guide separates the official ratio from pixels that are not stated." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-podcast-thumbnail-size/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>YouTube Thumbnail Size for Podcast Playlists: Use 1:1 | Feed Thumbnail</title>
+    <style>
+      .podcast-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .podcast-figure img { display: block; width: 100%; height: auto; }
+      .podcast-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .podcast-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .podcast-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .podcast-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .podcast-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .podcast-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: podcast-step; }
+      .podcast-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: podcast-step; }
+      .podcast-steps li::before { content: counter(podcast-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      .ratio-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #e7f4d4; color: #466c23; font-size: 12px; font-weight: 800; }
+      .read-not-stated { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #ffe5dd; color: #9d4938; font-size: 12px; font-weight: 800; }
+      .source-quote { margin: 18px 0; }
+      @media (max-width: 700px) { .podcast-figure { padding: 9px; } .podcast-grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL SIZE · PODCAST PLAYLIST CHECK</div>
+            <h1 id="article-title">YouTube thumbnail size for podcast playlists: use 1:1</h1>
+            <p class="answer-lede"><strong>Use a square 1:1 image for a YouTube podcast playlist cover.</strong> YouTube's current Help page says podcast playlists should use a 1:1 thumbnail instead of 16:9. The page does not state a fixed pixel dimension in that section, so do not turn 1280 × 720, 3840 × 2160, 3000 × 3000, or 1080 × 1080 into an official podcast requirement without another source.</p>
+            <p class="source-line">Official source: <a href="https://support.google.com/youtube/answer/72431?hl=en-GB" rel="noopener">Add customised thumbnails on YouTube - YouTube Help</a>, reviewed 2026-10-15.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="official-title" id="official-rule">
+            <div class="section-kicker">THE CURRENT OFFICIAL WORDING</div>
+            <h2 id="official-title">What does YouTube say about a podcast playlist thumbnail?</h2>
+            <p data-original-evidence="yes">The current YouTube Help page gives different aspect-ratio guidance for different thumbnail jobs. For videos, it says to try 16:9. For Shorts, it says to try 9:16. For podcast playlists, it says to use 1:1 instead of 16:9. That is the official answer to the ratio question: a podcast playlist cover is square.</p>
+            <blockquote class="source-quote"><p>Use a 1:1 thumbnail for podcast playlists instead of 16:9.</p><cite>— <a href="https://support.google.com/youtube/answer/72431?hl=en-GB" rel="noopener">YouTube Help, Image size and resolution</a></cite></blockquote>
+            <p data-original-evidence="yes">The same section gives numeric recommendations for video and Shorts thumbnails, plus a minimum width for videos and a minimum height for Shorts. It does not pair the podcast-playlist 1:1 instruction with a numeric width-and-height recommendation. A careful answer should keep the published ratio and the missing pixel value separate.</p>
+            <span class="ratio-badge">Podcast playlist cover: 1:1</span>
+            <span class="read-not-stated">Fixed podcast pixels: not stated on the checked Help section</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="separate-title" id="separate-assets">
+            <div class="section-kicker">DO NOT MIX THE TWO ASSETS</div>
+            <h2 id="separate-title">Is a podcast playlist cover the same as an episode thumbnail?</h2>
+            <p data-original-evidence="yes">Not automatically. The official wording names a podcast playlist when it gives the 1:1 exception. It separately describes video thumbnails with a 16:9 recommendation. That means a creator should identify the upload target before choosing a canvas: the podcast playlist cover is the square asset, while an individual episode can still have a video thumbnail workflow.</p>
+            <div class="podcast-grid">
+              <div><strong>Podcast playlist cover</strong><span>Use the official 1:1 ratio. The checked Help section does not name a fixed pixel canvas.</span></div>
+              <div><strong>Standard video thumbnail</strong><span>Use the video guidance and the 16:9 workflow on the <a href="/youtube-thumbnail-size">thumbnail size page</a>.</span></div>
+              <div><strong>Community pixel anecdote</strong><span>A user may report that a square export worked, but that is not a YouTube-wide requirement.</span></div>
+            </div>
+            <figure class="podcast-figure">
+              <img src="/assets/youtube-podcast-thumbnail-size.svg" alt="A diagram comparing a square podcast playlist cover with a wide 16 to 9 video thumbnail and marking the podcast pixel value as not stated." width="1200" height="620" />
+              <figcaption>Original local diagram. It separates the official 1:1 podcast-playlist ratio from the 16:9 video workflow and from pixel values that the checked Help section does not publish.</figcaption>
+            </figure>
+          </section>
+
+          <section class="guide-section" aria-labelledby="local-title" id="local-check">
+            <div class="section-kicker">WHAT FEED THUMBNAIL CAN VERIFY LOCALLY</div>
+            <h2 id="local-title">Can the Feed Thumbnail resizer make a podcast playlist cover?</h2>
+            <p data-original-evidence="yes">The current public <a href="/resizer.js">resizer source</a> sets its target canvas to 1280 × 720, calculates crop and fit operations against that 16:9 ratio, and exports a JPEG. Those are reproducible first-party implementation facts. They make the resizer useful for a standard video-thumbnail handoff, but they do not make it a square podcast-playlist exporter.</p>
+            <p data-original-evidence="yes">This boundary matters because a square source image can still be placed into a wide canvas. The resulting file may look clean in a video-thumbnail preview while being the wrong shape for a podcast playlist cover. Open the <a href="/youtube-thumbnail-resizer">thumbnail resizer</a> when you need the current 16:9 local workflow; use a square-capable export path when the target is the podcast playlist cover.</p>
+            <p data-original-evidence="yes">The site can therefore verify a file-preparation step, not the final appearance of every YouTube surface. It does not sign in to YouTube Studio, upload a podcast, or confirm how an account-specific cover is rendered. The official Help page remains the source for the 1:1 rule, and the local code remains the source for the resizer's 1280 × 720 JPEG behavior.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="workflow-title" id="workflow">
+            <div class="section-kicker">A SQUARE-FIRST WORKFLOW</div>
+            <h2 id="workflow-title">How should you prepare the image?</h2>
+            <ol class="podcast-steps">
+              <li><span><strong>Confirm the target.</strong> Decide whether the file is for the podcast playlist cover or for an individual video. Do not let a familiar 16:9 thumbnail preset decide that for you.</span></li>
+              <li><span><strong>Start with 1:1 for the playlist cover.</strong> Keep the artwork square and place the title, face, or logo away from the edge so the design remains readable when it is shown small.</span></li>
+              <li><span><strong>Do not invent the pixel requirement.</strong> Record the official ratio, then check the current upload interface for any account- or route-specific constraint. A community report that 3000 × 3000 worked is evidence of one user's outcome, not an official minimum or maximum.</span></li>
+              <li><span><strong>Keep episode art separate.</strong> If the same podcast also has standard videos, prepare their thumbnails using the video guidance and the 16:9 tool path where appropriate.</span></li>
+              <li><span><strong>Verify in Studio.</strong> The final upload and display check belongs in YouTube's own product. Feed Thumbnail can prepare or inspect a local image, but it cannot report a Studio result.</span></li>
+            </ol>
+            <p class="source-line">This workflow combines the official ratio with a documented first-party tool boundary. It does not estimate search volume, traffic, or a hidden pixel limit.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="gap-title" id="comparison-gap">
+            <div class="section-kicker">WHAT THE FIXED CHECKED PAGES LEAVE OUT</div>
+            <h2 id="gap-title">Why is the podcast thumbnail answer easy to confuse?</h2>
+            <p data-original-evidence="yes">The LightX YouTube thumbnail resizer page we opened documents a 1280 × 720 preset, custom dimensions, image editing, and JPG/PNG download. It does not state a YouTube podcast-playlist cover ratio or a podcast pixel requirement. The Snappa YouTube thumbnail maker page documents a YouTube dimension preset, templates, editable graphics, and download steps. It also does not establish the podcast-playlist rule.</p>
+            <p data-original-evidence="yes">The Reddit thread <a href="https://www.reddit.com/r/NewTubers/comments/1kc4yhg/youtube_podcast_thumbnail/" rel="noopener">YouTube Podcast Thumbnail</a> shows the user problem directly: the poster asks for optimal dimensions because the cover is square rather than the usual 1920 × 1080. A reply says 3000 × 3000 worked, and another suggests 1080 × 1080. Those are useful question signals and personal outcomes; they are not official dimensions.</p>
+            <p data-original-evidence="yes">The gap is therefore not another generic thumbnail maker. It is the missing handoff between a named aspect ratio and an unstated pixel value. The official source answers “what shape should the playlist cover have?” The first-party source answers “what does this site's current resizer export?” The community thread explains why creators may search for a number that the checked official section does not provide.</p>
+            <p>This comparison is limited to the pages actually opened for this guide. It is not a ranking claim, a statement about every page on the three fixed domains, or a promise that a particular square size will be accepted in every account or upload flow.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title">
+            <div class="section-kicker">QUESTIONS</div>
+            <h2 id="faq-title">YouTube thumbnail size and podcast questions</h2>
+            <div class="faq-grid">
+              <details open><summary>What is the YouTube podcast thumbnail size?</summary><p>The checked YouTube Help page says to use a 1:1 aspect ratio for podcast playlists instead of 16:9. It does not state a fixed pixel dimension in that section.</p></details>
+              <details><summary>Is 1280 × 720 the podcast playlist size?</summary><p>Do not treat it as the podcast answer. It is a common 16:9 video-thumbnail canvas and the current Feed Thumbnail resizer target, while the official podcast-playlist instruction is 1:1.</p></details>
+              <details><summary>Is 3000 × 3000 required?</summary><p>No. That number appears as a user-reported working result in the checked Reddit discussion. It is not presented there or in the checked YouTube Help section as a universal requirement.</p></details>
+              <details><summary>Can Feed Thumbnail confirm the uploaded podcast cover?</summary><p>No. Its current resizer is a local 1280 × 720 JPEG workflow. It does not sign in to YouTube Studio or verify an account-specific podcast upload.</p></details>
+              <details><summary>Should every episode thumbnail be square?</summary><p>Not from the checked wording alone. The Help page names the podcast playlist cover for the 1:1 instruction and separately describes video thumbnails with a 16:9 recommendation. Confirm the target asset before exporting.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Keep the ratio, pixel value, and tool boundary separate</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/72431?hl=en-GB" rel="noopener">YouTube Help: Add customised thumbnails on YouTube</a> is the source for the 1:1 podcast-playlist instruction, the separate 16:9 video guidance, and the statement that the checked section does not give a numeric podcast canvas. Reviewed 2026-10-15.</p>
+              <p><a href="https://www.lightxeditor.com/photo-editing/youtube-thumbnail-resizer/" rel="noopener">LightX's YouTube thumbnail resizer</a> and <a href="https://snappa.com/create/youtube-thumbnails" rel="noopener">Snappa's YouTube thumbnail maker</a> were opened for page-specific comparison of 16:9-oriented creation and resize coverage.</p>
+              <p><a href="https://www.reddit.com/r/NewTubers/comments/1kc4yhg/youtube_podcast_thumbnail/" rel="noopener">The opened Reddit podcast-thumbnail discussion</a> was treated as a real user question and anecdotal evidence, not as an official dimension source.</p>
+              <p><a href="/resizer.js">Feed Thumbnail's public resizer source</a> is the source for the local 1280 × 720 JPEG behavior. For the broader official table, read <a href="/youtube-thumbnail-size">YouTube thumbnail size</a>. For all guides, open <a href="/guides/">Feed Thumbnail Guides</a>.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>
