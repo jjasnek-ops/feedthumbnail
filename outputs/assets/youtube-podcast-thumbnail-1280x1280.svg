@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">YouTube podcast thumbnail recommendation compared with a video thumbnail</title>
+  <desc id="desc">A square podcast show cover is labeled 1280 by 1280 recommended, beside a 16 to 9 episode video thumbnail. A note says the recommendation is not a hard minimum or maximum.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7f1e8"/>
+      <stop offset="1" stop-color="#e8f0f4"/>
+    </linearGradient>
+    <linearGradient id="lime" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#dff2bf"/>
+      <stop offset="1" stop-color="#b9df89"/>
+    </linearGradient>
+    <linearGradient id="coral" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ff795f"/>
+      <stop offset="1" stop-color="#ffb36c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="620" rx="34" fill="url(#bg)"/>
+  <text x="64" y="68" fill="#172033" font-family="Arial, sans-serif" font-size="30" font-weight="700">Choose the asset before choosing the canvas</text>
+  <text x="64" y="102" fill="#68758a" font-family="Arial, sans-serif" font-size="17">The current YouTube recommendation is square; the episode video path remains separate.</text>
+
+  <rect x="64" y="146" width="454" height="404" rx="26" fill="#ffffff" stroke="#d6dfe4" stroke-width="2"/>
+  <rect x="100" y="190" width="302" height="302" rx="8" fill="url(#lime)" stroke="#466c23" stroke-width="4"/>
+  <circle cx="251" cy="300" r="62" fill="#466c23" opacity=".92"/>
+  <path d="M251 252v101M214 288h74M226 347h50" stroke="#ffffff" stroke-width="12" stroke-linecap="round"/>
+  <text x="100" y="526" fill="#172033" font-family="Arial, sans-serif" font-size="21" font-weight="700">Podcast show cover</text>
+  <text x="100" y="551" fill="#466c23" font-family="Arial, sans-serif" font-size="18" font-weight="700">1280 × 1280 recommended · 1:1</text>
+
+  <rect x="558" y="146" width="578" height="404" rx="26" fill="#ffffff" stroke="#d6dfe4" stroke-width="2"/>
+  <rect x="602" y="232" width="490" height="276" rx="8" fill="url(#coral)" stroke="#9d4938" stroke-width="4"/>
+  <circle cx="778" cy="370" r="52" fill="#9d4938" opacity=".9"/>
+  <path d="M778 330v80M748 358h60M758 405h40" stroke="#ffffff" stroke-width="10" stroke-linecap="round"/>
+  <text x="602" y="190" fill="#172033" font-family="Arial, sans-serif" font-size="21" font-weight="700">Episode video thumbnail</text>
+  <text x="602" y="535" fill="#9d4938" font-family="Arial, sans-serif" font-size="18" font-weight="700">16:9 video workflow · separate asset</text>
+
+  <rect x="854" y="275" width="238" height="116" rx="16" fill="#fff7d6" stroke="#d1a72f" stroke-width="2"/>
+  <text x="874" y="309" fill="#735a12" font-family="Arial, sans-serif" font-size="16" font-weight="700">Recommendation</text>
+  <text x="874" y="337" fill="#735a12" font-family="Arial, sans-serif" font-size="15">not a hard minimum</text>
+  <text x="874" y="363" fill="#735a12" font-family="Arial, sans-serif" font-size="15">or maximum</text>
+  <path d="M854 334h-42" stroke="#d1a72f" stroke-width="3" stroke-linecap="round"/>
+  <path d="M816 334l12-8M816 334l12 8" stroke="#d1a72f" stroke-width="3" stroke-linecap="round"/>
+  <text x="64" y="598" fill="#68758a" font-family="Arial, sans-serif" font-size="15">Use the square recommendation for the show cover; verify the final upload in YouTube Studio.</text>
+</svg>
