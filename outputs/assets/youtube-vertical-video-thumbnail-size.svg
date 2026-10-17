@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Vertical video thumbnail surface rule</title>
+  <desc id="desc">A 16 to 9 custom thumbnail contains a central 4 to 5 design-safe area. Surface cards explain that YouTube may show an auto-generated 4 to 5 thumbnail on home, explore and subscription pages, while the custom thumbnail remains on the watch feed, watch history and non-mobile platforms.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7f1e8"/>
+      <stop offset="1" stop-color="#e8f0f4"/>
+    </linearGradient>
+    <linearGradient id="wide" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ff795f"/>
+      <stop offset="1" stop-color="#ffb36c"/>
+    </linearGradient>
+    <linearGradient id="portrait" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#dff2bf"/>
+      <stop offset="1" stop-color="#b9df89"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="620" rx="34" fill="url(#bg)"/>
+  <text x="64" y="68" fill="#172033" font-family="Arial, sans-serif" font-size="30" font-weight="700">One upload, more than one thumbnail surface</text>
+  <text x="64" y="102" fill="#68758a" font-family="Arial, sans-serif" font-size="17">The 4:5 center is a design precaution, not a published universal crop boundary.</text>
+
+  <rect x="64" y="146" width="520" height="398" rx="26" fill="#ffffff" stroke="#d6dfe4" stroke-width="2"/>
+  <text x="100" y="190" fill="#172033" font-family="Arial, sans-serif" font-size="21" font-weight="700">16:9 custom thumbnail</text>
+  <rect x="100" y="226" width="448" height="252" rx="8" fill="url(#wide)" stroke="#9d4938" stroke-width="4"/>
+  <rect x="248" y="258" width="152" height="188" rx="8" fill="url(#portrait)" stroke="#466c23" stroke-width="4" stroke-dasharray="10 8"/>
+  <circle cx="324" cy="330" r="35" fill="#466c23" opacity=".9"/>
+  <path d="M324 300v60M302 322h44M310 360h28" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+  <text x="100" y="514" fill="#9d4938" font-family="Arial, sans-serif" font-size="18" font-weight="700">central 4:5 safe area = design aid</text>
+
+  <rect x="616" y="146" width="520" height="398" rx="26" fill="#ffffff" stroke="#d6dfe4" stroke-width="2"/>
+  <text x="652" y="190" fill="#172033" font-family="Arial, sans-serif" font-size="21" font-weight="700">What YouTube says by surface</text>
+  <rect x="652" y="222" width="448" height="90" rx="16" fill="#fff7d6" stroke="#d1a72f" stroke-width="2"/>
+  <text x="674" y="252" fill="#735a12" font-family="Arial, sans-serif" font-size="16" font-weight="700">Home · Explore · Subscriptions</text>
+  <text x="674" y="279" fill="#735a12" font-family="Arial, sans-serif" font-size="15">auto-generated 4:5 may replace custom</text>
+  <rect x="652" y="330" width="448" height="90" rx="16" fill="#e7f4d4" stroke="#466c23" stroke-width="2"/>
+  <text x="674" y="360" fill="#466c23" font-family="Arial, sans-serif" font-size="16" font-weight="700">Watch feed · History · Non-mobile</text>
+  <text x="674" y="387" fill="#466c23" font-family="Arial, sans-serif" font-size="15">custom thumbnail still appears</text>
+  <text x="652" y="487" fill="#68758a" font-family="Arial, sans-serif" font-size="15">No universal 4:5 upload pixels are stated.</text>
+  <text x="64" y="598" fill="#68758a" font-family="Arial, sans-serif" font-size="15">Check the actual surface and device before concluding that a file failed.</text>
+</svg>

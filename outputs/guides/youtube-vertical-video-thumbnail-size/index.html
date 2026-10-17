@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="YouTube's current thumbnail Help page says a 16:9 custom thumbnail for a vertical video may be replaced by an auto-generated 4:5 thumbnail on selected surfaces. Learn what that means for youtube thumbnail size workflows." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-vertical-video-thumbnail-size/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>YouTube Thumbnail Size for Vertical Videos: 16:9 vs 4:5 | Feed Thumbnail</title>
+    <style>
+      .vertical-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .vertical-figure img { display: block; width: 100%; height: auto; }
+      .vertical-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .surface-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .surface-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .surface-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .surface-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .vertical-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: vertical-step; }
+      .vertical-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: vertical-step; }
+      .vertical-steps li::before { content: counter(vertical-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      .surface-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #e7efff; color: #355a9b; font-size: 12px; font-weight: 800; }
+      .caution-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #ffe5dd; color: #9d4938; font-size: 12px; font-weight: 800; }
+      .source-quote { margin: 18px 0; }
+      @media (max-width: 700px) { .vertical-figure { padding: 9px; } .surface-grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL SIZE · VERTICAL VIDEO DISPLAY CHECK</div>
+            <h1 id="article-title">YouTube thumbnail size for vertical videos: why 16:9 may become 4:5</h1>
+            <p class="answer-lede"><strong>A 16:9 custom thumbnail is not guaranteed to remain the visible thumbnail for a vertical video on every YouTube surface.</strong> YouTube's current Help page says vertical videos with 16:9 custom thumbnails can be replaced by an auto-generated 4:5 thumbnail on the home, explore, and subscription pages. The same page says the custom thumbnail still appears on the watch feed, watch history, and non-mobile platforms.</p>
+            <p class="source-line">Official source: <a href="https://support.google.com/youtube/answer/72431?hl=en-GB" rel="noopener">Add customised thumbnails on YouTube - YouTube Help</a>, reviewed 2026-10-17.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="official-title" id="official-rule">
+            <div class="section-kicker">THE CURRENT OFFICIAL RULE</div>
+            <h2 id="official-title">What happens to a 16:9 thumbnail on a vertical video?</h2>
+            <p data-original-evidence="yes">The current YouTube Help page makes a display distinction that is easy to miss in a generic YouTube thumbnail size table. It says a vertical video with a 16:9 custom thumbnail can be replaced by an auto-generated 4:5 thumbnail on the home, explore, and subscription pages. It then names other surfaces where the custom thumbnail still appears: the watch feed, watch history, and non-mobile platforms.</p>
+            <blockquote class="source-quote"><p>“Vertical videos with 16:9 custom thumbnails will be replaced by an auto-generated 4:5 thumbnail” on selected pages.</p><cite>— <a href="https://support.google.com/youtube/answer/72431?hl=en-GB" rel="noopener">YouTube Help, Add customised thumbnails</a></cite></blockquote>
+            <p data-original-evidence="yes">That is a surface rule, not a new upload instruction. The page does not tell creators to upload a 4:5 file for every vertical video, does not publish one 4:5 pixel canvas, and does not promise that every vertical-video viewer sees the same asset. A careful answer should preserve the difference between the file you prepare and the thumbnail YouTube may generate for a particular route.</p>
+            <span class="surface-badge">Named replacement surfaces: home · explore · subscriptions</span>
+            <span class="caution-badge">4:5 is not a published universal upload canvas</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="surfaces-title" id="surface-map">
+            <div class="section-kicker">SURFACE-BY-SURFACE READING</div>
+            <h2 id="surfaces-title">Which thumbnail should you expect to see?</h2>
+            <div class="surface-grid">
+              <div><strong>Home, Explore, subscriptions</strong><span>The Help page says an auto-generated 4:5 thumbnail can replace a 16:9 custom thumbnail for a vertical video on these named pages.</span></div>
+              <div><strong>Watch feed and history</strong><span>The same note says the custom thumbnail still appears on the watch feed and watch history.</span></div>
+              <div><strong>Non-mobile platforms</strong><span>The custom thumbnail is also named as remaining visible on non-mobile platforms; the note does not promise one identical layout everywhere.</span></div>
+            </div>
+            <p data-original-evidence="yes">The word “surface” matters more than a simple 16:9-versus-9:16 argument. A creator can upload a file successfully and still see a different thumbnail treatment in one feed. That does not prove the upload failed, and it does not prove that YouTube cropped the uploaded file into 4:5. The official note says the replacement is auto-generated; it does not document the exact frame-selection or crop algorithm.</p>
+            <p data-original-evidence="yes">This also explains why a screenshot from a mobile subscription page cannot be used by itself to infer the saved thumbnail file. It is evidence about one display route. For a reproducible report, record the video orientation, the uploaded file's dimensions, the surface where the image appeared, and whether the viewer was on a mobile or non-mobile platform.</p>
+            <figure class="vertical-figure">
+              <img src="/assets/youtube-vertical-video-thumbnail-size.svg" alt="A 16 to 9 custom thumbnail with a central 4 to 5 design-safe area, beside YouTube surface cards showing where an auto-generated thumbnail may replace it and where the custom image remains." width="1200" height="620" />
+              <figcaption>Original local diagram. The central 4:5 area is a design aid for protecting important content, not a claim that YouTube applies one fixed crop to every vertical-video surface.</figcaption>
+            </figure>
+          </section>
+
+          <section class="guide-section" aria-labelledby="canvas-title" id="canvas-choice">
+            <div class="section-kicker">WHICH FILE SHOULD YOU PREPARE?</div>
+            <h2 id="canvas-title">Does a vertical video need a 4:5 thumbnail file?</h2>
+            <p data-original-evidence="yes">Not from the checked official wording. YouTube's current thumbnail Help page recommends 3840 × 2160 pixels for videos and 2160 × 3840 for Shorts, with a minimum width of 640 pixels for videos and a minimum height of 640 pixels for Shorts. It separately recommends 16:9 for videos and 9:16 for Shorts. The vertical-video replacement note does not add a 4:5 upload dimension for long-form vertical videos.</p>
+            <div class="surface-grid">
+              <div><strong>Standard video path</strong><span>Official table: 3840 × 2160 recommended, 16:9, minimum video width 640 pixels.</span></div>
+              <div><strong>Shorts path</strong><span>Official table: 2160 × 3840 recommended, 9:16, minimum Shorts height 640 pixels.</span></div>
+              <div><strong>Vertical long-form display</strong><span>The checked note describes a possible 4:5 display replacement, not a separate 4:5 upload requirement.</span></div>
+            </div>
+            <p data-original-evidence="yes">The safest content decision is therefore target-specific. Prepare the file required by the video or Shorts upload workflow, then design the important text and subject so the composition remains understandable if a vertical-video feed shows an auto-generated portrait treatment. Do not label a 4:5 safe area as an official YouTube crop specification unless YouTube publishes one.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="workflow-title" id="workflow">
+            <div class="section-kicker">A DISPLAY-AWARE WORKFLOW</div>
+            <h2 id="workflow-title">How should you design a vertical-video thumbnail?</h2>
+            <ol class="vertical-steps">
+              <li><span><strong>Identify the video type.</strong> Decide whether the upload is a standard video, a Short, or a vertical long-form video. The official size table does not use those labels interchangeably.</span></li>
+              <li><span><strong>Prepare the official file path.</strong> Use the current 16:9 video guidance or 9:16 Shorts guidance where it applies. Do not turn the auto-generated 4:5 display note into a mandatory upload preset.</span></li>
+              <li><span><strong>Protect the center.</strong> Keep the headline, face, and logo inside a conservative central portrait area as a design precaution. This is a layout recommendation from the guide, not a measured YouTube crop boundary.</span></li>
+              <li><span><strong>Test more than one surface.</strong> Check the watch feed and history as well as the home, explore, or subscription route that matters to your audience. Record the surface and device with the result.</span></li>
+              <li><span><strong>Separate evidence from inference.</strong> A replacement thumbnail proves what YouTube displayed on that surface. It does not by itself reveal the generated frame, the exact crop, or the saved source file.</span></li>
+            </ol>
+            <p class="source-line">This workflow combines the official surface note with a deliberately labelled design precaution. It does not estimate click-through rate, reach, or ranking impact.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="local-title" id="local-check">
+            <div class="section-kicker">WHAT FEED THUMBNAIL CAN VERIFY LOCALLY</div>
+            <h2 id="local-title">Can the Feed Thumbnail resizer preview YouTube's 4:5 replacement?</h2>
+            <p data-original-evidence="yes">No. The public <a href="/resizer.js">resizer source</a> sets a 1280 × 720 canvas, calculates crop and fit operations against that 16:9 target, and exports a JPEG. That is a reproducible local file-preparation fact for the standard video path. It is not a simulation of YouTube's auto-generated 4:5 thumbnail or a report about a particular feed.</p>
+            <p data-original-evidence="yes">The site can help inspect a prepared image and show how a central safe area fits inside a wide canvas, but it cannot sign in to YouTube Studio, upload a vertical video, observe an account-specific feed, or retrieve the frame that YouTube generated. Open the <a href="/youtube-thumbnail-resizer">thumbnail resizer</a> for the current 16:9 local workflow and use the official Help page for the display caveat.</p>
+            <p data-original-evidence="yes">If an uploaded custom image appears on the watch feed but not on a mobile home or subscription surface, that difference is consistent with the current Help note. It is not a local export failure until the file itself fails a format, dimension, or size check.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="benchmark-title" id="benchmark-check">
+            <div class="section-kicker">FIXED BENCHMARK CHECK</div>
+            <h2 id="benchmark-title">What do LightX, Snappa, and Reddit add?</h2>
+            <p data-original-evidence="yes">The opened LightX YouTube thumbnail resizer page documents a 1280 × 720 preset, custom dimensions, editing controls, and JPG/PNG download. The opened Snappa YouTube thumbnail pages focus on ordinary video-thumbnail presets, templates, and download workflows. Those pages are useful for the standard 16:9 creation comparison, but neither establishes YouTube's vertical-video surface replacement rule.</p>
+            <p data-original-evidence="yes">The Reddit discussions show why creators ask the question. One vertical long-form thread asks how to use a vertical thumbnail and reports that the custom image was more visible on desktop than on mobile. Another discussion describes creators seeing a frame or different thumbnail treatment for vertical videos. These are real user reports and question signals; they cannot establish the current product rule or its exact crop behavior.</p>
+            <p data-original-evidence="yes">The gap is specifically a handoff problem: generic tools describe the source file, the community describes inconsistent surfaces, and YouTube Help names the surfaces where an auto-generated 4:5 thumbnail may replace a 16:9 custom one. A useful guide has to keep those evidence types separate instead of promising that one canvas will look identical everywhere.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title">
+            <div class="section-kicker">QUESTIONS</div>
+            <h2 id="faq-title">YouTube thumbnail size and vertical-video questions</h2>
+            <div class="faq-grid">
+              <details open><summary>What is the YouTube thumbnail size for a vertical video?</summary><p>YouTube's checked Help page recommends 3840 × 2160 for videos and 16:9, but says a vertical video's 16:9 custom thumbnail may be replaced by an auto-generated 4:5 thumbnail on home, explore, and subscription pages. It does not publish one universal 4:5 upload canvas.</p></details>
+              <details><summary>Should I upload a 4:5 thumbnail for a vertical video?</summary><p>Do not infer that from the checked note. It describes a possible display replacement, not a separate 4:5 upload requirement.</p></details>
+              <details><summary>Will my custom thumbnail appear on every surface?</summary><p>Not necessarily. YouTube says the custom thumbnail still appears on the watch feed, watch history, and non-mobile platforms, while naming home, explore, and subscription pages as replacement surfaces for the vertical-video case.</p></details>
+              <details><summary>Is a vertical video the same as a Short?</summary><p>Not automatically. The Help page gives separate guidance for videos and Shorts. Confirm the product type and upload route before choosing a thumbnail canvas.</p></details>
+              <details><summary>Can I design a center 4:5 safe area?</summary><p>Yes, as a design precaution. Keep important content toward the center, but do not call that area YouTube's official crop boundary; the checked page does not publish the generated crop algorithm.</p></details>
+              <details><summary>Can Feed Thumbnail verify the replacement image?</summary><p>No. Its current resizer prepares a local 1280 × 720 JPEG and does not sign in to YouTube Studio or inspect account-specific feed rendering.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Keep the upload canvas and display route separate</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/72431?hl=en-GB" rel="noopener">YouTube Help: Add customised thumbnails on YouTube</a> is the source for the 3840 × 2160 video recommendation, the 2160 × 3840 Shorts recommendation, the 16:9 and 9:16 guidance, and the vertical-video 4:5 replacement note. Reviewed 2026-10-17.</p>
+              <p><a href="/resizer.js">Feed Thumbnail's public resizer source</a> is the source for the local 1280 × 720 JPEG behavior. For the broader official table, read <a href="/youtube-thumbnail-size">YouTube thumbnail size</a>. For all guides, open <a href="/guides/">Feed Thumbnail Guides</a>.</p>
+              <p><a href="https://www.lightxeditor.com/photo-editing/youtube-thumbnail-resizer/" rel="noopener">LightX's YouTube thumbnail resizer</a> and <a href="https://snappa.com/blog/youtube-thumbnail-size/" rel="noopener">Snappa's YouTube thumbnail size notes</a> were opened for standard 16:9 comparison, not as sources for YouTube display behavior.</p>
+              <p><a href="https://www.reddit.com/r/NewTubers/comments/17cy2cy/vertical_long_form_video_thumbnails/" rel="noopener">The opened Reddit vertical long-form thumbnail discussion</a> and <a href="https://www.reddit.com/r/NewTubers/comments/1laf8ii/how_can_i_upload_thumbnails_for_vertical_videos/" rel="noopener">a second vertical-video question</a> were treated as real user reports and question signals, not product documentation.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>
