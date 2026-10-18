@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="If a YouTube thumbnail size file saved but the old image still appears, separate upload, display propagation, and analytics timing. YouTube says thumbnail changes may take time to appear, without publishing one universal wait time." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-change-not-showing/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>YouTube Thumbnail Size Not Showing? Upload, Display, and Analytics Checks | Feed Thumbnail</title>
+    <style>
+      .change-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .change-figure img { display: block; width: 100%; height: auto; }
+      .change-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .gate-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .gate-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .gate-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .gate-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .check-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: check-step; }
+      .check-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: check-step; }
+      .check-steps li::before { content: counter(check-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      .status-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #e7f4d4; color: #466c23; font-size: 12px; font-weight: 800; }
+      .caution-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #ffe5dd; color: #9d4938; font-size: 12px; font-weight: 800; }
+      .source-quote { margin: 18px 0; }
+      @media (max-width: 700px) { .change-figure { padding: 9px; } .gate-grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL SIZE · CHANGE VISIBILITY CHECK</div>
+            <h1 id="article-title">YouTube thumbnail size not showing? Separate upload, display, and analytics timing</h1>
+            <p class="answer-lede"><strong>If a new YouTube thumbnail size file saved but the old image still appears, do not assume the dimensions are wrong.</strong> YouTube's current Help page says thumbnail changes may take time to appear on YouTube. That sentence gives a timing caveat, not a universal wait period. Check the saved file, the surface where you are looking, and the analytics report separately before changing the asset again.</p>
+            <p class="source-line">Official sources: <a href="https://support.google.com/youtube/answer/72431?hl=en-GB" rel="noopener">Add customised thumbnails on YouTube</a> and <a href="https://support.google.com/youtube/answer/9314486?hl=en-See" rel="noopener">Check your YouTube thumbnail impressions and watch time</a>, reviewed 2026-10-18.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="official-title" id="official-timing">
+            <div class="section-kicker">THE OFFICIAL TIMING NOTE</div>
+            <h2 id="official-title">What does YouTube actually say about a thumbnail change?</h2>
+            <p data-original-evidence="yes">The current YouTube Help page places a short note after the custom Shorts-thumbnail save steps: it may take time for thumbnail changes to appear on YouTube. The note is deliberately broad. It does not give a fixed number of minutes, hours, or days, and it does not say that resizing the file again will make the update appear sooner.</p>
+            <blockquote class="source-quote"><p>“It may take time for your thumbnail changes to appear on YouTube.”</p><cite>— <a href="https://support.google.com/youtube/answer/72431?hl=en-GB" rel="noopener">YouTube Help, Add customised thumbnails on YouTube</a></cite></blockquote>
+            <p data-original-evidence="yes">That wording is enough to separate a propagation problem from a dimension problem, but not enough to diagnose an account. A saved image can be valid while one viewer still sees an older preview. A different surface can also use a different display treatment, especially for vertical videos. The checked source does not promise that every page refreshes at the same moment.</p>
+            <span class="status-badge">Official answer: changes may take time to appear</span>
+            <span class="caution-badge">No universal wait time is published here</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="gates-title" id="three-gates">
+            <div class="section-kicker">THREE GATES, NOT ONE</div>
+            <h2 id="gates-title">Why can a correct YouTube thumbnail size still look wrong?</h2>
+            <div class="gate-grid">
+              <div><strong>1. Upload gate</strong><span>Did Studio save the intended file, format, dimensions, and account-level change?</span></div>
+              <div><strong>2. Display gate</strong><span>Which page, device, and video type are you checking? A surface can show a different preview or an older cached result.</span></div>
+              <div><strong>3. Analytics gate</strong><span>Is the thumbnail visible in an impression report yet? A metrics card and a detailed report can update on different schedules.</span></div>
+            </div>
+            <p data-original-evidence="yes">These gates describe different evidence. A local file check can confirm pixels, file type, and byte size. It cannot prove that YouTube saved the file to a channel or that a particular viewer received the newest preview. A Studio screenshot can show that the creator sees a saved asset, but it does not prove that every search or feed surface has refreshed.</p>
+            <p data-original-evidence="yes">The analytics gate is separate again. YouTube's impressions Help page says the key metrics card is updated more often than the “Impressions and how they led to watch time” report, and says key metrics data can be available within a few hours of publishing. That is an analytics reporting note, not a guarantee for thumbnail preview propagation.</p>
+            <figure class="change-figure">
+              <img src="/assets/youtube-thumbnail-change-not-showing.svg" alt="A three-stage diagram for a YouTube thumbnail change: upload saved, display surface checked, and analytics report checked, with a note that no universal wait time is stated." width="1200" height="620" />
+              <figcaption>Original local diagram. It keeps file validation, surface rendering, and analytics reporting as separate checks instead of treating one screenshot as proof of every state.</figcaption>
+            </figure>
+          </section>
+
+          <section class="guide-section" aria-labelledby="size-title" id="size-vs-status">
+            <div class="section-kicker">SIZE IS NOT STATUS</div>
+            <h2 id="size-title">Can changing the YouTube thumbnail size fix a stale preview?</h2>
+            <p data-original-evidence="yes">Not necessarily. YouTube's current size guidance recommends 3840 × 2160 pixels for video thumbnails and 2160 × 3840 for Shorts, with JPG or PNG formats and device-specific file-size limits. Those rules help create an eligible source file. They do not state that a second export, a larger canvas, or a 1280 × 720 resize will force every public preview to refresh.</p>
+            <p data-original-evidence="yes">The local Feed Thumbnail resizer has a reproducible 1280 × 720 canvas and JPEG export. That is useful for the standard 16:9 file path, but it is not a YouTube cache inspector. If the file already meets the relevant source requirements, repeatedly changing its size can make the investigation harder because each new upload creates another timestamp and another asset state.</p>
+            <p data-original-evidence="yes">There is also a display exception for vertical videos: YouTube says a 16:9 custom thumbnail can be replaced by an auto-generated 4:5 thumbnail on the home, explore, and subscription pages, while the custom image remains on the watch feed, watch history, and non-mobile platforms. Read the <a href="/guides/youtube-vertical-video-thumbnail-size/">vertical-video thumbnail guide</a> before treating a portrait preview as proof that the uploaded size was rejected.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="workflow-title" id="workflow">
+            <div class="section-kicker">A REPRODUCIBLE CHECKLIST</div>
+            <h2 id="workflow-title">What should you record before changing the file again?</h2>
+            <ol class="check-steps">
+              <li><span><strong>Record the source file.</strong> Note the pixel dimensions, extension, byte size, and export time. Keep the exact file that was selected in Studio so a later comparison has a stable input.</span></li>
+              <li><span><strong>Confirm the save path.</strong> Check the video or Short in the official Studio workflow and record whether the new preview appears there. Do not infer a public result from a local editor alone.</span></li>
+              <li><span><strong>Name the surface.</strong> Record whether you are checking the channel page, search, home, subscriptions, watch feed, history, or a non-mobile platform. For vertical videos, compare the named replacement surfaces separately.</span></li>
+              <li><span><strong>Keep the timestamp honest.</strong> The official Help page says changes may take time, but does not provide a universal deadline. Write down when you saved the change instead of promising that it must appear after a specific interval.</span></li>
+              <li><span><strong>Separate analytics from appearance.</strong> If you are checking impressions or click-through rate, read the relevant Studio report and its update context. A missing or delayed metric is not proof that the thumbnail file failed.</span></li>
+              <li><span><strong>Escalate only with evidence.</strong> If the issue persists, keep the video URL, file facts, surface/device, screenshots, and timestamps together for the channel owner or official support route. Do not submit credentials or bypass a verification prompt.</span></li>
+            </ol>
+            <p class="source-line">This checklist documents what can be compared without inventing a wait-time promise, a hidden cache rule, or a channel-specific diagnosis.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="analytics-title" id="analytics">
+            <div class="section-kicker">WHAT IMPRESSIONS MEASURE</div>
+            <h2 id="analytics-title">Does a thumbnail preview equal a registered impression?</h2>
+            <p data-original-evidence="yes">No. YouTube's impressions Help page defines an impression as a thumbnail shown for more than one second with at least 50% of the thumbnail visible. It lists YouTube computers, TVs, game consoles, Android, iPhone, iPad, Search, the homepage, feeds, Up Next, and playlists as counted locations, while excluding external websites and apps, the YouTube mobile website, YouTube Kids, YouTube Music, email, notifications, and other cases.</p>
+            <p data-original-evidence="yes">This means a creator can see a thumbnail in a public page and still have no matching impression for that exact view, or see a metrics delay while the public preview has already changed. The report is a measurement system with its own inclusion rules, not a live image cache dashboard. Do not use an early impression number to prove that a new file was or was not displayed everywhere.</p>
+            <p data-original-evidence="yes">The same page says that the key metrics card and the detailed impressions report can differ because the key metrics card updates more often. It also says key metrics data can be available within a few hours of publishing. These are the source's reporting notes; Feed Thumbnail does not have access to the channel's Studio analytics and does not infer values.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="benchmark-title" id="benchmark-check">
+            <div class="section-kicker">FIXED BENCHMARK CHECK</div>
+            <h2 id="benchmark-title">What do LightX, Snappa, and Reddit add?</h2>
+            <p data-original-evidence="yes">The opened LightX YouTube thumbnail resizer page documents a 1280 × 720 preset, custom dimensions, image editing, and JPG/PNG download. The opened Snappa YouTube thumbnail size page explains the ordinary video-thumbnail canvas and creation workflow. Both are useful when checking the source file, but neither establishes YouTube's public preview propagation timing or analytics refresh rules.</p>
+            <p data-original-evidence="yes">Reddit supplies the real user problem rather than a reliable timer. The opened discussions describe custom thumbnails appearing on a channel or browse surface but not in search, or changing after a delay. Those reports show why creators look for a “thumbnail not showing” answer, but they are personal outcomes and can mix caching, surface rules, account state, and vertical-video behavior.</p>
+            <p data-original-evidence="yes">The gap is therefore a troubleshooting map, not another generic resizer. The official sources explain the timing caveat and the measurement boundaries; the fixed tools explain the local file path; the community explains the symptoms. No source in this comparison supplies a universal number of minutes before every thumbnail surface must update.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title">
+            <div class="section-kicker">QUESTIONS</div>
+            <h2 id="faq-title">YouTube thumbnail size and change-visibility questions</h2>
+            <div class="faq-grid">
+              <details open><summary>Why is my new YouTube thumbnail not showing?</summary><p>YouTube says thumbnail changes may take time to appear. Check the saved file, the exact surface and device, and the analytics report separately before deciding that the size is wrong.</p></details>
+              <details><summary>How long does a YouTube thumbnail change take?</summary><p>The checked official Help page does not publish one universal wait time. Record the save time and compare the relevant surfaces without inventing a deadline.</p></details>
+              <details><summary>Should I upload the thumbnail again?</summary><p>First confirm the file facts and the Studio save state. Repeated uploads change the evidence trail; a larger or different canvas is not documented as a universal refresh trigger.</p></details>
+              <details><summary>Does the thumbnail preview equal an impression?</summary><p>No. YouTube counts impressions using its own visibility and duration rules and excludes several surfaces, including external apps and the YouTube mobile website.</p></details>
+              <details><summary>Why can a vertical video show a different image?</summary><p>YouTube says a 16:9 custom thumbnail for a vertical video can be replaced by an auto-generated 4:5 thumbnail on the home, explore, and subscription pages. Check the <a href="/guides/youtube-vertical-video-thumbnail-size/">vertical-video guide</a>.</p></details>
+              <details><summary>Can Feed Thumbnail check my YouTube thumbnail update?</summary><p>No. It can inspect local dimensions, format, and its own 1280 × 720 JPEG output, but it cannot sign in to Studio or observe a channel-specific public preview or analytics report.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Keep timing, rendering, and measurement separate</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/72431?hl=en-GB" rel="noopener">YouTube Help: Add customised thumbnails on YouTube</a> is the source for the statement that thumbnail changes may take time to appear, current size/format guidance, and the vertical-video display note. Reviewed 2026-10-18.</p>
+              <p><a href="https://support.google.com/youtube/answer/9314486?hl=en-See" rel="noopener">YouTube Help: Check your YouTube thumbnail impressions and watch time</a> is the source for impression inclusion rules, the key-metrics update note, and the distinction between public visibility and analytics reporting. Reviewed 2026-10-18.</p>
+              <p><a href="https://support.google.com/youtube/answer/141805?hl=en" rel="noopener">YouTube Help: YouTube performance FAQ &amp; Troubleshooting</a> is the source for the caution that changing a title or thumbnail affects viewer interactions rather than acting as a guaranteed ranking switch.</p>
+              <p><a href="/resizer.js">Feed Thumbnail's public resizer source</a> is the source for the local 1280 × 720 JPEG behavior. For the broader table, read <a href="/youtube-thumbnail-size">YouTube thumbnail size</a>. For all guides, open <a href="/guides/">Feed Thumbnail Guides</a>.</p>
+              <p><a href="https://www.lightxeditor.com/photo-editing/youtube-thumbnail-resizer/" rel="noopener">LightX's YouTube thumbnail resizer</a>, <a href="https://snappa.com/blog/youtube-thumbnail-size/" rel="noopener">Snappa's YouTube thumbnail size notes</a>, and <a href="https://www.reddit.com/r/youtube/comments/lpbi3e" rel="noopener">the opened Reddit custom-thumbnail discussion</a> were used as fixed comparison and question-signal sources, not as authority for a wait time or analytics value.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>

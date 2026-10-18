@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Three checks for a YouTube thumbnail change that is not showing</title>
+  <desc id="desc">A three-stage diagram shows upload saved, display surface checked, and analytics report checked. The official timing note says thumbnail changes may take time to appear, with no universal wait time shown.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7f1e8"/>
+      <stop offset="1" stop-color="#e8f0f4"/>
+    </linearGradient>
+    <linearGradient id="coral" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ff795f"/>
+      <stop offset="1" stop-color="#ffb36c"/>
+    </linearGradient>
+    <linearGradient id="lime" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#dff2bf"/>
+      <stop offset="1" stop-color="#b9df89"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#dbe9ff"/>
+      <stop offset="1" stop-color="#b7cef6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="620" rx="34" fill="url(#bg)"/>
+  <text x="64" y="68" fill="#172033" font-family="Arial, sans-serif" font-size="30" font-weight="700">A thumbnail update has three different states</text>
+  <text x="64" y="102" fill="#68758a" font-family="Arial, sans-serif" font-size="17">Check the file, the surface, and the report before changing the canvas again.</text>
+
+  <path d="M362 322h48M752 322h48" stroke="#9d4938" stroke-width="5" stroke-linecap="round"/>
+  <path d="M400 322l-14-10M400 322l-14 10M790 322l-14-10M790 322l-14 10" stroke="#9d4938" stroke-width="5" stroke-linecap="round"/>
+
+  <rect x="64" y="146" width="298" height="382" rx="26" fill="#ffffff" stroke="#d6dfe4" stroke-width="2"/>
+  <circle cx="213" cy="220" r="36" fill="url(#coral)"/>
+  <path d="M196 220l12 12 23-27" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="96" y="292" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">1 · Upload saved</text>
+  <text x="96" y="332" fill="#5d6b80" font-family="Arial, sans-serif" font-size="16">pixels · format</text>
+  <text x="96" y="360" fill="#5d6b80" font-family="Arial, sans-serif" font-size="16">bytes · save state</text>
+  <rect x="96" y="404" width="234" height="70" rx="14" fill="#fff7d6" stroke="#d1a72f" stroke-width="2"/>
+  <text x="116" y="434" fill="#735a12" font-family="Arial, sans-serif" font-size="15" font-weight="700">Local file check</text>
+  <text x="116" y="458" fill="#735a12" font-family="Arial, sans-serif" font-size="14">does not prove public display</text>
+
+  <rect x="410" y="146" width="342" height="382" rx="26" fill="#ffffff" stroke="#d6dfe4" stroke-width="2"/>
+  <circle cx="581" cy="220" r="36" fill="url(#lime)"/>
+  <path d="M557 220h48M581 196v48" stroke="#466c23" stroke-width="8" stroke-linecap="round"/>
+  <text x="442" y="292" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">2 · Surface checked</text>
+  <text x="442" y="332" fill="#5d6b80" font-family="Arial, sans-serif" font-size="16">channel · search · home</text>
+  <text x="442" y="360" fill="#5d6b80" font-family="Arial, sans-serif" font-size="16">device · video type</text>
+  <rect x="442" y="404" width="278" height="70" rx="14" fill="#e7f4d4" stroke="#466c23" stroke-width="2"/>
+  <text x="462" y="434" fill="#466c23" font-family="Arial, sans-serif" font-size="15" font-weight="700">Display check</text>
+  <text x="462" y="458" fill="#466c23" font-family="Arial, sans-serif" font-size="14">may need propagation time</text>
+
+  <rect x="800" y="146" width="336" height="382" rx="26" fill="#ffffff" stroke="#d6dfe4" stroke-width="2"/>
+  <circle cx="968" cy="220" r="36" fill="url(#blue)"/>
+  <path d="M947 238v-25M968 238v-42M989 238v-32" stroke="#355a9b" stroke-width="9" stroke-linecap="round"/>
+  <text x="832" y="292" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">3 · Report checked</text>
+  <text x="832" y="332" fill="#5d6b80" font-family="Arial, sans-serif" font-size="16">impressions · CTR</text>
+  <text x="832" y="360" fill="#5d6b80" font-family="Arial, sans-serif" font-size="16">card · detailed report</text>
+  <rect x="832" y="404" width="272" height="70" rx="14" fill="#e7efff" stroke="#355a9b" stroke-width="2"/>
+  <text x="852" y="434" fill="#355a9b" font-family="Arial, sans-serif" font-size="15" font-weight="700">Analytics check</text>
+  <text x="852" y="458" fill="#355a9b" font-family="Arial, sans-serif" font-size="14">is not a live cache dashboard</text>
+
+  <text x="64" y="584" fill="#68758a" font-family="Arial, sans-serif" font-size="15">YouTube says changes may take time to appear; the checked Help page gives no universal wait time.</text>
+</svg>
