@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Separate the YouTube thumbnail size source file from the embedded player viewport and Data API thumbnail variants. The custom image is the embedded preview, but the iframe dimensions are a different check." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-size-embedded-player/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>YouTube Thumbnail Size for Embedded Videos: Source, Player, and API Image | Feed Thumbnail</title>
+    <style>
+      .embed-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .embed-figure img { display: block; width: 100%; height: auto; }
+      .embed-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .three-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .three-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .three-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .three-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .embed-table-wrap { overflow-x: auto; margin-top: 18px; }
+      .embed-table { width: 100%; min-width: 650px; border-collapse: collapse; background: rgba(255,255,255,.72); }
+      .embed-table th, .embed-table td { padding: 12px 13px; border-bottom: 1px solid #dce2eb; text-align: left; vertical-align: top; line-height: 1.55; }
+      .embed-table th { color: var(--ink); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+      .embed-table td { color: #56647a; font-size: 13px; }
+      .embed-table td strong { color: var(--ink); }
+      .scope-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #e7f4d4; color: #466c23; font-size: 12px; font-weight: 800; }
+      .caution-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #ffe5dd; color: #9d4938; font-size: 12px; font-weight: 800; }
+      .embed-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: embed-step; }
+      .embed-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: embed-step; }
+      .embed-steps li::before { content: counter(embed-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      .code-note { margin: 18px 0; padding: 14px 16px; border-radius: 14px; background: #17223a; color: #f8fbff; overflow-x: auto; font: 12px/1.65 ui-monospace, SFMono-Regular, Consolas, monospace; }
+      @media (max-width: 700px) { .embed-figure { padding: 9px; } .three-grid { grid-template-columns: 1fr; } .embed-table th, .embed-table td { padding: 10px 9px; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL SIZE · EMBEDDED PLAYER CHECK</div>
+            <h1 id="article-title">YouTube thumbnail size for embedded videos: source, player, and API image</h1>
+            <p class="answer-lede"><strong>An embedded YouTube player has more than one relevant size.</strong> The custom thumbnail is the preview image in the embedded player; YouTube recommends a 3840 × 2160 video thumbnail and a 16:9 ratio. The player itself is a separate viewport: Google’s player documentation recommends a 16:9 player of at least 480 × 270 pixels and requires at least a 200 × 200 viewport. Data API thumbnail variants are a third size system, not new upload requirements.</p>
+            <p class="source-line">Official sources: <a href="https://support.google.com/youtube/answer/72431?hl=en-GB" rel="noopener">Add customised thumbnails on YouTube</a>, <a href="https://developers.google.com/youtube/player_parameters?hl=en" rel="noopener">YouTube Embedded Players and Player Parameters</a>, and <a href="https://developers.google.com/youtube/data/reference/rest/v3/thumbnails?hl=en" rel="noopener">Thumbnails API reference</a>, reviewed 2026-10-20.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="three-title" id="three-sizes">
+            <div class="section-kicker">THREE SIZES, THREE JOBS</div>
+            <h2 id="three-title">Which YouTube thumbnail size are you actually measuring?</h2>
+            <div class="three-grid">
+              <div><strong>1 · Source image</strong><span>Custom video thumbnail: 3840 × 2160 recommendation, minimum width 640, 16:9.</span></div>
+              <div><strong>2 · Embedded player</strong><span>Viewport: at least 200 × 200; recommended 16:9 player: at least 480 × 270.</span></div>
+              <div><strong>3 · API variant</strong><span>Resource outputs such as default, medium, high, standard, and maxres have their own dimensions.</span></div>
+            </div>
+            <p data-original-evidence="yes">YouTube Help says the custom thumbnail image will be used as the preview image in the embedded player and recommends 3840 × 2160 pixels for videos, with a minimum width of 640 pixels and an aspect ratio of 16:9. That is the source-file guidance. It does not say that every iframe must be 3840 × 2160, or that the player must use the same pixel dimensions as the uploaded file.</p>
+            <p data-original-evidence="yes">The YouTube IFrame Player documentation describes a different object: an embedded player viewport. It requires at least 200 × 200 pixels and recommends a 16:9 player of at least 480 × 270 when controls are shown. Those numbers describe the space occupied by the player on a site, not the custom thumbnail upload canvas.</p>
+            <span class="scope-badge">Source file ≠ iframe viewport ≠ API variant</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="embed-title" id="embed-route">
+            <div class="section-kicker">THE EMBED ROUTE</div>
+            <h2 id="embed-title">Does an iframe width change the YouTube thumbnail size?</h2>
+            <p data-original-evidence="yes">No. YouTube’s embed Help page tells a creator to open a video or playlist, choose Share, choose Embed, copy the HTML, and paste it into the site. The IFrame documentation then uses the iframe’s width and height to define the player. A 640 × 360 player is an example of a 16:9 viewport; it is not a replacement for the 3840 × 2160 source recommendation.</p>
+            <pre class="code-note">&lt;iframe width="640" height="360"
+  src="https://www.youtube.com/embed/VIDEO_ID"&gt;&lt;/iframe&gt;</pre>
+            <p data-original-evidence="yes">A practical embed can therefore use a high-resolution 16:9 custom thumbnail and display it inside a smaller responsive player. The browser scales the player to its container; changing the iframe attributes changes the player box, not the stored custom image. If the player is made too small for its controls or below the minimum viewport, that is an embed-layout problem rather than a YouTube thumbnail-size failure.</p>
+            <figure class="embed-figure">
+              <img src="/assets/youtube-thumbnail-size-embedded-player.svg" alt="A diagram separating a 3840 by 2160 YouTube thumbnail source, a 480 by 270 recommended embedded player, and API thumbnail variants." width="1200" height="680" />
+              <figcaption>Original local diagram. The same video can have a source image, a player viewport, and several API thumbnail representations.</figcaption>
+            </figure>
+          </section>
+
+          <section class="guide-section" aria-labelledby="api-title" id="api-variants">
+            <div class="section-kicker">DATA API VARIANTS</div>
+            <h2 id="api-title">Why do API thumbnail names have different dimensions?</h2>
+            <p data-original-evidence="yes">The YouTube Data API describes a thumbnail resource as a set of available image-size objects. It warns that different resource types can support different sizes, that the same name can mean different dimensions for different resources, and that width and height may not be returned for every image. The labels are response variants, not a menu of upload presets.</p>
+            <div class="embed-table-wrap">
+              <table class="embed-table">
+                <thead><tr><th scope="col">API name</th><th scope="col">Video dimensions documented</th><th scope="col">How to read it</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">default</th><td><strong>120 × 90</strong></td><td>Default video or video-related resource thumbnail.</td></tr>
+                  <tr><th scope="row">medium</th><td><strong>320 × 180</strong></td><td>Higher-resolution video thumbnail variant.</td></tr>
+                  <tr><th scope="row">high</th><td><strong>480 × 360</strong></td><td>High variant; do not rename it as an upload canvas.</td></tr>
+                  <tr><th scope="row">standard</th><td><strong>640 × 480</strong></td><td>Available for some videos and related resources.</td></tr>
+                  <tr><th scope="row">maxres</th><td><strong>1280 × 720</strong></td><td>Highest documented video variant when available.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p data-original-evidence="yes">The API page also says that if an uploaded thumbnail does not match the required dimensions, the image is resized to match without changing its aspect ratio. It says the image is not cropped, but may include black bars so that the size is correct. Keep that statement in its API-documentation scope: it explains the thumbnail resource behavior and does not publish a universal crop map for every YouTube surface or third-party embed.</p>
+            <span class="caution-badge">Variant labels are not upload instructions</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="problem-title" id="troubleshooting">
+            <div class="section-kicker">WHEN THE EMBED LOOKS WRONG</div>
+            <h2 id="problem-title">Is a missing or stale embedded thumbnail a size problem?</h2>
+            <p data-original-evidence="yes">Not automatically. YouTube’s thumbnail Help page says thumbnail changes may take time to appear, without publishing one universal wait period. The embed Help page separately notes that age-restricted videos cannot be watched on most third-party websites, and that missing HTTP Referer context can cause blocked playback and an error screen. Those are product or playback conditions, not evidence that the source image has the wrong YouTube thumbnail size.</p>
+            <p data-original-evidence="yes">The fixed Reddit question about an embedded video describes a creator who thought the uploaded thumbnail was being ignored; the post’s edit attributes the different image to a browser extension. Another Reddit discussion asks how websites keep thumbnail aspect ratios consistent and receives community suggestions about cropping, letterboxing, and `object-fit`. These reports are useful troubleshooting signals, but neither is authority for YouTube’s player or API behavior.</p>
+            <p>Before exporting another image, identify which object is wrong: the saved custom source, the iframe box, the API response variant, the external page cache, a browser extension, or playback access. A single screenshot from an embedded page cannot distinguish all of those states.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="local-title" id="local-boundary">
+            <div class="section-kicker">WHAT FEED THUMBNAIL CAN CHECK</div>
+            <h2 id="local-title">Can the local tools inspect an embedded YouTube thumbnail?</h2>
+            <p data-original-evidence="yes">The public Feed Thumbnail resizer source sets a fixed 1280 × 720 canvas and exports JPEG. It can provide a reproducible local 16:9 preparation path, but it does not create an iframe, request the YouTube Data API, or observe an external page’s cache and browser extensions.</p>
+            <p data-original-evidence="yes">The public downloader accepts standard watch, Shorts, live, embed, and bare video-ID inputs in the browser. It requests direct YouTube image files and reports the dimensions of files that actually load. That is useful evidence about an exposed image URL; it is not a guarantee about what a specific embedded player, website cache, or user extension will display.</p>
+            <p class="source-line">Open the <a href="/youtube-thumbnail-downloader">thumbnail downloader</a> to inspect loaded image variants, the <a href="/youtube-thumbnail-resizer">thumbnail resizer</a> for the fixed local canvas, and <a href="/youtube-thumbnail-size">YouTube thumbnail size</a> for the general source recommendation.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="benchmark-title" id="benchmark-check">
+            <div class="section-kicker">FIXED BENCHMARK CHECK</div>
+            <h2 id="benchmark-title">What do LightX, Snappa, and Reddit add?</h2>
+            <p data-original-evidence="yes">The opened LightX YouTube Thumbnail Resizer page covers a 1280 × 720 preset, custom dimensions, editing, and JPG/PNG download. It explains source-file preparation, not the relationship between an uploaded thumbnail, an iframe viewport, and an API response variant.</p>
+            <p data-original-evidence="yes">The opened Snappa YouTube thumbnail-size page focuses on the ordinary 1280 × 720, 16:9 workflow and template creation. It does not document the YouTube Player API’s 200 × 200 minimum, 480 × 270 recommendation, or API variant names.</p>
+            <p data-original-evidence="yes">The opened Reddit embedded-video discussion describes a thumbnail that seemed wrong inside an iframe and later attributes the result to a browser extension. The opened web-development discussion asks about consistent thumbnail aspect ratios and compares cropping, letterboxing, and stretching. Both are community signals, not official rules or measured platform behavior.</p>
+            <p>The useful gap is the handoff between an image editor and a player embed. A generic YouTube thumbnail size answer can be correct for the source file while still being incomplete for the iframe and API layers.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="workflow-title" id="workflow">
+            <div class="section-kicker">A REPRODUCIBLE CHECKLIST</div>
+            <h2 id="workflow-title">What should you record for an embedded-thumbnail bug?</h2>
+            <ol class="embed-steps">
+              <li><span><strong>Record the source file.</strong> Note the actual pixel dimensions, format, and the time the custom thumbnail was saved in Studio.</span></li>
+              <li><span><strong>Record the player box.</strong> Capture the iframe width and height or the responsive container’s computed size. Compare it with the official 16:9 player guidance.</span></li>
+              <li><span><strong>Record the integration route.</strong> Say whether the HTML came from YouTube’s Share → Embed flow, the IFrame API, or a third-party card that fetches an image URL.</span></li>
+              <li><span><strong>Record the actual image variant.</strong> If a downloader or API response is involved, record the filename or variant name and its measured width and height instead of trusting a label.</span></li>
+              <li><span><strong>Check playback conditions.</strong> Look for age restrictions, embedding being disabled, missing Referer context, cache, and browser extensions before changing a valid source image.</span></li>
+              <li><span><strong>Keep the conclusion narrow.</strong> Report “source mismatch,” “player layout,” “API variant,” “external cache,” or “playback access” only when the evidence supports that layer.</span></li>
+            </ol>
+            <p class="source-line">This checklist is a way to separate source, player, response, and playback evidence. It is not a promise that every third-party page refreshes at the same time.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title">
+            <div class="section-kicker">QUESTIONS</div>
+            <h2 id="faq-title">YouTube thumbnail size and embedded-player questions</h2>
+            <div class="faq-grid">
+              <details open><summary>What is the YouTube thumbnail size for an embedded video?</summary><p>For a video source image, YouTube recommends 3840 × 2160 and 16:9. The embedded player is a separate viewport; Google recommends a 16:9 player of at least 480 × 270 and requires at least 200 × 200.</p></details>
+              <details><summary>Do I need to upload a 640 × 360 thumbnail for a 640 × 360 iframe?</summary><p>No. The iframe dimensions describe the player box. YouTube’s source recommendation is a separate 3840 × 2160 video thumbnail.</p></details>
+              <details><summary>Will YouTube crop a thumbnail that has the wrong dimensions?</summary><p>The Data API documentation says a mismatched uploaded thumbnail is resized without changing its aspect ratio and may include black bars; it says the image is not cropped. That statement is scoped to the API thumbnail resource behavior.</p></details>
+              <details><summary>Why does an embed show an old or different image?</summary><p>Check thumbnail propagation, external-page cache, browser extensions, API variant, and playback conditions. A different embedded image is not by itself proof that the source YouTube thumbnail size was wrong.</p></details>
+              <details><summary>Can Feed Thumbnail inspect my embedded player?</summary><p>No. It can inspect local files and loaded direct image variants in the browser. It cannot read a private Studio state, query your API credentials, or observe every external embed’s cache and extension state.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Keep the source, player, and response layers separate</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/72431?hl=en-GB" rel="noopener">YouTube Help: Add customised thumbnails on YouTube</a> is the source for the custom thumbnail being used as the embedded-player preview, the 3840 × 2160 video recommendation, minimum width, formats, and 16:9 guidance. Reviewed 2026-10-20.</p>
+              <p><a href="https://developers.google.com/youtube/player_parameters?hl=en" rel="noopener">YouTube IFrame Player API: Embedded Players and Player Parameters</a> is the source for the 200 × 200 minimum viewport, the 16:9 player recommendation of at least 480 × 270, and the iframe width/height distinction. Reviewed 2026-10-20.</p>
+              <p><a href="https://developers.google.com/youtube/data/reference/rest/v3/thumbnails?hl=en" rel="noopener">YouTube Data API: Thumbnails</a> is the source for the named response variants, their documented video dimensions, variable availability, and the resize-without-crop / possible-black-bars wording. Reviewed 2026-10-20.</p>
+              <p><a href="https://support.google.com/youtube/answer/171780?hl=en" rel="noopener">YouTube Help: Embed videos &amp; playlists</a> is the source for the Share → Embed path, embedding restrictions, age-restricted playback note, and Referer warning.</p>
+              <p><a href="/resizer.js">Feed Thumbnail's resizer source</a> and <a href="/downloader.js">downloader source</a> are the first-party sources for the local 1280 × 720 JPEG path and browser-side embed-link/image-variant behavior.</p>
+              <p><a href="https://www.lightxeditor.com/photo-editing/youtube-thumbnail-resizer/" rel="noopener">LightX's YouTube thumbnail resizer</a>, <a href="https://snappa.com/blog/youtube-thumbnail-size/" rel="noopener">Snappa's YouTube thumbnail notes</a>, <a href="https://www.reddit.com/r/youtube/comments/1dl7f9i/embedded_video_change_thumbnail/" rel="noopener">the opened Reddit embedded-video question</a>, and <a href="https://www.reddit.com/r/webdev/comments/101h425/how_do_sites_like_youtube_have_thumbnails_with/" rel="noopener">the opened web-development aspect-ratio discussion</a> were used as fixed comparison and question-signal sources only.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>
