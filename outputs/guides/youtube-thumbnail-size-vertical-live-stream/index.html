@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="For YouTube thumbnail size on live streams, keep the custom source image separate from YouTube's horizontal and vertical live layouts. Use the official 16:9 source guidance, then check crop and surface behavior." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-size-vertical-live-stream/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>YouTube Thumbnail Size for Vertical Live Streams: Source, Crop, and Surfaces | Feed Thumbnail</title>
+    <style>
+      .live-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .live-figure img { display: block; width: 100%; height: auto; }
+      .live-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .stream-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .stream-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .stream-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .stream-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .live-table-wrap { overflow-x: auto; margin-top: 18px; }
+      .live-table { width: 100%; min-width: 650px; border-collapse: collapse; background: rgba(255,255,255,.72); }
+      .live-table th, .live-table td { padding: 12px 13px; border-bottom: 1px solid #dce2eb; text-align: left; vertical-align: top; line-height: 1.55; }
+      .live-table th { color: var(--ink); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+      .live-table td { color: #56647a; font-size: 13px; }
+      .live-table td strong { color: var(--ink); }
+      .scope-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #e7f4d4; color: #466c23; font-size: 12px; font-weight: 800; }
+      .caution-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #ffe5dd; color: #9d4938; font-size: 12px; font-weight: 800; }
+      .live-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: live-step; }
+      .live-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: live-step; }
+      .live-steps li::before { content: counter(live-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      .live-note { margin: 18px 0; padding: 15px 16px; border-left: 4px solid #ff795f; border-radius: 12px; background: #fff1eb; color: #674b46; font-size: 14px; line-height: 1.7; }
+      @media (max-width: 700px) { .live-figure { padding: 9px; } .stream-grid { grid-template-columns: 1fr; } .live-table th, .live-table td { padding: 10px 9px; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL SIZE · LIVE STREAM CHECK</div>
+            <h1 id="article-title">YouTube thumbnail size for vertical live streams: source, crop, and surfaces</h1>
+            <p class="answer-lede"><strong>A vertical live-stream layout is not the same thing as a vertical thumbnail upload.</strong> YouTube’s current thumbnail Help page recommends a 3840 × 2160 video thumbnail with a 16:9 aspect ratio. Its live-streaming Help page describes a separate dual-format experience: a horizontal 16:9 stream and a vertical 9:16 presentation, with a center crop or other layout options. Start with the source thumbnail, then check the live layout and the surface where viewers see it.</p>
+            <p class="source-line">Official sources: <a href="https://support.google.com/youtube/answer/72431?hl=en-GB" rel="noopener">Add custom thumbnails on YouTube</a>, <a href="https://support.google.com/youtube/answer/2474026?hl=en" rel="noopener">Get started with live streaming</a>, and <a href="https://support.google.com/youtube/answer/9228389?hl=en" rel="noopener">Create a live stream via webcam</a>, reviewed 2026-10-21.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="short-title" id="short-answer">
+            <div class="section-kicker">THE SHORT ANSWER</div>
+            <h2 id="short-title">Which YouTube thumbnail size should a live stream use?</h2>
+            <div class="stream-grid">
+              <div><strong>Custom thumbnail source</strong><span>Use the video guidance: 3840 × 2160, minimum width 640, JPG or PNG, and 16:9.</span></div>
+              <div><strong>Horizontal live format</strong><span>YouTube describes the ordinary live format as 16:9 for computers, TVs, and other horizontal viewers.</span></div>
+              <div><strong>Vertical live format</strong><span>YouTube describes a 9:16 viewing layout or feed experience; that is a stream presentation layer, not a published 9:16 thumbnail-upload requirement.</span></div>
+            </div>
+            <p data-original-evidence="yes">YouTube’s custom-thumbnail Help page says the image is used as the preview image for a video and recommends a resolution of 3840 × 2160 pixels for videos, a minimum width of 640 pixels, JPG or PNG formats, and a 16:9 aspect ratio for videos. The page does not publish a separate live-stream thumbnail canvas in that size list, so the safest documented source rule is the video rule.</p>
+            <p data-original-evidence="yes">The live-streaming Help page talks about the broadcast layout instead. It says Live Control Room can send horizontal and vertical formats at the same time, with a horizontal 16:9 format and a vertical 9:16 format. It also says the vertical stream is a center crop of the horizontal stream by default. That is why a vertical live preview can look different from the custom thumbnail source without proving that the source image has the wrong YouTube thumbnail size.</p>
+            <span class="scope-badge">Source thumbnail ≠ live layout ≠ viewer surface</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="dual-title" id="dual-format">
+            <div class="section-kicker">DUAL-FORMAT LIVE STREAMING</div>
+            <h2 id="dual-title">What does YouTube crop when a live stream is vertical?</h2>
+            <p data-original-evidence="yes">For the built-in dual-format experience, YouTube says the vertical stream is a center crop of the horizontal stream. It also documents three vertical layout choices in the editing canvas: Center crop, Fit to phone width, and Stacked. The creator can adjust zoom and position in the vertical preview, which changes how the live video is framed for the vertical surface.</p>
+            <p data-original-evidence="yes">The same official page says the vertical format cannot be added after the stream has started. If the vertical composition matters, choose or configure it before going live. A late change to the thumbnail file cannot recover a subject that was already cut out of the vertical video layout.</p>
+            <figure class="live-figure">
+              <img src="/assets/youtube-thumbnail-size-vertical-live-stream.svg" alt="A diagram showing a 3840 by 2160 16:9 thumbnail source, YouTube horizontal and vertical live layouts, and different viewing surfaces." width="1200" height="700" />
+              <figcaption>Original local diagram. The thumbnail source remains a file; the horizontal and vertical live layouts are presentation choices applied to the broadcast.</figcaption>
+            </figure>
+            <div class="live-note"><strong>Do not overread the 9:16 label.</strong> YouTube’s live Help page documents the vertical stream aspect ratio and crop choices, but it does not turn that into a universal 9:16 custom-thumbnail upload specification. Keep the thumbnail file and live-video canvas as separate checks.</div>
+          </section>
+
+          <section class="guide-section" aria-labelledby="surface-title" id="surfaces">
+            <div class="section-kicker">SURFACE BEHAVIOR</div>
+            <h2 id="surface-title">Where will viewers see the horizontal or vertical live version?</h2>
+            <p data-original-evidence="yes">YouTube says viewers watching on mobile in the Shorts feed will see the vertical version, while all other viewers will see the horizontal stream. Subscribers receive one go-live notification with a shared stream URL, and the same live chat is shown to viewers of both formats. The custom thumbnail, the video layout, and the navigation surface are related, but they are not one pixel measurement.</p>
+            <div class="live-table-wrap">
+              <table class="live-table">
+                <thead><tr><th scope="col">Layer</th><th scope="col">Official signal</th><th scope="col">What to test</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Thumbnail source</th><td><strong>3840 × 2160 and 16:9</strong> video recommendation</td><td>File dimensions, format, clarity, and the time it was saved.</td></tr>
+                  <tr><th scope="row">Live broadcast</th><td><strong>16:9 horizontal plus 9:16 vertical</strong> when dual format is enabled</td><td>Whether the stream was configured before going live and which layout is selected.</td></tr>
+                  <tr><th scope="row">Vertical layout</th><td><strong>Center crop, fit to phone width, or stacked</strong></td><td>Subject position, safe area, zoom, and whether important text survives the crop.</td></tr>
+                  <tr><th scope="row">Viewer surface</th><td><strong>Shorts feed on mobile versus other viewers</strong></td><td>Device, app surface, URL, and whether the image is a preview or live video frame.</td></tr>
+                  <tr><th scope="row">Analytics timing</th><td><strong>Combined metrics; vertical metrics after 24 hours</strong></td><td>Do not treat an early analytics gap as proof of a thumbnail-size error.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p data-original-evidence="yes">The live-streaming Help page says combined metrics for both streams are available in Live Control Room during and after the stream, while metrics for only the vertical stream become available 24 hours after the stream. That timing belongs to live-stream analytics, not to the file’s pixel dimensions.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="upload-title" id="upload-route">
+            <div class="section-kicker">UPLOAD AND CONTROL ROOM ROUTES</div>
+            <h2 id="upload-title">How do you prepare the thumbnail before going live?</h2>
+            <p data-original-evidence="yes">YouTube’s webcam Help page says that after a creator enters the title, description, and privacy settings, the camera takes a thumbnail before the creator clicks Go Live. It also says scheduled streams can be accessed in Live Control Room through Manage. The page documents a workflow step, not a new live-specific thumbnail dimension.</p>
+            <ol class="live-steps">
+              <li><span><strong>Prepare a source file.</strong> Start with the documented video thumbnail guidance: 16:9, as large as practical, and 3840 × 2160 when the upload path accepts it.</span></li>
+              <li><span><strong>Design for the center.</strong> Keep faces, logos, and the short title away from the outer edges if the vertical live layout may use a center crop.</span></li>
+              <li><span><strong>Schedule or open the live stream.</strong> In YouTube Studio, use the stream’s Manage or Live Control Room route and confirm the thumbnail and metadata before broadcasting.</span></li>
+              <li><span><strong>Inspect the vertical preview.</strong> Choose Center crop, Fit to phone width, or Stacked when available, then adjust zoom and position for the video itself.</span></li>
+              <li><span><strong>Test the right surface.</strong> Check a computer or TV view separately from the mobile Shorts feed. Record whether the mismatch is the source image, the live video crop, or the surface preview.</span></li>
+            </ol>
+            <p class="source-line">The exact buttons can change with the Studio interface. The durable distinction is the evidence path: source file, Live Control Room layout, then viewer surface.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="access-title" id="access-boundaries">
+            <div class="section-kicker">FEATURE BOUNDARIES</div>
+            <h2 id="access-title">Could a live-stream feature limit look like a thumbnail problem?</h2>
+            <p data-original-evidence="yes">Yes. YouTube’s current members-only live-stream Help page says that switching a public stream to members-only is currently unavailable on vertical live streams. A missing option or a different control-room route is therefore not evidence that the thumbnail source has the wrong YouTube thumbnail size.</p>
+            <p data-original-evidence="yes">The live-streaming Help page also separates the horizontal and vertical viewer experiences: the vertical version can appear in the Shorts feed, while the horizontal version is shown to other viewers. A creator who checks only one surface can conclude that a thumbnail or live layout failed when the two surfaces are intentionally different.</p>
+            <span class="caution-badge">Feature availability is not a dimension check</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="local-title" id="local-boundary">
+            <div class="section-kicker">WHAT FEED THUMBNAIL CAN CHECK</div>
+            <h2 id="local-title">Can the local tools create a vertical live thumbnail?</h2>
+            <p data-original-evidence="yes">The public Feed Thumbnail resizer source sets a fixed 1280 × 720 canvas and exports JPEG. That is a reproducible local 16:9 preparation path for the source-file side of this workflow. It does not create a live broadcast, choose a Live Control Room layout, or generate a vertical stream feed.</p>
+            <p data-original-evidence="yes">The public downloader accepts watch, Shorts, live, embed, and bare video-ID inputs in the browser. It requests direct YouTube image files and reports the dimensions of files that actually load. That can help record an exposed thumbnail variant, but it cannot tell whether the live video was center-cropped, fit to phone width, or supplied by a separate encoder.</p>
+            <p class="source-line">Use the <a href="/youtube-thumbnail-resizer">thumbnail resizer</a> for the local 16:9 canvas, the <a href="/youtube-thumbnail-downloader">thumbnail downloader</a> for loaded image variants, and <a href="/youtube-thumbnail-size">YouTube thumbnail size</a> for the general source guidance.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="benchmark-title" id="benchmark-check">
+            <div class="section-kicker">FIXED BENCHMARK CHECK</div>
+            <h2 id="benchmark-title">What do LightX, Snappa, and Reddit add to the live-stream question?</h2>
+            <p data-original-evidence="yes">The opened LightX YouTube Thumbnail Resizer page offers a 1280 × 720 preset, custom dimensions, editing, and JPG/PNG download. That is useful for preparing a horizontal source file, but it does not document YouTube’s dual-format live layout or the vertical crop options.</p>
+            <p data-original-evidence="yes">The opened Snappa YouTube thumbnail-size page focuses on the ordinary 1280 × 720, 16:9 workflow and template creation. Its advice supports a standard source-file handoff, not a claim that a 9:16 live presentation needs a separate 9:16 thumbnail upload.</p>
+            <p data-original-evidence="yes">The opened Reddit livestream-thumbnail question describes the practical tension of making a new thumbnail for every stream, especially when the stream’s final scene does not exist yet. A newer Reddit discussion asks how a horizontal stream connects to an automatically generated vertical version and how that crop is controlled; another community thread observes the new dual-layout experience appearing in the Shorts feed while the channel view remains horizontal. These are useful question signals, not official dimensions or guaranteed distribution results.</p>
+            <p>The gap is the handoff between a thumbnail editor and a live-layout control room. A 16:9 source answer can be correct while a creator still needs to test center crop, phone-width fit, stacked layout, and the surface-specific preview.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="checklist-title" id="checklist">
+            <div class="section-kicker">A REPRODUCIBLE CHECKLIST</div>
+            <h2 id="checklist-title">What should you record when a vertical live thumbnail looks wrong?</h2>
+            <ol class="live-steps">
+              <li><span><strong>Record the source.</strong> Save the actual file dimensions, format, and the moment the custom thumbnail was selected.</span></li>
+              <li><span><strong>Record the live mode.</strong> Note whether YouTube created both formats automatically or whether a third-party encoder supplied a separate vertical feed.</span></li>
+              <li><span><strong>Record the crop.</strong> Write down Center crop, Fit to phone width, Stacked, or an encoder layout, plus zoom and position.</span></li>
+              <li><span><strong>Record the surface.</strong> Compare Studio, the watch page, a computer or TV, and the mobile Shorts feed as separate observations.</span></li>
+              <li><span><strong>Record the timing.</strong> Keep thumbnail propagation and the 24-hour vertical-metrics note separate from the source file’s dimensions.</span></li>
+              <li><span><strong>Keep the conclusion narrow.</strong> Say “source file,” “live crop,” “surface preview,” “feature availability,” or “analytics timing” only when the evidence supports that layer.</span></li>
+            </ol>
+            <p class="source-line">This checklist separates what can be measured locally from what only the YouTube account and live surface can confirm.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title">
+            <div class="section-kicker">QUESTIONS</div>
+            <h2 id="faq-title">YouTube thumbnail size for vertical live streams</h2>
+            <div class="faq-grid">
+              <details open><summary>What is the YouTube thumbnail size for a live stream?</summary><p>YouTube’s documented video thumbnail guidance recommends 3840 × 2160, a minimum width of 640, JPG or PNG, and 16:9. The live-stream Help page describes stream layouts separately and does not publish a universal live-only thumbnail canvas.</p></details>
+              <details><summary>Should a vertical live stream use a 9:16 thumbnail?</summary><p>Do not infer that from the live stream’s 9:16 viewing format. YouTube documents the vertical broadcast layout and crop behavior, while its custom-thumbnail size guidance remains the video source guidance.</p></details>
+              <details><summary>Why is my subject cut off in the vertical live view?</summary><p>The default vertical live presentation can be a center crop of the horizontal stream. Check the vertical preview and the available Center crop, Fit to phone width, or Stacked layout options before changing the thumbnail source.</p></details>
+              <details><summary>Can I add the vertical live format after the stream starts?</summary><p>YouTube’s live-stream Help page says you cannot add the vertical format once the stream has started. Configure the mode and composition before going live.</p></details>
+              <details><summary>Can Feed Thumbnail verify my live-stream surface?</summary><p>No. It can prepare and measure local images and inspect direct files that load in the browser. It cannot read your Studio state, control the Live Control Room, or guarantee what a mobile Shorts feed will show.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Keep the thumbnail source and live layout separate</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/72431?hl=en-GB" rel="noopener">YouTube Help: Add custom thumbnails on YouTube</a> is the source for the 3840 × 2160 video recommendation, minimum width, JPG/PNG formats, and 16:9 video guidance. Reviewed 2026-10-21.</p>
+              <p><a href="https://support.google.com/youtube/answer/2474026?hl=en" rel="noopener">YouTube Help: Get started with live streaming</a> is the source for dual horizontal and vertical formats, the 16:9 and 9:16 aspect ratios, center-crop default, alternate layout choices, the pre-live setup boundary, viewer surfaces, and metric timing. Reviewed 2026-10-21.</p>
+              <p><a href="https://support.google.com/youtube/answer/9228389?hl=en" rel="noopener">YouTube Help: Create a live stream via webcam</a> is the source for the webcam thumbnail step and the Live Control Room Manage route for scheduled streams. Reviewed 2026-10-21.</p>
+              <p><a href="https://support.google.com/youtube/answer/16399635?hl=en" rel="noopener">YouTube Help: Live stream to members-only</a> is the source for the current vertical-live feature boundary used in the access section. Reviewed 2026-10-21.</p>
+              <p><a href="/resizer.js">Feed Thumbnail’s resizer source</a> and <a href="/downloader.js">downloader source</a> are the first-party sources for the local 1280 × 720 JPEG path and browser-side live/embed-link and image-variant behavior.</p>
+              <p><a href="https://www.lightxeditor.com/photo-editing/youtube-thumbnail-resizer/" rel="noopener">LightX’s YouTube thumbnail resizer</a>, <a href="https://snappa.com/blog/youtube-thumbnail-size/" rel="noopener">Snappa’s YouTube thumbnail notes</a>, <a href="https://www.reddit.com/r/YouTubeCreators/comments/1qvlq4x/thumbnail_use_for_livestreams/" rel="noopener">the opened Reddit livestream-thumbnail question</a>, <a href="https://www.reddit.com/r/youtube/comments/1vw70j7/i_wanna_connect_horizontal_and_vertical_streams/" rel="noopener">the opened Reddit dual-format question</a>, and <a href="https://www.reddit.com/r/PartneredYoutube/comments/1w4i6a5/new_dual_layout_horizontal_and_vertical/" rel="noopener">the opened Reddit dual-layout discussion</a> were used as fixed comparison and question-signal sources only.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>
