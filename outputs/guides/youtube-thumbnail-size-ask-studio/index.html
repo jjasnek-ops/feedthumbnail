@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ask Studio can suggest YouTube thumbnails from a video's transcript and themes, but it is not a published pixel preset. Separate the generated suggestion from the final 3840 × 2160, 16:9 upload check." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-size-ask-studio/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>YouTube Thumbnail Size with Ask Studio: Suggestion vs Upload File | Feed Thumbnail</title>
+    <style>
+      .ask-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .ask-figure img { display: block; width: 100%; height: auto; }
+      .ask-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .ai-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .ai-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .ai-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .ai-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .ask-table-wrap { overflow-x: auto; margin-top: 18px; }
+      .ask-table { width: 100%; min-width: 680px; border-collapse: collapse; background: rgba(255,255,255,.72); }
+      .ask-table th, .ask-table td { padding: 12px 13px; border-bottom: 1px solid #dce2eb; text-align: left; vertical-align: top; line-height: 1.55; }
+      .ask-table th { color: var(--ink); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+      .ask-table td { color: #56647a; font-size: 13px; }
+      .ask-table td strong { color: var(--ink); }
+      .scope-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #e7f4d4; color: #466c23; font-size: 12px; font-weight: 800; }
+      .caution-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #ffe5dd; color: #9d4938; font-size: 12px; font-weight: 800; }
+      .ask-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: ask-step; }
+      .ask-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: ask-step; }
+      .ask-steps li::before { content: counter(ask-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      .ask-note { margin: 18px 0; padding: 15px 16px; border-left: 4px solid #ff795f; border-radius: 12px; background: #fff1eb; color: #674b46; font-size: 14px; line-height: 1.7; }
+      @media (max-width: 700px) { .ask-figure { padding: 9px; } .ai-grid { grid-template-columns: 1fr; } .ask-table th, .ask-table td { padding: 10px 9px; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL SIZE · ASK STUDIO CHECK</div>
+            <h1 id="article-title">YouTube thumbnail size with Ask Studio: generated suggestion vs upload file</h1>
+            <p class="answer-lede"><strong>Ask Studio is a suggestion layer, not a published pixel preset.</strong> YouTube says Ask Studio can analyze a video’s transcript and themes, suggest a custom thumbnail, and accept follow-up prompts for changes. The same Help page still gives the source-file guidance: 3840 × 2160 for videos, minimum width 640, JPG or PNG, and 16:9. Treat the suggestion as a concept to review; treat the final selected or uploaded image as the file whose YouTube thumbnail size you verify.</p>
+            <p class="source-line">Official sources: <a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">Add custom thumbnails on YouTube</a>, <a href="https://support.google.com/youtube/answer/16291691?hl=en" rel="noopener">Learn about Ask Studio in YouTube Studio</a>, and <a href="https://blog.youtube/news-and-events/youtube-studio-custom-thumbnail-updates/" rel="noopener">YouTube Blog: Making thumbnails easier</a>, reviewed 2026-10-22.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="short-title" id="short-answer">
+            <div class="section-kicker">THE SHORT ANSWER</div>
+            <h2 id="short-title">What is the YouTube thumbnail size when Ask Studio makes a suggestion?</h2>
+            <div class="ai-grid">
+              <div><strong>Manual source file</strong><span>For a video custom thumbnail, the official guidance is 3840 × 2160, minimum width 640, JPG or PNG, and 16:9.</span></div>
+              <div><strong>Ask Studio suggestion</strong><span>Ask Studio uses a video’s transcript and themes to suggest a thumbnail and lets you request changes; the public guide does not state a fixed output canvas.</span></div>
+              <div><strong>Final upload check</strong><span>Measure the actual image you select or upload. Do not infer its dimensions from the fact that Ask Studio generated it.</span></div>
+            </div>
+            <p data-original-evidence="yes">YouTube Help gives two routes under the custom video thumbnail workflow: click Upload file to use an image from your device, or select Get suggestions to generate a thumbnail. It then describes Ask Studio as a way to get custom-thumbnail suggestions based on the video’s transcript and themes, with a prompt, optional video or reference-image attachment, follow-up changes, and a final review of the suggestions.</p>
+            <p data-original-evidence="yes">The same Help page places Image size &amp; resolution after the Ask Studio instructions. It recommends 3840 × 2160 pixels for videos, a minimum width of 640 pixels, image formats such as JPG or PNG, and a 16:9 video ratio. It does not name a separate Ask Studio pixel preset in that list.</p>
+            <span class="scope-badge">Suggestion ≠ source file ≠ upload receipt</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="official-title" id="official-route">
+            <div class="section-kicker">WHAT THE OFFICIAL PAGES SAY</div>
+            <h2 id="official-title">Does Ask Studio change the published YouTube thumbnail size?</h2>
+            <p data-original-evidence="yes">No separate change is documented in the public pages reviewed here. YouTube’s July 2026 Blog announcement says thumbnail generation was brought directly into Ask Studio for long-form videos, where creators can ask for a thumbnail and adjust elements such as colors and layouts by chatting. The announcement describes the feature and its creative purpose; it does not replace the image-size guidance in YouTube Help.</p>
+            <div class="ask-table-wrap">
+              <table class="ask-table">
+                <thead><tr><th scope="col">Layer</th><th scope="col">What the official source says</th><th scope="col">What to verify</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Generation</th><td><strong>Transcript and themes</strong> can inform a custom-thumbnail suggestion.</td><td>Prompt, video context, reference images, and the visual result.</td></tr>
+                  <tr><th scope="row">Creative revision</th><td><strong>Follow-up prompts</strong> can request changes such as larger text.</td><td>Legibility, faces, claims, and whether the design still matches the video.</td></tr>
+                  <tr><th scope="row">Image source</th><td><strong>3840 × 2160 and 16:9</strong> remain the documented video-thumbnail guidance.</td><td>Actual pixel dimensions, file format, and upload path.</td></tr>
+                  <tr><th scope="row">Studio action</th><td><strong>Review suggestions</strong> before using them.</td><td>Which image was actually selected or uploaded; do not treat a suggestion as an upload receipt.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>The conclusion that Ask Studio has no separately published output canvas is an evidence-bounded reading of the public documentation, not a claim about every internal generation step. If YouTube exposes a different dimension in your Studio account, record that account-level observation separately from the public Help-page rule.</p>
+            <figure class="ask-figure">
+              <img src="/assets/youtube-thumbnail-size-ask-studio.svg" alt="A diagram separating a manual 3840 by 2160 thumbnail file, an Ask Studio suggestion, and the final image-size and upload checks." width="1200" height="680" />
+              <figcaption>Original local diagram. Ask Studio can help create a suggestion; the final selected or uploaded image is the object to measure.</figcaption>
+            </figure>
+          </section>
+
+          <section class="guide-section" aria-labelledby="eligibility-title" id="eligibility">
+            <div class="section-kicker">ACCOUNT AND ACCESS BOUNDARIES</div>
+            <h2 id="eligibility-title">Why might Ask Studio be missing even when your file is valid?</h2>
+            <p data-original-evidence="yes">The Ask Studio Help page says the feature is available to most YouTube creators globally, but only in a web browser on a computer. It lists Official Artist Channels, Made for Kids channels, and creators under 18 as groups without access. If Ask Studio is absent, that is an eligibility or product-surface question, not proof that your YouTube thumbnail size is wrong.</p>
+            <p data-original-evidence="yes">The same page says Ask Studio can use channel and audience context, lets creators attach up to 10 images for visual context, and keeps conversations for up to 30 days. It also warns that human reviewers may process conversations for quality and asks users not to provide confidential information. These are account and privacy boundaries around the suggestion tool, not image-dimension rules.</p>
+            <p data-original-evidence="yes">The custom-thumbnail Help page separately says a creator can upload a custom video thumbnail when the account is verified. Keep that upload eligibility check separate from Ask Studio’s availability: a creator might have one route without having the other route exposed in the same interface.</p>
+            <span class="caution-badge">Missing Ask Studio is not a size error</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="workflow-title" id="workflow">
+            <div class="section-kicker">A SAFE REVIEW WORKFLOW</div>
+            <h2 id="workflow-title">How should you check an Ask Studio thumbnail?</h2>
+            <ol class="ask-steps">
+              <li><span><strong>Start with the video context.</strong> Ask Studio’s public guidance says it uses the transcript and themes. Check that the suggested image actually represents the video instead of assuming relevance from a prompt alone.</span></li>
+              <li><span><strong>Review the visual details.</strong> Inspect faces, text, logos, numbers, and any generated objects. A visually plausible suggestion is not automatically an accurate or policy-safe thumbnail.</span></li>
+              <li><span><strong>Keep the size rule visible.</strong> For a video source, use the official 3840 × 2160 / 16:9 guidance as the reference. Do not substitute the local 1280 × 720 convenience canvas for what YouTube Help calls the recommended source resolution.</span></li>
+              <li><span><strong>Measure the final image.</strong> If the workflow gives you an actual file or selected image that can be inspected, record its pixel width, height, format, and file size. The generator label is not a measurement.</span></li>
+              <li><span><strong>Use the Studio route.</strong> Review the suggestion in the signed-in publishing workflow and confirm which image is selected or uploaded. This page does not open a private Studio session or claim account-level success.</span></li>
+              <li><span><strong>Keep the conclusion narrow.</strong> Report “suggestion quality,” “source dimensions,” “upload eligibility,” or “feature access” only when the evidence supports that layer.</span></li>
+            </ol>
+            <p class="ask-note"><strong>Why this matters:</strong> a generated thumbnail can look correct at a glance while still being the wrong format, the wrong aspect ratio, or the wrong image for the video. Size verification belongs after generation and before the upload decision.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="local-title" id="local-boundary">
+            <div class="section-kicker">WHAT FEED THUMBNAIL CAN CHECK</div>
+            <h2 id="local-title">Can Feed Thumbnail verify an Ask Studio output?</h2>
+            <p data-original-evidence="yes">The public Feed Thumbnail resizer source uses a fixed 1280 × 720 canvas and exports JPEG in the browser. It is useful for a repeatable 16:9 preparation path, but it does not sign in to YouTube Studio, call Ask Studio, or tell you which generated suggestion your channel selected.</p>
+            <p data-original-evidence="yes">The public downloader accepts standard watch, Shorts, live, embed, and bare video-ID inputs in the browser. It requests direct YouTube image files and reports the dimensions of files that actually load. That can document an exposed image variant after publication; it cannot prove that an Ask Studio suggestion was used or explain the model’s generation process.</p>
+            <p class="source-line">Use the <a href="/youtube-thumbnail-resizer">thumbnail resizer</a> for a local 16:9 canvas, the <a href="/youtube-thumbnail-downloader">thumbnail downloader</a> for loaded public image variants, and <a href="/youtube-thumbnail-size">YouTube thumbnail size</a> for the general source guidance.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="benchmark-title" id="benchmark-check">
+            <div class="section-kicker">FIXED BENCHMARK CHECK</div>
+            <h2 id="benchmark-title">What do LightX, Snappa, and Reddit add?</h2>
+            <p data-original-evidence="yes">The opened LightX YouTube Thumbnail Resizer page offers a 1280 × 720 preset, custom dimensions, editing, and JPG/PNG download. It is a source-file preparation reference; it does not document Ask Studio access, transcript-based suggestions, or the final dimensions of an AI-generated result.</p>
+            <p data-original-evidence="yes">The opened Snappa YouTube thumbnail-size page focuses on the ordinary 1280 × 720, 16:9 workflow and template creation. It supports a manual design path, but it is not evidence that Ask Studio emits a 1280 × 720 or 3840 × 2160 file every time.</p>
+            <p data-original-evidence="yes">The opened Reddit discussion about YouTube making AI thumbnails easier quotes the Ask Studio launch announcement and debates whether generated thumbnails will look repetitive or affect viewer trust. The discussion is a community reaction signal, not evidence for click-through rate, ranking, or image dimensions. No performance metric is inferred from it.</p>
+            <p>The useful gap is the handoff between a generative suggestion and a measurable upload file. A creator can use Ask Studio for ideation while still keeping the source-file check, visual review, account eligibility, and upload confirmation as separate steps.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="checklist-title" id="checklist">
+            <div class="section-kicker">A REPRODUCIBLE CHECKLIST</div>
+            <h2 id="checklist-title">What should you record before using an Ask Studio thumbnail?</h2>
+            <ol class="ask-steps">
+              <li><span><strong>Record the route.</strong> Note whether the image came from a manual file, YouTube’s ordinary suggestion route, or Ask Studio.</span></li>
+              <li><span><strong>Record the context.</strong> Save the video, prompt, reference-image count, and the reason the suggestion was chosen. Avoid storing confidential channel data in public notes.</span></li>
+              <li><span><strong>Record the final asset.</strong> Measure actual pixel dimensions, aspect ratio, format, and file size after the last edit.</span></li>
+              <li><span><strong>Record access separately.</strong> Note whether Ask Studio was available on computer web, whether the channel met its stated eligibility boundaries, and whether the account was verified for custom upload.</span></li>
+              <li><span><strong>Record the Studio action.</strong> Distinguish preview, saved suggestion, selected image, and saved upload. They are not interchangeable states.</span></li>
+              <li><span><strong>Keep conclusions modest.</strong> Do not claim a CTR, ranking, or viewer-trust effect without verified channel data. Do not claim a generator dimension that was not measured.</span></li>
+            </ol>
+            <p class="source-line">This checklist separates public documentation, local measurements, account access, and creator judgment. It does not substitute for a signed-in YouTube Studio confirmation.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title">
+            <div class="section-kicker">QUESTIONS</div>
+            <h2 id="faq-title">YouTube thumbnail size and Ask Studio questions</h2>
+            <div class="faq-grid">
+              <details open><summary>Does Ask Studio have a different YouTube thumbnail size?</summary><p data-original-evidence="yes">The public Help pages reviewed here do not publish a separate Ask Studio pixel preset. YouTube’s video guidance remains 3840 × 2160, minimum width 640, JPG or PNG, and 16:9; measure the final image you actually select or upload.</p></details>
+              <details><summary>Can Ask Studio create a thumbnail for my video?</summary><p>YouTube says Ask Studio can suggest custom thumbnails using a video’s transcript and themes, and that you can use prompts and follow-up changes before reviewing the suggestions. Access requires the signed-in Studio surface and stated eligibility.</p></details>
+              <details><summary>Is a 1280 × 720 Ask Studio suggestion automatically correct?</summary><p>Do not assume it. 1280 × 720 is a common manual workflow and a LightX or Snappa preset, but the public Ask Studio documentation does not make that an output guarantee. Measure the actual file.</p></details>
+              <details><summary>Why can’t I see Ask Studio?</summary><p>YouTube says Ask Studio is available on computer web for most creators globally, with stated exclusions including Official Artist Channels, Made for Kids channels, and creators under 18. A missing feature is an access question, not a thumbnail-size diagnosis.</p></details>
+              <details><summary>Can Feed Thumbnail call Ask Studio for me?</summary><p>No. The local tools can prepare or inspect public image files. They cannot sign in to your channel, access private Studio data, or choose a generated suggestion on your behalf.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Keep Ask Studio suggestions separate from measurable files</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">YouTube Help: Add custom thumbnails on YouTube</a> is the source for the Upload file / Get suggestions workflow, the Ask Studio transcript-and-themes description, the follow-up prompt steps, the review step, and the 3840 × 2160, minimum-width, format, and 16:9 source guidance. Reviewed 2026-10-22.</p>
+              <p><a href="https://support.google.com/youtube/answer/16291691?hl=en" rel="noopener">YouTube Help: Learn about Ask Studio in YouTube Studio</a> is the source for computer-web availability, stated channel exclusions, image attachments, conversation retention, privacy caution, and the suggestion-quality boundary. Reviewed 2026-10-22.</p>
+              <p><a href="https://blog.youtube/news-and-events/youtube-studio-custom-thumbnail-updates/" rel="noopener">YouTube Blog: Making thumbnails easier</a> is the source for the July 2026 announcement that thumbnail generation was brought into Ask Studio for long-form videos and that creators can adjust colors and layouts by chatting. Reviewed 2026-10-22.</p>
+              <p><a href="/resizer.js">Feed Thumbnail’s resizer source</a> and <a href="/downloader.js">downloader source</a> are the first-party sources for the local 1280 × 720 JPEG path and browser-side public-image behavior. No account-level Ask Studio test was run because it requires channel sign-in.</p>
+              <p><a href="https://www.lightxeditor.com/photo-editing/youtube-thumbnail-resizer/" rel="noopener">LightX’s YouTube thumbnail resizer</a>, <a href="https://snappa.com/blog/youtube-thumbnail-size/" rel="noopener">Snappa’s YouTube thumbnail notes</a>, and <a href="https://www.reddit.com/r/youtube/comments/1v7xv1a/thoughts_about_youtube_making_it_easier_for/" rel="noopener">the opened Reddit Ask Studio discussion</a> were used as fixed comparison and question-signal sources only. No benchmark performance was estimated.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>

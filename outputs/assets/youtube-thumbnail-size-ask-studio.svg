@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Ask Studio suggestion and YouTube thumbnail size check</title>
+  <desc id="desc">A manual source file card and an Ask Studio suggestion card lead to a final review and upload gate. The final gate shows 3840 by 2160 and 16 to 9 as the documented video source guidance.</desc>
+  <rect width="1200" height="680" rx="32" fill="#f8fafc"/>
+  <rect x="36" y="32" width="1128" height="616" rx="26" fill="#ffffff" stroke="#dce2eb" stroke-width="2"/>
+  <text x="72" y="82" fill="#17223a" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Suggestion is not the size check</text>
+  <text x="72" y="113" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="16">Measure the image you actually select or upload.</text>
+
+  <rect x="72" y="150" width="302" height="254" rx="20" fill="#17223a"/>
+  <rect x="98" y="184" width="250" height="141" rx="8" fill="#ff795f"/>
+  <rect x="116" y="202" width="214" height="105" rx="5" fill="#ffd5c9"/>
+  <circle cx="157" cy="247" r="28" fill="#ff795f"/>
+  <circle cx="157" cy="238" r="11" fill="#17223a"/>
+  <rect x="205" y="229" width="92" height="12" rx="6" fill="#17223a"/>
+  <rect x="205" y="253" width="67" height="12" rx="6" fill="#17223a" opacity=".72"/>
+  <text x="98" y="357" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700">Manual source file</text>
+  <text x="98" y="382" fill="#dce6f5" font-family="Arial, Helvetica, sans-serif" font-size="15">3840 × 2160 · 16:9</text>
+
+  <path d="M398 278h54" stroke="#ff795f" stroke-width="4" stroke-linecap="round"/>
+  <path d="m438 264 20 14-20 14" fill="none" stroke="#ff795f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="478" y="150" width="282" height="254" rx="20" fill="#eef5ff" stroke="#cfe0f5"/>
+  <circle cx="620" cy="222" r="36" fill="#7b8cff"/>
+  <path d="M603 222h34M620 205v34" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  <rect x="535" y="281" width="170" height="12" rx="6" fill="#b5c8e5"/>
+  <rect x="563" y="306" width="114" height="12" rx="6" fill="#b5c8e5"/>
+  <text x="535" y="357" fill="#17223a" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700">Ask Studio idea</text>
+  <text x="535" y="382" fill="#52647c" font-family="Arial, Helvetica, sans-serif" font-size="15">transcript · themes · prompt</text>
+
+  <path d="M784 278h54" stroke="#ff795f" stroke-width="4" stroke-linecap="round"/>
+  <path d="m824 264 20 14-20 14" fill="none" stroke="#ff795f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="864" y="150" width="264" height="254" rx="20" fill="#fff1eb" stroke="#f7c7b9"/>
+  <rect x="895" y="189" width="202" height="92" rx="9" fill="#ffffff" stroke="#ff795f" stroke-width="3"/>
+  <path d="M918 253 951 220l27 24 31-38 54 54" fill="none" stroke="#ff795f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1046" cy="216" r="9" fill="#7b8cff"/>
+  <text x="895" y="324" fill="#17223a" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Review + upload</text>
+  <text x="895" y="350" fill="#9d4938" font-family="Arial, Helvetica, sans-serif" font-size="14">measure actual asset</text>
+  <text x="895" y="377" fill="#9d4938" font-family="Arial, Helvetica, sans-serif" font-size="14">format · ratio · size</text>
+
+  <line x1="72" y1="447" x2="1128" y2="447" stroke="#dce2eb" stroke-width="2"/>
+  <text x="72" y="489" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" letter-spacing="1">DOCUMENTED VIDEO SOURCE GUIDANCE</text>
+  <rect x="72" y="514" width="430" height="76" rx="15" fill="#f4f8fc"/>
+  <text x="98" y="548" fill="#17223a" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">3840 × 2160</text>
+  <text x="98" y="574" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">minimum width 640 · JPG or PNG</text>
+  <rect x="522" y="514" width="260" height="76" rx="15" fill="#f4f8fc"/>
+  <text x="550" y="548" fill="#17223a" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">16:9</text>
+  <text x="550" y="574" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">video aspect-ratio guidance</text>
+  <rect x="802" y="514" width="326" height="76" rx="15" fill="#17223a"/>
+  <text x="828" y="548" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">No generator label = measurement</text>
+  <text x="828" y="574" fill="#dce6f5" font-family="Arial, Helvetica, sans-serif" font-size="14">inspect the final file</text>
+</svg>
