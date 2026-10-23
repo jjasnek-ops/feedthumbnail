@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">YouTube thumbnail size and feature access gates</title>
+  <desc id="desc">A four-stage diagram: file size and ratio, phone verification, feature eligibility, then device and policy checks before upload.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f9fbff"/>
+      <stop offset="1" stop-color="#eef3ff"/>
+    </linearGradient>
+    <linearGradient id="file" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff795f"/>
+      <stop offset="1" stop-color="#ffad73"/>
+    </linearGradient>
+    <linearGradient id="access" x1="0" x2="1">
+      <stop offset="0" stop-color="#5b74e8"/>
+      <stop offset="1" stop-color="#8e9cf7"/>
+    </linearGradient>
+    <linearGradient id="route" x1="0" x2="1">
+      <stop offset="0" stop-color="#22a789"/>
+      <stop offset="1" stop-color="#67c9a8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#27324d" flood-opacity=".12"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#9aa7bb"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="680" rx="34" fill="url(#bg)"/>
+  <circle cx="1040" cy="110" r="140" fill="#dbe4ff" opacity=".52"/>
+  <circle cx="150" cy="585" r="170" fill="#ffe4d8" opacity=".52"/>
+  <text x="70" y="72" fill="#1e2940" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Thumbnail size is one gate. Upload access is another.</text>
+  <text x="70" y="105" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="16">Record the file, the signed-in channel, and the route separately.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="64" y="168" width="244" height="330" rx="24" fill="#fff" stroke="#ffd2c5" stroke-width="2"/>
+    <rect x="82" y="188" width="208" height="104" rx="16" fill="url(#file)"/>
+    <rect x="99" y="211" width="174" height="58" rx="8" fill="#fff3ee" opacity=".95"/>
+    <path d="M118 250 L142 228 L162 242 L189 216 L252 255" fill="none" stroke="#ff795f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="82" y="332" fill="#1e2940" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">01 · File gate</text>
+    <text x="82" y="366" fill="#5d6b80" font-family="Arial, Helvetica, sans-serif" font-size="15">3840 × 2160</text>
+    <text x="82" y="392" fill="#5d6b80" font-family="Arial, Helvetica, sans-serif" font-size="15">16:9 · JPG or PNG</text>
+    <text x="82" y="418" fill="#5d6b80" font-family="Arial, Helvetica, sans-serif" font-size="15">Minimum width 640</text>
+    <text x="82" y="462" fill="#9d4938" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">A valid file does not</text>
+    <text x="82" y="483" fill="#9d4938" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">prove channel access.</text>
+  </g>
+
+  <path d="M314 332 H348" fill="none" stroke="#9aa7bb" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="362" y="168" width="244" height="330" rx="24" fill="#fff" stroke="#cfd7ff" stroke-width="2"/>
+    <rect x="430" y="194" width="108" height="92" rx="18" fill="url(#access)"/>
+    <rect x="449" y="218" width="70" height="52" rx="10" fill="#edf0ff" opacity=".95"/>
+    <circle cx="484" cy="237" r="12" fill="#6f82ec"/>
+    <path d="M465 260 Q484 244 503 260" fill="none" stroke="#6f82ec" stroke-width="6" stroke-linecap="round"/>
+    <text x="380" y="332" fill="#1e2940" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">02 · Account gate</text>
+    <text x="380" y="366" fill="#5d6b80" font-family="Arial, Helvetica, sans-serif" font-size="15">Phone verification</text>
+    <text x="380" y="392" fill="#5d6b80" font-family="Arial, Helvetica, sans-serif" font-size="15">Custom thumbnails</text>
+    <text x="380" y="418" fill="#5d6b80" font-family="Arial, Helvetica, sans-serif" font-size="15">Intermediate access</text>
+    <text x="380" y="462" fill="#5368c9" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Check Feature eligibility</text>
+    <text x="380" y="483" fill="#5368c9" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">in the correct channel.</text>
+  </g>
+
+  <path d="M612 332 H646" fill="none" stroke="#9aa7bb" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="660" y="168" width="220" height="330" rx="24" fill="#fff" stroke="#bce8dc" stroke-width="2"/>
+    <rect x="723" y="196" width="94" height="88" rx="18" fill="url(#route)"/>
+    <rect x="743" y="216" width="54" height="48" rx="8" fill="#eafff7"/>
+    <path d="M754 240 H786 M754 251 H777" stroke="#22a789" stroke-width="6" stroke-linecap="round"/>
+    <text x="680" y="332" fill="#1e2940" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">03 · Route gate</text>
+    <text x="680" y="366" fill="#5d6b80" font-family="Arial, Helvetica, sans-serif" font-size="15">Computer or mobile</text>
+    <text x="680" y="392" fill="#5d6b80" font-family="Arial, Helvetica, sans-serif" font-size="15">Video, Short, podcast</text>
+    <text x="680" y="418" fill="#5d6b80" font-family="Arial, Helvetica, sans-serif" font-size="15">2 MB or 50 MB context</text>
+    <text x="680" y="462" fill="#25876f" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">A device error is not</text>
+    <text x="680" y="483" fill="#25876f" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">always a pixel error.</text>
+  </g>
+
+  <path d="M886 332 H920" fill="none" stroke="#9aa7bb" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="934" y="168" width="202" height="330" rx="24" fill="#fff" stroke="#ffd5a0" stroke-width="2"/>
+    <circle cx="1035" cy="242" r="47" fill="#fff1d7"/>
+    <path d="M1014 249 L1029 264 L1059 226" fill="none" stroke="#e49a3b" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="954" y="332" fill="#1e2940" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">04 · Save gate</text>
+    <text x="954" y="366" fill="#5d6b80" font-family="Arial, Helvetica, sans-serif" font-size="15">Policy and daily limit</text>
+    <text x="954" y="392" fill="#5d6b80" font-family="Arial, Helvetica, sans-serif" font-size="15">Review and save</text>
+    <text x="954" y="418" fill="#5d6b80" font-family="Arial, Helvetica, sans-serif" font-size="15">Propagation timing</text>
+    <text x="954" y="462" fill="#a16c20" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Only now ask whether</text>
+    <text x="954" y="483" fill="#a16c20" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">the image is visible.</text>
+  </g>
+
+  <rect x="64" y="555" width="1072" height="66" rx="18" fill="#1e2940"/>
+  <text x="96" y="596" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">A measured thumbnail can still be blocked by account access, route limits, policy, or timing.</text>
+</svg>
