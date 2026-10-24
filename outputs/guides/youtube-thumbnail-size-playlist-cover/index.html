@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFZG7G9MRH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MFZG7G9MRH');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="YouTube thumbnail size rules differ by surface. Separate an ordinary playlist cover with no published numeric canvas from video thumbnails and podcast playlist covers." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-size-playlist-cover/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>YouTube Thumbnail Size for Playlist Covers: Cover vs Video | Feed Thumbnail</title>
+    <style>
+      .playlist-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .playlist-figure img { display: block; width: 100%; height: auto; }
+      .playlist-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .playlist-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .playlist-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .playlist-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .playlist-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .playlist-table-wrap { overflow-x: auto; margin-top: 18px; }
+      .playlist-table { width: 100%; min-width: 720px; border-collapse: collapse; background: rgba(255,255,255,.72); }
+      .playlist-table th, .playlist-table td { padding: 12px 13px; border-bottom: 1px solid #dce2eb; text-align: left; vertical-align: top; line-height: 1.55; }
+      .playlist-table th { color: var(--ink); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+      .playlist-table td { color: #56647a; font-size: 13px; }
+      .playlist-table td strong { color: var(--ink); }
+      .playlist-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #e7f4d4; color: #466c23; font-size: 12px; font-weight: 800; }
+      .playlist-warning { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #ffe5dd; color: #9d4938; font-size: 12px; font-weight: 800; }
+      .playlist-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: playlist-step; }
+      .playlist-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: playlist-step; }
+      .playlist-steps li::before { content: counter(playlist-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      .playlist-note { margin: 18px 0; padding: 15px 16px; border-left: 4px solid #ff795f; border-radius: 12px; background: #fff1eb; color: #674b46; font-size: 14px; line-height: 1.7; }
+      @media (max-width: 700px) { .playlist-figure { padding: 9px; } .playlist-grid { grid-template-columns: 1fr; } .playlist-table th, .playlist-table td { padding: 10px 9px; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL SIZE · PLAYLIST COVER CHECK</div>
+            <h1 id="article-title">YouTube thumbnail size for playlist covers: cover vs video thumbnail</h1>
+            <p class="answer-lede"><strong>An ordinary playlist cover is not the same object as a video custom thumbnail.</strong> YouTube’s current playlist Help page says you can choose an image, take a photo, or create a playlist cover with AI, but the page reviewed here does not publish a numeric pixel canvas or aspect-ratio rule. Keep the official 3840 × 2160 / 16:9 video guidance for video thumbnails, the 1280 × 1280 recommendation for podcast playlist covers, and the ordinary playlist-cover workflow as three separate evidence layers.</p>
+            <p class="source-line">Official sources: <a href="https://support.google.com/youtube/answer/15400119?co=GENIE.Platform%3DDesktop&amp;hl=en" rel="noopener">Add a playlist thumbnail</a>, <a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">Add custom thumbnails on YouTube</a>, and <a href="https://support.google.com/youtube/answer/12751636?hl=en" rel="noopener">Create a podcast in YouTube Studio</a>, reviewed 2026-10-24.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="short-title" id="short-answer">
+            <div class="section-kicker">THE SHORT ANSWER</div>
+            <h2 id="short-title">What is the YouTube thumbnail size for a normal playlist cover?</h2>
+            <div class="playlist-grid">
+              <div><strong>Ordinary playlist cover</strong><span>The official playlist page supports a custom image, a camera photo, or an AI-created cover, but the reviewed page does not state a numeric canvas.</span></div>
+              <div><strong>Video thumbnail</strong><span>YouTube recommends 3840 × 2160 for a video, with a minimum width of 640, JPG or PNG, and 16:9.</span></div>
+              <div><strong>Podcast playlist</strong><span>YouTube recommends a square podcast thumbnail and separately states 1280 × 1280 in the podcast workflow.</span></div>
+            </div>
+            <p data-original-evidence="yes">The ordinary playlist Help page says to open a playlist, select Edit, choose an image from the library, and use that image as the playlist thumbnail on computer. The Android page adds a camera route, optional text, filters, stickers, and a Create with AI route that offers themes and more options after a description change. These instructions describe creation and editing controls; they do not publish a resolution or ratio.</p>
+            <p data-original-evidence="yes">The video-thumbnail Help page is a different document and explicitly lists 3840 × 2160 for videos, 2160 × 3840 for Shorts, minimum widths or heights, JPG or PNG, device-specific MB limits, and ratios for video, Shorts, and podcast playlists. Its numbers should not be silently relabeled as an ordinary playlist-cover specification.</p>
+            <span class="playlist-badge">No numeric playlist-cover canvas was found in the reviewed page</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="layers-title" id="layers">
+            <div class="section-kicker">THREE DIFFERENT IMAGE OBJECTS</div>
+            <h2 id="layers-title">Why does the same word thumbnail cause confusion?</h2>
+            <p data-original-evidence="yes">YouTube uses thumbnail language for several surfaces. A video custom thumbnail is attached to an individual video and is used as a preview image in the embedded player. A playlist thumbnail is attached to a collection. A podcast thumbnail is attached to a podcast show, which YouTube describes as a playlist with full-length episode videos. The surrounding product surfaces overlap, but the public size evidence does not.</p>
+            <div class="playlist-table-wrap">
+              <table class="playlist-table">
+                <thead><tr><th scope="col">Object</th><th scope="col">What the official source publishes</th><th scope="col">What to record</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Video thumbnail</th><td><strong>3840 × 2160, minimum width 640, JPG or PNG, 16:9</strong> are the current video guidance.</td><td>Final pixel size, ratio, format, bytes, video route, and display surface.</td></tr>
+                  <tr><th scope="row">Ordinary playlist cover</th><td><strong>Choose an image, take a photo, or create with AI</strong>; the reviewed page states no numeric canvas.</td><td>Playlist type, source image, editing route, crop behavior, and visible result.</td></tr>
+                  <tr><th scope="row">Podcast cover</th><td><strong>Square</strong> is required for the podcast workflow, and YouTube recommends 1280 × 1280.</td><td>Podcast status, square source, 1280 × 1280 recommendation, and playlist details.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p data-original-evidence="yes">The podcast Help page says a podcast show is a playlist and that podcast episodes are videos in that playlist. When editing podcast details, it requires a square podcast thumbnail and recommends 1280x1280 pixels. That is a useful contrast: YouTube gives a number for the podcast surface but not in the ordinary playlist-cover page reviewed for this guide.</p>
+            <p data-original-evidence="yes">The conclusion is deliberately narrow. “No numeric playlist-cover canvas was found” means the reviewed first-party page does not state one in its accessible instructions. It does not prove that every internal renderer accepts every file, that every account sees the same editor, or that a future page cannot add a dimension.</p>
+            <figure class="playlist-figure">
+              <img src="/assets/youtube-thumbnail-size-playlist-cover.svg" alt="A diagram separating a video thumbnail, a normal playlist cover with no published numeric canvas, and a square podcast cover." width="1200" height="680" />
+              <figcaption>Original local diagram. Do not transfer a video or podcast dimension to an ordinary playlist cover without evidence.</figcaption>
+            </figure>
+          </section>
+
+          <section class="guide-section" aria-labelledby="route-title" id="route">
+            <div class="section-kicker">THE PLAYLIST EDITOR</div>
+            <h2 id="route-title">What can you do in the current playlist-cover workflow?</h2>
+            <p data-original-evidence="yes">On computer, YouTube’s playlist page documents an Edit action followed by Choose from library. The page describes the selected image as the playlist thumbnail and does not ask the reader to enter a width, height, or ratio. If your account’s editor shows a crop or preview, record that account-level behavior instead of turning it into a universal pixel rule.</p>
+            <p data-original-evidence="yes">On Android, the playlist page documents three source routes: choose an existing image, take a new photo, or select Create with AI. The AI route asks you to pick a theme, optionally change a few words in the description, and select Create. The page does not state that the AI result is a 16:9 video thumbnail or a 1:1 podcast cover.</p>
+            <p data-original-evidence="yes">The platform tabs on the same Help page expose computer, Android phone and tablet, and iPhone and iPad variants. A difference in the visible editor can therefore be a device or rollout difference. A missing button should be logged as a route or account-surface observation, not converted into an unsupported size claim.</p>
+            <ol class="playlist-steps">
+              <li><span><strong>Identify the collection.</strong> Confirm that it is an ordinary playlist, not a podcast show, a video, a Short, or a live-stream surface.</span></li>
+              <li><span><strong>Choose the route.</strong> Record computer, Android, or iPhone/iPad and the exact YouTube surface where Edit appears.</span></li>
+              <li><span><strong>Choose the source.</strong> Note whether the cover came from the library, a camera photo, a local editor, or Create with AI.</span></li>
+              <li><span><strong>Inspect the preview.</strong> Look for cropping, padding, text loss, and whether the cover is presented differently in YouTube or YouTube Music.</span></li>
+              <li><span><strong>Keep the dimension claim bounded.</strong> If the Help page does not state a number, say “the page does not publish a numeric canvas” and preserve your measured account observation separately.</span></li>
+              <li><span><strong>Save and re-check.</strong> Record whether the cover persisted, where it appeared, and whether a later playlist edit replaced it.</span></li>
+            </ol>
+            <p class="playlist-note"><strong>Practical rule:</strong> an ordinary playlist cover can be prepared as a local image, but Feed Thumbnail’s 1280 × 720 video canvas is a convenience for video-thumbnail preparation, not proof of a playlist-cover specification.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="podcast-title" id="podcast-contrast">
+            <div class="section-kicker">PODCAST CONTRAST</div>
+            <h2 id="podcast-title">When should you use the square podcast rule instead?</h2>
+            <p data-original-evidence="yes">Use the square podcast rule when the playlist is being used as a YouTube podcast show. YouTube says a podcast show is a playlist, but it adds podcast-specific details, full-length episode expectations, podcast features, and a square podcast thumbnail. The podcast workflow recommends 1280x1280 for that cover.</p>
+            <p data-original-evidence="yes">Do not infer that every playlist is a podcast because both surfaces have a cover. The podcast Help page says some playlists are not eligible for podcast features, including content the creator does not own, and it distinguishes podcast episodes from Shorts created to support the podcast. These are content and product classifications, not ordinary playlist-cover dimensions.</p>
+            <p data-original-evidence="yes">If a creator wants a normal thematic collection, keep the ordinary playlist page and its image/AI workflow as the source of truth. If the creator wants a podcast show, record the podcast designation, square cover, 1280 × 1280 recommendation, episode order, and the podcast-specific Studio route.</p>
+            <span class="playlist-warning">Square is documented for podcast covers, not automatically for every playlist</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="local-title" id="local-boundary">
+            <div class="section-kicker">WHAT FEED THUMBNAIL CAN CHECK</div>
+            <h2 id="local-title">Can a local tool determine a playlist-cover size?</h2>
+            <p data-original-evidence="yes">The Feed Thumbnail resizer source uses a fixed 1280 × 720 canvas, a browser canvas, crop, fit, padding, and stretch modes, and a JPEG export. That is a reproducible 16:9 video-thumbnail preparation path. It does not claim to be a playlist-cover editor and it cannot inspect an account’s playlist preview or YouTube’s crop behavior.</p>
+            <p data-original-evidence="yes">The downloader source accepts watch, Shorts, live, embed, and bare video-ID inputs and measures public image variants after they load. A playlist URL is not the same as a video ID, and a loaded video thumbnail cannot prove the dimensions or crop of a playlist cover. Treat the downloader’s image evidence as a public video-surface check only.</p>
+            <p data-original-evidence="yes">A local checklist can still help: save the source file, record its pixel dimensions and bytes, export a few aspect-ratio variants if the playlist editor visibly crops them, and compare screenshots from the same account and route. Label those as reproducible observations, not first-party numeric requirements.</p>
+            <p class="source-line">Use the <a href="/youtube-thumbnail-resizer">thumbnail resizer</a> for a local video-thumbnail canvas, the <a href="/youtube-thumbnail-downloader">thumbnail downloader</a> for public video image variants, and <a href="/youtube-thumbnail-size">YouTube thumbnail size</a> for the official video source guidance.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="benchmark-title" id="benchmark-check">
+            <div class="section-kicker">FIXED BENCHMARK CHECK</div>
+            <h2 id="benchmark-title">What do LightX, Snappa, and Reddit add?</h2>
+            <p data-original-evidence="yes">The opened LightX YouTube Thumbnail Resizer page presents a 1280 × 720 preset and custom dimensions. That is useful for a video-thumbnail source file, but it does not establish a YouTube playlist-cover canvas, playlist editor crop, or podcast-cover requirement.</p>
+            <p data-original-evidence="yes">The opened Snappa YouTube thumbnail-size page focuses on the 1280 × 720, 16:9 video workflow, templates, and upload guidance for a video. It is not first-party evidence for ordinary playlist covers and does not document the playlist image, camera, or AI routes.</p>
+            <p data-original-evidence="yes">The opened Reddit feature-change discussion says a creator noticed the set-playlist-thumbnail option return after a period when it seemed unavailable. This is a rollout and product-surface signal, not evidence for a numeric size. The opened YouTube Music discussion reports custom playlist thumbnails, regional or device differences, phone prompts, and an editor that some users saw on desktop or mobile. These are community observations only.</p>
+            <p data-original-evidence="yes">The opened Reddit bug discussion asks about a missing set-video-as-playlist-thumbnail option and includes replies about custom playlist thumbnails and reverting to an automatically selected video. It shows why “which image is used” and “what size is it” are separate questions. No claim about current universal behavior is inferred from the archived thread.</p>
+            <p>No search volume, traffic, ranking, click-through rate, conversion, or competitor-performance number is inferred from these benchmark pages or discussions.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="checklist-title" id="checklist">
+            <div class="section-kicker">A REPRODUCIBLE CHECKLIST</div>
+            <h2 id="checklist-title">What should you record before publishing a playlist cover?</h2>
+            <ol class="playlist-steps">
+              <li><span><strong>Classify the surface.</strong> Write ordinary playlist, podcast playlist, video, Short, live stream, or YouTube Music playlist before selecting a dimension.</span></li>
+              <li><span><strong>Capture the official rule.</strong> For a video, cite 3840 × 2160 / 16:9. For a podcast cover, cite square and 1280 × 1280. For an ordinary playlist cover, record that the reviewed page states the creation routes but no numeric canvas.</span></li>
+              <li><span><strong>Record the route.</strong> Note computer, Android, or iPhone/iPad, plus the exact Edit, Choose from library, Take photo, or Create with AI controls visible.</span></li>
+              <li><span><strong>Measure your asset.</strong> Save width, height, format, and bytes even when YouTube does not publish a playlist-cover number. This is a measurement of your file, not a platform guarantee.</span></li>
+              <li><span><strong>Check the crop.</strong> Keep text and faces away from edges until the account-level editor and target surface show how the cover is presented.</span></li>
+              <li><span><strong>Keep the log honest.</strong> Separate first-party documentation, local tests, public screenshots, Reddit questions, and creator judgment. Do not turn a community workaround into a universal rule.</span></li>
+            </ol>
+            <p class="source-line">This checklist helps preserve the boundary between an official specification and an observed playlist-cover editor. It does not replace a signed-in YouTube test.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title">
+            <div class="section-kicker">QUESTIONS</div>
+            <h2 id="faq-title">YouTube thumbnail size and playlist cover questions</h2>
+            <div class="faq-grid">
+              <details open><summary>What is the official YouTube thumbnail size for an ordinary playlist?</summary><p data-original-evidence="yes">The ordinary playlist Help page reviewed here explains how to choose an image, take a photo, or create a cover with AI, but it does not state a numeric resolution or aspect ratio. Do not present the video 3840 × 2160 rule as an ordinary playlist-cover specification.</p></details>
+              <details><summary>Can I use 1280 × 720 for a playlist cover?</summary><p>It is a practical 16:9 working canvas used by Feed Thumbnail, LightX, and Snappa for video thumbnails. It may be a useful experiment for a playlist editor, but the official ordinary-playlist page reviewed here does not guarantee that canvas.</p></details>
+              <details><summary>Is a YouTube playlist cover always square?</summary><p data-original-evidence="yes">No universal square rule was found for ordinary playlists. YouTube’s podcast workflow is explicitly square and recommends 1280x1280, but that is a podcast-cover rule. Keep the two playlist types separate.</p></details>
+              <details><summary>Can YouTube create a playlist cover with AI?</summary><p data-original-evidence="yes">The Android playlist Help page says to open Edit, choose Create with AI, pick a theme, optionally change a few words in the description, and select Create. Treat the generated result as a playlist-cover creation route, not as a published pixel preset.</p></details>
+              <details><summary>Can Feed Thumbnail test my playlist cover?</summary><p>No. It can measure a local file and prepare a 1280 × 720 video-thumbnail canvas, but it cannot sign in to a playlist, reproduce private account UI, or guarantee how YouTube crops a playlist cover on every surface.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Keep playlist covers separate from video thumbnails</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/15400119?co=GENIE.Platform%3DDesktop&amp;hl=en" rel="noopener">YouTube Help: Add a playlist thumbnail — Computer</a> is the source for the ordinary playlist image and Choose from library route. Reviewed 2026-10-24.</p>
+              <p><a href="https://support.google.com/youtube/answer/15400119?co=GENIE.Platform%3DAndroid&amp;hl=en" rel="noopener">YouTube Help: Add a playlist thumbnail — Android</a> is the source for the image, camera, text/filter/sticker, and Create with AI routes. Reviewed 2026-10-24.</p>
+              <p><a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">YouTube Help: Add custom thumbnails on YouTube</a> is the source for the separate video and Shorts dimensions, formats, MB limits, and ratios. Reviewed 2026-10-24.</p>
+              <p><a href="https://support.google.com/youtube/answer/12751636?hl=en" rel="noopener">YouTube Help: Create a podcast in YouTube Studio</a> is the source for the podcast-as-playlist distinction, square podcast cover, and 1280x1280 recommendation. Reviewed 2026-10-24.</p>
+              <p><a href="/resizer.js">Feed Thumbnail’s resizer source</a> and <a href="/downloader.js">downloader source</a> are the first-party sources for the local 1280 × 720 video path and public video image-variant behavior. No private playlist test was run.</p>
+              <p><a href="https://www.lightxeditor.com/photo-editing/youtube-thumbnail-resizer/" rel="noopener">LightX’s YouTube thumbnail resizer</a>, <a href="https://snappa.com/blog/youtube-thumbnail-size/" rel="noopener">Snappa’s YouTube thumbnail notes</a>, and the opened <a href="https://www.reddit.com/r/youtube/comments/1tk0l3s/wow_set_playlist_thumbnail_is_back_as_of_last/" rel="noopener">Reddit feature-change discussion</a>, <a href="https://www.reddit.com/r/YoutubeMusic/comments/1g6dejx/loving_the_custom_playlist_thumbnails_so_far/" rel="noopener">YouTube Music playlist-cover discussion</a>, and <a href="https://www.reddit.com/r/youtube/comments/1ggaiqd/set_video_as_thumbnail_for_playlist_option_missing/" rel="noopener">playlist-thumbnail bug discussion</a> were used as fixed comparison and question-signal sources only. No benchmark performance was estimated.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Playlist cover versus video thumbnail versus podcast cover</title>
+  <desc id="desc">A three-card comparison showing the published video thumbnail rule, the ordinary playlist workflow with no numeric canvas on the reviewed page, and the square podcast recommendation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7f8fc"/>
+      <stop offset="1" stop-color="#eef1f7"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#24324d" flood-opacity=".10"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="680" rx="30" fill="url(#bg)"/>
+  <text x="48" y="48" fill="#1d2940" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" letter-spacing="2">LABEL THE SURFACE BEFORE CHOOSING A SIZE</text>
+  <text x="48" y="77" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="15">The playlist editor, the video upload, and the podcast workflow are different evidence layers.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="40" y="108" width="350" height="450" rx="22" fill="#ffffff"/>
+    <rect x="40" y="108" width="350" height="12" rx="6" fill="#ff795f"/>
+  </g>
+  <text x="68" y="160" fill="#9d4938" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="800" letter-spacing="1.5">VIDEO THUMBNAIL</text>
+  <rect x="68" y="186" width="294" height="166" rx="12" fill="#19263b"/>
+  <path d="M88 320 L170 238 L222 284 L264 245 L342 320" fill="none" stroke="#ffb19e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="126" cy="232" r="18" fill="#ff795f"/>
+  <text x="68" y="398" fill="#1d2940" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800">3840 × 2160</text>
+  <text x="68" y="428" fill="#56647a" font-family="Arial, Helvetica, sans-serif" font-size="16">16:9 video guidance</text>
+  <text x="68" y="468" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">Published on YouTube's</text>
+  <text x="68" y="490" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">custom-thumbnail Help page.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="425" y="108" width="350" height="450" rx="22" fill="#ffffff"/>
+    <rect x="425" y="108" width="350" height="12" rx="6" fill="#6875f5"/>
+  </g>
+  <text x="453" y="160" fill="#4d59c8" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="800" letter-spacing="1.5">ORDINARY PLAYLIST</text>
+  <rect x="453" y="186" width="294" height="166" rx="12" fill="#e9ecff"/>
+  <rect x="480" y="213" width="90" height="112" rx="10" fill="#6875f5" opacity=".92"/>
+  <rect x="592" y="213" width="128" height="15" rx="7" fill="#a8b0f7"/>
+  <rect x="592" y="243" width="102" height="15" rx="7" fill="#c3c9fb"/>
+  <rect x="592" y="273" width="76" height="15" rx="7" fill="#c3c9fb"/>
+  <text x="453" y="398" fill="#1d2940" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800">Image / Photo / AI</text>
+  <text x="453" y="428" fill="#56647a" font-family="Arial, Helvetica, sans-serif" font-size="16">Creation routes are documented</text>
+  <text x="453" y="468" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">No numeric canvas was found</text>
+  <text x="453" y="490" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">on the reviewed playlist page.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="810" y="108" width="350" height="450" rx="22" fill="#ffffff"/>
+    <rect x="810" y="108" width="350" height="12" rx="6" fill="#4f9f77"/>
+  </g>
+  <text x="838" y="160" fill="#357b59" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="800" letter-spacing="1.5">PODCAST PLAYLIST</text>
+  <rect x="923" y="186" width="124" height="124" rx="12" fill="#d9f1e4"/>
+  <circle cx="985" cy="248" r="39" fill="#4f9f77"/>
+  <circle cx="985" cy="238" r="13" fill="#ffffff"/>
+  <path d="M962 257 C962 278 1008 278 1008 257 M985 278 V292" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+  <text x="838" y="398" fill="#1d2940" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800">1280 × 1280</text>
+  <text x="838" y="428" fill="#56647a" font-family="Arial, Helvetica, sans-serif" font-size="16">Square podcast recommendation</text>
+  <text x="838" y="468" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">A separate podcast-as-playlist</text>
+  <text x="838" y="490" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">workflow, not a universal playlist rule.</text>
+
+  <rect x="40" y="596" width="1120" height="48" rx="16" fill="#1d2940"/>
+  <text x="600" y="627" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">Do not transfer the video or podcast number to an ordinary playlist without first-party evidence.</text>
+</svg>
