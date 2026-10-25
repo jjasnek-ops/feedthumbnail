@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Video thumbnail source versus channel Home layout</title>
+  <desc id="desc">A three-card diagram showing a regular video thumbnail source, a channel Home layout that selects content, and responsive display cards that are not a separate upload canvas.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7f8fc"/>
+      <stop offset="1" stop-color="#eef1f7"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#24324d" flood-opacity=".10"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="680" rx="30" fill="url(#bg)"/>
+  <text x="48" y="48" fill="#1d2940" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" letter-spacing="2">CHANNEL HOME IS A DISPLAY ROUTE</text>
+  <text x="48" y="77" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="15">The selected video owns the custom thumbnail source; the Home tab arranges content around it.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="40" y="108" width="350" height="450" rx="22" fill="#ffffff"/>
+    <rect x="40" y="108" width="350" height="12" rx="6" fill="#ff795f"/>
+  </g>
+  <text x="68" y="160" fill="#9d4938" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="800" letter-spacing="1.5">1 · VIDEO SOURCE</text>
+  <rect x="68" y="188" width="294" height="166" rx="12" fill="#19263b"/>
+  <path d="M88 320 L170 238 L222 284 L264 245 L342 320" fill="none" stroke="#ffb19e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="126" cy="232" r="18" fill="#ff795f"/>
+  <text x="68" y="402" fill="#1d2940" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800">3840 × 2160</text>
+  <text x="68" y="432" fill="#56647a" font-family="Arial, Helvetica, sans-serif" font-size="16">Regular video guidance</text>
+  <text x="68" y="472" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">Prepare and measure this</text>
+  <text x="68" y="494" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">file in the video workflow.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="425" y="108" width="350" height="450" rx="22" fill="#ffffff"/>
+    <rect x="425" y="108" width="350" height="12" rx="6" fill="#6875f5"/>
+  </g>
+  <text x="453" y="160" fill="#4d59c8" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="800" letter-spacing="1.5">2 · HOME LAYOUT</text>
+  <rect x="453" y="188" width="294" height="166" rx="12" fill="#e9ecff"/>
+  <rect x="477" y="214" width="246" height="55" rx="8" fill="#6875f5"/>
+  <rect x="477" y="284" width="72" height="48" rx="7" fill="#a8b0f7"/>
+  <rect x="562" y="284" width="72" height="48" rx="7" fill="#c3c9fb"/>
+  <rect x="647" y="284" width="76" height="48" rx="7" fill="#a8b0f7"/>
+  <text x="453" y="402" fill="#1d2940" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800">Select content</text>
+  <text x="453" y="432" fill="#56647a" font-family="Arial, Helvetica, sans-serif" font-size="16">Trailer, Spotlight, videos,</text>
+  <text x="453" y="454" fill="#56647a" font-family="Arial, Helvetica, sans-serif" font-size="16">playlists, posts, or channels</text>
+  <text x="453" y="494" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">No separate Home canvas is</text>
+  <text x="453" y="516" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">published on the reviewed page.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="810" y="108" width="350" height="450" rx="22" fill="#ffffff"/>
+    <rect x="810" y="108" width="350" height="12" rx="6" fill="#4f9f77"/>
+  </g>
+  <text x="838" y="160" fill="#357b59" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="800" letter-spacing="1.5">3 · DISPLAY CARD</text>
+  <rect x="838" y="188" width="294" height="166" rx="12" fill="#d9f1e4"/>
+  <rect x="864" y="214" width="116" height="80" rx="8" fill="#4f9f77"/>
+  <rect x="997" y="214" width="108" height="14" rx="7" fill="#8fc7aa"/>
+  <rect x="997" y="242" width="84" height="14" rx="7" fill="#b2ddc4"/>
+  <rect x="864" y="311" width="244" height="15" rx="7" fill="#8fc7aa"/>
+  <text x="838" y="402" fill="#1d2940" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800">Responsive surface</text>
+  <text x="838" y="432" fill="#56647a" font-family="Arial, Helvetica, sans-serif" font-size="16">Card size and crop can vary</text>
+  <text x="838" y="472" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">Record device, section, and</text>
+  <text x="838" y="494" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">viewer state before re-uploading.</text>
+
+  <rect x="40" y="596" width="1120" height="48" rx="16" fill="#1d2940"/>
+  <text x="600" y="627" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">A different Home card is display evidence, not a new thumbnail-size requirement.</text>
+</svg>

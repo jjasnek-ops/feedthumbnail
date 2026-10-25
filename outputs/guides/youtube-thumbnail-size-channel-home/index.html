@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="YouTube thumbnail size for a channel Home tab is not a separate upload canvas. Separate the selected video, channel sections, playlist covers, and responsive display surfaces." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-size-channel-home/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>YouTube Thumbnail Size for Channel Home Sections | Feed Thumbnail</title>
+    <style>
+      .channel-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .channel-figure img { display: block; width: 100%; height: auto; }
+      .channel-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .channel-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .channel-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .channel-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .channel-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .channel-table-wrap { overflow-x: auto; margin-top: 18px; }
+      .channel-table { width: 100%; min-width: 760px; border-collapse: collapse; background: rgba(255,255,255,.72); }
+      .channel-table th, .channel-table td { padding: 12px 13px; border-bottom: 1px solid #dce2eb; text-align: left; vertical-align: top; line-height: 1.55; }
+      .channel-table th { color: var(--ink); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+      .channel-table td { color: #56647a; font-size: 13px; }
+      .channel-table td strong { color: var(--ink); }
+      .channel-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #e7f4d4; color: #466c23; font-size: 12px; font-weight: 800; }
+      .channel-warning { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #ffe5dd; color: #9d4938; font-size: 12px; font-weight: 800; }
+      .channel-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: channel-step; }
+      .channel-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: channel-step; }
+      .channel-steps li::before { content: counter(channel-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      .channel-note { margin: 18px 0; padding: 15px 16px; border-left: 4px solid #ff795f; border-radius: 12px; background: #fff1eb; color: #674b46; font-size: 14px; line-height: 1.7; }
+      @media (max-width: 700px) { .channel-figure { padding: 9px; } .channel-grid { grid-template-columns: 1fr; } .channel-table th, .channel-table td { padding: 10px 9px; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL SIZE · CHANNEL HOME CHECK</div>
+            <h1 id="article-title">YouTube thumbnail size for channel Home sections: source vs display</h1>
+            <p class="answer-lede"><strong>A channel Home tab does not have a separate thumbnail upload canvas in the official layout instructions reviewed here.</strong> YouTube tells creators to select a video for a channel trailer or featured video and to choose content for Home-tab sections. Keep the video thumbnail source rule at 3840 × 2160 and 16:9, then treat the channel layout and its responsive cards as separate display layers.</p>
+            <p class="source-line">Official sources: <a href="https://support.google.com/youtube/answer/3219384?hl=en" rel="noopener">Customize your YouTube channel layout</a>, <a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">Add custom thumbnails on YouTube</a>, and <a href="https://support.google.com/youtube/answer/12340300?hl=en" rel="noopener">Thumbnail &amp; title tips</a>, reviewed 2026-10-25.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="short-title" id="short-answer">
+            <div class="section-kicker">THE SHORT ANSWER</div>
+            <h2 id="short-title">What is the YouTube thumbnail size for a channel Home tab?</h2>
+            <div class="channel-grid">
+              <div><strong>Video source</strong><span>For a regular video, YouTube recommends 3840 × 2160, a minimum width of 640, JPG or PNG, and 16:9.</span></div>
+              <div><strong>Channel layout</strong><span>The Home tab selects videos, Shorts, live streams, playlists, channels, posts, or other sections. The reviewed layout page gives no separate pixel canvas.</span></div>
+              <div><strong>Display card</strong><span>The selected content can appear in different cards and devices. A rendered card is not a new upload specification.</span></div>
+            </div>
+            <p data-original-evidence="yes">The current YouTube channel-layout Help page says that a channel Home tab can show a trailer, a featured video, and featured sections. It explains how to turn the Home tab on, select a video for a trailer or Spotlight, and add sections such as Videos, Playlists, Channels, Posts, and Top community clips. The page reviewed here does not publish a numeric pixel size for a separate channel-home thumbnail upload.</p>
+            <p data-original-evidence="yes">The custom-thumbnail Help page is the document that publishes image guidance. It says that a custom video thumbnail is used as a preview in the embedded player and recommends 3840 × 2160 pixels for videos, a minimum video width of 640 pixels, JPG or PNG, and an aspect ratio of 16:9. Those numbers describe the video thumbnail source file, not the size of a channel Home card.</p>
+            <span class="channel-badge">Channel layout chooses content; Studio thumbnail upload chooses the source image</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="route-title" id="route">
+            <div class="section-kicker">THE OFFICIAL ROUTE</div>
+            <h2 id="route-title">What does YouTube actually ask you to upload on the Home tab?</h2>
+            <p data-original-evidence="yes">For a channel trailer, the layout Help page directs the creator to YouTube Studio, Customization, Home tab, Layout, Add section, and Channel trailer. The final action is to select a video and publish the layout. It is not an instruction to upload a second image file that belongs only to the channel homepage.</p>
+            <p data-original-evidence="yes">For a featured video shown to returning subscribers, the same page directs the creator to add Spotlight, select a video, and publish. The page also states that the featured video will not be shown to that viewer again after it has been watched. This is a content-selection rule and a viewer-state rule, not a new thumbnail-dimension rule.</p>
+            <p data-original-evidence="yes">For featured sections, YouTube lists content types rather than image canvases. The page names Videos, Shorts, live streams, single or multiple playlists, memberships, channels, top community clips, effects, and posts. The creator configures which content is surfaced and in what order; each item keeps the image or thumbnail associated with that content type.</p>
+            <figure class="channel-figure">
+              <img src="/assets/youtube-thumbnail-size-channel-home.svg" alt="A diagram separating a video thumbnail source, a channel Home layout that selects content, and responsive channel display cards." width="1200" height="680" />
+              <figcaption>Original local diagram. The Home tab selects content; the selected video still owns the custom thumbnail source.</figcaption>
+            </figure>
+          </section>
+
+          <section class="guide-section" aria-labelledby="table-title" id="size-table">
+            <div class="section-kicker">KEEP THE LAYERS SEPARATE</div>
+            <h2 id="table-title">Which YouTube thumbnail size should you prepare?</h2>
+            <div class="channel-table-wrap">
+              <table class="channel-table">
+                <thead><tr><th>Surface</th><th>What you control</th><th>Evidence-backed size boundary</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Regular video in a Home section</strong></td><td>Upload or replace the video's custom thumbnail in Studio.</td><td>3840 × 2160 recommendation, minimum width 640, JPG or PNG, and 16:9 for videos.</td></tr>
+                  <tr><td><strong>Short in a Home section</strong></td><td>Choose the Short and use the custom Short thumbnail route where available.</td><td>2160 × 3840 recommendation, minimum height 640, and 9:16 guidance for Shorts.</td></tr>
+                  <tr><td><strong>Channel trailer or Spotlight</strong></td><td>Select the video that the Home tab should feature.</td><td>No separate channel-home canvas was published on the reviewed channel-layout page; use the selected video's own thumbnail evidence.</td></tr>
+                  <tr><td><strong>Playlist section</strong></td><td>Select one or more playlists for the Home tab.</td><td>Do not silently reuse the video rule as a playlist-cover rule. See the separate playlist-cover guide and the account-level editor evidence.</td></tr>
+                  <tr><td><strong>Banner or profile picture</strong></td><td>Edit channel branding assets in the branding/profile workflow.</td><td>These are channel identity assets, not video thumbnails. A thumbnail-size answer cannot substitute for their separate specifications.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p data-original-evidence="yes">The source-file numbers in this table come from YouTube's custom-thumbnail Help page, while the channel Home actions come from the channel-layout Help page. The combination is useful because it prevents a common category error: a channel page may display a video thumbnail, but that does not mean the channel page asks for a second image with its own pixel preset.</p>
+            <p data-original-evidence="yes">Shorts need their own caution. YouTube's thumbnail page describes a 2160 × 3840 recommendation, a minimum height of 640 pixels, and a 9:16 aspect ratio for Shorts. A Short may be placed into a channel Home section, but placement in that section does not turn the Short into a regular 16:9 video or prove how every responsive card will crop it.</p>
+            <p data-original-evidence="yes">A playlist section is also a different object. The Home-tab page says that a creator can highlight playlists, but it does not publish an ordinary playlist-cover canvas in the same paragraph. Do not infer a playlist-cover size from the video-thumbnail recommendation merely because both objects can appear on the same channel page.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="display-title" id="display">
+            <div class="section-kicker">DISPLAY VS SOURCE</div>
+            <h2 id="display-title">Why can a valid thumbnail look different on a channel page?</h2>
+            <p data-original-evidence="yes">The Thumbnail &amp; title tips page says that thumbnails show up differently across devices and encourages creators to make the image as large as possible. It also directs creators to compare metrics for Home and Suggested, the Subscriptions Feed, and other discovery surfaces. That advice confirms that presentation varies by surface, but it does not publish one channel-Home pixel rectangle.</p>
+            <p data-original-evidence="yes">A channel layout can therefore place the same video in a featured slot, a Videos section, a Shorts section, or a personalized For you section. The surrounding card, row width, device viewport, and viewer state may change. A crop, letterbox, or different card proportion is display evidence; it is not automatically evidence that the original video thumbnail was uploaded at the wrong size.</p>
+            <p class="channel-note">If the source image is correct but the channel page looks different, record the content type, channel section, device, viewport, and viewer state before changing the file. The reviewed first-party pages do not justify a universal “channel homepage thumbnail size” number.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="local-title" id="local-tool">
+            <div class="section-kicker">THE LOCAL TOOL BOUNDARY</div>
+            <h2 id="local-title">What can Feed Thumbnail verify?</h2>
+            <p data-original-evidence="yes">Feed Thumbnail's public resizer is a browser-local preparation tool. Its source sets a 1280 × 720 canvas and exports a local JPEG path, which is useful for a practical 16:9 video-thumbnail draft. It does not sign in to YouTube Studio, select a channel Home section, or observe the responsive card rendered for a particular viewer.</p>
+            <p data-original-evidence="yes">The public downloader accepts watch, Shorts, live, embed, and bare video-ID inputs and reports dimensions for image files that actually load in the browser. That makes it useful for inspecting an exposed video image variant, but it cannot prove the private channel-layout state, the selected Home-tab section, or the crop applied by every YouTube client.</p>
+            <p>Use the local tool to measure the source file, then use YouTube Studio and the channel Home tab to check the actual placement. Keep those observations in separate notes instead of turning a local 1280 × 720 convenience export into an official channel-home requirement.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="benchmark-title" id="benchmark-check">
+            <div class="section-kicker">FIXED BENCHMARK CHECK</div>
+            <h2 id="benchmark-title">What do LightX, Snappa, and Reddit add?</h2>
+            <p data-original-evidence="yes">The opened LightX YouTube Thumbnail Resizer page presents a 1280 × 720 preset, custom dimensions, editing controls, and JPG/PNG download language. It is a practical source-file workflow. It does not document a separate YouTube channel Home upload canvas or guarantee how the Home tab renders a selected video.</p>
+            <p data-original-evidence="yes">The opened Snappa YouTube thumbnail-size page focuses on 1280 × 720 and 16:9 for YouTube thumbnails, templates, and common player previews. That is useful for preparing the video source file, but it is not first-party evidence for a channel layout card, a playlist cover, or a device-specific crop.</p>
+            <p data-original-evidence="yes">The opened Reddit discussions report a square-looking YouTube homepage, thumbnails missing in Home and subscription tabs, and custom thumbnails appearing on a channel page but not in a channel search result. These are useful questions to reproduce across devices and accounts; they are community observations, not a universal dimension rule.</p>
+            <p>No search volume, ranking, click-through rate, traffic, conversion, or competitor-performance number is inferred from these benchmark pages or discussions.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="checklist-title" id="checklist">
+            <div class="section-kicker">A REPRODUCIBLE CHECKLIST</div>
+            <h2 id="checklist-title">What should you record before changing a channel thumbnail?</h2>
+            <ol class="channel-steps">
+              <li><span><strong>Classify the content.</strong> Write regular video, Short, live stream, playlist, post, channel, or profile asset before choosing a file.</span></li>
+              <li><span><strong>Measure the source.</strong> Record width, height, format, bytes, and the time the video thumbnail was saved in Studio.</span></li>
+              <li><span><strong>Record the Home route.</strong> Note trailer, Spotlight, Videos, Shorts, Playlists, For you, or another section.</span></li>
+              <li><span><strong>Record the viewer context.</strong> Capture device, app or browser, viewport, signed-in state, and whether the video was already watched.</span></li>
+              <li><span><strong>Compare the source and display.</strong> Ask whether the difference is a crop, a card layout, a missing asset, propagation, or a different content type.</span></li>
+              <li><span><strong>Keep claims narrow.</strong> Cite the video-thumbnail rule for the source, the channel-layout page for selection, and your own screenshot for the display observation.</span></li>
+            </ol>
+            <p class="source-line">This checklist preserves the boundary between an official source-file recommendation and an account- or device-specific channel presentation. It does not replace a signed-in YouTube test.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title">
+            <div class="section-kicker">QUESTIONS</div>
+            <h2 id="faq-title">YouTube thumbnail size and channel Home questions</h2>
+            <div class="faq-grid">
+              <details open><summary>What is the YouTube thumbnail size for a channel homepage?</summary><p data-original-evidence="yes">The reviewed channel-layout Help page does not publish a separate channel-home thumbnail canvas. For a regular video selected for the Home tab, use the video's custom-thumbnail guidance: 3840 × 2160 recommended, minimum width 640, and 16:9.</p></details>
+              <details><summary>Does a channel trailer need a different thumbnail size?</summary><p>The layout workflow selects a video for the trailer. The selected video's custom thumbnail remains the relevant source file; the Home tab placement is a separate presentation layer.</p></details>
+              <details><summary>Does a Shorts thumbnail become 16:9 on the channel Home tab?</summary><p data-original-evidence="yes">No such conversion rule is stated on the reviewed pages. YouTube's thumbnail page describes Shorts with 2160 × 3840 and 9:16 guidance, while the channel-layout page describes selecting Shorts as section content.</p></details>
+              <details><summary>Can I upload a separate image for a channel section?</summary><p data-original-evidence="yes">The channel-layout page describes selecting a video, playlist, or other content for sections. It does not document a separate generic image upload for a channel Home section. Do not invent a pixel preset from the card's rendered size.</p></details>
+              <details><summary>Can Feed Thumbnail test my channel homepage crop?</summary><p>No. It can measure local files and prepare a 1280 × 720 video-thumbnail export, but it cannot sign in, change channel layout, observe viewer-specific sections, or guarantee a crop across YouTube clients.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Keep the channel layout and video source separate</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/3219384?hl=en" rel="noopener">YouTube Help: Customize your YouTube channel layout</a> is the source for the Home tab, channel trailer, Spotlight, featured sections, selectable content types, and the absence of a numeric channel-home canvas on the reviewed page. Reviewed 2026-10-25.</p>
+              <p><a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">YouTube Help: Add custom thumbnails on YouTube</a> is the source for the 3840 × 2160 video recommendation, 2160 × 3840 Shorts recommendation, minimum dimensions, formats, file-size limits, and aspect-ratio guidance. Reviewed 2026-10-25.</p>
+              <p><a href="https://support.google.com/youtube/answer/12340300?hl=en" rel="noopener">YouTube Help: Thumbnail &amp; title tips</a> is the source for device variation and the Home, Suggested, and Subscriptions Feed measurement context. Reviewed 2026-10-25.</p>
+              <p><a href="/resizer.js">Feed Thumbnail's resizer source</a> and <a href="/downloader.js">downloader source</a> are the first-party sources for the local 1280 × 720 JPEG path and browser-side video image-variant behavior. No signed-in channel test was run.</p>
+              <p><a href="https://www.lightxeditor.com/photo-editing/youtube-thumbnail-resizer/" rel="noopener">LightX's YouTube thumbnail resizer</a>, <a href="https://snappa.com/blog/youtube-thumbnail-size/" rel="noopener">Snappa's YouTube thumbnail notes</a>, and the opened <a href="https://www.reddit.com/r/youtube/comments/1t1ws92/why_has_youtube_strangely_changed_the_aspect/" rel="noopener">homepage aspect-ratio discussion</a>, <a href="https://www.reddit.com/r/youtube/comments/vfu1v4/thumbnails_not_showing_up/" rel="noopener">Home and subscription thumbnail discussion</a>, and <a href="https://www.reddit.com/r/youtube/comments/131sn95/my_channel_is_possibly_bugged/" rel="noopener">channel-page thumbnail discussion</a> were used as fixed comparison and question-signal sources only.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>
