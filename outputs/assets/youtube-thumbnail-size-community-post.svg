@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Community post image versus video thumbnail</title>
+  <desc id="desc">A three-card diagram showing the official Community post ratio and file boundary, a practical square working canvas, and the separate video-thumbnail recommendation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7f8fc"/>
+      <stop offset="1" stop-color="#eef1f7"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#24324d" flood-opacity=".10"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="680" rx="30" fill="url(#bg)"/>
+  <text x="48" y="48" fill="#1d2940" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" letter-spacing="2">POST IMAGE ≠ VIDEO THUMBNAIL</text>
+  <text x="48" y="77" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="15">The Community post page gives a ratio and file boundary; the video page gives a different source recommendation.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="40" y="108" width="350" height="450" rx="22" fill="#ffffff"/>
+    <rect x="40" y="108" width="350" height="12" rx="6" fill="#6875f5"/>
+  </g>
+  <text x="68" y="160" fill="#4d59c8" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="800" letter-spacing="1.5">COMMUNITY IMAGE POST</text>
+  <rect x="129" y="186" width="172" height="172" rx="14" fill="#e9ecff"/>
+  <rect x="158" y="215" width="114" height="114" rx="10" fill="#6875f5"/>
+  <circle cx="215" cy="252" r="20" fill="#a8b0f7"/>
+  <path d="M172 311 L205 278 L226 299 L245 281 L260 296" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="68" y="404" fill="#1d2940" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800">1:1 suggested</text>
+  <text x="68" y="434" fill="#56647a" font-family="Arial, Helvetica, sans-serif" font-size="16">Up to 16 MB</text>
+  <text x="68" y="474" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">JPG · PNG · GIF · WEBP</text>
+  <text x="68" y="496" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">No fixed pixel canvas published.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="425" y="108" width="350" height="450" rx="22" fill="#ffffff"/>
+    <rect x="425" y="108" width="350" height="12" rx="6" fill="#4f9f77"/>
+  </g>
+  <text x="453" y="160" fill="#357b59" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="800" letter-spacing="1.5">PRACTICAL WORKING CANVAS</text>
+  <rect x="514" y="186" width="172" height="172" rx="14" fill="#d9f1e4"/>
+  <rect x="543" y="215" width="114" height="114" rx="10" fill="#4f9f77"/>
+  <path d="M563 300 L585 278 L601 294 L623 270 L640 288" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="453" y="404" fill="#1d2940" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800">Square by choice</text>
+  <text x="453" y="434" fill="#56647a" font-family="Arial, Helvetica, sans-serif" font-size="16">1080 × 1080 can be convenient</text>
+  <text x="453" y="474" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">A workflow preset is not a</text>
+  <text x="453" y="496" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">published YouTube pixel rule.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="810" y="108" width="350" height="450" rx="22" fill="#ffffff"/>
+    <rect x="810" y="108" width="350" height="12" rx="6" fill="#ff795f"/>
+  </g>
+  <text x="838" y="160" fill="#9d4938" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="800" letter-spacing="1.5">VIDEO THUMBNAIL</text>
+  <rect x="838" y="205" width="294" height="166" rx="12" fill="#19263b"/>
+  <path d="M858 339 L940 257 L992 303 L1034 264 L1112 339" fill="none" stroke="#ffb19e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="896" cy="251" r="18" fill="#ff795f"/>
+  <text x="838" y="420" fill="#1d2940" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800">3840 × 2160</text>
+  <text x="838" y="450" fill="#56647a" font-family="Arial, Helvetica, sans-serif" font-size="16">16:9 video guidance</text>
+  <text x="838" y="490" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">Do not transfer this source rule</text>
+  <text x="838" y="512" fill="#68758a" font-family="Arial, Helvetica, sans-serif" font-size="14">to an image Community post.</text>
+
+  <rect x="40" y="596" width="1120" height="48" rx="16" fill="#1d2940"/>
+  <text x="600" y="627" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">Use the official 1:1 and 16 MB boundaries; label any pixel preset as your workflow choice.</text>
+</svg>
