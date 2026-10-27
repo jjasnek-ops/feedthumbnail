@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="YouTube thumbnail size and channel banner size are different jobs. Compare 3840 × 2160 video thumbnails with the 2560 × 1440 banner recommendation, 2048 × 1152 minimum, safe area, file limit, and device crop." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-size-banner/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>YouTube Thumbnail Size vs Channel Banner Size: 3840 × 2160 Is Not 2560 × 1440 | Feed Thumbnail</title>
+    <style>
+      .banner-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .banner-figure img { display: block; width: 100%; height: auto; }
+      .banner-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .banner-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .banner-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .banner-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .banner-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .banner-table-wrap { overflow-x: auto; margin-top: 18px; }
+      .banner-table { width: 100%; min-width: 800px; border-collapse: collapse; background: rgba(255,255,255,.72); }
+      .banner-table th, .banner-table td { padding: 12px 13px; border-bottom: 1px solid #dce2eb; text-align: left; vertical-align: top; line-height: 1.55; }
+      .banner-table th { color: var(--ink); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+      .banner-table td { color: #56647a; font-size: 13px; }
+      .banner-table td strong { color: var(--ink); }
+      .banner-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #e7f4d4; color: #466c23; font-size: 12px; font-weight: 800; }
+      .banner-warning { margin: 18px 0; padding: 15px 16px; border-left: 4px solid #ff795f; border-radius: 12px; background: #fff1eb; color: #674b46; font-size: 14px; line-height: 1.7; }
+      .banner-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: banner-step; }
+      .banner-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: banner-step; }
+      .banner-steps li::before { content: counter(banner-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      @media (max-width: 700px) { .banner-figure { padding: 9px; } .banner-grid { grid-template-columns: 1fr; } .banner-table th, .banner-table td { padding: 10px 9px; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL SIZE · CHANNEL BANNER CHECK</div>
+            <h1 id="article-title">YouTube thumbnail size vs channel banner size: 3840 × 2160 is not 2560 × 1440</h1>
+            <p class="answer-lede"><strong>A video thumbnail and a channel banner are different YouTube assets.</strong> The current custom-thumbnail guidance recommends 3840 × 2160 for a regular video, while channel branding guidance recommends 2560 × 1440 for a banner, sets 2048 × 1152 as the minimum upload dimension, and defines a much narrower safe area for text and logos. Do not move one asset's preset into the other asset's upload route.</p>
+            <p class="source-line">Official sources: <a href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">Manage your channel branding</a>, <a href="https://support.google.com/youtube/answer/12950272?hl=en" rel="noopener">Channel banner and profile picture tips</a>, <a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">Add custom thumbnails on YouTube</a>, and <a href="https://support.google.com/youtube/answer/3027950?hl=en" rel="noopener">Channel customization</a>, reviewed 2026-10-27.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="short-title" id="short-answer">
+            <div class="section-kicker">THE SHORT ANSWER</div>
+            <h2 id="short-title">What is the YouTube thumbnail size compared with a banner?</h2>
+            <div class="banner-grid">
+              <div><strong>Regular video thumbnail</strong><span>Recommended source: 3840 × 2160 px, 16:9, with JPG or PNG upload guidance and a 640 px minimum width for videos.</span></div>
+              <div><strong>Channel banner</strong><span>Recommended: 2560 × 1440 px. Minimum upload: 2048 × 1152 px at 16:9. Keep text and logos in the 1235 × 338 px safe area at the minimum dimension.</span></div>
+              <div><strong>File and display boundary</strong><span>Banner file size should be 6 MB or smaller. The same banner is used across computer, mobile, and TV, but the visible crop changes by device.</span></div>
+            </div>
+            <p data-original-evidence="yes">YouTube's custom-thumbnail page describes a video thumbnail as a quick snapshot of the content and recommends a 3840 × 2160 resolution for videos. It also recommends JPG or PNG, a minimum width of 640 pixels for videos, and a 16:9 aspect ratio for videos. Those values describe the image attached to a video, not the background image at the top of a channel page.</p>
+            <p data-original-evidence="yes">YouTube's channel-branding page says that a banner image appears as a background at the top of the YouTube page. It recommends a 2048 × 1152 minimum upload at 16:9, gives a 1235 × 338 safe area for text and logos at that minimum, recommends 2560 × 1440 especially for TV, and sets a 6 MB or smaller file-size boundary.</p>
+            <p data-original-evidence="yes">The banner tips page uses a shorter practical recommendation: upload a banner of at least 2560 × 1440 for the best display on all devices. Read that recommendation together with the branding page's minimum and safe-area measurements; do not reduce the banner to a video-thumbnail preset simply because both assets can be described with a wide ratio.</p>
+            <span class="banner-badge">Thumbnail = video preview · Banner = channel identity background</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="route-title" id="routes">
+            <div class="section-kicker">TWO DIFFERENT UPLOAD ROUTES</div>
+            <h2 id="route-title">Why does the same keyword lead to different size rules?</h2>
+            <p data-original-evidence="yes">A regular video thumbnail is chosen in YouTube Studio from the video's Content workflow. The custom-thumbnail page tells the creator to open the video, select the thumbnail control, upload a file or choose a suggestion, and save. The thumbnail becomes a preview image for that video and can be used by an embedded player.</p>
+            <p data-original-evidence="yes">A channel banner is changed from YouTube Studio's Customization and Profile route. The branding page describes selecting an image, opening a preview, changing the crop, and publishing it. The banner is therefore a channel-level branding object, not a property of one video. A thumbnail edit should not be expected to update the banner, and a banner replacement should not change a video's thumbnail.</p>
+            <p data-original-evidence="yes">The channel-customization page separates the Home tab from Profile. Home organizes a channel trailer, featured video, and sections; Profile updates the profile picture, banner image, video watermark, channel name, handle, description, and links. This separation is useful when a design brief says “YouTube thumbnail size” but actually means a channel header or another Profile asset.</p>
+            <p data-original-evidence="yes">The official pages also use different language for display. A video thumbnail is a preview or snapshot, while a banner is a background that covers a larger channel surface. The thumbnail is expected to communicate one video's subject quickly; the banner has to carry a brand system through several device crops. These are different design constraints even when both working files are landscape.</p>
+            <div class="banner-warning">A 3840 × 2160 thumbnail is not a 2560 × 1440 banner. A 1280 × 720 thumbnail preset is even less suitable as a banner source because it does not give the banner workflow the recommended TV canvas or the documented safe-area planning space.</div>
+          </section>
+
+          <section class="guide-section" aria-labelledby="table-title" id="compare">
+            <div class="section-kicker">COMPARE THE ASSETS</div>
+            <h2 id="table-title">Which numbers belong to which YouTube image?</h2>
+            <div class="banner-table-wrap">
+              <table class="banner-table">
+                <thead><tr><th>Asset</th><th>First-party dimensions and ratio</th><th>Upload or display boundary</th><th>Do not infer</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Regular video thumbnail</strong></td><td>3840 × 2160 recommended; 16:9; minimum width 640 px for videos.</td><td>JPG or PNG guidance; mobile video thumbnail limit 2 MB and desktop limit 50 MB on the reviewed page.</td><td>Do not use its 16:9 canvas as the channel banner's safe area.</td></tr>
+                  <tr><td><strong>Channel banner</strong></td><td>Minimum 2048 × 1152 at 16:9; 2560 × 1440 recommended, especially for TV.</td><td>1235 × 338 safe area at the minimum dimension; 6 MB or smaller; crop changes across devices.</td><td>Do not assume the whole 2560 × 1440 image will be visible on mobile or desktop.</td></tr>
+                  <tr><td><strong>Profile picture</strong></td><td>Square or round visual; the branding page says it renders at 98 × 98 px.</td><td>JPG, GIF, BMP, or PNG; no animated GIF; no more than 15 MB.</td><td>Do not use a profile icon as a banner-safe-area measurement.</td></tr>
+                  <tr><td><strong>Video watermark</strong></td><td>Minimum 150 × 150 px; square.</td><td>Less than 1 MB; display timing is configured separately.</td><td>Do not treat the watermark minimum as a thumbnail or banner export preset.</td></tr>
+                  <tr><td><strong>Shorts thumbnail</strong></td><td>2160 × 3840 recommended; 9:16 guidance.</td><td>Custom Shorts thumbnail upload is described in YouTube Studio on a computer; a verified account is required for custom thumbnails.</td><td>Do not rotate the Shorts rule into a channel banner rule.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p data-original-evidence="yes">The table keeps four image jobs visible at once: video preview, channel background, profile identity, and video watermark. The fact that the branding page lists a 98 × 98 rendered profile picture and a square 150 × 150 watermark is a reminder that “YouTube image size” is not one universal preset. The upload control and display surface decide which measurement matters.</p>
+            <p data-original-evidence="yes">The video page has its own device-dependent byte limits: the reviewed page says 2 MB for video thumbnails on mobile and 50 MB for video, Shorts, and podcast thumbnails on desktop. The banner page gives a different 6 MB or smaller boundary. These limits cannot be compared as if they were interchangeable compression targets because they belong to different upload workflows.</p>
+            <p data-original-evidence="yes">For a banner, plan the full canvas and then design the center first. For a video thumbnail, plan the frame that must read as a small preview and then test it in the watch and embedded-player contexts. A large source file does not remove the need to test the rendered surface.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="safe-title" id="safe-area">
+            <div class="section-kicker">SAFE AREA AND DEVICE CROP</div>
+            <h2 id="safe-title">What does the YouTube banner safe area protect?</h2>
+            <p data-original-evidence="yes">At YouTube's minimum banner dimension of 2048 × 1152, the documented safe area for text and logos is 1235 × 338. The safe area is much shorter than the full 16:9 canvas. It exists because the same image is adapted to computer, mobile, and TV displays, where the visible framing is not identical.</p>
+            <p data-original-evidence="yes">The branding page explicitly says that the same banner image is used across computer, mobile, and TV displays, but shows differently depending on the device. It also says that images should accommodate the entire screen for larger devices but will be cropped on certain views and devices. That is a first-party reason to treat edge content as flexible decoration rather than essential information.</p>
+            <p data-original-evidence="yes">The banner tips page reinforces the device problem by recommending at least 2560 × 1440 for the best display on all devices and describing the banner as a larger space for communicating what a channel is about. The recommendation is not a promise that every pixel will remain visible everywhere; it is a working canvas for the channel-branding surface.</p>
+            <p data-original-evidence="yes">Opened Reddit discussions provide useful question signals around this exact gap. One r/NewTubers thread reports that a banner can be cut off on mobile and that important elements should stay in the center safe area. Another discussion reports that a 2560 × 1440 banner can show a full TV view but a narrower desktop or mobile crop. A recent thread reports softness after upload and recommends checking the banner on mobile and desktop after compression. These are creator observations, not replacement specifications.</p>
+            <figure class="banner-figure">
+              <img src="/assets/youtube-thumbnail-size-banner.svg" alt="A diagram comparing the 3840 by 2160 video thumbnail canvas, the 2560 by 1440 channel banner canvas, the 2048 by 1152 minimum, and the narrow banner safe area." width="1200" height="680" />
+              <figcaption>Original local diagram. The full banner canvas is not the same as the safe area, and neither is the video-thumbnail upload route.</figcaption>
+            </figure>
+          </section>
+
+          <section class="guide-section" aria-labelledby="local-title" id="local-tool">
+            <div class="section-kicker">THE LOCAL TOOL BOUNDARY</div>
+            <h2 id="local-title">What can Feed Thumbnail verify today?</h2>
+            <p data-original-evidence="yes">Feed Thumbnail's public resizer is deliberately a local video-thumbnail workflow. It reads one PNG, JPG, or WEBP file in the browser, targets a fixed 1280 × 720 canvas, lets the user choose crop, fit, padding, or stretch treatment, and exports an upload-ready JPG. The page states that the image stays on the device and that there is no account, server upload, batch queue, or image API.</p>
+            <p data-original-evidence="yes">The public downloader is also browser-only. It accepts standard watch, Shorts, live, embed, and bare video-ID inputs, checks the direct YouTube image files, keeps files that load, and reports natural pixel dimensions. It is useful for inspecting video thumbnail variants; it does not accept a channel-banner upload, simulate YouTube Studio Customization, or measure a signed-in device crop.</p>
+            <p data-original-evidence="yes">The local boundary is intentional. A 1280 × 720 thumbnail preset is a practical video source and a clear contrast with the official banner recommendation, but it is not a banner maker. For a channel banner, start with a 2560 × 1440 or larger working file, keep the important text and logo inside the safe area, check the 6 MB limit, and use YouTube's preview before publishing.</p>
+            <p>Use the local tools to inspect the asset you own, not to claim that a public browser check has verified a private YouTube channel. A trustworthy record should say which file was measured, which surface was tested, which device was used, and whether the account had permission to publish the change.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="benchmark-title" id="benchmark-check">
+            <div class="section-kicker">FIXED BENCHMARK CHECK</div>
+            <h2 id="benchmark-title">What do LightX, Snappa, and Reddit add?</h2>
+            <p data-original-evidence="yes">The opened LightX YouTube Thumbnail Resizer is an upload-and-edit workflow that advertises a 1280 × 720 preset for a YouTube thumbnail. It is a useful practical benchmark for making a video preview, but its page is not the first-party source for the channel banner minimum, safe area, or 6 MB boundary. The workflows should remain labeled separately.</p>
+            <p data-original-evidence="yes">The opened Snappa article recommends 1280 × 720 and 16:9 for common YouTube thumbnails. That aligns with the familiar video-preview production shortcut and helps explain why creators may search for one “YouTube thumbnail size” answer. It does not replace YouTube's channel-branding page, which gives a different 2560 × 1440 recommendation and a 1235 × 338 safe area at minimum dimensions.</p>
+            <p data-original-evidence="yes">The opened Reddit threads were used as question-signal sources. The NewTubers sizing thread describes mobile and desktop crop differences and a center safe-area practice; another thread describes a 2560 × 1440 banner being fully visible on TV but cropped on other views; a recent thread discusses compression and softness after upload. These reports support a test checklist, not an official pixel formula or a performance claim.</p>
+            <p>No search volume, ranking position, click-through rate, traffic, conversion, or competitor-performance number is inferred from LightX, Snappa, Reddit, or the official Help pages. The comparison is about workflow boundaries and evidence quality only.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="checklist-title" id="checklist">
+            <div class="section-kicker">A REPRODUCIBLE CHECKLIST</div>
+            <h2 id="checklist-title">How should you prepare a banner without breaking the thumbnail workflow?</h2>
+            <ol class="banner-steps">
+              <li><span><strong>Name the surface.</strong> Write video thumbnail, channel banner, profile picture, watermark, or Shorts thumbnail before opening an editor.</span></li>
+              <li><span><strong>Choose the official canvas.</strong> Use 3840 × 2160 and 16:9 for a regular video thumbnail recommendation; use 2560 × 1440 for a banner working canvas, with 2048 × 1152 as the documented minimum.</span></li>
+              <li><span><strong>Protect the banner center.</strong> At the minimum banner dimension, keep text and logos inside the 1235 × 338 safe area. Leave edge decoration expendable.</span></li>
+              <li><span><strong>Measure the real export.</strong> Record width, height, format, byte size, and the filename of the file actually selected for upload.</span></li>
+              <li><span><strong>Check the device previews.</strong> Compare computer, mobile, and TV views where the YouTube preview offers them; record which elements are intentionally allowed to crop.</span></li>
+              <li><span><strong>Publish only with authority.</strong> A signed-in YouTube Studio test requires channel ownership or explicit authorization. Do not represent a local diagram or public page inspection as a completed channel update.</span></li>
+            </ol>
+            <p class="source-line">This checklist separates official dimensions from local production choices, device display observations, and account permissions. It is a verification routine, not a promise that one export will look identical in every YouTube surface.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title">
+            <div class="section-kicker">QUESTIONS</div>
+            <h2 id="faq-title">YouTube thumbnail size and channel banner questions</h2>
+            <div class="faq-grid">
+              <details open><summary>What is the YouTube thumbnail size for a regular video?</summary><p data-original-evidence="yes">YouTube's current custom-thumbnail guidance recommends 3840 × 2160 for videos, a minimum width of 640 pixels, JPG or PNG image formats, and a 16:9 aspect ratio for videos. Upload byte limits differ between mobile and desktop.</p></details>
+              <details><summary>What is the recommended YouTube banner size?</summary><p data-original-evidence="yes">YouTube's banner tips recommend at least 2560 × 1440 for the best display on all devices. The channel-branding page gives 2048 × 1152 as the minimum upload dimension at 16:9 and lists 1235 × 338 as the safe area at that minimum.</p></details>
+              <details><summary>Can I use 3840 × 2160 as a YouTube channel banner?</summary><p>It is a 16:9 image, but the video-thumbnail recommendation does not automatically make it the documented banner workflow. A banner still needs a safe-area layout, the channel-branding route, a 6 MB or smaller export, and a device-crop check.</p></details>
+              <details><summary>Will the whole 2560 × 1440 banner show on mobile?</summary><p data-original-evidence="yes">No guarantee of a full view is given. YouTube says the same banner is used across computer, mobile, and TV but shows differently depending on the device, and that it will be cropped on certain views and devices.</p></details>
+              <details><summary>Does Feed Thumbnail make a YouTube banner?</summary><p>No. Its public resizer currently targets a local 1280 × 720 video-thumbnail JPG, and its downloader inspects video image files. Neither tool signs in to YouTube Studio or validates a channel-banner preview.</p></details>
+              <details><summary>What should stay in the banner safe area?</summary><p data-original-evidence="yes">Keep text and logos in the 1235 × 338 safe area at YouTube's minimum 2048 × 1152 banner dimension. Treat the outer artwork as flexible decoration because the visible crop changes across devices.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Keep the video preview and channel brand evidence separate</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">YouTube Help: Manage your channel branding</a> is the source for the banner background role, 2048 × 1152 minimum, 16:9 ratio, 1235 × 338 safe area at minimum dimensions, 2560 × 1440 recommendation, 6 MB limit, device crop, 98 × 98 profile rendering, and 150 × 150 watermark minimum. Reviewed 2026-10-27.</p>
+              <p><a href="https://support.google.com/youtube/answer/12950272?hl=en" rel="noopener">YouTube Help: Channel banner and profile picture tips</a> is the source for the at-least-2560 × 1440 banner recommendation and the distinction between a profile signature image and a larger banner brand surface. Reviewed 2026-10-27.</p>
+              <p><a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">YouTube Help: Add custom thumbnails on YouTube</a> is the source for the 3840 × 2160 video recommendation, 640 px minimum width, 16:9 video guidance, device-dependent byte limits, and the separate Shorts and podcast rules. Reviewed 2026-10-27.</p>
+              <p><a href="https://support.google.com/youtube/answer/3027950?hl=en" rel="noopener">YouTube Help: Channel customization</a> is the source for the Home and Profile separation and for the Profile route that updates the banner, profile picture, and watermark. Reviewed 2026-10-27.</p>
+              <p><a href="/youtube-thumbnail-resizer">Feed Thumbnail's local thumbnail resizer</a> and <a href="/youtube-thumbnail-downloader">thumbnail downloader</a> are the first-party sources for the 1280 × 720 browser-local video workflow and direct YouTube image-dimension checks. No signed-in banner upload was run.</p>
+              <p><a href="https://www.lightxeditor.com/photo-editing/youtube-thumbnail-resizer/" rel="noopener">LightX's YouTube thumbnail resizer</a>, <a href="https://snappa.com/blog/youtube-thumbnail-size/" rel="noopener">Snappa's YouTube thumbnail notes</a>, and the opened <a href="https://www.reddit.com/r/NewTubers/comments/1rwdzed/youtube_banner_sizing_question/" rel="noopener">banner sizing discussion</a>, <a href="https://www.reddit.com/r/NewTubers/comments/1grzr1s" rel="noopener">banner crop discussion</a>, and <a href="https://www.reddit.com/r/NewTubers/comments/1uux1qr/why_does_my_youtube_banner_keep_losing_quality_when_i_upload_it/" rel="noopener">banner quality discussion</a> were used as fixed comparison and question-signal sources only.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>

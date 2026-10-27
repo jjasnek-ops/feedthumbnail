@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">YouTube thumbnail size versus channel banner size</title>
+  <desc id="desc">A three-card comparison of the 3840 by 2160 video thumbnail, the 2560 by 1440 channel banner, and the banner safe area with device crop.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#26334d"/>
+    </linearGradient>
+    <linearGradient id="coral" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff795f"/>
+      <stop offset="1" stop-color="#f3a15c"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9fe1c1"/>
+      <stop offset="1" stop-color="#d5f1b8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#09111f" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="680" rx="34" fill="url(#bg)"/>
+  <circle cx="1100" cy="70" r="120" fill="#40516f" opacity=".3"/>
+  <circle cx="90" cy="620" r="170" fill="#ff795f" opacity=".08"/>
+  <text x="70" y="76" fill="#f5f7fb" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800" letter-spacing="3">YOUTUBE IMAGE SURFACES</text>
+  <text x="70" y="122" fill="#ffffff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="37" font-weight="900">Thumbnail size is not banner size.</text>
+  <text x="70" y="154" fill="#aebbd0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17">Keep the asset, upload route, and crop expectation attached to the right surface.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="202" width="330" height="300" rx="24" fill="#f9fbff"/>
+    <rect x="94" y="232" width="282" height="158" rx="13" fill="#14223b"/>
+    <rect x="94" y="232" width="282" height="158" rx="13" fill="url(#coral)" opacity=".92"/>
+    <circle cx="318" cy="290" r="39" fill="#14223b" opacity=".78"/>
+    <path d="M305 274l28 16-28 16z" fill="#fff"/>
+    <path d="M110 366h154" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".9"/>
+    <text x="94" y="430" fill="#14223b" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="900">VIDEO THUMBNAIL</text>
+    <text x="94" y="459" fill="#4d5b72" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">3840 × 2160 · 16:9</text>
+    <text x="94" y="484" fill="#65748a" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Preview for one video</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="435" y="202" width="330" height="300" rx="24" fill="#f9fbff"/>
+    <rect x="459" y="232" width="282" height="158" rx="13" fill="#1b2b3f"/>
+    <rect x="459" y="232" width="282" height="158" rx="13" fill="url(#mint)" opacity=".88"/>
+    <path d="M480 250h240v122H480z" fill="none" stroke="#fff" stroke-width="2" opacity=".65"/>
+    <rect x="535" y="303" width="130" height="34" rx="10" fill="#14223b" opacity=".86"/>
+    <path d="M552 320h96" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+    <text x="459" y="430" fill="#14223b" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="900">CHANNEL BANNER</text>
+    <text x="459" y="459" fill="#4d5b72" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">2560 × 1440 recommended</text>
+    <text x="459" y="484" fill="#65748a" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">2048 × 1152 minimum · 6 MB</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="800" y="202" width="330" height="300" rx="24" fill="#f9fbff"/>
+    <rect x="824" y="232" width="282" height="158" rx="13" fill="#eaf0f7"/>
+    <rect x="824" y="232" width="282" height="158" rx="13" fill="#d6e6f0"/>
+    <rect x="883" y="293" width="164" height="37" rx="10" fill="none" stroke="#ff795f" stroke-width="4" stroke-dasharray="8 7"/>
+    <path d="M848 248h234v125H848z" fill="none" stroke="#7d8da4" stroke-width="2" stroke-dasharray="6 6"/>
+    <text x="965" y="317" fill="#283951" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="900" text-anchor="middle">SAFE AREA</text>
+    <text x="824" y="430" fill="#14223b" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="900">BANNER CROP</text>
+    <text x="824" y="459" fill="#4d5b72" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">1235 × 338 at minimum</text>
+    <text x="824" y="484" fill="#65748a" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Computer · mobile · TV differ</text>
+  </g>
+
+  <path d="M70 550h1060" stroke="#556681" stroke-width="1" opacity=".7"/>
+  <circle cx="80" cy="588" r="8" fill="#ff795f"/>
+  <text x="104" y="595" fill="#f5f7fb" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">A thumbnail is a video preview; a banner is channel branding.</text>
+  <text x="104" y="625" fill="#aebbd0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Place essential banner text and logos inside the central safe area.</text>
+</svg>
