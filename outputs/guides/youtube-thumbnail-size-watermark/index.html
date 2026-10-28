@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="YouTube thumbnail size and video watermark size are different jobs. Compare the 3840 × 2160 video thumbnail recommendation with YouTube's 150 × 150 square watermark minimum, under-1 MB limit, timing, and display rules." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-size-watermark/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>YouTube Thumbnail Size for a Video Watermark: 150 × 150 Is Not a Thumbnail | Feed Thumbnail</title>
+    <style>
+      .watermark-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .watermark-figure img { display: block; width: 100%; height: auto; }
+      .watermark-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .watermark-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .watermark-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .watermark-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .watermark-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .watermark-table-wrap { overflow-x: auto; margin-top: 18px; }
+      .watermark-table { width: 100%; min-width: 800px; border-collapse: collapse; background: rgba(255,255,255,.72); }
+      .watermark-table th, .watermark-table td { padding: 12px 13px; border-bottom: 1px solid #dce2eb; text-align: left; vertical-align: top; line-height: 1.55; }
+      .watermark-table th { color: var(--ink); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+      .watermark-table td { color: #56647a; font-size: 13px; }
+      .watermark-table td strong { color: var(--ink); }
+      .watermark-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #e7f4d4; color: #466c23; font-size: 12px; font-weight: 800; }
+      .watermark-warning { margin: 18px 0; padding: 15px 16px; border-left: 4px solid #ff795f; border-radius: 12px; background: #fff1eb; color: #674b46; font-size: 14px; line-height: 1.7; }
+      .watermark-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: watermark-step; }
+      .watermark-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: watermark-step; }
+      .watermark-steps li::before { content: counter(watermark-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      @media (max-width: 700px) { .watermark-figure { padding: 9px; } .watermark-grid { grid-template-columns: 1fr; } .watermark-table th, .watermark-table td { padding: 10px 9px; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL SIZE · VIDEO WATERMARK CHECK</div>
+            <h1 id="article-title">YouTube thumbnail size for a video watermark: 150 × 150 is not a thumbnail</h1>
+            <p class="answer-lede"><strong>A YouTube video watermark is a small channel-branding asset, not the preview image attached to a video.</strong> The current branding guidance requires a square watermark of at least 150 × 150 pixels and less than 1 MB. The separate custom-thumbnail guidance recommends 3840 × 2160 for a regular video. The two files use different routes, surfaces, and checks.</p>
+            <p class="source-line">Official sources: <a href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">Manage your channel branding</a>, <a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">Add custom thumbnails on YouTube</a>, and <a href="https://support.google.com/youtube/answer/3027950?hl=en" rel="noopener">Channel customization</a>, reviewed 2026-10-28.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="short-title" id="short-answer">
+            <div class="section-kicker">THE SHORT ANSWER</div>
+            <h2 id="short-title">What is the YouTube thumbnail size compared with a watermark?</h2>
+            <div class="watermark-grid">
+              <div><strong>Regular video thumbnail</strong><span>Recommended source: 3840 × 2160 px, 16:9, with JPG or PNG upload guidance and a 640 px minimum width for videos.</span></div>
+              <div><strong>Video watermark</strong><span>Minimum 150 × 150 px, square, and less than 1 MB. You choose whether it appears at the end, from a custom start time, or throughout the video.</span></div>
+              <div><strong>Different surface</strong><span>The thumbnail previews one video before or around playback. The watermark promotes channel branding inside the video player and is configured from channel Profile.</span></div>
+            </div>
+            <p data-original-evidence="yes">YouTube's custom-thumbnail page recommends a 3840 × 2160 resolution for regular videos, a minimum width of 640 pixels for videos, JPG or PNG formats, and a 16:9 aspect ratio. It describes the custom image as a quick snapshot of the content and says that it can be used as the preview image in the embedded player.</p>
+            <p data-original-evidence="yes">YouTube's channel-branding page gives the video-watermark rule separately: the image must be at least 150 × 150 pixels, square, and less than 1 MB. The page does not describe the watermark as a thumbnail or give it the thumbnail's 3840 × 2160 canvas.</p>
+            <p data-original-evidence="yes">The word “minimum” matters. YouTube's watermark guidance sets a floor for the uploaded square image, while the thumbnail page gives a large recommended source resolution and separate device-dependent byte limits. Neither number is a universal export preset for every YouTube image.</p>
+            <span class="watermark-badge">Thumbnail = video preview · Watermark = channel branding overlay</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="route-title" id="routes">
+            <div class="section-kicker">TWO DIFFERENT ROUTES</div>
+            <h2 id="route-title">Where do you add each asset?</h2>
+            <p data-original-evidence="yes">For a regular video thumbnail, YouTube's computer Help page sends the creator to YouTube Studio, then Content, then the selected video, and finally the Thumbnail control. The creator can upload a file or choose a generated suggestion and save it. This action changes the preview image for that video.</p>
+            <p data-original-evidence="yes">For a video watermark, the branding page sends the creator to YouTube Studio, Customization, and Profile. The creator selects the display time, chooses an image, changes its size, and publishes it. The action applies a channel-level branding element that can appear on the creator's videos; it is not an edit to one video's thumbnail.</p>
+            <p data-original-evidence="yes">The channel-customization page makes this distinction visible in its tabs. Home organizes a channel trailer, featured video, and channel sections. Profile updates the profile picture, banner image, and video watermark, along with channel name, handle, description, and site links. A design request that says “thumbnail size” but asks for a Profile asset needs to be reclassified before exporting.</p>
+            <p data-original-evidence="yes">A thumbnail is usually judged before a viewer starts the video or while a player is choosing a preview. A watermark is judged while the video is playing, where it must identify the channel without covering the important frame. The platform measurements cannot tell you whether a logo is visually distracting; they only define the upload boundary and configuration route.</p>
+            <div class="watermark-warning">Do not create a 150 × 150 file and call it a video thumbnail. Do not upload a 3840 × 2160 thumbnail source as a watermark. Start by naming the surface, then apply the measurement that belongs to that surface.</div>
+          </section>
+
+          <section class="guide-section" aria-labelledby="timing-title" id="timing">
+            <div class="section-kicker">TIMING AND AVAILABILITY</div>
+            <h2 id="timing-title">How does a video watermark appear?</h2>
+            <p data-original-evidence="yes">The branding page gives three display-time choices. End of video shows the watermark for the last 15 seconds. Custom start time begins it at a time selected by the creator. Entire video keeps it visible throughout the video. These are timing controls for the watermark, not variants of a thumbnail image.</p>
+            <p data-original-evidence="yes">The same page says video watermarks are not available on videos set as made for kids. If a watermark was added before a video was set as made for kids, viewers will not see it on that video. A missing watermark can therefore be an availability or audience-setting issue rather than a pixel-size failure.</p>
+            <p data-original-evidence="yes">YouTube also says the channel watermark is available in landscape view on computers and mobile devices and is not clickable on mobile. It does not show in custom YouTube chromeless players or Adobe Flash. The display notes define where the branding feature can be observed; they do not redefine the square upload file.</p>
+            <p data-original-evidence="yes">The branding page points to the Subscription source report for watermark metrics. That is an analytics surface, not a thumbnail performance report. Do not use a watermark subscription-source metric as a proxy for thumbnail impressions, thumbnail click-through rate, or a video's thumbnail test.</p>
+            <figure class="watermark-figure">
+              <img src="/assets/youtube-thumbnail-size-watermark.svg" alt="A diagram comparing the 3840 by 2160 video thumbnail, the 150 by 150 square video watermark, and the 98 by 98 rendered profile picture." width="1200" height="680" />
+              <figcaption>Original local diagram. The thumbnail is a large preview source; the watermark is a small square brand asset with a timing rule.</figcaption>
+            </figure>
+          </section>
+
+          <section class="guide-section" aria-labelledby="compare-title" id="compare">
+            <div class="section-kicker">COMPARE THE IMAGE JOBS</div>
+            <h2 id="compare-title">Which YouTube image size belongs to which asset?</h2>
+            <div class="watermark-table-wrap">
+              <table class="watermark-table">
+                <thead><tr><th>Asset</th><th>First-party size and shape</th><th>Where it is configured</th><th>Do not infer</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Regular video thumbnail</strong></td><td>3840 × 2160 recommended; 16:9; minimum width 640 px for videos.</td><td>Studio, Content, selected video, Thumbnail, Upload file, Save.</td><td>Do not use it as the watermark file or the channel Profile icon.</td></tr>
+                  <tr><td><strong>Video watermark</strong></td><td>Minimum 150 × 150 px; square; less than 1 MB.</td><td>Studio, Customization, Profile, display time, image, Publish.</td><td>Do not call the 150 × 150 minimum a thumbnail recommendation.</td></tr>
+                  <tr><td><strong>Profile picture</strong></td><td>JPG, GIF, BMP, or PNG; the branding page says it renders at 98 × 98 px.</td><td>Studio, Customization, Profile; crop or resize the uploaded image, then Publish.</td><td>Do not use the rendered profile size as the watermark minimum.</td></tr>
+                  <tr><td><strong>Channel banner</strong></td><td>Minimum 2048 × 1152 at 16:9; 2560 × 1440 recommended; safe area applies.</td><td>Studio, Customization, Profile; preview the crop, then Publish.</td><td>Do not compress a banner into a square watermark workflow.</td></tr>
+                  <tr><td><strong>Shorts thumbnail</strong></td><td>2160 × 3840 recommended; 9:16 guidance.</td><td>Studio on a computer for custom Shorts thumbnails; account verification is required.</td><td>Do not rotate the Shorts source into the watermark rule.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p data-original-evidence="yes">The official branding page lists profile picture, banner, and video watermark as separate Profile assets. The profile picture is an identity image that renders at 98 × 98 pixels, the banner is a large background with device crops, and the watermark is a square image below 1 MB with timing controls. The three objects share a route but not a size rule.</p>
+            <p data-original-evidence="yes">The custom-thumbnail page lists regular video, Shorts, and podcast thumbnail guidance separately. A regular video uses 16:9 and 3840 × 2160 as a recommended source, a Short uses 9:16 and 2160 × 3840, and a podcast playlist uses 1:1. None of those thumbnail recommendations replaces the watermark's 150 × 150 square minimum.</p>
+            <p data-original-evidence="yes">The file-size wording also differs. The watermark must be less than 1 MB. The video-thumbnail page describes device-dependent limits of 2 MB for video thumbnails on mobile and 50 MB for video, Shorts, and podcast thumbnails on desktop. These are different upload controls, so a file that passes one gate does not automatically pass the other.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="local-title" id="local-tool">
+            <div class="section-kicker">THE LOCAL TOOL BOUNDARY</div>
+            <h2 id="local-title">What can Feed Thumbnail check?</h2>
+            <p data-original-evidence="yes">Feed Thumbnail's public resizer is a browser-local video-thumbnail tool. It reads one PNG, JPG, or WEBP file, targets a fixed 1280 × 720 canvas, offers crop, fit, padding, or stretch treatments, and exports an upload-ready JPG. The page says the file stays on the device and that there is no account, server upload, batch queue, or image API.</p>
+            <p data-original-evidence="yes">The public downloader is also a video-image workflow. It accepts watch, Shorts, live, embed, and bare video-ID inputs, checks direct YouTube image files, keeps files that load, and reports their natural dimensions. It cannot add a watermark to a video, sign in to channel Profile, select a display time, or verify a made-for-kids availability state.</p>
+            <p data-original-evidence="yes">The local 1280 × 720 preset is therefore useful for the thumbnail side of this comparison, not the watermark side. A watermark export needs a square canvas, a byte check below 1 MB, and a visual test at the player's actual display size. The local browser tool does not claim to be a YouTube Studio watermark uploader.</p>
+            <p>Use the tool to inspect assets you own and document their actual dimensions. For a private channel operation, record the signed-in account, selected video or channel Profile route, display-time choice, audience setting, and final viewer surface. Do not turn a public local measurement into evidence that a watermark was published.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="benchmark-title" id="benchmark-check">
+            <div class="section-kicker">FIXED BENCHMARK CHECK</div>
+            <h2 id="benchmark-title">What do LightX, Snappa, and Reddit add?</h2>
+            <p data-original-evidence="yes">The opened LightX YouTube Thumbnail Resizer is an upload-and-edit workflow centered on a practical 1280 × 720 thumbnail preset. That is useful for the video-preview side of this article, but the page does not publish YouTube's 150 × 150 watermark minimum, the less-than-1 MB watermark boundary, or the Studio Profile timing controls.</p>
+            <p data-original-evidence="yes">The opened Snappa article recommends 1280 × 720 and 16:9 for common YouTube thumbnails. It helps explain the familiar thumbnail preset that creators may bring to a branding question, but it is not first-party evidence for a watermark upload. The official branding page must remain the source for the watermark's square file rule.</p>
+            <p data-original-evidence="yes">The opened Reddit discussions were used as question signals. A NewTubers thread asks about the best watermark size and includes reports that YouTube resizes a watermark; another discussion weighs channel watermark branding against hard-coded editing; a YouTube thread reports a 1000 × 1000 uploaded watermark appearing tiny. These observations motivate a display test but do not override YouTube's minimum, byte limit, or timing documentation.</p>
+            <p>No search volume, ranking position, click-through rate, traffic, conversion, subscription lift, or competitor-performance number is inferred from LightX, Snappa, Reddit, or YouTube's Help pages. The comparison is about asset boundaries and evidence quality only.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="checklist-title" id="checklist">
+            <div class="section-kicker">A REPRODUCIBLE CHECKLIST</div>
+            <h2 id="checklist-title">How should you prepare and verify a watermark?</h2>
+            <ol class="watermark-steps">
+              <li><span><strong>Name the surface.</strong> Write video thumbnail, video watermark, profile picture, banner, or Shorts thumbnail before opening an editor.</span></li>
+              <li><span><strong>Choose the correct source rule.</strong> Use the regular-video thumbnail recommendation for a video preview; use a square image at least 150 × 150 and less than 1 MB for a watermark.</span></li>
+              <li><span><strong>Inspect the visual scale.</strong> Test the logo at the actual video-player size and keep it legible without covering important frame content.</span></li>
+              <li><span><strong>Select the timing.</strong> Record end-of-video, custom start time, or entire-video, rather than treating timing as a file-size option.</span></li>
+              <li><span><strong>Check availability.</strong> Confirm the video is not set as made for kids if you expect the channel watermark to appear.</span></li>
+              <li><span><strong>Verify the surface.</strong> Check landscape computer and mobile playback, and record that custom chromeless players and Adobe Flash do not show the watermark.</span></li>
+              <li><span><strong>Publish only with authority.</strong> A signed-in Studio change requires channel ownership or explicit authorization; a local file check is not a completed channel update.</span></li>
+            </ol>
+            <p class="source-line">This checklist separates first-party dimensions, byte limits, timing, availability, and display observations. It does not promise that a watermark will be equally visible on every player or device.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title">
+            <div class="section-kicker">QUESTIONS</div>
+            <h2 id="faq-title">YouTube thumbnail size and watermark questions</h2>
+            <div class="faq-grid">
+              <details open><summary>What is the YouTube thumbnail size for a video watermark?</summary><p data-original-evidence="yes">A video watermark is not a thumbnail. YouTube's branding page requires a square image at least 150 × 150 pixels and less than 1 MB. A regular video thumbnail has a separate 3840 × 2160 recommendation and 16:9 guidance.</p></details>
+              <details><summary>Is 150 × 150 the recommended video thumbnail size?</summary><p data-original-evidence="yes">No. It is the minimum square size for a video watermark. It should not be used as the source canvas for a regular video thumbnail.</p></details>
+              <details><summary>Can I use a 3840 × 2160 thumbnail as a watermark?</summary><p>You should not treat it as the watermark rule. The watermark workflow expects a square image below 1 MB and has its own display-time and Profile settings. A large thumbnail source may fail the watermark byte or shape check.</p></details>
+              <details><summary>When does the YouTube watermark appear?</summary><p data-original-evidence="yes">YouTube lists three choices: the last 15 seconds of the video, a custom start time, or the entire video. Those settings are selected in channel Profile and are separate from the thumbnail upload.</p></details>
+              <details><summary>Why is my YouTube watermark not visible?</summary><p data-original-evidence="yes">Check the audience setting, because YouTube says watermarks are not available on videos set as made for kids. Also check the player surface: the watermark is available in landscape computer and mobile views, is not clickable on mobile, and does not show in custom chromeless players or Adobe Flash.</p></details>
+              <details><summary>Does Feed Thumbnail create a video watermark?</summary><p>No. Its public resizer targets a local 1280 × 720 video-thumbnail JPG, and its downloader inspects video image files. Neither tool signs in to YouTube Studio or configures a channel watermark.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Keep the thumbnail and watermark evidence separate</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">YouTube Help: Manage your channel branding</a> is the source for the 150 × 150 minimum, square shape, less-than-1 MB watermark boundary, end/custom/entire display timing, made-for-kids availability, landscape display, mobile click behavior, and player exclusions. It also documents the Profile route. Reviewed 2026-10-28.</p>
+              <p><a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">YouTube Help: Add custom thumbnails on YouTube</a> is the source for the separate 3840 × 2160 regular-video recommendation, 640 px minimum width, 16:9 guidance, device-dependent thumbnail byte limits, and Shorts and podcast thumbnail rules. Reviewed 2026-10-28.</p>
+              <p><a href="https://support.google.com/youtube/answer/3027950?hl=en" rel="noopener">YouTube Help: Channel customization</a> is the source for the Home and Profile separation and for Profile controls that update the banner, profile picture, and video watermark. Reviewed 2026-10-28.</p>
+              <p><a href="/youtube-thumbnail-resizer">Feed Thumbnail's local thumbnail resizer</a> and <a href="/youtube-thumbnail-downloader">thumbnail downloader</a> are the first-party sources for the 1280 × 720 browser-local video workflow and direct YouTube image-dimension checks. No signed-in watermark upload was run.</p>
+              <p><a href="https://www.lightxeditor.com/photo-editing/youtube-thumbnail-resizer/" rel="noopener">LightX's YouTube thumbnail resizer</a>, <a href="https://snappa.com/blog/youtube-thumbnail-size/" rel="noopener">Snappa's YouTube thumbnail notes</a>, and the opened <a href="https://www.reddit.com/r/NewTubers/comments/qkv7b6" rel="noopener">watermark-size discussion</a>, <a href="https://www.reddit.com/r/NewTubers/comments/13tmd2q/should_i_be_using_channel_watermark_on_my_videos/" rel="noopener">channel watermark discussion</a>, and <a href="https://www.reddit.com/r/youtube/comments/1gps3as" rel="noopener">small watermark discussion</a> were used as fixed comparison and question-signal sources only.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>

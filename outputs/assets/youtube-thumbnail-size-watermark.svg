@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">YouTube thumbnail size versus video watermark size</title>
+  <desc id="desc">A three-card comparison of the 3840 by 2160 video thumbnail, the 150 by 150 square video watermark, and the 98 by 98 rendered profile picture.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#26334d"/>
+    </linearGradient>
+    <linearGradient id="coral" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff795f"/>
+      <stop offset="1" stop-color="#f3a15c"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9fe1c1"/>
+      <stop offset="1" stop-color="#d5f1b8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#09111f" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="680" rx="34" fill="url(#bg)"/>
+  <circle cx="1100" cy="70" r="120" fill="#40516f" opacity=".3"/>
+  <circle cx="90" cy="620" r="170" fill="#ff795f" opacity=".08"/>
+  <text x="70" y="76" fill="#f5f7fb" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800" letter-spacing="3">YOUTUBE IMAGE SURFACES</text>
+  <text x="70" y="122" fill="#ffffff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="37" font-weight="900">Watermark size is not thumbnail size.</text>
+  <text x="70" y="154" fill="#aebbd0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17">Name the surface before choosing the canvas, byte limit, and timing.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="202" width="330" height="300" rx="24" fill="#f9fbff"/>
+    <rect x="94" y="232" width="282" height="158" rx="13" fill="url(#coral)"/>
+    <circle cx="318" cy="290" r="39" fill="#14223b" opacity=".78"/>
+    <path d="M305 274l28 16-28 16z" fill="#fff"/>
+    <path d="M110 366h154" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".9"/>
+    <text x="94" y="430" fill="#14223b" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="900">VIDEO THUMBNAIL</text>
+    <text x="94" y="459" fill="#4d5b72" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">3840 × 2160 · 16:9</text>
+    <text x="94" y="484" fill="#65748a" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Preview for one video</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="435" y="202" width="330" height="300" rx="24" fill="#f9fbff"/>
+    <rect x="459" y="232" width="282" height="158" rx="13" fill="#162842"/>
+    <rect x="570" y="255" width="80" height="80" rx="12" fill="url(#mint)"/>
+    <path d="M588 293h44M610 271v44" stroke="#162842" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="610" cy="368" r="7" fill="#ff795f"/>
+    <text x="459" y="430" fill="#14223b" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="900">VIDEO WATERMARK</text>
+    <text x="459" y="459" fill="#4d5b72" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">150 × 150 minimum</text>
+    <text x="459" y="484" fill="#65748a" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Square · less than 1 MB</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="800" y="202" width="330" height="300" rx="24" fill="#f9fbff"/>
+    <rect x="824" y="232" width="282" height="158" rx="13" fill="#eaf0f7"/>
+    <circle cx="965" cy="300" r="50" fill="#d6e6f0" stroke="#7d8da4" stroke-width="3"/>
+    <circle cx="965" cy="288" r="16" fill="#7d8da4"/>
+    <path d="M935 334c7-24 58-24 65 0" fill="#7d8da4"/>
+    <text x="824" y="430" fill="#14223b" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="900">PROFILE PICTURE</text>
+    <text x="824" y="459" fill="#4d5b72" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">Renders at 98 × 98</text>
+    <text x="824" y="484" fill="#65748a" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">15 MB upload boundary</text>
+  </g>
+
+  <path d="M70 550h1060" stroke="#556681" stroke-width="1" opacity=".7"/>
+  <circle cx="80" cy="588" r="8" fill="#ff795f"/>
+  <text x="104" y="595" fill="#f5f7fb" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="800">A watermark is branding on a video; a thumbnail is the preview before playback.</text>
+  <text x="104" y="625" fill="#aebbd0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">The upload route, byte limit, and display timing belong to different controls.</text>
+</svg>
