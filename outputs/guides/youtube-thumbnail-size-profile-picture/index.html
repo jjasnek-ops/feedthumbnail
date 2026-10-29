@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="YouTube thumbnail size and profile picture size are different jobs. Compare the 3840 × 2160 video thumbnail recommendation with the square profile picture rule, 98 × 98 rendered size, 15 MB limit, formats, crop, and display surfaces." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-size-profile-picture/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>YouTube Thumbnail Size vs Profile Picture Size: 98 × 98 Is a Render | Feed Thumbnail</title>
+    <style>
+      .profile-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .profile-figure img { display: block; width: 100%; height: auto; }
+      .profile-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .profile-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .profile-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .profile-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .profile-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .profile-table-wrap { overflow-x: auto; margin-top: 18px; }
+      .profile-table { width: 100%; min-width: 820px; border-collapse: collapse; background: rgba(255,255,255,.72); }
+      .profile-table th, .profile-table td { padding: 12px 13px; border-bottom: 1px solid #dce2eb; text-align: left; vertical-align: top; line-height: 1.55; }
+      .profile-table th { color: var(--ink); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+      .profile-table td { color: #56647a; font-size: 13px; }
+      .profile-table td strong { color: var(--ink); }
+      .profile-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #e7f4d4; color: #466c23; font-size: 12px; font-weight: 800; }
+      .profile-warning { margin: 18px 0; padding: 15px 16px; border-left: 4px solid #ff795f; border-radius: 12px; background: #fff1eb; color: #674b46; font-size: 14px; line-height: 1.7; }
+      .profile-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: profile-step; }
+      .profile-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: profile-step; }
+      .profile-steps li::before { content: counter(profile-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      @media (max-width: 700px) { .profile-figure { padding: 9px; } .profile-grid { grid-template-columns: 1fr; } .profile-table th, .profile-table td { padding: 10px 9px; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL SIZE · PROFILE PICTURE CHECK</div>
+            <h1 id="article-title">YouTube thumbnail size vs profile picture size: 98 × 98 is a render, not a canvas</h1>
+            <p class="answer-lede"><strong>A channel profile picture is a small identity image, not the preview image attached to a video.</strong> YouTube's branding guidance says the profile picture can be JPG, GIF, BMP, or PNG, cannot exceed 15 MB, and renders at 98 × 98 pixels. The separate custom-thumbnail guidance recommends 3840 × 2160 for a regular video. The profile picture needs square or round composition and crop checks, not a thumbnail preset.</p>
+            <p class="source-line">Official sources: <a href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">Manage your channel branding</a>, <a href="https://support.google.com/youtube/answer/12950272?hl=en" rel="noopener">Channel banner and profile picture tips</a>, <a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">Add custom thumbnails on YouTube</a>, and <a href="https://support.google.com/youtube/answer/3027950?hl=en" rel="noopener">Channel customization</a>, reviewed 2026-10-29.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="short-title" id="short-answer">
+            <div class="section-kicker">THE SHORT ANSWER</div>
+            <h2 id="short-title">What is the YouTube thumbnail size compared with a profile picture?</h2>
+            <div class="profile-grid">
+              <div><strong>Regular video thumbnail</strong><span>Recommended source: 3840 × 2160 px, 16:9, with JPG or PNG upload guidance and a 640 px minimum width for videos.</span></div>
+              <div><strong>Channel profile picture</strong><span>Square or round identity image; YouTube says it renders at 98 × 98 px, accepts JPG, GIF, BMP, or PNG, and allows up to 15 MB.</span></div>
+              <div><strong>Different job</strong><span>The thumbnail previews one video. The profile picture represents the channel across the channel page, comments, and most playback modes.</span></div>
+            </div>
+            <p data-original-evidence="yes">YouTube's custom-thumbnail page recommends a 3840 × 2160 resolution for regular videos, a minimum width of 640 pixels for videos, JPG or PNG formats, and a 16:9 aspect ratio. It calls the custom image a quick snapshot of the video and says it is used as the preview image in the embedded player.</p>
+            <p data-original-evidence="yes">YouTube's branding page gives a different profile-picture rule. It accepts JPG, GIF, BMP, or PNG files, excludes animated GIFs, sets a maximum image size of 15 MB, and says the image renders at 98 × 98 pixels. The wording describes the rendered display size; it does not instruct creators to upload a 98 × 98 source canvas.</p>
+            <p data-original-evidence="yes">The profile-picture tips page recommends a square or round image and calls the profile picture a signature image or logo that represents the channel. That is a branding description, not a video-preview specification. A large source can still be sensible for a crisp logo, but the official page reviewed here does not publish a single required upload width or height.</p>
+            <span class="profile-badge">Thumbnail = video preview · Profile picture = channel identity</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="route-title" id="routes">
+            <div class="section-kicker">TWO DIFFERENT ROUTES</div>
+            <h2 id="route-title">Where do you change each image?</h2>
+            <p data-original-evidence="yes">For a regular video thumbnail, YouTube's computer Help page sends the creator to YouTube Studio, then Content, then the selected video, and finally the Thumbnail control. The creator can upload a file or choose a generated suggestion and save it. This changes the preview image for that one video.</p>
+            <p data-original-evidence="yes">For a profile picture, the branding page sends the creator to YouTube Studio, Customization, and Profile. The creator chooses an illustration or image, changes the crop or image size in the profile control, clicks Done, and publishes. The page notes that it may take a few minutes for a profile picture to update across YouTube.</p>
+            <p data-original-evidence="yes">The channel-customization page separates Home from Profile. Home organizes a channel trailer, featured video, and channel sections. Profile updates the profile picture, banner image, and video watermark, along with the channel name, handle, description, and site links. A request that says “YouTube thumbnail size” but asks for a channel logo belongs to Profile, not the video's Content editor.</p>
+            <p data-original-evidence="yes">A thumbnail is evaluated as a small preview of one piece of content. A profile picture is reused as a channel signature in several contexts, including comments and playback surfaces. The same logo may be cropped into a circle or rendered at different physical sizes by the interface, so a square source with a clear center is a production choice that follows from the surface, not a replacement for the official 98 × 98 render statement.</p>
+            <div class="profile-warning">Do not turn “renders at 98 × 98” into “upload exactly 98 × 98.” The official guidance gives accepted formats, a byte limit, a rendered size, and a crop control; it does not state that 98 × 98 is the only valid source canvas.</div>
+          </section>
+
+          <section class="guide-section" aria-labelledby="display-title" id="display">
+            <div class="section-kicker">DISPLAY AND CROP</div>
+            <h2 id="display-title">Why can a profile picture look blurry or wrong?</h2>
+            <p data-original-evidence="yes">The profile-picture control includes crop and resize behavior. YouTube's branding page tells the creator to change the crop of the illustration or the size of the uploaded image before clicking Done. A source that looks correct in a rectangular editor can therefore lose edges or detail after it is fitted into a square or round identity slot.</p>
+            <p data-original-evidence="yes">The profile tips page says the image appears on the channel page, when the creator comments, and on the bottom right of videos in most playback modes. Those contexts can be much smaller than the original upload. Fine text, narrow strokes, and edge-hugging marks should be treated as risky design choices because the platform's documented output is a small identity rendering.</p>
+            <p data-original-evidence="yes">The official page does not promise one identical pixel display on every surface. It only says the image renders at 98 × 98 and identifies several places where viewers may see it. A browser, app, comment row, or video player can scale that render differently. Record the surface and device when investigating a blurry or stale image rather than inferring a new thumbnail dimension.</p>
+            <p data-original-evidence="yes">Opened Reddit discussions provide question signals around this distinction. One r/youtubers thread reports a profile picture and banner resetting to default until the creator changed browsers. A NewTubers discussion describes blurry profile pictures after trying 800 × 800 files and multiple formats. Another thread reports a profile image not updating in search results and shows how a placeholder can be mistaken for the current asset. These reports are useful for a reproduction log, not official specifications.</p>
+            <figure class="profile-figure">
+              <img src="/assets/youtube-thumbnail-size-profile-picture.svg" alt="A diagram comparing the 3840 by 2160 video thumbnail source, the square profile picture that renders at 98 by 98, and the 15 MB file boundary." width="1200" height="680" />
+              <figcaption>Original local diagram. A profile picture is a small identity rendering; it is not the 16:9 video-thumbnail canvas.</figcaption>
+            </figure>
+          </section>
+
+          <section class="guide-section" aria-labelledby="compare-title" id="compare">
+            <div class="section-kicker">COMPARE THE IMAGE JOBS</div>
+            <h2 id="compare-title">Which YouTube image size belongs to which asset?</h2>
+            <div class="profile-table-wrap">
+              <table class="profile-table">
+                <thead><tr><th>Asset</th><th>First-party size and shape</th><th>Where it appears or is configured</th><th>Do not infer</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Regular video thumbnail</strong></td><td>3840 × 2160 recommended; 16:9; minimum width 640 px for videos.</td><td>Studio, Content, selected video, Thumbnail, Upload file, Save; used as a preview.</td><td>Do not use the thumbnail canvas as a profile-picture source rule.</td></tr>
+                  <tr><td><strong>Channel profile picture</strong></td><td>Square or round image; renders at 98 × 98 px; JPG, GIF, BMP, or PNG; no animated GIF.</td><td>Studio, Customization, Profile; channel page, comments, and most playback modes.</td><td>Do not claim that 98 × 98 is the only valid upload canvas.</td></tr>
+                  <tr><td><strong>Channel banner</strong></td><td>Minimum 2048 × 1152 at 16:9; 2560 × 1440 recommended; safe area applies.</td><td>Studio, Customization, Profile; top-of-channel background with device crops.</td><td>Do not compress a banner into a profile icon or thumbnail preset.</td></tr>
+                  <tr><td><strong>Video watermark</strong></td><td>Minimum 150 × 150 px; square; less than 1 MB.</td><td>Studio, Customization, Profile; end, custom-start, or entire-video timing.</td><td>Do not use the watermark minimum as a profile picture or thumbnail size.</td></tr>
+                  <tr><td><strong>Shorts thumbnail</strong></td><td>2160 × 3840 recommended; 9:16 guidance.</td><td>Studio on a computer for custom Shorts thumbnails; account verification is required.</td><td>Do not rotate the Shorts source into a channel identity rule.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p data-original-evidence="yes">The official branding page lists profile picture, banner, and video watermark as separate Profile assets. The profile picture is an identity image that renders at 98 × 98, the banner is a large background with device crops, and the watermark is a square image below 1 MB with timing controls. The shared navigation does not make their export rules interchangeable.</p>
+            <p data-original-evidence="yes">The custom-thumbnail page lists regular video, Shorts, and podcast thumbnail guidance separately. A regular video uses 16:9 and 3840 × 2160 as a recommended source, a Short uses 9:16 and 2160 × 3840, and a podcast playlist uses 1:1. None of those thumbnail recommendations replaces the profile picture's format, byte, crop, or rendered-size guidance.</p>
+            <p data-original-evidence="yes">The file-size wording is also different. The profile picture must not exceed 15 MB, while the video-thumbnail page describes device-dependent limits of 2 MB for video thumbnails on mobile and 50 MB for video, Shorts, and podcast thumbnails on desktop. Passing one upload gate does not prove that a file belongs in another asset's control.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="local-title" id="local-tool">
+            <div class="section-kicker">THE LOCAL TOOL BOUNDARY</div>
+            <h2 id="local-title">What can Feed Thumbnail check?</h2>
+            <p data-original-evidence="yes">Feed Thumbnail's public resizer is a browser-local video-thumbnail tool. It reads one PNG, JPG, or WEBP file, targets a fixed 1280 × 720 canvas, offers crop, fit, padding, or stretch treatments, and exports an upload-ready JPG. The page says the file stays on the device and that there is no account, server upload, batch queue, or image API.</p>
+            <p data-original-evidence="yes">The public downloader is also a video-image workflow. It accepts watch, Shorts, live, embed, and bare video-ID inputs, checks direct YouTube image files, keeps files that load, and reports their natural dimensions. It does not open the channel Profile editor, apply a square or round crop, or verify that a profile picture has propagated to comments or search.</p>
+            <p data-original-evidence="yes">The local 1280 × 720 preset is useful for the thumbnail side of this comparison, not the profile-picture side. A profile asset needs a square or round composition, a byte check below 15 MB, an intentional crop, and a small-size readability test. The local browser tool does not claim to be a YouTube channel-branding uploader.</p>
+            <p>Use the local tools to inspect assets you own and document their actual dimensions. For a private channel operation, record the signed-in account, Profile route, crop choice, file format, byte size, device, and surface where the update is expected. Do not turn a public local measurement into evidence that a profile picture was published.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="benchmark-title" id="benchmark-check">
+            <div class="section-kicker">FIXED BENCHMARK CHECK</div>
+            <h2 id="benchmark-title">What do LightX, Snappa, and Reddit add?</h2>
+            <p data-original-evidence="yes">The opened LightX YouTube Thumbnail Resizer is an upload-and-edit workflow centered on a practical 1280 × 720 thumbnail preset. That is useful for the video-preview side of this article, but the page does not publish YouTube's 98 × 98 profile render, 15 MB profile limit, or Profile crop route.</p>
+            <p data-original-evidence="yes">The opened Snappa article recommends 1280 × 720 and 16:9 for common YouTube thumbnails. It helps explain the familiar thumbnail preset that creators may bring to a channel-branding question, but it is not first-party evidence for a profile picture. The official branding and profile-tips pages remain the source for square or round identity treatment and the 98 × 98 render.</p>
+            <p data-original-evidence="yes">The opened Reddit discussions were used as question signals. A youtubers thread reports a profile picture resetting to default until a browser changed; a NewTubers thread discusses blur after trying 800 × 800 images and several formats; a YouTube thread discusses stale or placeholder profile images in search. These reports support a browser, crop, cache, and surface test matrix, not a new official pixel formula.</p>
+            <p>No search volume, ranking position, click-through rate, traffic, conversion, subscription lift, or competitor-performance number is inferred from LightX, Snappa, Reddit, or YouTube's Help pages. The comparison is about asset boundaries and evidence quality only.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="checklist-title" id="checklist">
+            <div class="section-kicker">A REPRODUCIBLE CHECKLIST</div>
+            <h2 id="checklist-title">How should you prepare and verify a profile picture?</h2>
+            <ol class="profile-steps">
+              <li><span><strong>Name the surface.</strong> Write video thumbnail, profile picture, banner, watermark, or Shorts thumbnail before opening an editor.</span></li>
+              <li><span><strong>Choose the correct source rule.</strong> Use the regular-video recommendation for a video preview; use a square or round profile asset that fits the JPG, GIF, BMP, PNG, and 15 MB rules.</span></li>
+              <li><span><strong>Keep the center legible.</strong> Test the logo at a small rendered size and avoid tiny text, thin strokes, and important edge details that can disappear inside a circular crop.</span></li>
+              <li><span><strong>Record the crop.</strong> Note whether YouTube's Profile control cropped or resized the image before you clicked Done.</span></li>
+              <li><span><strong>Check propagation.</strong> Allow time for the profile picture to update, then compare the channel page, a comment, and a playback surface on the relevant device.</span></li>
+              <li><span><strong>Check the actual file.</strong> Record width, height, format, byte size, and whether the file is an animated GIF, which the official guidance excludes.</span></li>
+              <li><span><strong>Publish only with authority.</strong> A signed-in Studio change requires channel ownership or explicit authorization; a local file check is not a completed channel update.</span></li>
+            </ol>
+            <p class="source-line">This checklist separates first-party format, byte, render, crop, and route guidance from local design choices and surface observations. It does not promise identical appearance in every YouTube interface.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title">
+            <div class="section-kicker">QUESTIONS</div>
+            <h2 id="faq-title">YouTube thumbnail size and profile picture questions</h2>
+            <div class="faq-grid">
+              <details open><summary>What is the YouTube thumbnail size for a profile picture?</summary><p data-original-evidence="yes">A profile picture is not a thumbnail. YouTube's branding guidance accepts JPG, GIF, BMP, or PNG, excludes animated GIFs, limits the image to 15 MB, and says it renders at 98 × 98 pixels. A regular video thumbnail has a separate 3840 × 2160 recommendation and 16:9 guidance.</p></details>
+              <details><summary>Is 98 × 98 the required profile-picture upload size?</summary><p data-original-evidence="yes">The reviewed page says the image renders at 98 × 98; it does not say that 98 × 98 is the only valid uploaded source canvas. Use a square or round composition, stay within the format and 15 MB rules, and test the crop.</p></details>
+              <details><summary>Can I use a 3840 × 2160 thumbnail as a profile picture?</summary><p>It is not the documented profile-picture workflow. A 16:9 thumbnail source needs to be re-composed into a square or round identity image and checked in the Profile crop control. Do not treat a video preview canvas as a channel logo.</p></details>
+              <details><summary>Why is my YouTube profile picture blurry?</summary><p data-original-evidence="yes">Check the source quality, crop, file size, browser or app, and the surface where you see it. YouTube says the profile picture renders at 98 × 98 and can appear in several small contexts; a crisp large file can still be difficult to read when reduced.</p></details>
+              <details><summary>Does YouTube accept an animated GIF profile picture?</summary><p data-original-evidence="yes">No. The branding page lists JPG, GIF, BMP, or PNG but explicitly excludes animated GIFs.</p></details>
+              <details><summary>Does Feed Thumbnail make a profile picture?</summary><p>No. Its public resizer targets a local 1280 × 720 video-thumbnail JPG, and its downloader inspects video image files. Neither tool signs in to YouTube Studio or configures a channel profile picture.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Keep the thumbnail and profile evidence separate</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">YouTube Help: Manage your channel branding</a> is the source for the profile-picture formats, animated-GIF exclusion, 15 MB maximum, 98 × 98 rendered size, crop and resize control, Profile route, and propagation note. Reviewed 2026-10-29.</p>
+              <p><a href="https://support.google.com/youtube/answer/12950272?hl=en" rel="noopener">YouTube Help: Channel banner and profile picture tips</a> is the source for the profile picture as a signature image or logo, square or round upload advice, and appearances on the channel page, comments, and most playback modes. Reviewed 2026-10-29.</p>
+              <p><a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">YouTube Help: Add custom thumbnails on YouTube</a> is the source for the separate 3840 × 2160 regular-video recommendation, 640 px minimum width, 16:9 guidance, device-dependent thumbnail byte limits, and Shorts and podcast thumbnail rules. Reviewed 2026-10-29.</p>
+              <p><a href="https://support.google.com/youtube/answer/3027950?hl=en" rel="noopener">YouTube Help: Channel customization</a> is the source for the Home and Profile separation and for Profile controls that update the profile picture, banner, and video watermark. Reviewed 2026-10-29.</p>
+              <p><a href="/youtube-thumbnail-resizer">Feed Thumbnail's local thumbnail resizer</a> and <a href="/youtube-thumbnail-downloader">thumbnail downloader</a> are the first-party sources for the 1280 × 720 browser-local video workflow and direct YouTube image-dimension checks. No signed-in profile-picture update was run.</p>
+              <p><a href="https://www.lightxeditor.com/photo-editing/youtube-thumbnail-resizer/" rel="noopener">LightX's YouTube thumbnail resizer</a>, <a href="https://snappa.com/blog/youtube-thumbnail-size/" rel="noopener">Snappa's YouTube thumbnail notes</a>, and the opened <a href="https://www.reddit.com/r/youtubers/comments/1hrcqm2/help_needed_cant_change_profile_picture/" rel="noopener">profile update discussion</a>, <a href="https://www.reddit.com/r/NewTubers/comments/1t8cr7r/i_am_so_angry_i_cant_fix_a_blurry_profile_picture/" rel="noopener">blurry profile picture discussion</a>, and <a href="https://www.reddit.com/r/youtube/comments/10l8iev" rel="noopener">profile placeholder discussion</a> were used as fixed comparison and question-signal sources only.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>
