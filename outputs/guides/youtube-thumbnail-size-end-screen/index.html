@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="YouTube thumbnail size and end screen size are different jobs. Compare the 3840 × 2160 regular-video thumbnail recommendation with YouTube's end-screen timing, element count, 25-second eligibility, aspect-ratio limits, and lack of an official PNG canvas." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-size-end-screen/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>YouTube Thumbnail Size vs End Screen Size: 16:9 Is Not the Same Asset | Feed Thumbnail</title>
+    <style>
+      .end-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .end-figure img { display: block; width: 100%; height: auto; }
+      .end-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .end-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .end-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .end-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .end-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .end-table-wrap { overflow-x: auto; margin-top: 18px; }
+      .end-table { width: 100%; min-width: 820px; border-collapse: collapse; background: rgba(255,255,255,.72); }
+      .end-table th, .end-table td { padding: 12px 13px; border-bottom: 1px solid #dce2eb; text-align: left; vertical-align: top; line-height: 1.55; }
+      .end-table th { color: var(--ink); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+      .end-table td { color: #56647a; font-size: 13px; }
+      .end-table td strong { color: var(--ink); }
+      .end-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #e7f4d4; color: #466c23; font-size: 12px; font-weight: 800; }
+      .end-warning { margin: 18px 0; padding: 15px 16px; border-left: 4px solid #ff795f; border-radius: 12px; background: #fff1eb; color: #674b46; font-size: 14px; line-height: 1.7; }
+      .end-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: end-step; }
+      .end-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: end-step; }
+      .end-steps li::before { content: counter(end-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      @media (max-width: 700px) { .end-figure { padding: 9px; } .end-grid { grid-template-columns: 1fr; } .end-table th, .end-table td { padding: 10px 9px; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL SIZE · END SCREEN CHECK</div>
+            <h1 id="article-title">YouTube thumbnail size vs end screen size: 16:9 is not the same asset</h1>
+            <p class="answer-lede"><strong>A video thumbnail is an uploaded preview image; an end screen is a timed layer of interactive elements added in YouTube Studio.</strong> The current custom-thumbnail guidance recommends 3840 × 2160 for a regular video and 16:9. The end-screen page describes the last 5–20 seconds, up to four elements for a standard 16:9 video, and a minimum video length of 25 seconds. The reviewed Help page does not publish a pixel canvas for an end-screen artwork file.</p>
+            <p class="source-line">Official sources: <a href="https://support.google.com/youtube/answer/6388789?hl=en" rel="noopener">Add end screens to videos</a>, <a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">Add custom thumbnails on YouTube</a>, and <a href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">Manage your channel branding</a>, reviewed 2026-10-30.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="short-title" id="short-answer">
+            <div class="section-kicker">THE SHORT ANSWER</div>
+            <h2 id="short-title">What is the YouTube thumbnail size compared with an end screen?</h2>
+            <div class="end-grid">
+              <div><strong>Regular video thumbnail</strong><span>Recommended source: 3840 × 2160 px, 16:9, with JPG or PNG upload guidance and a 640 px minimum width for videos.</span></div>
+              <div><strong>End screen rules</strong><span>Last 5–20 seconds; up to four elements for standard 16:9 videos; the video must be at least 25 seconds long.</span></div>
+              <div><strong>Pixel canvas</strong><span>The reviewed end-screen Help page does not publish a required PNG or JPG width and height. Studio places elements in the video player.</span></div>
+            </div>
+            <p data-original-evidence="yes">YouTube's custom-thumbnail page recommends a 3840 × 2160 resolution for regular videos, a minimum width of 640 pixels for videos, JPG or PNG formats, and a 16:9 aspect ratio. It describes the custom image as a quick snapshot of the content and says it can be used as the preview image in the embedded player.</p>
+            <p data-original-evidence="yes">YouTube's end-screen page says that end screens can be added to the last 5–20 seconds of a video. It permits up to four elements for videos with a standard 16:9 aspect ratio, notes that other aspect ratios may have a lower limit, and requires the video to be at least 25 seconds long.</p>
+            <p data-original-evidence="yes">The reviewed end-screen page explains timing, element count, eligibility, and the Studio Editor route, but it does not state that creators must upload one end-screen image at a named pixel dimension. A 1920 × 1080 or 1280 × 720 artwork file can be a production canvas, but that is a workflow choice unless a different first-party source says otherwise.</p>
+            <span class="end-badge">Thumbnail = uploaded preview · End screen = timed interactive layer</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="route-title" id="routes">
+            <div class="section-kicker">TWO DIFFERENT ROUTES</div>
+            <h2 id="route-title">Where do you add each surface?</h2>
+            <p data-original-evidence="yes">For a regular video thumbnail, YouTube's computer Help page sends the creator to YouTube Studio, then Content, then the selected video, and finally the Thumbnail control. The creator can upload a file or choose a generated suggestion and save it. This changes the preview image for that video.</p>
+            <p data-original-evidence="yes">For an end screen, YouTube sends the creator to Studio, Content, the selected video, and Editor. The creator selects End screen, applies a template or chooses an element, changes timing and placement, previews the result in the player, and saves. The system is editing the video surface rather than receiving a standalone thumbnail-like upload.</p>
+            <p data-original-evidence="yes">The official end-screen element choices include a video, playlist, subscribe prompt, channel, and, when eligible, a link. Those objects are interactive destinations or calls to action. A custom PNG background may sit behind them, but the element controls and timeline remain part of YouTube Studio.</p>
+            <p data-original-evidence="yes">This distinction explains why a search for “YouTube thumbnail size” can produce confusing 16:9 answers. Both a thumbnail and an end-screen composition may be designed against a wide video frame, but the thumbnail is an image file with resolution and byte guidance, while the end screen is an editor state with timing, element, and viewer-surface rules.</p>
+            <div class="end-warning">Do not copy the 3840 × 2160 thumbnail recommendation into an end-screen upload form. There is no matching official end-screen file-size preset on the reviewed page; first decide whether you need a thumbnail source, a local background canvas, or Studio elements.</div>
+          </section>
+
+          <section class="guide-section" aria-labelledby="timing-title" id="timing">
+            <div class="section-kicker">TIMING AND ELEMENTS</div>
+            <h2 id="timing-title">What does the end-screen rule actually control?</h2>
+            <p data-original-evidence="yes">The end-screen timing window is the final 5–20 seconds. A creator can change when an element begins and ends on the timeline, then preview the result in the player. This is a temporal rule, not a pixel dimension. A still artwork can be 1920 × 1080 in a local editor and still require a separate Studio timeline configuration.</p>
+            <p data-original-evidence="yes">For a standard 16:9 video, YouTube says up to four elements can be added. Other aspect ratios may have a lower limit. The standard 16:9 phrase therefore affects the number of interactive slots, not just the shape of a background image.</p>
+            <p data-original-evidence="yes">The end-screen page says that other interactive elements, including card teasers and video watermarks, are suppressed during the end screen. A creator should not interpret a missing watermark or card as a thumbnail failure. It may be the expected interaction rule while the end screen is active.</p>
+            <p data-original-evidence="yes">Viewers can hide end screens while watching. The Help page also warns that an end screen may not always show or may show differently than designed as YouTube improves the feature based on performance, viewer behavior, device, and context. A local composition proves only the composition; it does not prove every viewer will see the same overlay.</p>
+            <figure class="end-figure">
+              <img src="/assets/youtube-thumbnail-size-end-screen.svg" alt="A diagram comparing the 3840 by 2160 video thumbnail, official end-screen timing and element rules, and the local 1920 by 1080 template canvas." width="1200" height="680" />
+              <figcaption>Original local diagram. The end-screen rules describe time and interactive elements; the local template canvas is labeled as a page specification.</figcaption>
+            </figure>
+          </section>
+
+          <section class="guide-section" aria-labelledby="availability-title" id="availability">
+            <div class="section-kicker">AVAILABILITY IS A SEPARATE CHECK</div>
+            <h2 id="availability-title">Why might an end screen not appear?</h2>
+            <p data-original-evidence="yes">The video must be at least 25 seconds long to have an end screen. This is an eligibility condition for the video surface, not a minimum thumbnail height. A perfectly valid thumbnail can be uploaded to a video that is too short for an end screen.</p>
+            <p data-original-evidence="yes">YouTube says end screens are not available for videos set as made for kids, in the YouTube Music app, in Flash videos, on mobile web, or in 360 videos. These limits describe viewer surfaces and audience settings. They do not mean that the thumbnail file was rejected.</p>
+            <p data-original-evidence="yes">The page also says viewers can hide end screens. If one viewer reports that the overlay is absent while another sees it, record the app, browser, device, audience setting, video duration, and whether the viewer dismissed the overlay. Do not infer a new image-size requirement from a viewer-surface difference.</p>
+            <p data-original-evidence="yes">The end-screen Help page includes an expanded analytics report for end-screen performance. That report is distinct from thumbnail impressions or thumbnail testing. A creator can document an end-screen click or element report without claiming that the end screen changed the thumbnail's click-through rate.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="compare-title" id="compare">
+            <div class="section-kicker">COMPARE THE IMAGE JOBS</div>
+            <h2 id="compare-title">Which YouTube image rule belongs to which surface?</h2>
+            <div class="end-table-wrap">
+              <table class="end-table">
+                <thead><tr><th>Surface</th><th>First-party size or rule</th><th>Where it is configured</th><th>Do not infer</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Regular video thumbnail</strong></td><td>3840 × 2160 recommended; 16:9; minimum width 640 px for videos.</td><td>Studio, Content, selected video, Thumbnail, Upload file, Save.</td><td>Do not use the thumbnail source resolution as an end-screen timing or element rule.</td></tr>
+                  <tr><td><strong>End screen</strong></td><td>Last 5–20 seconds; video at least 25 seconds; up to four elements for standard 16:9; other ratios may allow fewer.</td><td>Studio, Content, selected video, Editor, End screen, preview, Save.</td><td>Do not claim that the reviewed Help page requires a 1920 × 1080 end-screen upload.</td></tr>
+                  <tr><td><strong>Video watermark</strong></td><td>Separate square branding asset; watermark is suppressed while an end screen is active.</td><td>Channel Profile for the watermark; end screen in the selected video's Editor.</td><td>Do not treat a hidden watermark as evidence of a thumbnail or watermark-size failure.</td></tr>
+                  <tr><td><strong>Shorts thumbnail</strong></td><td>2160 × 3840 recommended; 9:16 guidance.</td><td>Studio on a computer for custom Shorts thumbnails; account verification is required.</td><td>Do not rotate the Shorts thumbnail source into an end-screen canvas rule.</td></tr>
+                  <tr><td><strong>Local end-screen template</strong></td><td>Feed Thumbnail page specification: 1920 × 1080, 16:9, PNG export.</td><td>Browser-local canvas; no account, upload, API, or video export.</td><td>Do not present the local page canvas as a pixel dimension published by YouTube.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p data-original-evidence="yes">The table keeps the uploaded thumbnail, Studio end screen, watermark, Shorts thumbnail, and local template in separate rows. This matters because each row has a different evidence type: resolution, timeline, interaction, availability, or local page specification.</p>
+            <p data-original-evidence="yes">The custom-thumbnail page gives device-dependent byte limits for video thumbnails, while the end-screen page gives no corresponding file byte limit for a standalone end-screen artwork upload. Do not invent a file-size gate for the end screen from the thumbnail's mobile or desktop limit.</p>
+            <p data-original-evidence="yes">A local 1920 × 1080 background is a practical way to align with a standard 16:9 video frame, especially when creating a clean visual outro. It remains a production choice. The official end-screen controls that must be verified are the video duration, element count, timing, placement, preview, and viewer surface.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="local-title" id="local-tool">
+            <div class="section-kicker">THE LOCAL TOOL BOUNDARY</div>
+            <h2 id="local-title">What can Feed Thumbnail check?</h2>
+            <p data-original-evidence="yes">Feed Thumbnail's public thumbnail resizer is a browser-local video-thumbnail tool. It reads one PNG, JPG, or WEBP file, targets a fixed 1280 × 720 canvas, offers crop, fit, padding, or stretch treatments, and exports an upload-ready JPG. The page says the file stays on the device and that there is no account, server upload, batch queue, or image API.</p>
+            <p data-original-evidence="yes">The public downloader is also a video-image workflow. It accepts watch, Shorts, live, embed, and bare video-ID inputs, checks direct YouTube image files, keeps files that load, and reports their natural dimensions. It does not open YouTube Studio Editor or verify an end-screen timeline and viewer surface.</p>
+            <p data-original-evidence="yes">The public end-screen template is a separate local tool. It lets the user edit words, colors, and element positions on a 1920 × 1080 16:9 page canvas, export a PNG, and keep the edits in the browser. Its page labels 1920 × 1080 as a page specification and explicitly distinguishes it from a pixel dimension published on the official Help page.</p>
+            <p>Use the template to compose a visual background and plan a clean next move, then configure the actual video in YouTube Studio. Record the video duration, end-screen timing, element count, placement, audience setting, and viewer surface. Do not turn a local PNG export into evidence that a YouTube end screen was saved or shown to viewers.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="benchmark-title" id="benchmark-check">
+            <div class="section-kicker">FIXED BENCHMARK CHECK</div>
+            <h2 id="benchmark-title">What do LightX, Snappa, and Reddit add?</h2>
+            <p data-original-evidence="yes">The opened LightX YouTube Thumbnail Resizer is an upload-and-edit workflow centered on a practical 1280 × 720 thumbnail preset. That is useful for the video-preview side of this article, but it does not publish YouTube's end-screen timing, element count, 25-second eligibility, or viewer-surface limitations.</p>
+            <p data-original-evidence="yes">The opened Snappa article recommends 1280 × 720 and 16:9 for common YouTube thumbnails. It helps explain the familiar thumbnail preset that creators may mistakenly transfer to an outro composition. It is not first-party evidence for an end-screen artwork canvas or the Studio Editor rules.</p>
+            <p data-original-evidence="yes">The opened Reddit discussions were used as question signals. One creator-made guide discussion describes overlaying a Studio screenshot to match proportions and leaving blank space at the end; another discussion reports unsupported ultra-wide ratios and disabled end-screen controls; a third discussion reports playlist availability and timing questions. These reports support a reproduction checklist, not official dimensions or performance guarantees.</p>
+            <p>No search volume, ranking position, click-through rate, traffic, conversion, end-screen lift, or competitor-performance number is inferred from LightX, Snappa, Reddit, or YouTube's Help pages. The comparison is about asset boundaries and evidence quality only.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="checklist-title" id="checklist">
+            <div class="section-kicker">A REPRODUCIBLE CHECKLIST</div>
+            <h2 id="checklist-title">How should you prepare and verify an end screen?</h2>
+            <ol class="end-steps">
+              <li><span><strong>Name the surface.</strong> Write video thumbnail, end screen, watermark, Shorts thumbnail, or local background before opening an editor.</span></li>
+              <li><span><strong>Choose the correct evidence.</strong> Use 3840 × 2160 and 16:9 for the regular-video thumbnail recommendation; use end-screen timing and element rules for the outro.</span></li>
+              <li><span><strong>Check video eligibility.</strong> Confirm that the video is at least 25 seconds and record the audience setting.</span></li>
+              <li><span><strong>Choose the element set.</strong> Record video, playlist, subscribe, channel, or eligible link elements and stay within the standard 16:9 four-element limit.</span></li>
+              <li><span><strong>Set the timeline.</strong> Keep the active end-screen window between 5 and 20 seconds and preview the result in the player.</span></li>
+              <li><span><strong>Check the viewer surface.</strong> Test computer and supported playback contexts while noting mobile web, Music, Flash, 360, made-for-kids, and hide controls.</span></li>
+              <li><span><strong>Publish only with authority.</strong> A signed-in Studio change requires channel ownership or explicit authorization; a local PNG is not a completed end-screen update.</span></li>
+            </ol>
+            <p class="source-line">This checklist separates first-party thumbnail resolution from end-screen timing, elements, eligibility, and viewer-surface rules. It does not promise that every viewer will see the same overlay.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title">
+            <div class="section-kicker">QUESTIONS</div>
+            <h2 id="faq-title">YouTube thumbnail size and end-screen questions</h2>
+            <div class="faq-grid">
+              <details open><summary>What is the YouTube thumbnail size for an end screen?</summary><p data-original-evidence="yes">An end screen is not a thumbnail file. YouTube recommends 3840 × 2160 and 16:9 for a regular video thumbnail, while the end-screen page gives a 5–20 second window, up to four elements for standard 16:9 videos, and a 25-second minimum video length. The reviewed Help page does not publish a required end-screen artwork pixel canvas.</p></details>
+              <details><summary>Can I use a 1920 × 1080 image for a YouTube end screen?</summary><p>A 1920 × 1080 image can be a practical local 16:9 background canvas, and Feed Thumbnail labels it as a page specification. It is not presented here as a pixel dimension required by the official end-screen Help page. Studio still controls the interactive elements and timing.</p></details>
+              <details><summary>How long can a YouTube end screen be?</summary><p data-original-evidence="yes">YouTube says an end screen can be added to the last 5–20 seconds of a video. The creator can change element timing on the Studio Editor timeline.</p></details>
+              <details><summary>How many end-screen elements can a standard 16:9 video use?</summary><p data-original-evidence="yes">YouTube says up to four elements can be added for a standard 16:9 video. Other aspect ratios may have a lower limit.</p></details>
+              <details><summary>Why is my end screen unavailable?</summary><p data-original-evidence="yes">Check whether the video is at least 25 seconds and whether it is set as made for kids. YouTube also lists the YouTube Music app, Flash videos, mobile web, and 360 videos as unavailable contexts. Viewers can also hide end screens.</p></details>
+              <details><summary>Does Feed Thumbnail upload an end screen to YouTube?</summary><p>No. Its local end-screen template exports a PNG from a 1920 × 1080 page specification, but it does not sign in, upload a video, configure Studio Editor, or verify that viewers see the final overlay.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Keep the thumbnail and end-screen evidence separate</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/6388789?hl=en" rel="noopener">YouTube Help: Add end screens to videos</a> is the source for the 5–20 second timing window, 16:9 element count, 25-second minimum video length, Studio Editor route, element choices, suppressed watermarks and cards, unavailable contexts, viewer hide control, and context-dependent display note. Reviewed 2026-10-30.</p>
+              <p><a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">YouTube Help: Add custom thumbnails on YouTube</a> is the source for the separate 3840 × 2160 regular-video recommendation, 640 px minimum width, 16:9 guidance, device-dependent thumbnail byte limits, and Shorts and podcast thumbnail rules. Reviewed 2026-10-30.</p>
+              <p><a href="https://support.google.com/youtube/answer/10456525?hl=en" rel="noopener">YouTube Help: Manage your channel branding</a> is the source for the separate video-watermark asset and for the fact that watermarks are suppressed during an active end screen. Reviewed 2026-10-30.</p>
+              <p><a href="/youtube-end-screen-template">Feed Thumbnail's local end-screen template</a> is the source for the editable 1920 × 1080 page specification, PNG export, local-only behavior, and explicit distinction between the page canvas and an official YouTube pixel requirement. The <a href="/youtube-thumbnail-resizer">local thumbnail resizer</a> and <a href="/youtube-thumbnail-downloader">thumbnail downloader</a> remain separate video-image tools.</p>
+              <p><a href="https://www.lightxeditor.com/photo-editing/youtube-thumbnail-resizer/" rel="noopener">LightX's YouTube thumbnail resizer</a>, <a href="https://snappa.com/blog/youtube-thumbnail-size/" rel="noopener">Snappa's YouTube thumbnail notes</a>, and the opened <a href="https://www.reddit.com/r/youtube/comments/ibe3v0/end_screen_guide_i_couldnt_find_a_good_version_so/" rel="noopener">end-screen guide discussion</a>, <a href="https://www.reddit.com/r/NewTubers/comments/1lc51n8/end_screens_matter_trust_me/" rel="noopener">end-screen availability discussion</a>, and <a href="https://www.reddit.com/r/NewTubers/comments/q5wb91" rel="noopener">unsupported-aspect-ratio discussion</a> were used as fixed comparison and question-signal sources only.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>
