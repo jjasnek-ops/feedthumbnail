@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="YouTube thumbnail size and info cards are different jobs. Compare the 3840 × 2160 thumbnail recommendation with YouTube's card types, five-card limit, start time, teaser copy, viewer surfaces, and the absence of an info-card image canvas." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-size-info-cards/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>YouTube Thumbnail Size vs Info Cards: Cards Have No Upload Canvas | Feed Thumbnail</title>
+    <style>
+      .card-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .card-figure img { display: block; width: 100%; height: auto; }
+      .card-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .card-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .card-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .card-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .card-table-wrap { overflow-x: auto; margin-top: 18px; }
+      .card-table { width: 100%; min-width: 820px; border-collapse: collapse; background: rgba(255,255,255,.72); }
+      .card-table th, .card-table td { padding: 12px 13px; border-bottom: 1px solid #dce2eb; text-align: left; vertical-align: top; line-height: 1.55; }
+      .card-table th { color: var(--ink); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+      .card-table td { color: #56647a; font-size: 13px; }
+      .card-table td strong { color: var(--ink); }
+      .card-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #e7f4d4; color: #466c23; font-size: 12px; font-weight: 800; }
+      .card-warning { margin: 18px 0; padding: 15px 16px; border-left: 4px solid #ff795f; border-radius: 12px; background: #fff1eb; color: #674b46; font-size: 14px; line-height: 1.7; }
+      .card-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: card-step; }
+      .card-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: card-step; }
+      .card-steps li::before { content: counter(card-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      @media (max-width: 700px) { .card-figure { padding: 9px; } .card-grid { grid-template-columns: 1fr; } .card-table th, .card-table td { padding: 10px 9px; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL SIZE · INFO CARD CHECK</div>
+            <h1 id="article-title">YouTube thumbnail size vs info cards: cards have no upload canvas</h1>
+            <p class="answer-lede"><strong>A custom video thumbnail is an image file; an info card is a timed YouTube Studio object that points to a video, playlist, channel, or eligible external link.</strong> YouTube's current custom-thumbnail guidance recommends 3840 × 2160 for regular videos and 16:9. The info-card page instead describes a five-card limit, a start time, optional message and teaser text, and a player interaction. It does not publish a required JPG, PNG, width, height, or standalone card canvas.</p>
+            <p class="source-line">Official sources: <a href="https://support.google.com/youtube/answer/6140493?hl=en" rel="noopener">Add info cards to videos</a> and <a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">Add custom thumbnails on YouTube</a>, reviewed 2026-10-31.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="short-title" id="short-answer">
+            <div class="section-kicker">THE SHORT ANSWER</div>
+            <h2 id="short-title">What is the YouTube thumbnail size compared with an info card?</h2>
+            <div class="card-grid">
+              <div><strong>Regular video thumbnail</strong><span>Uploaded image: YouTube recommends 3840 × 2160 px for videos, 16:9, with JPG or PNG guidance and a 640 px minimum width for videos.</span></div>
+              <div><strong>Info card object</strong><span>A Studio item attached to a video. It can point to a video, playlist, channel, or eligible link, with a chosen start time and teaser copy.</span></div>
+              <div><strong>Pixel canvas</strong><span>The reviewed info-card Help page does not publish a card width, height, file format, or image upload requirement.</span></div>
+            </div>
+            <p data-original-evidence="yes">YouTube's custom-thumbnail page treats the thumbnail as a quick snapshot of the content and recommends 3840 × 2160 for regular videos, a minimum width of 640 pixels for videos, JPG or PNG image formats, and a 16:9 aspect ratio. The file can become the preview image in the embedded player. Those are image-source instructions.</p>
+            <p data-original-evidence="yes">YouTube's info-card page treats the card as an interactive feature added in the Editor. The documented card types are video, playlist, channel, and, for creators in the YouTube Partner Program, an external link. The creator chooses what the card points to and when its teaser begins.</p>
+            <p data-original-evidence="yes">The reviewed info-card page does not say to upload a card image, export a card PNG, or create a card at a named pixel dimension. A thumbnail preset such as 3840 × 2160 or 1280 × 720 can prepare a video preview, but it cannot prove that an info card has been configured or that its teaser will appear.</p>
+            <span class="card-badge">Thumbnail = image file · Info card = timed destination</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="route-title" id="routes">
+            <div class="section-kicker">TWO DIFFERENT ROUTES</div>
+            <h2 id="route-title">Where do you add each surface?</h2>
+            <p data-original-evidence="yes">For a custom video thumbnail, YouTube's computer Help page sends the creator to YouTube Studio, Content, the selected video, and the Thumbnail control. The creator chooses Upload file or Get suggestions and saves the change. This route stores a preview image for the video.</p>
+            <p data-original-evidence="yes">For an info card, the official route is Studio, Content, the selected video, Editor, Info cards, and a card type. The creator then chooses a destination, changes the start time below the video, adds optional message and teaser text, and selects Save. This route edits a timeline-linked interaction, not a static image slot.</p>
+            <p data-original-evidence="yes">The two routes can be used on the same video, but they produce different records. A thumbnail check can confirm dimensions, file type, crop, and local export. An info-card check needs the destination, start time, teaser copy, audience setting, viewer surface, and whether YouTube actually exposes the card.</p>
+            <p data-original-evidence="yes">The phrase “YouTube thumbnail size” therefore answers only part of a creator's preparation question. If the next action is Upload file under Thumbnail, prepare an image file. If the next action is Info cards under Editor, do not look for a missing card-size field; look for the card type, destination, time, copy, and Save state.</p>
+            <div class="card-warning">Do not copy a thumbnail dimension into an imaginary info-card upload form. The first-party card instructions describe an Editor object and its timing, not a required artwork canvas.</div>
+          </section>
+
+          <section class="guide-section" aria-labelledby="types-title" id="types">
+            <div class="section-kicker">CARD TYPES AND COPY</div>
+            <h2 id="types-title">What does an info card contain?</h2>
+            <p data-original-evidence="yes">A video card links to a public YouTube video. A playlist card links to a public YouTube playlist. A channel card points viewers to a YouTube channel, including a channel that helped with the video or that the creator wants to recommend. These destinations are content objects; none is a thumbnail-image upload.</p>
+            <p data-original-evidence="yes">A link card can point to an external website when the creator is in the YouTube Partner Program. YouTube's page also warns that the linked website must comply with its policies, Community Guidelines, and Terms of Service. That eligibility and policy boundary is different from a thumbnail file-size limit.</p>
+            <p data-original-evidence="yes">The creator can add an optional message and teaser text about the video. The official page says message and teaser text are required for channel cards. Copy therefore belongs in the card configuration and should be checked as copy, not placed inside a thumbnail canvas because the card has no published image dimension.</p>
+            <p data-original-evidence="yes">A practical evidence record for a card should preserve the selected type, destination URL or channel, chosen start time, message, teaser, Save result, and a viewer-side check. A local thumbnail tool can preserve the source image and its dimensions, but it cannot observe a signed-in Studio object or confirm that YouTube delivered the teaser.</p>
+            <figure class="card-figure">
+              <img src="/assets/youtube-thumbnail-size-info-cards.svg" alt="A diagram separating a 3840 by 2160 thumbnail image file from an info card timeline with a destination, start time, teaser, and no published card canvas." width="1200" height="680" />
+              <figcaption>Original local diagram. The thumbnail has an image-source dimension; the info card has a destination and timeline state rather than a published pixel canvas.</figcaption>
+            </figure>
+          </section>
+
+          <section class="guide-section" aria-labelledby="limits-title" id="limits">
+            <div class="section-kicker">LIMITS AND VIEWER CONTEXT</div>
+            <h2 id="limits-title">Why might a card be missing when the thumbnail is fine?</h2>
+            <p data-original-evidence="yes">YouTube says a creator can add up to five cards to one video. That is a count limit on interactive objects, not a maximum number of thumbnail exports. If the sixth item is not available, changing the thumbnail from 1280 × 720 to 3840 × 2160 will not create another card slot.</p>
+            <p data-original-evidence="yes">The creator chooses a start time for each card. Viewers see a teaser at the designated time, and when the teaser is not showing they can hover over the player and select the card icon. On mobile, the official page describes the card icon as visible when player controls are showing. A hidden teaser can therefore be a timing or viewer-surface question rather than an image-resolution error.</p>
+            <p data-original-evidence="yes">The official page says cards are shown below the video description and that viewers can scroll through multiple cards while the video plays. It also says videos displaying cards will not show a Call-to-Action overlay. A creator should not treat a changed overlay as proof that the thumbnail was resized or rejected.</p>
+            <p data-original-evidence="yes">Cards will not show if the video has a Content ID claim and the content owner has set up a campaign. Cards are also unavailable on videos set as made for kids, and the page says the feature is available to viewers on computers. These are content, rights, audience, and surface conditions, not a card pixel requirement.</p>
+            <p data-original-evidence="yes">YouTube says the system may improve which teasers and cards are most relevant based on performance, viewer behavior, and device. A saved card in Studio is therefore not the same evidence as a guaranteed teaser at an identical position for every viewer. Record the device, signed-in state, video timestamp, audience setting, and card destination during a reproduction check.</p>
+            <ol class="card-steps">
+              <li><span><strong>Confirm the image separately.</strong> Check the thumbnail file's width, height, format, byte size, crop, and the Studio save result.</span></li>
+              <li><span><strong>Confirm the card separately.</strong> Check card type, destination, start time, message, teaser copy, and the five-card count.</span></li>
+              <li><span><strong>Reproduce the viewer surface.</strong> Note computer or mobile context, player controls, made-for-kids setting, Content ID state, and whether the card icon or teaser appears.</span></li>
+            </ol>
+          </section>
+
+          <section class="guide-section" aria-labelledby="compare-title" id="compare">
+            <div class="section-kicker">COMPARE THE JOBS</div>
+            <h2 id="compare-title">Which YouTube rule belongs to which surface?</h2>
+            <div class="card-table-wrap">
+              <table class="card-table">
+                <thead><tr><th>Surface</th><th>First-party size or rule</th><th>Where it is configured</th><th>Do not infer</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Regular video thumbnail</strong></td><td>3840 × 2160 recommended; 16:9; minimum width 640 px for videos; JPG or PNG guidance.</td><td>Studio, Content, selected video, Thumbnail, Upload file, Save.</td><td>Do not turn the image dimensions into an info-card canvas or timing rule.</td></tr>
+                  <tr><td><strong>Info card</strong></td><td>Up to five cards; video, playlist, channel, or eligible link; start time; message and teaser text.</td><td>Studio, Content, selected video, Editor, Info cards, destination, Save.</td><td>Do not claim that YouTube publishes a card PNG, JPG, width, or height requirement.</td></tr>
+                  <tr><td><strong>End screen</strong></td><td>Last 5–20 seconds; up to four elements for a standard 16:9 video; video at least 25 seconds.</td><td>Studio, Content, selected video, Editor, End screen.</td><td>Do not treat end-screen timing or element count as thumbnail dimensions.</td></tr>
+                  <tr><td><strong>Feed Thumbnail resizer</strong></td><td>Local 1280 × 720 target with crop, fit, padding, or stretch choices and JPG export.</td><td>Browser-local tool; no YouTube Studio connection.</td><td>Do not use a local export as proof that a card is saved or visible.</td></tr>
+                  <tr><td><strong>Feed Thumbnail downloader</strong></td><td>Loads direct YouTube image variants and reports their natural dimensions.</td><td>Browser-only video-image inspection.</td><td>Do not use a downloaded image dimension to infer an info-card state.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p data-original-evidence="yes">The table keeps an uploaded preview, an Editor card, an end screen, and two local image tools in separate rows. The evidence type changes by row: resolution and format for the thumbnail, destination and timing for the card, timeline and elements for the end screen, and local file behavior for Feed Thumbnail.</p>
+            <p data-original-evidence="yes">The custom-thumbnail page includes device-dependent byte limits: 2 MB for video thumbnails on mobile, 10 MB for podcast thumbnails on mobile, and 50 MB for video, Shorts, and podcast thumbnails on desktop. The info-card page does not provide a parallel file-byte limit because it does not describe a card image upload.</p>
+            <p data-original-evidence="yes">A card may recommend a different video or playlist even when the current thumbnail is valid. Conversely, a thumbnail may appear while a card is unavailable because of the video setting, Content ID campaign, viewer surface, start time, or card-count limit. Diagnose the object that failed instead of changing an unrelated image dimension.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="local-title" id="local-tool">
+            <div class="section-kicker">THE LOCAL TOOL BOUNDARY</div>
+            <h2 id="local-title">What can Feed Thumbnail check?</h2>
+            <p data-original-evidence="yes">Feed Thumbnail's public thumbnail resizer is a browser-local video-thumbnail tool. It reads a PNG, JPG, or WEBP file, targets a fixed 1280 × 720 canvas, offers crop, fit, padding, or stretch treatments, and exports a JPG. Its page says the file stays on the device and that there is no account, server upload, batch queue, or image API.</p>
+            <p data-original-evidence="yes">The public downloader is also a video-image workflow. It accepts watch, Shorts, live, embed, and bare video-ID inputs, checks direct YouTube image files, keeps files that load, and reports their natural dimensions. It does not open YouTube Studio Editor or inspect a card destination, time, or teaser.</p>
+            <p data-original-evidence="yes">The local tools can create an honest handoff: save the source thumbnail, note the dimensions, record the format and byte size, and keep the card plan as a separate text checklist. They cannot sign in, add a card, verify a Content ID state, or establish what every viewer sees.</p>
+            <p>Use the resizer for the image job and YouTube Studio for the card job. If a card is missing, preserve the thumbnail file unchanged while checking the Editor state, audience setting, rights state, time, count, and viewer surface. This keeps a local file assertion separate from a first-party interaction assertion.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="benchmark-title" id="benchmark-check">
+            <div class="section-kicker">FIXED BENCHMARK CHECK</div>
+            <h2 id="benchmark-title">What do LightX, Snappa, and Reddit add?</h2>
+            <p data-original-evidence="yes">The opened LightX YouTube Thumbnail Resizer is an upload-and-edit workflow centered on a practical 1280 × 720 preset. It describes upload, resizing, download, custom dimensions, panning, and JPG or PNG export. That is useful for the thumbnail side of this article, but it does not publish YouTube's card types, five-card limit, teaser timing, or viewer restrictions.</p>
+            <p data-original-evidence="yes">The opened Snappa article recommends 1280 × 720 and 16:9 for common YouTube thumbnails, then walks through a thumbnail template and Studio upload workflow. It helps explain why a creator may arrive with an image preset in mind. It is not first-party evidence for an info-card image canvas, card count, or card availability.</p>
+            <p data-original-evidence="yes">The opened Reddit discussions were used as question signals rather than dimension sources. One r/youtube report describes cards disappearing for a logged-in viewer; a second report describes cards not appearing on Shorts; a third report describes cards missing on desktop until a viewer setting was changed. These reports support a device, account, and surface reproduction checklist, not a universal rule.</p>
+            <p>No search volume, ranking position, click-through rate, traffic, conversion, card lift, thumbnail performance, or competitor-performance number is inferred from LightX, Snappa, or Reddit. The fixed benchmark line is a workflow comparison and a source of failure modes; official YouTube Help remains the evidence for the product rules.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="checklist-title" id="checklist">
+            <div class="section-kicker">A REPRODUCIBLE CHECK</div>
+            <h2 id="checklist-title">How to check a thumbnail and an info card without mixing them</h2>
+            <p data-original-evidence="yes">Start with the file. Record whether the asset is for a regular video, a Short, or a podcast playlist, then check the corresponding current recommendation, aspect ratio, format, byte limit, and upload device. For a regular video, the reviewed official page recommends 3840 × 2160, 16:9, and JPG or PNG with a 640 px minimum width.</p>
+            <p data-original-evidence="yes">Then move to Studio and inspect the thumbnail route. Content, selected video, Thumbnail, Upload file, and Save answer whether the preview image changed. Do not use a successful thumbnail save as evidence that a card was added; the card has its own Editor route.</p>
+            <p data-original-evidence="yes">For the card route, select Editor and Info cards. Count the existing cards, identify the destination, inspect the start time and message or teaser, and save. If the destination is external, confirm the Partner Program and policy boundary before treating the card as eligible.</p>
+            <p data-original-evidence="yes">Finally, test the viewer surface. Record the timestamp, device, browser or app, signed-in state, audience setting, Content ID state if known, and whether the teaser, card icon, or cards below the description appear. A viewer report that says “the card is not there” is incomplete until those variables are recorded.</p>
+            <ol class="card-steps">
+              <li><span><strong>File evidence:</strong> dimensions, aspect ratio, format, byte size, crop, source path, and thumbnail save time.</span></li>
+              <li><span><strong>Studio evidence:</strong> card type, destination, number of cards, start time, message, teaser, and Save result.</span></li>
+              <li><span><strong>Viewer evidence:</strong> timestamp, device, player controls, audience setting, rights context, teaser, card icon, and below-description cards.</span></li>
+            </ol>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title" id="faq">
+            <div class="section-kicker">FAQ</div>
+            <h2 id="faq-title">YouTube thumbnail size and info-card questions</h2>
+            <div class="faq-list">
+              <details open><summary>What size should an info-card image be?</summary><p data-original-evidence="yes">The reviewed YouTube Help page does not specify an info-card image because it describes a card as a Studio interaction with a destination, start time, message, and teaser. Use the official thumbnail dimensions only for the thumbnail file.</p></details>
+              <details><summary>Can I upload a 3840 × 2160 image to an info card?</summary><p>No. The 3840 × 2160 recommendation belongs to a regular video thumbnail. An info card is configured in the Editor and does not have the same upload field.</p></details>
+              <details><summary>How many info cards can one video have?</summary><p data-original-evidence="yes">YouTube says up to five cards can be added to one video. That is an interactive-object limit, not a thumbnail image count.</p></details>
+              <details><summary>Why can a thumbnail show while an info card is missing?</summary><p data-original-evidence="yes">The thumbnail and card have separate routes and conditions. Check card timing, card count, destination, Content ID campaign, made-for-kids setting, viewer surface, and player controls before changing the thumbnail file.</p></details>
+              <details><summary>Does Feed Thumbnail add YouTube info cards?</summary><p>No. Feed Thumbnail's resizer and downloader are browser-local image tools. They do not sign in, open Studio Editor, save a card, or verify what viewers see.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Keep the thumbnail and card evidence separate</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/6140493?hl=en" rel="noopener">YouTube Help: Add info cards to videos</a> is the source for the four card types, five-card limit, Studio Editor route, start time, message and teaser text, viewer interaction, below-description placement, Content ID campaign behavior, Call-to-Action overlay behavior, computer availability, and made-for-kids restriction. Reviewed 2026-10-31.</p>
+              <p><a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">YouTube Help: Add custom thumbnails on YouTube</a> is the source for the separate 3840 × 2160 regular-video recommendation, 640 px minimum width, 16:9 guidance, JPG or PNG formats, device-dependent byte limits, and the distinct Shorts and podcast rules. Reviewed 2026-10-31.</p>
+              <p><a href="/youtube-thumbnail-resizer">Feed Thumbnail's local thumbnail resizer</a> is the source for the 1280 × 720 browser-local target, crop and fit options, and local export boundary. The <a href="/youtube-thumbnail-downloader">thumbnail downloader</a> is a separate image inspection tool and does not inspect Studio cards.</p>
+              <p><a href="https://www.lightxeditor.com/photo-editing/youtube-thumbnail-resizer/" rel="noopener">LightX's YouTube thumbnail resizer</a>, <a href="https://snappa.com/blog/youtube-thumbnail-size/" rel="noopener">Snappa's YouTube thumbnail notes</a>, and the opened <a href="https://www.reddit.com/r/youtube/comments/145363h" rel="noopener">logged-in card report</a>, <a href="https://www.reddit.com/r/NewTubers/comments/126ibie" rel="noopener">Shorts card report</a>, and <a href="https://www.reddit.com/r/youtube/comments/eq36vg" rel="noopener">desktop card report</a> were used as fixed comparison and question-signal sources only.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>
