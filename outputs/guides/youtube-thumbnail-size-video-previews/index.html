@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="YouTube thumbnail size and video previews are different layers. Compare the 3840 × 2160 thumbnail recommendation with YouTube's automatic 3-second preview, first-half clip selection, eligibility, browser surfaces, and playback settings." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-size-video-previews/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>YouTube Thumbnail Size vs Video Previews: 3 Seconds Is Not a New Thumbnail | Feed Thumbnail</title>
+    <style>
+      .preview-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .preview-figure img { display: block; width: 100%; height: auto; }
+      .preview-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .preview-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .preview-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .preview-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .preview-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .preview-table-wrap { overflow-x: auto; margin-top: 18px; }
+      .preview-table { width: 100%; min-width: 850px; border-collapse: collapse; background: rgba(255,255,255,.72); }
+      .preview-table th, .preview-table td { padding: 12px 13px; border-bottom: 1px solid #dce2eb; text-align: left; vertical-align: top; line-height: 1.55; }
+      .preview-table th { color: var(--ink); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+      .preview-table td { color: #56647a; font-size: 13px; }
+      .preview-table td strong { color: var(--ink); }
+      .preview-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #e7f4d4; color: #466c23; font-size: 12px; font-weight: 800; }
+      .preview-warning { margin: 18px 0; padding: 15px 16px; border-left: 4px solid #ff795f; border-radius: 12px; background: #fff1eb; color: #674b46; font-size: 14px; line-height: 1.7; }
+      .preview-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: preview-step; }
+      .preview-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: preview-step; }
+      .preview-steps li::before { content: counter(preview-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      @media (max-width: 700px) { .preview-figure { padding: 9px; } .preview-grid { grid-template-columns: 1fr; } .preview-table th, .preview-table td { padding: 10px 9px; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL SIZE · VIDEO PREVIEW CHECK</div>
+            <h1 id="article-title">YouTube thumbnail size vs video previews: 3 seconds is not a new thumbnail</h1>
+            <p class="answer-lede"><strong>A custom thumbnail is an image file; a video preview is an automatically selected clip from the video.</strong> YouTube's current custom-thumbnail guidance recommends 3840 × 2160 for regular videos, 16:9, JPG or PNG, and a 640 px minimum width for videos. Its video-preview page describes a 3-second preview, a clip from the first half of the video, surface-specific eligibility, and the fact that the thumbnail appears when the preview is not active.</p>
+            <p class="source-line">Official sources: <a href="https://support.google.com/youtube/answer/7074781?hl=en" rel="noopener">Video previews</a>, <a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">Add custom thumbnails on YouTube</a>, and <a href="https://support.google.com/youtube/answer/7640367?hl=en" rel="noopener">Use the inline player</a>, reviewed 2026-11-02.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="short-title" id="short-answer">
+            <div class="section-kicker">THE SHORT ANSWER</div>
+            <h2 id="short-title">What is the YouTube thumbnail size when a video preview plays?</h2>
+            <div class="preview-grid">
+              <div><strong>Thumbnail source</strong><span>Uploaded image: YouTube recommends 3840 × 2160 px for videos, 16:9, JPG or PNG, and a 640 px minimum width for videos.</span></div>
+              <div><strong>Video preview</strong><span>A 3-second clip is automatically selected from the first half of the video. It is video content, not an alternate image file.</span></div>
+              <div><strong>When the image returns</strong><span>YouTube says the thumbnail appears after the preview plays and whenever the preview is not active.</span></div>
+            </div>
+            <p data-original-evidence="yes">YouTube's custom-thumbnail page treats a thumbnail as a quick snapshot of the content and recommends 3840 × 2160 pixels for regular videos, a minimum width of 640 pixels for videos, JPG or PNG image formats, and a 16:9 aspect ratio. That is the source-file rule for the uploaded preview image.</p>
+            <p data-original-evidence="yes">YouTube's video-preview page defines a preview as a 3-second preview before watching. When a viewer hovers over a video's thumbnail on a computer or scrolls past a video on mobile search, the viewer may see the preview; after the preview plays, YouTube says the video's thumbnail appears.</p>
+            <p data-original-evidence="yes">The two layers can look like they are competing because the preview temporarily covers the thumbnail. The preview does not create a new thumbnail-size requirement, does not replace the uploaded image file, and does not give the creator a second pixel canvas to export.</p>
+            <span class="preview-badge">Thumbnail = image source · Preview = automatic video clip</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="selection-title" id="selection">
+            <div class="section-kicker">WHAT YOUTUBE SELECTS</div>
+            <h2 id="selection-title">Can you choose the 3-second preview frame?</h2>
+            <p data-original-evidence="yes">The reviewed Help page says that a clip from the first half of the video is automatically selected to be displayed as the video preview. This is different from the thumbnail workflow, where the creator can upload a custom image or use a generated suggestion through the Thumbnail control.</p>
+            <p data-original-evidence="yes">The first-half rule describes the source region from which the system selects a preview clip. It does not describe a 3-second image file, a 3-second thumbnail canvas, or a fixed crop that a creator can export locally. A frame that looks unhelpful is a preview-selection question, not evidence that the thumbnail has the wrong YouTube thumbnail size.</p>
+            <p data-original-evidence="yes">The same page says that even when a video has a preview, creators should still customize their video thumbnails because thumbnails appear when the preview is not active. That first-party instruction is the clearest reason to keep investing in the static thumbnail source instead of treating an automatically chosen clip as a replacement.</p>
+            <figure class="preview-figure">
+              <img src="/assets/youtube-thumbnail-size-video-previews.svg" alt="A diagram separating a 3840 by 2160 thumbnail image from an automatic 3-second video preview selected from the first half of a video." width="1200" height="680" />
+              <figcaption>Original local diagram. The uploaded thumbnail is a file; the preview is an automatically selected clip that temporarily occupies a browsing surface.</figcaption>
+            </figure>
+            <div class="preview-warning">Do not put the expected preview scene inside the thumbnail and call it a size fix. The static image and the automatic clip are different evidence paths; a creator can control the image file, but the Help page describes the preview clip as automatically selected.</div>
+          </section>
+
+          <section class="guide-section" aria-labelledby="surfaces-title" id="surfaces">
+            <div class="section-kicker">SURFACES AND ELIGIBILITY</div>
+            <h2 id="surfaces-title">Where can a video preview appear?</h2>
+            <p data-original-evidence="yes">YouTube's video-preview page says viewers can watch previews on Home, Subscriptions, watch pages, and search results. It also says previews are available only on select computer browsers, naming Chrome version 32 and up and Opera version 19 and up on the reviewed page. Treat the page and browser as part of the evidence, not as a property of the thumbnail file.</p>
+            <p data-original-evidence="yes">The page says video previews are available for most videos longer than 30 seconds, but they may not be added to every video longer than 30 seconds. YouTube uses several criteria, including the video topic and content, to determine eligibility. If a preview is not present within two days, the page says the video is not currently eligible.</p>
+            <p data-original-evidence="yes">That eligibility language explains why two videos with identical 3840 × 2160 thumbnails can behave differently. A missing preview may result from duration, topic, content, browser, surface, or YouTube's selection criteria. It does not prove that one image needs a different dimension.</p>
+            <div class="preview-table-wrap">
+              <table class="preview-table">
+                <thead><tr><th>Layer</th><th>Official signal</th><th>What to record</th><th>Do not infer</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Thumbnail file</strong></td><td>3840 × 2160 recommended for videos; 16:9; JPG or PNG; 640 px minimum width.</td><td>Width, height, format, bytes, crop, upload device, Save result.</td><td>Do not infer preview eligibility from image dimensions alone.</td></tr>
+                  <tr><td><strong>Preview clip</strong></td><td>3 seconds; clip automatically selected from the first half of the video.</td><td>Video duration, selected scene, timestamp, preview state, and surface.</td><td>Do not treat the clip as an alternate thumbnail file.</td></tr>
+                  <tr><td><strong>Browser surface</strong></td><td>Help page describes Home, Subscriptions, watch pages, search results, and selected computer browsers.</td><td>Browser version, device, URL, account state, and playback setting.</td><td>Do not promise identical preview behavior everywhere.</td></tr>
+                  <tr><td><strong>Inline player</strong></td><td>On Android, Playback in feeds can be Always on, Wi-Fi only, or Off; some devices and formats turn autoplay previews off.</td><td>Playback setting, network, device, and whether the player is inline or watch-page.</td><td>Do not diagnose a setting as a thumbnail-size rejection.</td></tr>
+                  <tr><td><strong>Preview eligibility</strong></td><td>Most videos longer than 30 seconds may qualify, but YouTube may not add previews to all of them.</td><td>Publish time, duration, eligibility wait, and the two-day check.</td><td>Do not estimate eligibility or traffic from the thumbnail alone.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="guide-section" aria-labelledby="settings-title" id="settings">
+            <div class="section-kicker">PLAYBACK SETTINGS</div>
+            <h2 id="settings-title">Why can a thumbnail disappear when a viewer scrolls?</h2>
+            <p data-original-evidence="yes">The video-preview Help page says the thumbnail appears after the preview plays and when the preview is not active. A viewer who watches a preview is therefore looking at a temporary video layer. The thumbnail can be valid even though the viewer does not see it during the active preview.</p>
+            <p data-original-evidence="yes">YouTube's inline-player Help page for Android describes Playback in feeds settings: Always on, Wi-Fi only, or Off. It also notes that autoplay previews are turned off on some devices and formats to save battery and ensure smooth scrolling. These controls change whether the video plays inline; they do not resize the uploaded thumbnail.</p>
+            <p data-original-evidence="yes">A useful reproduction needs the account, device, browser or app, network, playback setting, page surface, and time spent hovering or scrolling. If the thumbnail returns when previews are disabled, that is evidence about the playback layer. If the image is wrong when no preview is active, then inspect the thumbnail source or propagation state.</p>
+            <p data-original-evidence="yes">The official page also warns that watching a video for a certain amount of time while browsing may enter the watch history when the inline player is used. That is a viewer-behavior side effect, not a file-property claim. Keep the playback setting and watch-history observation out of the thumbnail-size calculation.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="route-title" id="route">
+            <div class="section-kicker">TWO DIFFERENT ROUTES</div>
+            <h2 id="route-title">How do you fix the right layer?</h2>
+            <p data-original-evidence="yes">For the thumbnail, use YouTube Studio, Content, the selected video, Thumbnail, Upload file or Get suggestions, and Save. Check the file's dimensions, format, byte size, crop, policy compliance, and the device-specific limit before calling the image valid.</p>
+            <p data-original-evidence="yes">For a preview, there is no matching upload field on the reviewed Help page. Check whether the video is longer than 30 seconds, whether the surface and browser support previews, whether the preview has had up to two days to appear, and whether Playback in feeds or inline playback is affecting what the viewer sees.</p>
+            <p data-original-evidence="yes">If the preview clip shows a spoiler, an unflattering scene, or a poor crop, do not promise that a new thumbnail dimension will change the automatically selected first-half clip. The first-party page describes selection as automatic; the safe action is to diagnose the preview behavior and keep the static thumbnail clear for the moments when it is visible.</p>
+            <ol class="preview-steps">
+              <li><span><strong>Check the file.</strong> Verify dimensions, aspect ratio, format, bytes, crop, and Studio Save result.</span></li>
+              <li><span><strong>Check the video.</strong> Record duration and whether the video has been published long enough for the two-day eligibility check.</span></li>
+              <li><span><strong>Check the surface.</strong> Note Home, Subscriptions, watch page, search, browser, app, device, and account state.</span></li>
+              <li><span><strong>Check playback.</strong> Record hover or scroll behavior, inline player state, Playback in feeds setting, network, and whether the preview is active.</span></li>
+              <li><span><strong>State the narrow result.</strong> Label the issue file, propagation, eligibility, playback setting, or preview selection instead of calling every mismatch a size problem.</span></li>
+            </ol>
+          </section>
+
+          <section class="guide-section" aria-labelledby="local-title" id="local-tool">
+            <div class="section-kicker">THE LOCAL TOOL BOUNDARY</div>
+            <h2 id="local-title">What can Feed Thumbnail check?</h2>
+            <p data-original-evidence="yes">Feed Thumbnail's public thumbnail resizer is a browser-local video-thumbnail tool. It reads PNG, JPG, or WEBP input, targets a fixed 1280 × 720 canvas, offers crop, fit, padding, or stretch treatments, and exports a JPG. Its page says the file stays on the device and that there is no account, server upload, batch queue, or image API.</p>
+            <p data-original-evidence="yes">The public downloader is a separate browser-side image workflow. It accepts watch, Shorts, live, embed, and bare video-ID inputs, checks direct YouTube image files, keeps files that load, and reports their natural dimensions. It cannot inspect whether a preview clip is eligible, which first-half scene YouTube selected, or which viewer setting is active.</p>
+            <p data-original-evidence="yes">The local record can preserve the source thumbnail, width, height, aspect ratio, file type, byte size, crop choice, and export time. A preview record needs video duration, publish time, surface, browser or app, playback setting, selected clip, and the time since publication. Keep these records linked but separate.</p>
+            <p>Use the resizer for the image job and YouTube for the preview job. If a viewer says the thumbnail disappeared, first ask whether a 3-second preview is active. If the preview is off and the image is still wrong, return to the file and propagation checks.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="benchmark-title" id="benchmark-check">
+            <div class="section-kicker">FIXED BENCHMARK CHECK</div>
+            <h2 id="benchmark-title">What do LightX, Snappa, and Reddit add?</h2>
+            <p data-original-evidence="yes">The opened LightX YouTube Thumbnail Resizer is an upload-and-edit workflow centered on a practical 1280 × 720 preset. It exposes custom dimensions, pan and scale controls, and JPG or PNG export. It is useful for the static image layer, but it does not document YouTube's automatic preview selection, eligibility, or Playback in feeds settings.</p>
+            <p data-original-evidence="yes">The opened Snappa article recommends 1280 × 720 and 16:9 for common YouTube thumbnails, then discusses templates and a Studio upload workflow. It reinforces the source-file handoff. It is not first-party evidence for the 3-second clip or the browser and surface conditions in YouTube's preview page.</p>
+            <p data-original-evidence="yes">The opened Reddit question signals describe viewers wanting to disable previews on Home or Subscriptions, sound playing when hovering, a creator asking how to change the automatically chosen preview video, and the thumbnail returning when the preview is not active. These reports are useful reproduction prompts, not official dimensions, eligibility rules, or performance guarantees.</p>
+            <p>No search volume, ranking position, click-through rate, traffic, conversion, preview completion, or competitor-performance number is inferred from LightX, Snappa, or Reddit. YouTube Help remains the evidence for the product rules.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="checklist-title" id="checklist">
+            <div class="section-kicker">A REPRODUCIBLE CHECK</div>
+            <h2 id="checklist-title">How to test a thumbnail that seems to vanish</h2>
+            <ol class="preview-steps">
+              <li><span><strong>Record the source.</strong> Save dimensions, format, bytes, crop, upload device, and Studio Save time.</span></li>
+              <li><span><strong>Record the video.</strong> Note duration, publish time, and the first-half scenes that could be selected automatically.</span></li>
+              <li><span><strong>Record the viewer path.</strong> Compare Home, Subscriptions, search, watch page, computer, mobile browser, and app separately.</span></li>
+              <li><span><strong>Record playback state.</strong> Note hover or scroll, inline player, Playback in feeds, network, browser, account, and whether sound is enabled.</span></li>
+              <li><span><strong>Wait before concluding.</strong> If the preview is absent, use the two-day note as a timing checkpoint rather than inventing a new image dimension.</span></li>
+              <li><span><strong>Keep the conclusion narrow.</strong> Say “thumbnail source,” “preview eligibility,” “automatic clip,” “playback setting,” or “surface propagation” only when the evidence supports it.</span></li>
+            </ol>
+            <p data-original-evidence="yes">The checklist keeps the static image, the automatic clip, and the viewer settings in separate columns. That makes it possible to improve the thumbnail for non-preview moments without claiming that creators can control a clip the official page says is automatically selected.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title" id="faq">
+            <div class="section-kicker">FAQ</div>
+            <h2 id="faq-title">YouTube thumbnail size and video previews</h2>
+            <div class="faq-list">
+              <details open><summary>Does a YouTube video preview need a different thumbnail size?</summary><p data-original-evidence="yes">No separate preview image size is published on the reviewed page. Use the regular video thumbnail guidance: 3840 × 2160 recommended, 16:9, JPG or PNG, and at least 640 pixels wide for videos.</p></details>
+              <details><summary>How long is a YouTube video preview?</summary><p>YouTube describes a 3-second preview. It is a clip from the first half of the video that the system automatically selects.</p></details>
+              <details><summary>Can I choose the preview clip?</summary><p data-original-evidence="yes">The reviewed Help page says a clip from the first half is automatically selected. It does not describe a creator upload field for a custom preview clip.</p></details>
+              <details><summary>Why does my thumbnail return after the preview?</summary><p data-original-evidence="yes">That is expected in the documented behavior: after the video preview plays, YouTube says the video's thumbnail appears, and thumbnails appear whenever the preview is not active.</p></details>
+              <details><summary>Does Feed Thumbnail test YouTube video previews?</summary><p>No. Feed Thumbnail can prepare and inspect local image files. It cannot read preview eligibility, select a clip, control Playback in feeds, or verify every viewer surface.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Keep the thumbnail file and preview clip separate</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/7074781?hl=en" rel="noopener">YouTube Help: Video previews</a> is the source for the 3-second preview, hover and scroll contexts, Home, Subscriptions, watch-page and search surfaces, selected browser support, longer-than-30-seconds guidance, two-day eligibility note, automatic first-half clip selection, and thumbnails returning when the preview is inactive. Reviewed 2026-11-02.</p>
+              <p><a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">YouTube Help: Add custom thumbnails on YouTube</a> is the source for the separate 3840 × 2160 regular-video recommendation, 640 px minimum width, 16:9 guidance, JPG or PNG formats, device-dependent byte limits, and the Studio upload route. Reviewed 2026-11-02.</p>
+              <p><a href="https://support.google.com/youtube/answer/7640367?hl=en" rel="noopener">YouTube Help: Use the inline player</a> is the source for Playback in feeds options on Android, autoplay preview behavior on some devices and formats, and the distinction between inline browsing and the watch page. Reviewed 2026-11-02.</p>
+              <p><a href="/youtube-thumbnail-resizer">Feed Thumbnail's local thumbnail resizer</a> is the source for the 1280 × 720 browser-local workflow, while the <a href="/youtube-thumbnail-downloader">thumbnail downloader</a> is the separate image-variant inspection workflow. Neither can inspect YouTube preview eligibility or playback settings.</p>
+              <p><a href="https://www.lightxeditor.com/photo-editing/youtube-thumbnail-resizer/" rel="noopener">LightX's YouTube thumbnail resizer</a>, <a href="https://snappa.com/blog/youtube-thumbnail-size/" rel="noopener">Snappa's YouTube thumbnail notes</a>, and the opened <a href="https://www.reddit.com/r/youtube/comments/1w6sduh" rel="noopener">mobile preview setting discussion</a>, <a href="https://www.reddit.com/r/youtube/comments/1rk1ys2" rel="noopener">hover-sound discussion</a>, and <a href="https://www.reddit.com/r/NewTubers/comments/18yr8xo" rel="noopener">automatic preview selection question</a> were used as fixed comparison and question-signal sources only.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>

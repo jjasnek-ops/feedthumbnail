@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">YouTube thumbnail versus video preview</title>
+  <desc id="desc">A diagram separating a 3840 by 2160 thumbnail image from an automatically selected 3-second preview clip taken from the first half of a video.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#263555"/>
+    </linearGradient>
+    <linearGradient id="image" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff795f"/>
+      <stop offset="1" stop-color="#ffb35d"/>
+    </linearGradient>
+    <linearGradient id="clip" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8ed7ff"/>
+      <stop offset="1" stop-color="#b6f0d0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#050914" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="680" rx="32" fill="url(#bg)"/>
+  <text x="64" y="68" fill="#eaf1ff" font-family="Arial, sans-serif" font-size="28" font-weight="700">Two browsing layers, one video</text>
+  <text x="64" y="102" fill="#9fb0c9" font-family="Arial, sans-serif" font-size="16">The image is uploaded. The three-second clip is selected automatically.</text>
+  <rect x="58" y="145" width="410" height="440" rx="24" fill="#f7f9fc" filter="url(#shadow)"/>
+  <text x="88" y="192" fill="#172033" font-family="Arial, sans-serif" font-size="21" font-weight="700">THUMBNAIL FILE</text>
+  <rect x="88" y="226" width="350" height="197" rx="14" fill="url(#image)"/>
+  <path d="M88 384 C156 330 214 360 266 323 C328 278 360 328 438 264 L438 423 L88 423Z" fill="#c94d5a" opacity=".55"/>
+  <circle cx="351" cy="291" r="54" fill="#ffd178" opacity=".82"/>
+  <rect x="112" y="280" width="154" height="28" rx="14" fill="#111827" opacity=".9"/>
+  <text x="128" y="300" fill="#fff" font-family="Arial, sans-serif" font-size="14" font-weight="700">STATIC PREVIEW</text>
+  <text x="88" y="468" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">3840 × 2160 · 16:9</text>
+  <text x="88" y="500" fill="#5f6c80" font-family="Arial, sans-serif" font-size="15">JPG or PNG · creator upload</text>
+  <text x="88" y="542" fill="#466c23" font-family="Arial, sans-serif" font-size="16" font-weight="700">Visible when preview is inactive</text>
+  <line x1="468" y1="365" x2="528" y2="365" stroke="#9ddcff" stroke-width="5" stroke-linecap="round"/>
+  <path d="M518 353 L538 365 L518 377" fill="none" stroke="#9ddcff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="542" y="145" width="600" height="440" rx="24" fill="#f7f9fc" filter="url(#shadow)"/>
+  <text x="574" y="192" fill="#172033" font-family="Arial, sans-serif" font-size="21" font-weight="700">AUTOMATIC VIDEO PREVIEW</text>
+  <text x="574" y="222" fill="#5f6c80" font-family="Arial, sans-serif" font-size="15">A clip from the first half of the video</text>
+  <rect x="574" y="256" width="538" height="86" rx="14" fill="#e8f6ff" stroke="#9bdcff" stroke-width="2"/>
+  <line x1="604" y1="300" x2="1082" y2="300" stroke="#b5c1d2" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="676" cy="300" r="12" fill="#8c9bb3"/>
+  <rect x="802" y="282" width="70" height="36" rx="18" fill="url(#clip)" stroke="#4eaa9d" stroke-width="2"/>
+  <text x="815" y="306" fill="#172033" font-family="Arial, sans-serif" font-size="15" font-weight="700">3 sec</text>
+  <circle cx="1040" cy="300" r="12" fill="#8c9bb3"/>
+  <text x="574" y="387" fill="#172033" font-family="Arial, sans-serif" font-size="18" font-weight="700">Hover or scroll → preview may play</text>
+  <text x="574" y="418" fill="#5f6c80" font-family="Arial, sans-serif" font-size="15">Home · Subscriptions · watch pages · search</text>
+  <text x="574" y="470" fill="#5f6c80" font-family="Arial, sans-serif" font-size="15">Not a second image upload</text>
+  <text x="574" y="503" fill="#466c23" font-family="Arial, sans-serif" font-size="16" font-weight="700">Automatic selection · surface eligibility</text>
+  <text x="574" y="541" fill="#5f6c80" font-family="Arial, sans-serif" font-size="15">Thumbnail returns after the preview or when inactive</text>
+</svg>
