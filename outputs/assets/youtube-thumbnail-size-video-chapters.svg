@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">YouTube thumbnail size versus chapter previews</title>
+  <desc id="desc">A diagram separates the 3840 by 2160 main thumbnail upload from chapter timestamps and individual timeline preview frames.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#263555"/>
+    </linearGradient>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff795f"/>
+      <stop offset="1" stop-color="#ffb35d"/>
+    </linearGradient>
+    <linearGradient id="frameA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7fe0cf"/>
+      <stop offset="1" stop-color="#4f9bd8"/>
+    </linearGradient>
+    <linearGradient id="frameB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe28a"/>
+      <stop offset="1" stop-color="#f47b67"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="13" flood-color="#050914" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="680" rx="34" fill="url(#bg)"/>
+  <text x="70" y="74" fill="#ffffff" font-family="Arial, sans-serif" font-size="30" font-weight="800">One video, two preview layers</text>
+  <text x="70" y="108" fill="#aebbd0" font-family="Arial, sans-serif" font-size="16">The main thumbnail is an image upload. Chapters are a timestamped view of video content.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="156" width="470" height="376" rx="24" fill="#f8fafc"/>
+    <rect x="98" y="188" width="414" height="233" rx="16" fill="url(#hero)"/>
+    <circle cx="196" cy="286" r="54" fill="#ffe8d6" opacity=".94"/>
+    <path d="M156 394c18-63 43-94 76-94 34 0 60 31 79 94z" fill="#18253d" opacity=".9"/>
+    <rect x="286" y="246" width="178" height="24" rx="12" fill="#18253d" opacity=".84"/>
+    <rect x="286" y="286" width="140" height="15" rx="7.5" fill="#ffffff" opacity=".85"/>
+    <rect x="286" y="314" width="110" height="15" rx="7.5" fill="#ffffff" opacity=".6"/>
+    <text x="98" y="459" fill="#17243b" font-family="Arial, sans-serif" font-size="22" font-weight="800">MAIN THUMBNAIL FILE</text>
+    <text x="98" y="487" fill="#526176" font-family="Arial, sans-serif" font-size="16">3840 × 2160 · 16:9 · JPG / PNG</text>
+    <text x="98" y="515" fill="#526176" font-family="Arial, sans-serif" font-size="14">Dimensions and bytes are file checks.</text>
+  </g>
+
+  <path d="M564 344h72" stroke="#ffb35d" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 10"/>
+  <path d="M621 330l18 14-18 14" fill="none" stroke="#ffb35d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="660" y="156" width="470" height="376" rx="24" fill="#f8fafc"/>
+    <text x="690" y="205" fill="#17243b" font-family="Arial, sans-serif" font-size="22" font-weight="800">CHAPTER PREVIEW PATH</text>
+    <text x="690" y="232" fill="#526176" font-family="Arial, sans-serif" font-size="14">Timestamps + titles + video frames</text>
+    <line x1="708" y1="290" x2="1080" y2="290" stroke="#c9d4e2" stroke-width="8" stroke-linecap="round"/>
+    <line x1="708" y1="290" x2="830" y2="290" stroke="#ff795f" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="708" cy="290" r="12" fill="#ff795f"/>
+    <circle cx="830" cy="290" r="12" fill="#ff795f"/>
+    <circle cx="960" cy="290" r="12" fill="#ff795f"/>
+    <circle cx="1080" cy="290" r="12" fill="#ff795f"/>
+    <text x="696" y="324" fill="#526176" font-family="Arial, sans-serif" font-size="13">00:00</text>
+    <text x="815" y="324" fill="#526176" font-family="Arial, sans-serif" font-size="13">02:10</text>
+    <text x="945" y="324" fill="#526176" font-family="Arial, sans-serif" font-size="13">05:30</text>
+    <text x="1056" y="324" fill="#526176" font-family="Arial, sans-serif" font-size="13">09:40</text>
+    <rect x="700" y="356" width="108" height="74" rx="12" fill="url(#frameA)"/>
+    <rect x="830" y="356" width="108" height="74" rx="12" fill="url(#frameB)"/>
+    <rect x="960" y="356" width="108" height="74" rx="12" fill="#9273da"/>
+    <path d="M716 414c13-30 25-44 38-44 13 0 26 14 39 44z" fill="#102440" opacity=".78"/>
+    <circle cx="754" cy="378" r="13" fill="#f6f1df"/>
+    <path d="M846 414c15-25 29-39 45-39 16 0 30 14 45 39z" fill="#542f55" opacity=".8"/>
+    <circle cx="886" cy="380" r="13" fill="#fff0d0"/>
+    <path d="M976 414c14-26 29-42 44-42 15 0 28 16 43 42z" fill="#251b4d" opacity=".8"/>
+    <circle cx="1018" cy="379" r="13" fill="#e8f6ff"/>
+    <text x="700" y="468" fill="#17243b" font-family="Arial, sans-serif" font-size="16" font-weight="800">Individual previews</text>
+    <text x="700" y="494" fill="#526176" font-family="Arial, sans-serif" font-size="14">No separate chapter-image upload field</text>
+    <text x="700" y="518" fill="#526176" font-family="Arial, sans-serif" font-size="14">Check timestamps and video content instead</text>
+  </g>
+
+  <rect x="70" y="582" width="1060" height="52" rx="16" fill="#17243b" stroke="#50617d"/>
+  <circle cx="100" cy="608" r="8" fill="#7fe0cf"/>
+  <text x="123" y="614" fill="#eaf1fa" font-family="Arial, sans-serif" font-size="16" font-weight="700">Do not export a guessed “chapter thumbnail size”</text>
+  <text x="706" y="614" fill="#aebbd0" font-family="Arial, sans-serif" font-size="14">validate the right layer</text>
+</svg>

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="YouTube thumbnail size for chapters is not a second upload. Separate the 3840 × 2160 video thumbnail from chapter previews, timestamp rules, automatic chapters, and what creators can actually control." />
+    <link rel="canonical" href="https://feedthumbnail.com/guides/youtube-thumbnail-size-video-chapters/" />
+    <link rel="stylesheet" href="/styles.css?v=20260930-nav-wrap" />
+    <title>YouTube Thumbnail Size for Chapters: Chapter Previews Are Not Custom Uploads | Feed Thumbnail</title>
+    <style>
+      .chapter-figure { margin: 22px 0; padding: 14px; border: 1px solid rgba(20,27,45,.1); border-radius: 20px; background: rgba(255,255,255,.72); }
+      .chapter-figure img { display: block; width: 100%; height: auto; }
+      .chapter-figure figcaption { margin: 9px 5px 0; color: #68758a; font-size: 11px; line-height: 1.55; }
+      .chapter-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .chapter-grid > div { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.65); }
+      .chapter-grid strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 12px; }
+      .chapter-grid span { display: block; color: #637085; font-size: 12px; line-height: 1.6; }
+      .chapter-table-wrap { overflow-x: auto; margin-top: 18px; }
+      .chapter-table { width: 100%; min-width: 850px; border-collapse: collapse; background: rgba(255,255,255,.72); }
+      .chapter-table th, .chapter-table td { padding: 12px 13px; border-bottom: 1px solid #dce2eb; text-align: left; vertical-align: top; line-height: 1.55; }
+      .chapter-table th { color: var(--ink); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+      .chapter-table td { color: #56647a; font-size: 13px; }
+      .chapter-table td strong { color: var(--ink); }
+      .chapter-badge { display: inline-flex; margin: 15px 0 2px; padding: 8px 11px; border-radius: 999px; background: #e7f4d4; color: #466c23; font-size: 12px; font-weight: 800; }
+      .chapter-callout { margin: 18px 0; padding: 15px 16px; border-left: 4px solid #ff795f; border-radius: 12px; background: #fff1eb; color: #674b46; font-size: 14px; line-height: 1.7; }
+      .chapter-steps { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: chapter-step; }
+      .chapter-steps li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 1px solid rgba(20,27,45,.1); color: #5d6b80; font-size: 14px; line-height: 1.65; counter-increment: chapter-step; }
+      .chapter-steps li::before { content: counter(chapter-step, decimal-leading-zero); color: #ff795f; font-size: 11px; font-weight: 950; letter-spacing: .08em; }
+      @media (max-width: 700px) { .chapter-figure { padding: 9px; } .chapter-grid { grid-template-columns: 1fr; } .chapter-table th, .chapter-table td { padding: 10px 9px; } }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar site-header">
+        <a class="brand" href="/" aria-label="Feed Thumbnail home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FEED THUMBNAIL</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main class="guide-page">
+        <article>
+          <section class="guide-hero" aria-labelledby="article-title">
+            <div class="eyebrow">YOUTUBE THUMBNAIL SIZE · CHAPTER PREVIEW CHECK</div>
+            <h1 id="article-title">YouTube thumbnail size for chapters: chapter previews are not custom uploads</h1>
+            <p class="answer-lede"><strong>A YouTube chapter preview is part of the video timeline, not a second image file.</strong> YouTube's current custom-thumbnail guidance recommends 3840 × 2160 for regular videos, 16:9, JPG or PNG, and a 640 px minimum width for videos. Its Video Chapters page describes sections with individual previews, timestamps, automatic chapters, and an option to opt out, but it does not publish a separate chapter-thumbnail canvas or upload size.</p>
+            <p class="source-line">Official sources: <a href="https://support.google.com/youtube/answer/9884579?hl=en" rel="noopener">Video Chapters</a>, <a href="https://support.google.com/youtube/answer/57404?hl=en" rel="noopener">Edit video settings</a>, and <a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">Add custom thumbnails on YouTube</a>, reviewed 2026-11-16.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="short-title" id="short-answer">
+            <div class="section-kicker">THE SHORT ANSWER</div>
+            <h2 id="short-title">What is the YouTube thumbnail size for a chapter preview?</h2>
+            <div class="chapter-grid">
+              <div><strong>Main thumbnail</strong><span>Uploaded image: YouTube recommends 3840 × 2160 px for regular videos, 16:9, JPG or PNG, and a 640 px minimum width for videos.</span></div>
+              <div><strong>Chapter preview</strong><span>A timeline preview belongs to a section of the video. The reviewed Help page describes it as an individual preview, not as a creator-uploaded image.</span></div>
+              <div><strong>Creator input</strong><span>Manual chapters use timestamps and titles. Automatic chapters use YouTube's eligibility and generation controls; neither route adds a chapter-image upload field.</span></div>
+            </div>
+            <p data-original-evidence="yes">YouTube's Video Chapters Help page says that chapters break a video into sections, each with an individual preview. That wording describes the viewing experience around the video timeline. It does not give the creator a second file slot beside the video's main thumbnail, and it does not publish a chapter-specific pixel dimension.</p>
+            <p data-original-evidence="yes">The regular thumbnail rule still applies to the image viewers see before choosing the video: YouTube recommends 3840 × 2160 for videos, a 16:9 aspect ratio, JPG or PNG, and at least 640 pixels of width for videos. This is the uploadable source that Feed Thumbnail can prepare or inspect. It is not a specification for every frame that appears while a viewer navigates chapters.</p>
+            <p data-original-evidence="yes">So the practical answer to “what is the YouTube thumbnail size for chapters?” is: there is no separate chapter-thumbnail size in the reviewed first-party instructions. Validate the main thumbnail as an image, then validate chapters as timeline metadata and video content. A chapter frame that looks unhelpful is not automatically evidence of a wrong image dimension.</p>
+            <span class="chapter-badge">Main thumbnail = image file · Chapter preview = timeline view</span>
+          </section>
+
+          <section class="guide-section" aria-labelledby="official-title" id="official-rules">
+            <div class="section-kicker">WHAT YOUTUBE ACTUALLY REQUIRES</div>
+            <h2 id="official-title">The chapter rules are timestamps, not pixels</h2>
+            <p data-original-evidence="yes">For manually added chapters, YouTube instructs creators to sign in to YouTube Studio, open Content, choose a video, and add a list of timestamps and titles in the description. The first timestamp must start at 00:00, the video should have at least three timestamps in ascending order, and each chapter must be at least 10 seconds long. The creator then selects Save.</p>
+            <p data-original-evidence="yes">Those requirements describe a time map over the existing video. They do not ask for a JPG, PNG, canvas width, canvas height, byte limit, or chapter-image crop. If a creator is debugging a chapter, the first local checks should therefore be timestamp order, timestamp start, title text, chapter length, and the saved description—not a second export preset.</p>
+            <p data-original-evidence="yes">YouTube also says that manually entered chapters override automatic video chapters. For automatic chapters, the reviewed page points to the Show more area in the video's settings and the “Allow automatic chapters (when available and eligible)” checkbox. Not all videos are eligible, and not all eligible videos receive automatic chapters. That eligibility statement is about a platform feature, not about the 3840 × 2160 thumbnail file.</p>
+            <p data-original-evidence="yes">The Edit video settings page lists Thumbnail as the image viewers see before choosing the video, while Automatic chapters is a separate advanced setting. The separation is useful: the main thumbnail belongs to the image handoff, while chapter creation belongs to description timestamps or an automatic-chapter control. Do not merge those two controls just because both can be visible around the same video.</p>
+            <div class="chapter-callout">If a tool asks you to upload a separate “chapter thumbnail,” treat that as a tool-specific design workflow unless YouTube's own Studio documentation gives the same upload route. The reviewed first-party pages do not describe such a chapter-image field.</div>
+          </section>
+
+          <section class="guide-section" aria-labelledby="diagram-title" id="diagram">
+            <div class="section-kicker">THE TWO-LAYER MODEL</div>
+            <h2 id="diagram-title">Why the same video can show a custom thumbnail and chapter frames</h2>
+            <p data-original-evidence="yes">A regular video has an uploaded thumbnail that acts as its primary preview image. When a viewer opens the timeline and navigates a chapter, YouTube can show an individual preview for that section. The chapter preview is still connected to the video's moving-image content; it is not an alternate version of the uploaded thumbnail with a different export size.</p>
+            <p data-original-evidence="yes">The official page does not promise an exact frame-selection formula for every chapter preview. It does not say that the frame must be the exact timestamp, the middle of the chapter, the first frame, or a fixed 16:9 image. That is why an article about chapter previews should describe documented controls and observed behavior separately instead of inventing a universal crop or timing rule.</p>
+            <figure class="chapter-figure">
+              <img src="/assets/youtube-thumbnail-size-video-chapters.svg" alt="A diagram separating a 3840 by 2160 main thumbnail upload from chapter timestamps and individual timeline preview frames." width="1200" height="680" />
+              <figcaption>Original local diagram. The main thumbnail is an uploaded image; chapter previews are attached to timeline sections and do not create a second creator-upload canvas.</figcaption>
+            </figure>
+            <p data-original-evidence="yes">The diagram's left panel is the file path: dimensions, format, byte size, crop, and upload result can be recorded. The right panel is the chapter path: 00:00, titles, ascending order, minimum chapter length, automatic-versus-manual setting, and video processing state can be recorded. Keeping those columns separate prevents a chapter-rendering question from becoming a false YouTube thumbnail size diagnosis.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="modes-title" id="modes">
+            <div class="section-kicker">MANUAL OR AUTOMATIC</div>
+            <h2 id="modes-title">Which chapter route are you testing?</h2>
+            <p data-original-evidence="yes">Manual chapters give the creator a concrete text record: timestamp, title, order, and saved description. The first-party page says the first timestamp starts at 00:00, at least three timestamps are used, and each chapter is at least 10 seconds long. If the chapters do not appear, those are reproducible inputs to check before changing the thumbnail.</p>
+            <p data-original-evidence="yes">Automatic chapters use YouTube's own generation system when the video is available and eligible. The page says the checkbox is on by default for new uploads, that creators can allow automatic chapters in bulk, and that creators can opt out for one video or through upload defaults. An automatic chapter result can therefore differ from a manual timestamp map without implying that the main thumbnail is invalid.</p>
+            <div class="chapter-table-wrap">
+              <table class="chapter-table">
+                <thead><tr><th>Layer or route</th><th>Creator supplies</th><th>What to verify</th><th>What not to infer</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Main thumbnail</strong></td><td>Image file for the video.</td><td>3840 × 2160 recommendation, 16:9, JPG or PNG, width, bytes, crop, and Studio Save result.</td><td>Do not infer chapter-frame behavior from the file alone.</td></tr>
+                  <tr><td><strong>Manual chapters</strong></td><td>Description timestamps and titles.</td><td>00:00 start, three or more timestamps, ascending order, 10-second minimum, and saved description.</td><td>Do not invent a chapter image dimension.</td></tr>
+                  <tr><td><strong>Automatic chapters</strong></td><td>Allow or opt out setting, when available.</td><td>Eligibility, active strikes or content restrictions, setting state, and processing time.</td><td>Do not promise that every eligible video receives chapters.</td></tr>
+                  <tr><td><strong>Chapter preview</strong></td><td>Video content at and around the timeline section.</td><td>Chapter title, position, visible frame, device, app or browser, and whether the video has finished processing.</td><td>Do not treat a preview frame as a custom-upload asset.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="guide-section" aria-labelledby="practice-title" id="practice">
+            <div class="section-kicker">A CONTROLLED CREATOR WORKFLOW</div>
+            <h2 id="practice-title">How to make chapter previews easier to read</h2>
+            <p>There is no official promise that YouTube will select the exact frame a creator wants. A useful production practice is therefore to make the video content near a chapter boundary legible, then verify the public result after processing. This is editorial advice, not a new YouTube thumbnail size rule.</p>
+            <p data-original-evidence="yes">Start by choosing a timestamp that represents the section rather than placing a chapter marker in the middle of an unrelated transition. Add the chapter title, keep the timestamp sequence ascending, and make the first entry 00:00. If you use manual chapters, keep each section at least 10 seconds long as the Help page instructs.</p>
+            <p>Next, create a visually stable opening beat for the chapter: a readable subject, sufficient contrast, and no critical label hidden at the edge of the frame. This is a content-design recommendation. YouTube's official page does not promise that a face, title card, or exact frame will be selected, so treat the result as a quality improvement attempt rather than a guaranteed selector.</p>
+            <p data-original-evidence="yes">If the chapter preview stays identical to the main thumbnail, record whether the video uses automatic chapters, whether the manual timestamps were saved, whether the video is public, and how long the change has had to process. If the feature itself is unavailable, check the official eligibility note and any active strike or inappropriate-content condition before changing the image dimensions.</p>
+            <ol class="chapter-steps">
+              <li><span><strong>Audit the image.</strong> Check the main thumbnail's dimensions, aspect ratio, format, bytes, crop, and upload result.</span></li>
+              <li><span><strong>Audit the timestamps.</strong> Confirm 00:00, three or more ascending entries, descriptive titles, and the 10-second minimum.</span></li>
+              <li><span><strong>Identify the route.</strong> Record whether manual timestamps override automatic chapters or whether automatic chapters are allowed.</span></li>
+              <li><span><strong>Inspect the video.</strong> Note the frame around each chapter boundary, public state, processing state, device, browser or app, and account context.</span></li>
+              <li><span><strong>State the result narrowly.</strong> Call the issue an image-file, timestamp, eligibility, processing, surface, or frame-selection issue only when the evidence supports it.</span></li>
+            </ol>
+          </section>
+
+          <section class="guide-section" aria-labelledby="community-title" id="community">
+            <div class="section-kicker">COMMUNITY QUESTION SIGNALS</div>
+            <h2 id="community-title">Why do creators ask whether chapter thumbnails can be changed?</h2>
+            <p data-original-evidence="yes">The opened Reddit discussion in r/PartneredYoutube describes a creator seeing the same main thumbnail on some chapters and screen-grab-like previews on others, then asking how to ensure unique chapter thumbnails. The replies describe observed delays and inconsistent-looking frame choices. These are useful questions to reproduce, but they are not official timing guarantees or a published image specification.</p>
+            <p data-original-evidence="yes">A second Reddit discussion asks how to make one custom video thumbnail appear for all chapters after different timestamp frames were shown. A third asks whether chapter thumbnails are customizable and reports attempts involving automatic-chapter settings and timestamp formatting. Together, the threads show why the words “chapter thumbnail” can refer to a timeline preview, the main video thumbnail, or a creator's wish for a custom per-chapter asset.</p>
+            <p data-original-evidence="yes">The safe interpretation is narrower: YouTube's official page documents chapter previews and the controls around chapter generation, while Reddit provides anecdotal debugging prompts. Do not attribute a specific update delay, face-selection rule, or timestamp-to-frame algorithm to YouTube unless a first-party source documents it.</p>
+            <div class="chapter-callout">Community reports can tell you what to test. They cannot turn an observed frame into an official YouTube thumbnail size, a guaranteed chapter selector, or a universal Studio setting.</div>
+          </section>
+
+          <section class="guide-section" aria-labelledby="local-title" id="local-tool">
+            <div class="section-kicker">THE LOCAL TOOL BOUNDARY</div>
+            <h2 id="local-title">What can Feed Thumbnail check?</h2>
+            <p data-original-evidence="yes">Feed Thumbnail's public thumbnail resizer is a browser-local image workflow. It reads PNG, JPG, or WEBP input, targets a fixed 1280 × 720 canvas, offers crop, fit, padding, or stretch treatments, and exports a JPG. Its boundary is the static image file: dimensions, crop, format, byte size, and export time can be recorded without sending the image to a server.</p>
+            <p data-original-evidence="yes">The public thumbnail downloader is a separate browser-side image workflow. It accepts watch, Shorts, live, embed, and bare video-ID inputs, checks direct YouTube image files, keeps files that load, and reports their natural dimensions. It can help compare the main thumbnail's image variants, but it cannot read a chapter's timestamp map or choose the frame shown in a timeline preview.</p>
+            <p data-original-evidence="yes">The local workflow cannot sign in to YouTube Studio, add a description timestamp, change the automatic-chapter setting, determine feature eligibility, wait for account-specific processing, or verify every app and device surface. Those actions belong to the creator's YouTube account and the public-video reproduction step.</p>
+            <p>Use the resizer for the image job. Use YouTube Studio and a public watch-page check for the chapter job. If the static thumbnail is valid but chapter previews remain unexpected, preserve both records rather than exporting a new file at a guessed “chapter size.”</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="benchmark-title" id="benchmark-check">
+            <div class="section-kicker">FIXED BENCHMARK CHECK</div>
+            <h2 id="benchmark-title">What do LightX, Snappa, and Reddit add?</h2>
+            <p data-original-evidence="yes">The opened LightX YouTube Thumbnail Resizer is an upload-and-edit workflow centered on a practical 1280 × 720 preset. It exposes custom dimensions, pan and scale controls, and JPG or PNG export. That is useful for preparing the main image, but it does not document YouTube's chapter timestamps, automatic-chapter eligibility, or per-chapter preview selection.</p>
+            <p data-original-evidence="yes">The opened Snappa YouTube thumbnail article presents 1280 × 720 and 16:9 as common thumbnail guidance, with templates and a Studio upload discussion. It supports the static source-file handoff. It is not first-party evidence for a chapter preview canvas, an automatic frame algorithm, or a custom chapter-image upload route.</p>
+            <p data-original-evidence="yes">The three opened Reddit question signals focus on inconsistent chapter frames, wanting the same custom thumbnail across chapters, and whether automatic-chapter settings or timestamp formatting affect the preview. They are valuable reproduction prompts. They are not evidence for an official dimension, processing deadline, or performance guarantee.</p>
+            <p>No search volume, ranking position, click-through rate, traffic, conversion, chapter completion, or competitor-performance number is inferred from LightX, Snappa, or Reddit. YouTube Help remains the source for the documented chapter and thumbnail rules.</p>
+          </section>
+
+          <section class="guide-section" aria-labelledby="faq-title" id="faq">
+            <div class="section-kicker">FAQ</div>
+            <h2 id="faq-title">YouTube thumbnail size and chapter previews</h2>
+            <div class="faq-list">
+              <details open><summary>Do YouTube chapters need a different thumbnail size?</summary><p data-original-evidence="yes">The reviewed YouTube chapters page does not publish a separate chapter-thumbnail upload size. Use the regular video-thumbnail guidance for the main image: 3840 × 2160 recommended, 16:9, JPG or PNG, and at least 640 pixels wide for videos.</p></details>
+              <details><summary>Are chapter previews custom image files?</summary><p data-original-evidence="yes">The official page describes sections with individual previews and documents timestamp and automatic-chapter controls. It does not describe a second creator-upload image field for those previews.</p></details>
+              <details><summary>What are the manual chapter requirements?</summary><p data-original-evidence="yes">Start the first timestamp at 00:00, use at least three timestamps in ascending order, make each chapter at least 10 seconds, add titles, and save the description.</p></details>
+              <details><summary>Can I choose the exact frame shown for a chapter?</summary><p>The reviewed first-party page does not promise an exact frame-selection algorithm. You can control timestamps and video content, but you should not claim that a particular frame, face, or title card is guaranteed to become the preview.</p></details>
+              <details><summary>Does Feed Thumbnail test chapter previews?</summary><p>No. Feed Thumbnail can prepare and inspect local image files and direct thumbnail variants. It cannot sign in, edit timestamps, change chapter settings, determine eligibility, or verify every public viewer surface.</p></details>
+            </div>
+          </section>
+
+          <section class="guide-section source-section" aria-labelledby="sources-title">
+            <div class="section-kicker">SOURCES &amp; SCOPE</div>
+            <h2 id="sources-title">Keep the image source and chapter timeline separate</h2>
+            <div class="source-notes">
+              <p><a href="https://support.google.com/youtube/answer/9884579?hl=en" rel="noopener">YouTube Help: Video Chapters</a> is the source for sections with individual previews, manual timestamp rules, the 00:00 start, three-timestamp minimum, 10-second minimum, automatic-chapter controls, override behavior, eligibility note, and opt-out routes. Reviewed 2026-11-16.</p>
+              <p><a href="https://support.google.com/youtube/answer/57404?hl=en" rel="noopener">YouTube Help: Edit video settings</a> is the source for Thumbnail as a separate video setting and Automatic chapters as an advanced setting. Reviewed 2026-11-16.</p>
+              <p><a href="https://support.google.com/youtube/answer/72431?hl=en" rel="noopener">YouTube Help: Add custom thumbnails on YouTube</a> is the source for the regular-video recommendation of 3840 × 2160, 640 px minimum width, 16:9, JPG or PNG, device-dependent byte limits, and the Studio thumbnail route. Reviewed 2026-11-16.</p>
+              <p><a href="/youtube-thumbnail-resizer">Feed Thumbnail's local thumbnail resizer</a> is the source for the 1280 × 720 browser-local workflow, while the <a href="/youtube-thumbnail-downloader">thumbnail downloader</a> is the separate image-variant inspection workflow. Neither can inspect chapter metadata or timeline frame selection.</p>
+              <p><a href="https://www.lightxeditor.com/photo-editing/youtube-thumbnail-resizer/" rel="noopener">LightX's YouTube thumbnail resizer</a>, <a href="https://snappa.com/blog/youtube-thumbnail-size/" rel="noopener">Snappa's YouTube thumbnail notes</a>, and the opened <a href="https://www.reddit.com/r/PartneredYoutube/comments/1r07kkn/im_confused_by_youtube_chapters_thumbnails/" rel="noopener">chapter preview discussion</a>, <a href="https://www.reddit.com/r/PartneredYoutube/comments/1q9yqlk/chapters_thumbnails/" rel="noopener">same-thumbnail discussion</a>, and <a href="https://www.reddit.com/r/PartneredYoutube/comments/ozjjox/are_chapter_thumbnails_customizable/" rel="noopener">customization discussion</a> were used as fixed comparison and question-signal sources only.</p>
+            </div>
+          </section>
+        </article>
+        <p class="source-line"><a href="/guides/">All Feed Thumbnail guides</a></p>
+      </main>
+      <footer class="footer-note"><span>Feed Thumbnail</span><nav class="footer-nav" aria-label="Footer navigation"><a href="/">Tool</a><a href="/youtube-thumbnail-size">Thumbnail size</a><a href="/youtube-banner-size">Banner size</a><a href="/youtube-thumbnail-downloader">Downloader</a><a href="/youtube-thumbnail-maker">Thumbnail maker</a><a href="/youtube-banner-maker">Banner maker</a><a href="/youtube-profile-picture-size">Profile picture size</a><a href="/youtube-profile-picture-maker">Profile picture maker</a><a href="/youtube-thumbnail-resizer">Thumbnail resizer</a><a href="/youtube-end-screen-template">End screen template</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav><a href="/guides/">Guides</a></footer>
+    </div>
+  </body>
+</html>
